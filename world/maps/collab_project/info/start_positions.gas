@@ -1,0 +1,118 @@
+[start_positions]
+{
+	[t:start_group,n:test_crypt_altar]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = false;
+	  i id = 1698220;
+		screen_name = "";
+		[start_position]
+		{
+		  i id = 1;
+			position = -9.713576,-5.900000,-13.662422,0x3461F0A3;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -9.713576,-5.900000,-13.662422,0x3461F0A3;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_death_valley]
+	{
+	  b default = false;
+		description = "test_death_valley";
+	  b dev_only = false;
+	  i id = 1698220;
+		screen_name = "test_death_valley";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.341949,0.000002,-0.784531,0xC624A8C3;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.341949,0.000002,-0.784531,0xC624A8C3;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_prison]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = false;
+	  i id = 1698900;
+		screen_name = "";
+		[start_position]
+		{
+		  i id = 1;
+			position = 1.398616,0.000000,0.197551,0x81A06348;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 1.398616,0.000000,0.197551,0x81A06348;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_valley]
+	{
+	  b default = true;
+		description = "";
+	  b dev_only = false;
+	  i id = 1698220;
+		screen_name = "";
+		[start_position]
+		{
+		  i id = 1;
+			position = -0.069748,0.000000,1.950455,0x55B6944C;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.069748,0.000000,1.950455,0x55B6944C;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_volcano]
+	{
+	  b default = false;
+		description = "Test_Volcano";
+	  b dev_only = false;
+	  i id = 1698900;
+		screen_name = "Test_Volcano";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.771525,0.000000,0.423355,0x6DEEF7F1;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.771525,0.000000,0.423355,0x6DEEF7F1;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+}

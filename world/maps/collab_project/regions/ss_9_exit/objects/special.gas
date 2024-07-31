@@ -1,0 +1,42 @@
+[t:use_point,n:0x0090000b]
+{
+	[placement]
+	{
+	  p position = 1.71918,4.3159,-0.10336,0xfd58bfd8;
+	}
+}
+[t:use_point,n:0x0090000c]
+{
+	[placement]
+	{
+	  p position = -1.68791,4.3159,-0.0242357,0xfd58bfd8;
+	}
+}
+[t:use_point,n:0x0090000d]
+{
+	[placement]
+	{
+	  p position = -0.093877,4.3159,-1.79534,0xfd58bfd8;
+	}
+}
+[t:use_point,n:0x0090000e]
+{
+	[placement]
+	{
+	  p position = 0.0350194,4.3159,1.53391,0xfd58bfd8;
+	}
+}
+[t:use_point,n:0x00900006]
+{
+	[placement]
+	{
+	  p position = -0.00905359,4.3159,-1.85342,0x9de96a95;
+	}
+}
+[t:use_point,n:0x00900007]
+{
+	[placement]
+	{
+	  p position = 0.00323582,4.3159,1.63928,0x9de96a95;
+	}
+}

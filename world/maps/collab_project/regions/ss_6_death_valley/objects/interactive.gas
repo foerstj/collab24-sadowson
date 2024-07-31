@@ -1,0 +1,36 @@
+[t:door_glb_gendungeon_03,n:0x00600dc1]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  p position = -0.0019455,-1.5,0.478546,0x738fcc6b;
+	}
+}
+[t:lever_on_off_01,n:0x00600dcb]
+{
+	[on_off_lever]
+	{
+	  x on_scid = 0x00600DCD;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  p position = 1.26168,-0.282841,0.740952,0x622f6b91;
+		use_point_scids = 0x00600dce;
+	}
+}
+[t:lever_des_01,n:0x00600d92]
+{
+	[on_off_lever]
+	{
+	  x on_scid = 0x00600D91;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  p position = 4.88458,-9.7,-2.20634,0x3c89c4ab;
+	}
+}

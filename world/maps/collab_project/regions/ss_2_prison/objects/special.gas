@@ -1,0 +1,102 @@
+[t:trigger_generic,n:0x0020004d]
+{
+	[common]
+	{
+		dev_instance_text = "DEBUG PRISON START";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_2_prison_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(2.500000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.148269,0,0.0733757,0x81a06348;
+	}
+}
+[t:use_point,n:0x0020004c]
+{
+	[placement]
+	{
+	  p position = 1.36199,0,-0.355391,0xea914580;
+	}
+}
+[t:trigger_generic,n:0x0020001f]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD CHANGE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_2_prison_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(7.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.00475311,-1.45,-1.49696,0x9bb6dfb2;
+	}
+}
+[t:trigger_generic,n:0x0020001d]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD CHANGE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_2_prison_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0493622,-0.0441927,-0.140678,0xb2ad58dc;
+	}
+}
+[t:use_point,n:0x0020002d]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.92388;
+	  p position = -1.90528,-12,-4.25433,0x40fb1161;
+	}
+}

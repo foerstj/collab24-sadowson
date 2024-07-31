@@ -1,0 +1,18 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x08000008;
+	source_region_name = ss_8_volcano;
+	[t:stitch_editor,n:ss_7_crypt]
+	{
+		dest_region = ss_7_crypt;
+		[node_ids]
+		{
+			0x01985071 = 0x465F999E,5;
+			0x01985072 = 0x465F999E,4;
+			0x01985073 = 0x936532AB,6;
+			0x01985074 = 0x936532AB,5;
+			0x01985075 = 0x9CACAB1A,7;
+			0x01985076 = 0x9CACAB1A,6;
+		}
+	}
+}

@@ -1,0 +1,172 @@
+[chapters]
+{
+	[chapter_shattered_crossings]
+	{
+		chapter_image = b_gui_ig_mnu_jnl_chapter_04;
+		screen_name = chapter iv: shattered crossings;
+		[*]
+		{
+			description = a broken bridge, an ancient curse...;
+		  i order = 0;
+		}
+	}
+}
+[quests]
+{
+	[quest_athena]
+	{
+		chapter = chapter_shattered_crossings;
+		quest_image = b_gui_ig_mnu_jnl_quest_19;
+		screen_name = lady athena and the broken bridge;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = the bridge is broken. find lady athena to remedy the situation...;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = bodrus;
+		}
+		[*]
+		{
+			description = lady athena has given you a task to complete in exchange for repairing the bridge;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = lady athena;
+		}
+		[*]
+		{
+			description = lady athena's task is complete. you can cross the broken bridge now...;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = lady athena;
+		}
+	}
+	[quest_mercenaries]
+	{
+		chapter = chapter_shattered_crossings;
+		quest_image = b_gui_ig_mnu_jnl_quest_14;
+		screen_name = the mercenary problem;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = find the mercenaries near the plains and retrieve the warding crystal;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = lady athena;
+		}
+		[*]
+		{
+			description = defeat the mercenary boss to retrieve the warding crystal;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = mercenary boss;
+		}
+		[*]
+		{
+			description = the mercenary boss lied. find the lost warding crystal in the forgotten halls;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = mercenary lieutenant frank;
+		}
+	}
+	[quest_nymeria_sword]
+	{
+		chapter = chapter_shattered_crossings;
+		quest_image = b_gui_ig_mnu_jnl_quest_41;
+		screen_name = nymeria's family sword;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = find nymeria's family tomb;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = false;
+			speaker = nymeria dionisia;
+		}
+		[*]
+		{
+			description = find the heraldic sword of nymeria's legacy in her family tomb;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = false;
+			speaker = nymeria dionisia;
+		}
+		[*]
+		{
+			description = you have found nymeria's heraldic sword in her family tomb. return it to nymeria.;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = false;
+			speaker = nymeria dionisia;
+		}
+		[*]
+		{
+			description = nymeria's heraldric sword has been given to her.;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = nymeria.;
+		}
+	}
+	[quest_warding_crystal]
+	{
+		chapter = chapter_shattered_crossings;
+		quest_image = b_gui_ig_mnu_jnl_quest_24;
+		screen_name = return the warding crystal;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = retrieve the warding crystal;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = lady athena;
+		}
+		[*]
+		{
+			description = find the sleeping catacombs;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = unlock the sleeping catacombs;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = archivist;
+		}
+		[*]
+		{
+			description = return the warding crystal to the altar in the sleeping catacombs;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ancient spirit;
+		}
+		[*]
+		{
+			description = return to lady athena;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ancient spirit;
+		}
+		[*]
+		{
+			description = the warding crystal has been returned, the dead may now sleep eternally.;
+		  b is_consumable = true;
+		  i order = 5;
+		  b required = true;
+			speaker = lady athena;
+		}
+	}
+}

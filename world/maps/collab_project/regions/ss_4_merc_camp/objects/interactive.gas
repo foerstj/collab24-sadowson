@@ -1,0 +1,24 @@
+[t:door_glb_fort_01,n:0x00400794]
+{
+	[door_basic]
+	{
+	  x second_door = 0x00400795;
+	  b use_toggle = true;
+	}
+	[placement]
+	{
+	  p position = 3.10403,-5,26.7928,0x800b9b55;
+	}
+}
+[t:door_glb_fort_right_01,n:0x00400795]
+{
+	[door_basic]
+	{
+	  x second_door = 0x00400794;
+	  b use_toggle = true;
+	}
+	[placement]
+	{
+	  p position = 3.10427,-5,26.795,0x800b9b55;
+	}
+}

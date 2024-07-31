@@ -1,0 +1,33 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x07000007;
+	source_region_name = ss_7_crypt;
+	[t:stitch_editor,n:ss_6_death_valley]
+	{
+		dest_region = ss_6_death_valley;
+		[node_ids]
+		{
+			0x01985061 = 0xB6CFB027,1;
+			0x01985062 = 0x9E78BC04,1;
+			0x01985063 = 0x5C3B6894,1;
+			0x01985064 = 0x3991CE64,1;
+			0x01985065 = 0xFB448EC1,8;
+			0x01985066 = 0xFB448EC1,7;
+			0x01985067 = 0x30CEABE0,1;
+			0x01985068 = 0x0B5216F4,1;
+		}
+	}
+	[t:stitch_editor,n:ss_8_volcano]
+	{
+		dest_region = ss_8_volcano;
+		[node_ids]
+		{
+			0x01985071 = 0xDE22D660,9;
+			0x01985072 = 0xDE22D660,10;
+			0x01985073 = 0xDE22D660,11;
+			0x01985074 = 0xDE22D660,12;
+			0x01985075 = 0xDE22D660,13;
+			0x01985076 = 0xDE22D660,14;
+		}
+	}
+}

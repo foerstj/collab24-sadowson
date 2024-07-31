@@ -1,0 +1,11 @@
+[t:animate_elevator,n:0x0080000b]
+{
+	[nodal_tex_anim]
+	{
+	  x siege_node = 0xFFB582B6;
+	}
+	[placement]
+	{
+	  p position = 1.28451,0.126729,0.495605,0xaa9c1023;
+	}
+}

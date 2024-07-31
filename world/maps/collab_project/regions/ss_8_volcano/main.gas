@@ -1,0 +1,11 @@
+[t:region,n:region]
+{
+	created = battlestation,dowde;
+	description = none;
+  x guid = 0x08000008;
+	lastmodified = BATTLESTATION,dowde;
+  x mesh_range = 0x08000008;
+	notes = none;
+  x scid_range = 0x08000008;
+	se_version = 1.70.0.4;
+}

@@ -1,0 +1,25 @@
+[bookmarks]
+{
+	[t:bookmark,n:test_merc_boss]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0xB43078EA;
+		[camera]
+		{
+		  f azimuth = 0.520797;
+		  f distance = 18.000000;
+		  f orbit = -1.350000;
+		}
+	}
+	[t:bookmark,n:test_merc]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0xdfe5f24d;
+		[camera]
+		{
+		  f azimuth = 0.590797;
+		  f distance = 25.500000;
+		  f orbit = -1.429999;
+		}
+	}
+}

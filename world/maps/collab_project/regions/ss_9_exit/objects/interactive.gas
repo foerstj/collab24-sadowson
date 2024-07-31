@@ -1,0 +1,79 @@
+[t:door_csl_dungeon_06,n:0x00900008]
+{
+	[placement]
+	{
+	  p position = -0.00531578,-2.25,0.00462341,0x6a27fef8;
+	}
+}
+[t:door_csl_dungeon_07,n:0x00900009]
+{
+	[placement]
+	{
+	  p position = -0.000427246,0.0500002,0.303944,0x8a2776b7;
+	}
+}
+[t:door_csl_dungeon_07,n:0x0090000a]
+{
+	[placement]
+	{
+	  p position = -0.00474548,0.05,0.300791,0xa0b79591;
+	}
+}
+[t:dsx_utraean_obj_01,n:0x00900002]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[common]
+	{
+		screen_name = "Arcaneum";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 3.15013,-2,2.78171,0x6662c327;
+	}
+}
+[t:dsx_utraean_obj_01,n:0x00900001]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[common]
+	{
+		screen_name = "Volcanic Caverns";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.93723,0,-0.665668,0xf5eff828;
+	}
+}
+[t:lever_glb_06,n:0x00900003]
+{
+	[on_off_lever]
+	{
+	  f reset_time = 3;
+	}
+	[placement]
+	{
+	  q orientation = -0.707107,0,0,0.707107;
+	  p position = -0.0324862,6.39207,-0.105633,0xfd58bfd8;
+		use_point_scids = 0x0090000e,0x0090000c,0x0090000d,0x0090000b;
+	}
+}
+[t:lever_glb_06,n:0x00900004]
+{
+	[on_off_lever]
+	{
+	  f reset_time = 3;
+	}
+	[placement]
+	{
+	  q orientation = -0.707107,0,0,0.707107;
+	  p position = 0.012293,6.42029,-0.0959296,0x9de96a95;
+		use_point_scids = 0x00900006,0x00900007;
+	}
+}

@@ -1,0 +1,69 @@
+[conversation_archivist_counterpart]
+{
+	[text*]
+	{
+		button_1_text = please let me in;
+		button_1_value = request_entry;
+		screen_text = "Protection of the Sleeping Catacombs was charged to two people... myself and my counterpart. It has been many moons since we last saw each other. I think it likely she is protecting it from elsewhere, though I remember not.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_archivist_gate_open]
+{
+	[text*]
+	{
+		screen_text = "Congratulations traveller. The gate is open, the Sleeping Catacombs open to you.
+
+Step on the elevator... then I shall send you down.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_archivist_hello]
+{
+	[text*]
+	{
+		button_1_text = warding crystal;
+		button_1_value = return_warding_crystal;
+		screen_text = "Thieves! Liars - cheats!
+The living have no place in the Sleeping Catacombs! It will forever be sealed against your kind!
+Why have you returned? Do you desire more gold and treasures? There is nothing but death for you in here!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_archivist_on_elevator]
+{
+	[text*]
+	{
+		button_1_text = i am ready;
+		button_1_value = dv_player_ready;
+		screen_text = "Are you prepared to return the Warding Crystal?
+When I send you into the Sleeping Catacombs, the entrance will be sealed again... either enter prepared, or do not do so at all...";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_archivist_request_entry]
+{
+	[text*]
+	{
+		screen_text = "My charge is to protect the entrance. By duty, I cannot tell you how to enter...
+
+In truth, I do not remember. My memory is weak... my duty was so near completion and the final rest was close...
+
+I have a memory... though faint... we kept this knowledge in our village, beyond the grove. Seek there... perhaps something survived.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_archivist_return_warding_crystal]
+{
+	[text*]
+	{
+		button_1_text = please let me in;
+		button_1_value = request_entry;
+		button_2_text = counterpart?;
+		button_2_value = dv_counterpart;
+		screen_text = "You are not with them...? Those who stole from us?
+
+All we desire is sleep, and I am charged with the sacred duty to protect these crypts with my counterpart.";
+	  f scroll_rate = 10.000000;
+	}
+}
