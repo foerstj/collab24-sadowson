@@ -5,7 +5,7 @@
 	  b default = false;
 		description = "";
 	  b dev_only = false;
-	  i id = 1698220;
+	  i id = 470;
 		screen_name = "";
 		[start_position]
 		{
@@ -28,7 +28,7 @@
 	  b default = false;
 		description = "test_death_valley";
 	  b dev_only = false;
-	  i id = 1698220;
+	  i id = 460;
 		screen_name = "test_death_valley";
 		[start_position]
 		{
@@ -51,7 +51,7 @@
 	  b default = false;
 		description = "";
 	  b dev_only = false;
-	  i id = 1698900;
+	  i id = 420;
 		screen_name = "";
 		[start_position]
 		{
@@ -74,7 +74,7 @@
 	  b default = true;
 		description = "";
 	  b dev_only = false;
-	  i id = 1698220;
+	  i id = 410;
 		screen_name = "";
 		[start_position]
 		{
@@ -97,7 +97,7 @@
 	  b default = false;
 		description = "Test_Volcano";
 	  b dev_only = false;
-	  i id = 1698900;
+	  i id = 480;
 		screen_name = "Test_Volcano";
 		[start_position]
 		{
