@@ -1,0 +1,55 @@
+//STITCH DATA
+
+ss_1_valley 		>	ss_2_prison			-	0x01985001 > 0x01985003
+ss_1_valley 		>	ss_1a_family-tomb	-	0x01985011 > 0x01985013
+ss_2_prison 		>	ss_3_highway		-	0x01985021
+ss_3_highway		>	ss_4_merc_camp		-	0x01985031 > 0x01985038
+ss_4_merc_camp		>	ss_5_dungeon		-	0x01985041
+ss_5_dungeon		>	ss_6_death_valley	-	0x01985051
+ss_6_death_valley	>	ss_6a_basement		-	0x01985101
+ss_6_death_valley	>	ss_7_crypt		-	0x01985061 > 0x01985068
+ss_7_crypt			>	ss_8_volcano	-	0x01985071 > 0x01985076
+ss_8_volcano		>	ss_9_exit		-	NULL ( USE DISPLACER )
+ss_9_exit			>	ss_1_valley		-	0x01985004
+
+VA's
+
+*** Main Characters ***
+Lady Athena:
+Numeria:
+Archivist:				Antony J ( Lewylln )
+Mercenary Leader:		Philip D ( Sadowson )
+Lord Commander:			Philip D ( Sadowson )
+
+*** Shops ***
+Aurelia:
+Tiberius:
+Seraphine:				Sam ( Sami )
+
+*** Minor ***
+Bodrus:					Antony J ( Lewylln )
+Captain:				Antony J ( Lewylln )
+Guard_F_04:
+Guard_F_07:
+Guard_F_08:
+Guard_F_09:
+Guard_M_01:
+Guard_M_02:
+Guard_M_03:
+Guard_M_04:
+Guard_M_05:
+Melinda:
+Miralanna:
+Synod (M):
+Tent_F:
+Tent_M:
+Trianni:
+Lieutenant Piratus:
+Merc M 1:
+Merc M 2:
+Merc M 3:
+Merc M 4:
+Merc F 1:
+Merc F 2:
+Merc F 3:
+Merc F 4:

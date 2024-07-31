@@ -1,0 +1,91 @@
+////////////////////////
+
+Aurelia is a healer who specialises in making healing potions and looking after the sick and wounded. Although her primary job is as a healer, she also engages in trade with travellers that are passing through.
+She has a general disdain for warriors - melee users - who tend to stick their sword in anything they dont like, and she has a great level of respect for users of healing magic.
+
+
+Her dialogue is broken up into two categories - start-of-game and end-game, where her dialogue changes based off the main quest state. Each ////// is a seperation of dialogue for recording.
+
+//////
+START OF GAME
+//////
+COMBAT MAGE
+
+The fire of a mage versed in the art of combat magic will be a welcome reprieve against the undead assaulting our walls. I have spells and potions a plenty to keep you powered against them. What can I get you?
+
+//////
+
+Welcome back spellcaster. What can I get you today?
+
+//////
+MELEE
+//////
+
+Weapons down warrior. You're standing in a hall of healing - there's nothing for you to slay here.
+Though I suppose you're actually searching for healing potions so you can keep throwing your sword around. I'll be happy to sell them to you for a reasonable price.
+
+//////
+
+Back for more warrior? I've got plenty more stock if you're happy to pay.
+
+//////
+NATURE MAGIC
+//////
+
+One who is well versed in the healing arts and that of nature magic is always welcome in these hallowed halls. What services can I provide for you mage? I have a plenty good stock of spells if you need them, as well as enough mana potions to keep you going for a good long time.
+
+//////
+
+You are always welcome here healer. What can I get for you?
+
+//////
+ARCHER
+//////
+
+You have a keen eye to seek me out ranger. My spells and potions are typically reserved for the healing arts, but in these trying times, I will gladly sell to you if it means this undead menance is swiftly dealt with.
+
+//////
+
+Keep your eyes sharp ranger, the undead claw at our walls. What services can I provide you with?
+
+//////
+END OF GAME
+//////
+COMBAT MAGE
+
+That a mage versed in the art of combat magic has braved the undead from whence they came and protected our home is one worthy of singing high praises. I would be most honoured to trade with you traveller. What spells and potions do you require?
+
+//////
+
+I am glad that you are well sorcerer. What spells and potions do you require?
+
+//////
+MELEE
+//////
+
+That a warrior of your calibre was able to brave the undead head on is worthy of note. Though I am usually apprehensive of the boneheaded adventurers swinging their sword at anything that moves, I must admit that you seem a cut above the rest. You're pack is probably empty and in need of some more potions. Can I help you with that?
+
+//////
+
+The warrior returning! What potions can I help you with?
+
+//////
+NATURE
+//////
+
+It feels right to know that the undead scourage was dealt with at the hands of a mage of your repute. I would be honoured to engage in trade with you traveller, for you have saved us in our homes.
+What spells and potions do you require?
+
+//////
+
+The hero of our hour has returned. Traveller, what potions and spells do you require?
+
+//////
+RANGED
+//////
+
+It would appear that your keen eye and swift hands have saved us in our darkest hour, I thank you for your work traveller. I presume that your pack is light on healing potions, and I would gladly trade with you to help keep you going.
+
+///////
+
+The savior of our people has returned, swift of hands and keen of eye. What potions do you require ranger?
