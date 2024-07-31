@@ -1,0 +1,68 @@
+[t:template,n:collab_ss_warding_crystal]
+{
+	category_name       = "quest";
+	doc					= "collab_ss_warding_crystal";
+	specializes			= treasure;
+	[aspect]
+	{
+		model		= m_i_glb_artifact-01;
+		[voice]
+		{
+			put_down:* = s_e_gui_put_down_jewelry;
+		}
+	}
+	[common]
+	{
+		screen_name	= "Warding Crystal";
+	}
+	[generic_emitter_act]
+	{
+		other_effect = "scroll_key";
+	}
+	[gui]
+	{
+		inventory_icon	= b_gui_ig_i_it_artifact_01;
+		is_droppable = false;
+		can_sell = false;
+		tooltip_color	= "unique";
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			special_type 	= rare;
+			{
+				alteration = ALTER_GOLD_VALUE;
+				description = "\n Strange colours swirl around inside this crystal.\n The undead appear repelled by it, but not enough to stop them from attacking you!";
+				duration = #infinite;
+				
+				innate_enchantment = false;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 0;
+			}
+		}
+	}
+}
+[t:template,n:collab_ss_altar_crystal]
+{
+	category_name = "indoor";
+	doc = "collab_ss_altar_crystal";
+	specializes = base_usable;
+	[aspect]
+	{
+		model = m_i_csl_altar-01;
+		is_collidable	= true;
+		is_usable		= true;
+		is_selectable	= true;
+		does_block_path = true;
+	}
+	[common]
+	{
+		screen_name = "Altar";
+	}
+	[collab_ss_warding_crystal_placement]
+	{
+	}
+}

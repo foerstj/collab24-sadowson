@@ -1,0 +1,147 @@
+[t:template,n:collab_ss_stone_base]
+{
+	specializes = actor;
+	[aspect]
+	{
+		draw_selection_indicator = false;
+	}
+	[body]
+	{
+		initial_chore = chore_none;
+	}
+	[mind]
+	{
+		f com_range                        = 0.6;
+		f inner_comfort_zone_range         = 0.4;
+		f job_travel_distance_limit        = 2.0;
+		f melee_engage_range               = 0.19;
+		f outer_comfort_zone_range         = 0.6;
+		f personal_space_range             = 0.1;
+		f ranged_engage_range              = 0.9;
+		f sensor_scan_period               = 0.1;
+		f sight_fov                        = 1.0;
+		f sight_range                      = 2.0;
+		f visibility_memory_duration       = 0.2;
+		f visibility_memory_duration       = 0.2;
+		f limited_movement_range		   = 1.0;
+		
+		actor_weapon_preference = WP_NONE;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[conversation]
+	{
+	}
+}
+
+[t:template,n:collab_ss_stone_elddim]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_elddim";
+	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-elddim;
+	}
+	[common]
+	{
+		screen_name = "Rising Sun Stone";
+	}
+}
+[t:template,n:collab_ss_stone_crystwind]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_crystwind";
+	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-crystwind;
+	}
+	[common]
+	{
+		screen_name = "Hammer Stone";
+	}
+}
+[t:template,n:collab_ss_stone_fallraen]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_fallraen";
+	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-fallraen;
+	}
+	[common]
+	{
+		screen_name = "Snow Stone";
+	}
+}
+[t:template,n:collab_ss_stone_lang]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_lang";
+	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-lang;
+	}
+	[common]
+	{
+		screen_name = "Insect Stone";
+	}
+}
+[t:template,n:collab_ss_stone_meren]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_meren";
+	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-meren;
+	}
+	[common]
+	{
+		screen_name = "Fish Stone";
+	}
+}
+[t:template,n:collab_ss_stone_quillrabe]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_quillrabe";
+	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-quillrabe;
+	}
+	[common]
+	{
+		screen_name = "Watcher Stone";
+	}
+}
+[t:template,n:collab_ss_stone_hiroth]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_hiroth";
+	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-hiroth;
+	}
+	[common]
+	{
+		screen_name = "Lord Stone";
+	}
+}
+[t:template,n:collab_ss_stone_grescal]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_grescal";
+	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-grescal;
+	}
+	[common]
+	{
+		screen_name = "Shooting Star Stone";
+	}
+}

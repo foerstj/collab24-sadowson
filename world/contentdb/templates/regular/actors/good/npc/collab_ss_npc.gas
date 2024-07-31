@@ -1,0 +1,109 @@
+[t:template,n:collab_ss_Lady_Athena]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_Lady_Athena";
+	specializes = base_npc_fg;
+	[aspect]
+	{
+		draw_selection_indicator = FALSE;
+		model = m_c_gah_fg_pos_b1;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_16;
+			1 = b_c_pos_b1_003;
+		}
+	}
+	[common]
+	{
+		screen_name = "Lady Athena";
+	}
+	[conversation]
+	{
+	}
+	[ee_npc_indicator]
+	{
+	}
+}
+[t:template,n:collab_ss_Bodrus]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_Bodrus";
+	specializes = base_npc_fb_multiplayer;
+	[aspect]
+	{
+		draw_selection_indicator = FALSE;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_18;
+			1 = b_c_pos_a1_015;
+		}
+	}
+	[common]
+	{
+		screen_name = "Bodrus";
+	}
+	[conversation]
+	{
+	}
+	[ee_npc_indicator]
+	{
+	}
+}
+
+[t:template,n:collab_ss_blacksmith] //maybe there should be a dsx_base_blacksmith?
+{
+	specializes = base_npc_bs;
+	category_name = "1W_townsperson";
+	doc = "collab_ss_blacksmith";
+	[aspect]
+	{
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		model = m_c_gbn_bs_BS2;
+		[textures]
+		{
+			0 = b_c_gbn_bs-04;
+		}
+	}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_lharnob;
+	}
+	[common]
+	{
+		screen_name = "Blacksmith";
+	}
+}
+[t:template,n:collab_ss_merc_camp_lieutenant]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_merc_camp_lieutenant";
+	specializes = base_npc_fb;
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_27;
+			1 = b_c_pos_a3_001;
+		}
+	}
+	[common]
+	{
+		screen_name = "Lieutenant Piratus";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = bo_bo_ch_f_g_c_avg;
+			es_forearms = gl_ga_bl_f_g_c_avg;
+		}
+	}
+	[ee_npc_indicator]
+	{
+	}
+}

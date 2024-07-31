@@ -1,0 +1,205 @@
+/*
+  ============================================================================
+  ----------------------------------------------------------------------------
+
+	File		: 	job_talk_collab_nymeria.skrit
+
+	Author(s)	: 	Sadowson
+
+	Purpose		: 	Just stand there and talk at anyone we're told to.
+
+	(C)opyright 2024 Gas Powered Games, Inc.
+
+  ----------------------------------------------------------------------------
+  ============================================================================
+*/
+
+Go			m_Go$;
+GoMind		m_Mind$;
+GoBody  	m_Body$;
+Job			m_Job$;
+Goid		m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+startup state STARTUP$
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	init
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Face$;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	face the audience
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{
+		if( !m_Go$.HasConversation )
+		{
+			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
+							m_Go$.GetTemplateName,
+							m_Go$.Goid );
+			SetState Exiting$;
+		}
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	blab blab away... pretend you're Lee
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+		// $$$ read/write variables from the Game Auditor here, and bring up the appropriate dialogs...
+		if( Victory.IsQuestCompleted( "quest_nymeria_sword" ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_join" );
+			GameAuditor.GetDb.SetBool( "nymeria_quest_complete", true );
+
+			if( GameAuditor.GetDb.GetBool( "party_accept_0x100C93" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_accept" );
+				GameAuditor.GetDb.SetBool( "party_accept_0x100C93", false );
+				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 199, 1.0 );	// Turn off the indicator.
+			} 
+			else if( GameAuditor.GetDb.GetBool( "party_decline_0x100C93" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_reject" );
+				GameAuditor.GetDb.SetBool( "party_decline_0x100C93", false );
+				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x100C93", true );
+			}
+			else if( GameAuditor.GetDb.GetBool( "party_disband_0x100C93" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_disband" );
+				GameAuditor.GetDb.SetBool( "party_disband_0x100C93", false );
+				GameAuditor.GetDb.SetBool( "party_disbanded_0x100C93", true );
+				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 114, 1.0 );	// Change indicator to join
+			}
+			else if( GameAuditor.GetDb.GetBool( "party_disbanded_0x100C93" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_disband_rejoin" );			
+			}
+			else if( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x100C93" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_rejoin" );
+				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x100C93", false );
+				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 199, 1.0 );	// Turn off the indicator.
+			}		 
+		}
+		else
+		{
+			m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_hello" );
+			
+			if( GameAuditor.GetDb.GetBool( "nymeria_accept_quest" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_accept" );
+				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 126, 1.0 );	// Change indicator to Grey
+			}
+			else if( GameAuditor.GetDb.GetBool( "nymeria_decline_quest" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_decline" );
+				GameAuditor.GetDb.SetBool( "nymeria_decline_quest", false );
+			}
+		}
+		
+		if( Victory.GetQuestOrder( "quest_nymeria_sword" ) == 2 )
+		{
+			if( GameAuditor.GetDb.GetBool( "nymeria_quest_complete" ) )
+			{
+			}
+			else
+			{
+				if( Goid.InValidGoid != 
+					UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_nymeria_sword_weak", m_target$ ) )
+				{
+					//Player is ready to complete the quest.
+					
+					goid quest_weapon$ = UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_nymeria_sword_weak", m_target$ );
+					
+					m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_join" );
+					GameAuditor.GetDb.SetBool( "nymeria_quest_complete", true );
+					
+					//Remove the weapon from the player.
+					quest_weapon$.Go.parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, quest_weapon$ ) );
+					PostWorldMessage( WE_REQ_DELETE, quest_weapon$, quest_weapon$, 0.1 );
+					
+					//Have Nymeria equip the better version of the weapon.
+					go equip_weapon$;
+					equip_weapon$ = m_go$.inventory.GetItemFromTemplate( "collab_ss_nymeria_sword_strong" );
+					m_go$.inventory.RSEquip( es_weapon_hand, equip_weapon$.goid, AO_REFLEX );
+					
+					PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 114, 1.0 );	// Change indicator to join
+				}
+				else
+				{
+					m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_accept" );
+				}
+			}
+		}
+		
+		TryAnim$('talk');
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	finish blabbing
+state Exiting$
+{
+	event OnEnterState$
+	{
+		// $$$ close up any dialogs here...
+
+		// Send a PL_FACE reguest without a target so that they no longer
+		// continue to face the character they were talking to
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+
+		m_Job$.MarkForDeletion();
+	}
+}
+
+

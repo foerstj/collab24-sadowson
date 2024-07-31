@@ -1,0 +1,214 @@
+/*
+
+	FRIENDLY MERCS IN THE CAMP SPECIFICALLY DESIGNED TO NOT BE HOSTILE.
+	
+*/
+
+[t:template,n:collab_ss_mercenary_male_melee_friendly]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_mercenary_male_melee_friendly";
+	specializes = collab_ss_mercenary_male_melee_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:collab_ss_mercenary_female_melee_friendly]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_mercenary_female_melee_friendly";
+	specializes = collab_ss_mercenary_female_melee_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:collab_ss_mercenary_male_ranged_friendly]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_mercenary_male_ranged_friendly";
+	specializes = collab_ss_mercenary_male_ranged_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:collab_ss_mercenary_female_ranged_friendly]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_mercenary_female_ranged_friendly";
+	specializes = collab_ss_mercenary_female_ranged_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:collab_ss_mercenary_male_combat_friendly]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_mercenary_male_combat_friendly";
+	specializes = collab_ss_mercenary_male_cmagic_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:collab_ss_mercenary_female_combat_friendly]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_mercenary_female_combat_friendly";
+	specializes = collab_ss_mercenary_female_cmagic_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:collab_ss_mercenary_male_nature_friendly]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_mercenary_male_nature_friendly";
+	specializes = collab_ss_mercenary_male_nmagic_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:collab_ss_mercenary_female_nature_friendly]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_mercenary_female_nature_friendly";
+	specializes = collab_ss_mercenary_female_nmagic_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}

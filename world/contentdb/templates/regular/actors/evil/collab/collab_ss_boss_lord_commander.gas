@@ -1,0 +1,266 @@
+[t:template,n:collab_ss_lord_commander]
+{
+	category_name = "ss_7_crypt_enemies";
+	doc = "collab_ss_lord_commander";
+	specializes = actor_evil;
+	[actor]
+	{
+		alignment		= aa_good;
+		portrait_icon	= b_gui_ig_i_ic_c_sk_g;
+		can_level_up	= false;
+		[skills]
+		{
+			strength		= 19, 0;
+			intelligence	= 13, 0;
+			dexterity		= 15, 0;
+			melee 			= 40, 0;
+			combat_magic	= 40, 0;
+		}
+	}
+	[aspect]
+	{
+		
+		experience_value = 17980;
+		life = 752;
+		max_life = 752;
+		mana = 10;
+		max_mana = 10;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_skeleton; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_skeleton_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_skeleton_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_skeleton_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_skeleton_SED; }
+		}
+		model = m_c_ecm_sk_pos_a3;
+		[textures]
+		{
+			0 = b_c_ecm_sk-02;
+			1 = b_c_pos_a3_201;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 120;
+		damage_min = 90;
+	}
+	[body]
+	{
+		armor_version = ecm_sk;
+		avg_move_velocity = 2.25;
+		[bone_translator]
+		{
+			body_anterior	= bip01_head;
+			body_mid		= Bip01_Spine1;
+			body_posterior	= bip01_pelvis;
+			kill_bone		= Bip01_Spine1;
+			shield_bone		= shield_grip;
+			weapon_bone		= weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			[chore_attack]
+			{
+				chore_stances = ignore;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = a_c_gan_sk_fs4_at;
+					high = a_c_gan_sk_fs4_at-02;
+					loww = a_c_gan_sk_fs4_at-03;
+					qffg = a_c_gan_sk_fs4_dff;
+				}
+		 	  	[anim_durations]
+				{
+					fs0 = 0.830;
+					fs4 = 0.830;
+				}
+
+			}
+			[chore_default]
+			{
+				chore_stances = ignore;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = a_c_gan_sk_fs4_dsf;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = a_c_gan_sk_fs4_di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = ignore;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = a_c_gan_sk_fs4_dff;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = ignore;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = a_c_gan_sk_fs5_mg;
+					01 = a_c_gan_sk_fs5_mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					gtup = a_c_gan_sk_fs0_up;
+					frtd = a_c_gan_sk_fs0_dsf-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = ignore;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = a_c_gan_sk_fs4_wl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name ="Lord Commander";
+		forced_expiration_class = decay_fresh;
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message( "WE_ENTERED_WORLD" );
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script( "unique_ray_purple(sgx)" );
+			}
+
+			[*]
+			{
+				action* = call_sfx_script("gresh_hand_swipe_right");
+				action* = call_sfx_script("gresh_hand_swipe_left");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				action* = call_sfx_script("gresh_hand_swipe_right");
+				action* = call_sfx_script("gresh_hand_swipe_left");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_warrior_flames");
+				action* = call_sfx_script("seck_swap");
+				condition* = receive_world_message("we_killed");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_explosion");
+				condition* = receive_world_message("we_anim_die");
+			}
+		}
+	}
+	[conversation]
+	{
+	}
+	[defend]
+	{
+		defense = 500;
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_1;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		
+		[pcontent]
+		{
+			[all*]
+			{
+				es_weapon_hand = collab_ss_lord_commander_sword;
+			}
+			[oneof*]
+			{
+               	min = 1;
+               	max = 2;
+				il_main = #weapon/-rare(1)/119-129;
+				il_main = #armor/-rare(1)/300-340;
+				il_main = #*/-rare(1)/119-129;
+            }
+			[oneof*]
+			{
+               	chance = 0.01;
+				il_main = #weapon/-unique(2)/119-129;
+				il_main = #armor/-unique(2)/300-340;
+				il_main = #*/-unique(2)/119-129;
+	        }
+			[gold*]
+			{
+				max = 28102;
+				min = 24201;
+				piles = 3 - 6;
+			}
+		}
+		[other]
+		{
+			il_active_primary_spell	= spell_fireshot;
+			il_spell_1				= spell_fireshot;
+			il_main = collab_ss_lord_commander_sword_player;
+		}
+	}
+	[mind]
+	{
+		actor_balanced_attack_preference			= 0.8;
+		actor_weapon_preference						= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= true;
+		
+		com_channels = skeleton;
+		com_range = 7.0;
+		
+		job_travel_distance_limit					= 20;
+		
+		on_engaged_lost_consciousness_abort_attack	= true;
+		on_job_reached_travel_distance_abort_attack = true;
+		on_enemy_entered_icz_switch_to_melee = true;
+		
+		jat_attack_object_melee	 		= world\ai\jobs\common\job_attack_object_melee.skrit
+			?persistence				= 0.0
+			&hit_multiple				= true;
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true
+			&spell_chances				= "0.5,                0.5"
+			&spells						= "spell_fireshot, spell_fireshot";
+			
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?still						= true;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[water_effects]
+	{
+	}
+}

@@ -1,0 +1,136 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_warding_crystal_placement.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2024 Sadowson
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+
+// Reserved Tags
+property	bool	_server_only$			= true;
+property	string	_doc$					= "Controls the altar to return the Warding Crystal";
+property	string	_required_component$	= "placement";
+
+// Exported Properties
+property	string		Crystal_Template$			= "collab_ss_warding_crystal"	doc = "Template name for the Warding Crystal to be returned";
+property	SCID		EFX_Target$					= 0								doc = "External EFX SCID Target to activate when placed";
+property	SCID		Altar_Crystal$				= 0								doc = "SCID of Crystal on Altar";
+property	string		Quest_Name$					= "quest_warding_crystal"		doc = "Name of quest to update";
+property	int			Quest_State$				= 4								doc = "State to set the quest to";
+property	SCID		External_Target$			= 0								doc = "External SCID Target to activate when placed. Only valid message is WE_REQ_ACTIVATE and WE_REQ_DEACTIVATE";
+property	eWorldEvent	External_Target_Message$	= WE_REQ_ACTIVATE				doc = "Message to send to External_Target$";
+
+						owner						= GoSkritComponent;
+						
+//////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoDrawDebugHud$
+{
+	goid goid1$ = EFX_Target$.goid;
+	goid goid2$ = External_Target$.goid;
+	goid goid3$ = Altar_Crystal$.goid;
+	
+	if( goid1$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+										goid1$.go.placement.position,
+										MakeColor( 0, 1.0, 0, 0.5 ),
+										"EFX_Target" );
+	}
+	
+	if( goid2$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+										goid2$.go.placement.position,
+										MakeColor( 0, 1.0, 0, 0.5 ),
+										"External_Target" );
+	}
+	if( goid3$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+										goid3$.go.placement.position,
+										MakeColor( 0, 1.0, 0, 0.5 ),
+										"Altar Crystal" );
+	}
+}
+startup state Startup$
+{
+	transition -> Waiting$: OnGoHandleMessage( WE_ENTERED_WORLD );
+}
+
+state Waiting$
+{
+	event OnEnterState$
+	{
+		goid	Crystal$ = Altar_Crystal$.goid;
+		
+		if( Crystal$.IsValid )
+		{
+			#only( game )
+			[[
+				Crystal$.Go.Aspect.SSetIsVisible = false;
+				
+			]]
+		}
+		else
+		{
+			Report.Error( "collab_ss_warding_crystal.skrit: Altar_Crystal SCID invalid!" );
+		}
+		
+		owner.Go.Aspect.SSetIsUsable( false );
+		owner.Go.Aspect.SSetIsSelectable( false );
+	}
+	
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+		{
+			owner.Go.Aspect.SSetIsUsable( true );
+			owner.Go.Aspect.SSetIsSelectable( true );
+		}
+		
+		if( e$ == WE_REQ_USE )
+		{
+			#only( game )
+			[[
+			goid	player$ = MakeGoid( msg$.Data1 );
+			goid	Inventory_Warding_Crystal$;
+			goid	External_Goid$ = External_Target$.goid;
+			goid	Crystal$ = Altar_Crystal$.goid;
+		
+			if( Goid.InvalidGoid != UIPartyManager.DoesActivePartyHaveTemplate( Crystal_Template$, player$ ) )
+			{
+				Crystal$.Go.Aspect.SSetIsVisible = true;
+				
+				Inventory_Warding_Crystal$ = UIPartyManager.DoesActivePartyHaveTemplate( Crystal_Template$, player$ );
+				Inventory_Warding_Crystal$.Go.Parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, 
+																				QP_FRONT, AO_REFLEX, 
+																				Inventory_Warding_Crystal$ ) );
+				PostWorldMessage( WE_REQ_DELETE, Inventory_Warding_Crystal$, Inventory_Warding_Crystal$, 0.0 );
+				owner.go.PlayMaterialSound( "gui_inventory_full", owner.goid, true );
+				Victory.RSActivateQuest( Quest_Name$, Quest_State$ );
+				
+				Report.Screen( "The Warding Crystal has been returned to the Altar" );
+				
+				if( External_Goid$.IsValid )
+				{
+					PostWorldMessage( External_Target_Message$, owner.goid, External_Goid$, 0.0 );
+				}
+				
+				//Shut down the altar
+				owner.Go.Aspect.SSetIsUsable( false );
+				owner.Go.Aspect.SSetIsSelectable( false );
+			}
+			else
+			{
+				Report.Screen( "You lack the required item to place upon the altar" );
+			}
+			]]
+		}
+	}
+}

@@ -1,0 +1,109 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_nymeria_sword_check.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2024 Sadowson
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// Public Definitions
+
+// Reserved Tags
+
+owner = GoSkritComponent;
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$)
+{
+	if( e$ == WE_PICKED_UP )
+	{	
+		string Weapon_Name$;
+		
+		//goid actor$ = MakeGoid( msg$.GetSendFrom );
+		goid actor$ = msg$.GetSendFrom;
+		string actor_name$;
+		bool Replace_Weapon$ = false;
+		string Weapon_To_Add$;
+		
+		if( Actor$.IsValid )
+		{
+		
+		//Get the name of the actor and the weapons name.
+		actor$.go.common.GetScreenName( actor_name$ );
+		owner.go.common.GetScreenName( Weapon_Name$ );
+			
+		if( actor_name$ == "Nymeria Dionisia" )
+		{
+			//The actor is Nymeria.
+			
+			if( weapon_name$ == "Nymeria's Heraldric Sword (Inert)" )
+			{
+				//Replace the weapon with Nymeria's special weapon.
+				Replace_Weapon$ = true;
+				Weapon_To_Add$ = "collab_ss_nymeria_sword_strong";
+				
+				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Replace the weapon" );
+			}
+			else
+			{
+				//Do nothing, Nymeria has her special sword.
+				Replace_Weapon$ = false;
+				
+				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Do nothing. Nymeria has her special sword." );
+			}
+		}
+		else
+		{
+			//The actor is NOT Nymeria.
+			
+			if( weapon_name$ == "Nymeria's Heraldric Sword (Inert)" )
+			{
+				//Weapon is NOT Nymeria's special weapon and NOT in her inventory.
+				Replace_Weapon$ = false;
+				
+				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Weapon is NOT Nymeria's special weapon and NOT in her inventory." );
+			}
+			else
+			{
+				//Weapon IS Nymeria's special weapon and NOT in her inventory.
+				Replace_Weapon$ = true;
+				Weapon_To_Add$ = "collab_ss_nymeria_sword_weak";
+				
+				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Weapon IS Nymeria's special weapon and NOT in her inventory." );
+			}
+		}
+		
+		}
+		else
+		{
+			Report.Error( "collab_ss_nymeria_sword_check.skrit: Actor$ Goid is invalid!!!" );
+		}
+		
+		//Replace the blade if required.
+		if( Replace_Weapon$ )
+		{
+			goid weapon$ = owner.goid;
+			//actor$.Go.Inventory.RSCreateAddItem( il_main, Weapon_To_Add$ );
+			PostWorldMessage( WE_REQ_DELETE, weapon$, weapon$, 0 );
+			
+			SiegePos SpawnPos$;
+			GoCloneReq cloneReq$ = MakeGoCloneReq( weapon_to_add$ );
+			SpawnPos$ = actor$.go.placement.position;
+			cloneReq$.StartingPos = SpawnPos$;
+			If( actor$.Go.HasMind )
+			{
+				if( AIQuery.FindSpotRelativeToSource( actor$.go, 0, 0, 0, actor$.go.Mind.TempPos1 ) )
+				{
+					cloneReq$.StartingPos = actor$.Go.Mind.TempPos1;
+				}
+			}
+			cloneReq$.SnapToTerrain = true;
+			goid new_weapon$ = GoDb.SCloneGo( cloneReq$ );
+			
+			actor$.go.Mind.SDoJob( MakeJobReq( JAT_USE, JQ_ACTION, QP_FRONT, AO_REFLEX, new_weapon$ ) );
+		}
+	}
+}

@@ -1,0 +1,595 @@
+[t:template,n:collab_ss_Tiberius]
+{
+	category_name = "1W_shopkeep";
+	doc = "collab_ss_Tiberius (weapons)";
+	specializes = base_npc_fb;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_banthorne;
+	}
+	[aspect]
+	{
+		use_range = 1.0;
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_27;
+			1 = b_c_pos_a1_036;
+		}
+	}
+	[common]
+	{
+		screen_name = "Tiberius";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = collab_ss_guard_boots;
+		}
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/8-84;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #shield/85-141;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #shield/142-172;
+					max = 6;
+					min = 6;
+				}
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/30-40;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #melee/41-65;
+					max = 14;
+					min = 14;
+				}
+				[all*]
+				{
+					il_main = #melee/66-79;
+					max = 6;
+					min = 6;
+				}
+
+				[all*]
+				{
+					il_main = #ranged/30-40;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #ranged/41-65;
+					max = 14;
+					min = 14;
+				}
+				[all*]
+				{
+					il_main = #ranged/66-79;
+					max = 6;
+					min = 6;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+	[ee_npc_indicator]
+	{
+		ind_custom_ID = 128;
+	}
+}
+
+[t:template,n:collab_ss_Aurelia]
+{
+	category_name = "1W_shopkeep";
+	doc = "collab_ss_Aurelia (potions and spells)";
+	specializes = base_npc_fg;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_phaedriel;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		model = m_c_gah_fg_pos_b1;
+		use_range = 1;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_25;
+			1 = b_c_pos_b1_004;
+		}
+	}
+	[common]
+	{
+		screen_name = "Healer Aurelia";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0.08;
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/10-28;
+					max = 40;
+					min = 40;
+				}
+				[all*]
+				{
+					il_main = #spell/0-9;
+					max = 10;
+					min = 10;
+				}
+			}
+			[misc]
+			{
+                [all*]
+				{
+					il_main = #spellbook/73-80;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 5;
+					min = 5;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			potion_health_small = 10;
+			potion_health_medium = 20;
+			potion_mana_small = 10;
+			potion_mana_medium = 20;
+			potion_rejuvenation_small = 2;
+			potion_rejuvenation_medium = 4;
+
+			scroll_resurrect = 10;
+            spell_resurrect = 10;
+            spell_revive = 10;
+            spell_healing_hands = 10;
+
+            spell_fireshot = 4;
+            spell_zap = 4;
+		}
+	}
+	[ee_npc_indicator]
+	{
+		ind_custom_ID = 108;
+	}
+}
+
+[t:template,n:collab_ss_seraphine]
+{
+	category_name = "1W_shopkeep";
+	doc = "collab_ss_seraphine (armor)";
+	specializes = base_npc_fg;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_si;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		is_ghost_usable = TRUE;
+		model = m_c_gah_fg_pos_a1;
+		use_range = 1;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_15;
+			1 = b_c_pos_a1_036;
+		}
+	}
+	[common]
+	{
+		screen_name = "Seraphine";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = collab_ss_guard_boots;
+		}
+		[store_pcontent]
+		{
+			full_ratio = 0.08;
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/60-172;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #body/60-84;
+					max = 7;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #body/85-141;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #body/142-172;
+					max = 5;
+					min = 5;
+				}
+
+
+				[all*]
+				{
+					il_main = #gloves/8-84;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #gloves/85-141;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #gloves/142-172;
+					max = 6;
+					min = 6;
+				}
+
+				[all*]
+				{
+					il_main = #helm/8-84;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #helm/85-141;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #helm/142-172;
+					max = 6;
+					min = 6;
+				}
+
+				[all*]
+				{
+					il_main = #boots/8-84;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #boots/85-141;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #boots/142-172;
+					max = 6;
+					min = 6;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+	[ee_npc_indicator]
+	{
+		ind_custom_ID = 127;
+	}
+}
+
+[t:template,n:collab_ss_Hunter]
+{
+	category_name = "1W_shopkeep";
+	doc = "collab_ss_Hunter";
+	specializes = base_npc_bk;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_shopkeep;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gbn_bk-04;
+		}
+	}
+	[common]
+	{
+		screen_name = "Hunter";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/91-222;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #body/91-121;
+					max = 7;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #body/122-185;
+					max = 17;
+					min = 17;
+				}
+				[all*]
+				{
+					il_main = #body/186-222;
+					max = 3;
+					min = 3;
+				}
+
+
+				[all*]
+				{
+					il_main = #gloves/12-121;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/122-185;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/186-222;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #helm/12-121;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/122-185;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/186-222;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #boots/12-121;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/122-185;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/186-222;
+					max = 4;
+					min = 4;
+				}
+			}
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/12-121;
+					max = 5;
+					min = 5;
+				}
+				[all*]
+				{
+					il_main = #shield/122-185;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #shield/186-222;
+					max = 4;
+					min = 4;
+				}
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/44-56;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #melee/57-85;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #melee/86-101;
+					max = 6;
+					min = 6;
+				}
+
+				[all*]
+				{
+					il_main = #ranged/44-56;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #ranged/57-85;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #ranged/86-101;
+					max = 6;
+					min = 6;
+				}
+			}
+
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/15-36;
+					max = 25;
+					min = 25;
+				}
+				[all*]
+				{
+					il_main = #spell/0-14;
+					max = 5;
+					min = 5;
+				}
+			}
+			[misc]
+			{
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 3;
+					min = 3;
+				}
+			}
+		}
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+
+		[item_restock]
+		{
+			potion_health_small = 6;
+			potion_health_medium = 8;
+			potion_health_large = 3;
+			potion_mana_small = 6;
+			potion_mana_medium = 8;
+			potion_mana_large = 3;
+			potion_rejuvenation_small = 2;
+			potion_rejuvenation_medium = 2;
+			potion_rejuvenation_large = 2;
+
+			scroll_resurrect = 2;
+            spell_resurrect = 2;
+            spell_revive = 2;
+            spell_healing_hands = 2;
+
+            spell_fireshot = 2;
+            spell_zap = 2;
+		}
+	}
+	[ee_npc_indicator]
+	{
+		ind_custom_ID = 128;
+	}
+}

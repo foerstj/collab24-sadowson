@@ -1,0 +1,200 @@
+[t:template,n:collab_ss_guard_chestplate]
+{
+	doc = "collab_ss_guard_chestplate";
+	specializes = base_body_armor_plate;
+	[common]
+	{
+	  b allow_modifiers = false;
+		screen_name = "collab_ss_guard_chestplate";
+		is_pcontent_allowed = false;
+	}
+	[defend]
+	{
+		armor_style = 013;
+		armor_type = a3;
+	  f defense = 100.000000;
+	}
+	[gui]
+	{
+		inventory_height = 3;
+		inventory_icon = b_gui_ig_i_a_pos_a3_013;
+		inventory_width = 2;
+	}
+}
+[t:template,n:collab_ss_guard_boots]
+{
+	doc = "collab_ss_guard_boots";
+	specializes = base_boot;
+	[common]
+	{
+	  b allow_modifiers = false;
+		screen_name = "collab_ss_guard_boots";
+		is_pcontent_allowed = false;
+	}
+	[defend]
+	{
+		armor_style = 018;
+		armor_type = type1;
+	  f defense = 6.000000;
+	}
+	[gui]
+	{
+		inventory_height = 2;
+		inventory_icon = b_gui_ig_i_a_boot_018;
+		inventory_width = 1;
+	}
+}
+[t:template,n:collab_ss_guard_gloves]
+{
+	doc = "collab_ss_guard_gloves";
+	specializes = base_glove;
+	[common]
+	{
+	  b allow_modifiers = false;
+		screen_name = "collab_ss_guard_gloves";
+		is_pcontent_allowed = false;
+	}
+	[defend]
+	{
+		armor_style = 024;
+		armor_type = type1;
+	  f defense = 9.000000;
+	}
+	[gui]
+	{
+		inventory_height = 2;
+		inventory_icon = b_gui_ig_i_a_gntl_024;
+		inventory_width = 1;
+	}
+}
+[t:template,n:collab_ss_guard_helmet]
+{
+	doc = "collab_ss_guard_helmet";
+	specializes = base_helm;
+	[common]
+	{
+	  b allow_modifiers = false;
+		screen_name = "collab_ss_guard_helmet";
+		is_pcontent_allowed = false;
+	}
+	[defend]
+	{
+		armor_style = 001;
+		armor_type = type1;
+	  f defense = 42.000000;
+	}
+	[gui]
+	{
+		equip_requirements = strength:44;
+		inventory_icon = b_gui_ig_i_a_hlmt_116;
+	}
+}
+
+[t:template,n:collab_ss_guard_shield]
+{
+	doc = "collab_ss_guard_shield";
+	specializes = base_shield;
+	[aspect]
+	{
+		model = m_a_shd_27;
+		[textures]
+		{
+			0 = b_a_shd_117;
+		}
+	}
+	[common]
+	{
+		screen_name = "collab_ss_guard_shield";
+		is_pcontent_allowed = false;
+	}
+	[defend]
+	{
+	  f defense = 51.000000;
+	}
+	[gui]
+	{
+		inventory_height = 3;
+		inventory_icon = b_gui_ig_i_a_shd_141;
+		inventory_width = 2;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_chance_to_block_melee_damage;
+				description = "35% Chance to Block Melee Attack";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 35;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_ranged_damage;
+				description = "35% Chance to Block Ranged Attack";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 20;
+			}
+		}
+	}
+}
+[t:template,n:collab_ss_guard_sword]
+{
+	doc = "collab_ss_guard_sword";
+	specializes = base_sword;
+	[aspect]
+	{
+		model = m_w_swd_014;
+	}
+	[attack]
+	{
+	  f damage_max = 40.000000;
+	  f damage_min = 30.000000;
+	}
+	[common]
+	{
+		screen_name = "collab_ss_guard_sword";
+		is_pcontent_allowed = false;
+	}
+	[gui]
+	{
+		inventory_height = 3;
+		inventory_icon = b_gui_ig_i_w_swd_014;
+		inventory_width = 1;
+	}
+}
+[t:template,n:collab_ss_guard_bow]
+{
+	doc = "collab_ss_guard_bow";
+	specializes = base_bow;
+	[aspect]
+	{
+		model = m_w_bow_025;
+	}
+	[attack]
+	{
+		attack_range = 15;
+	  f damage_max = 40.000000;
+	  f damage_min = 30.000000;
+		reload_delay = 0.3;
+	}
+	[common]
+	{
+	  b allow_modifiers = false;
+		screen_name = "collab_ss_guard_bow";
+		is_pcontent_allowed = false;
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_bow_002;
+		inventory_height = 4;
+		inventory_icon = b_gui_ig_i_w_bow_014;
+		inventory_width = 1;
+	}
+}

@@ -1,0 +1,686 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_mercenary_generator.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2024 Sadowson
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+// Reserved Tags
+property	bool	_server_only$			= true;
+property	string	_doc$					= "Generates a squad of mercenaries based off a grouped preset";
+property 	string	_required_component$	= "placement";
+
+			bool		initial_spawn_complete$	= false;
+			float		command_state$;
+
+// Exported Properties
+property	Scid	Initial_command$											doc = "SCID of Command Object if applicable";
+property	float	Spawn_Radius$				= 1.5							doc = "Radius around spawner that Mercenaries can spawn";
+property	bool	Pull_from_global_pool$		= true							doc = "Squads will spawn from a global list, removing them from the list per use";
+property	string	Global_Pool_Name$			= "collab_ss_mercenary_pool"	doc = "Name of global pool to pull from";
+
+			String	Squad_Leader$			= "NONE";
+			String	Member_1$				= "NONE";
+			String	Member_2$				= "NONE";
+			String	Member_3$				= "NONE";
+			String	Member_4$				= "NONE";
+			String	Member_5$				= "NONE";
+			String	Member_6$				= "NONE";
+			String	Member_7$				= "NONE";
+			
+			String Gender_Prefix_Male$		= "collab_ss_mercenary_male_";
+			String Gender_Prefix_Female$	= "collab_ss_mercenary_female_";
+			
+			String	Spawn_List$;
+			
+			int		BAL_Count$ 			= 10;
+			int		MELEE_Count$		= 4;
+			int		RANGED_Count$		= 4;
+			int		COMBAT_Count$		= 4;
+			int		NATURE_Count$		= 4;
+			int		KILL_Count$			= 4;
+			int		ARCHER_Count$		= 3;
+			int		BIGBAL_Count$		= 3;
+			int		TANK_Count$			= 3;
+			int		EXPLODE_Count$		= 3;
+			int		DRUID_Count$		= 3;
+			int		PATH_Count$			= 3;
+			int		ADVENT_Count$		= 3;
+			int		MAGE_Count$			= 3;
+			int		DARK_Count$			= 3;
+			
+			String	Gender_Chance$ = "M,M,M,M,M,M,F,F,F,F";	//Default is 60% male, 40% female.
+			
+			String Character_Return$;
+
+			owner = GoSkritComponent;
+			
+/*
+	Mercenaries spawn in varying different strength states based entirely on RNG.
+	
+	If pulling from the global list, then each type that is pulled from will be removed from the global list. If the list is empty then spawn nothing.
+	
+	If NOT pulling from the global list then it could potentially anything from the same master list, but withour respecting chances.
+	
+	Valid Group Types:
+	BAL		- Balanced team of four. Melee, Ranged, Combat Mage, Nature Mage.
+	MELEE	- Melee team of four.
+	RANGED	- Ranged team of four.
+	COMBAT	- Combat Magic team of four.
+	NATURE	- Nature Magic Team of Four.
+	KILL	- A team of eight. Four melee and Four combat magic.
+	ARCHER	- A team of eight archers.
+	BIGBAL	- Balanced team of eight. Two Melee, Ranged, Combat Mage, Nature Mage.
+	TANK	- Four Melee, Four Nature Mages.
+	EXPLODE	- Eight Combat Mages
+	DRUID	- Three Ranged, Three Nature Mage.
+	PATH	- Two Ranged	( Pathfinders )
+	ADVENT	- Two Melee		( Adventurers )
+	MAGE	- Three Nature Mage, Three Combat Mage.
+	DARK	- Two Melee, Two Ranged, Two Combat
+*/
+//////////////////////////////////////////////////////////////////////////////
+
+event OnGoDrawDebugHud$
+{
+	goid goid_1$ = Initial_Command$.goid;
+	
+	World.DrawDebugSphere( owner.Go.Placement.Position,
+							Spawn_Radius$,
+							MakeColor( 0.8, 0.0, 0.0 ),
+							"Spawn_Radius" );
+							
+	if( goid_1$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.Go.Placement.Position,
+										Initial_Command$.Go.Placement.Position,
+										MakeColor( 1.0, 1.0, 0.0 ),
+										"Initial_Command" );
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+void Character_Squad_Name$( string Class_Type$ )
+{
+	string Complete_Name$;
+	int Gender_Chance_length$ = ( StringTool.GetNumDelimitedValues( Gender_Chance$ ) - 1 );
+	string Gender_Type$ = StringTool.GetDelimitedString( Gender_Chance$, ( GoMath.RandomInt( 0, Gender_Chance_length$ ) ) );
+	
+	if( Gender_Type$ == "M" )
+	{
+		StringTool.Append( Complete_Name$, Gender_Prefix_Male$ );
+		StringTool.Append( Complete_Name$, Class_Type$ );
+		Character_Return$ = Complete_Name$;
+	}
+	else if( Gender_Type$ == "F" )
+	{
+		StringTool.Append( Complete_Name$, Gender_Prefix_Female$ );
+		StringTool.Append( Complete_Name$, Class_Type$ );
+		Character_Return$ = Complete_Name$;
+	}
+	else
+	{
+		Report.ErrorF( "collab_ss_mercenary_generator.skrit: WE DONE SCREWED UP! Can't find valid Gender for class!? Tried to run with type: %s \n", Gender_Type$ );
+	}
+}
+
+void BuildSquadList$( bool Global_list$ )
+{
+	if( Global_List$ == true )
+	{
+		//Pull details from the global list.
+		BAL_Count$ 		= GameAuditor.GetDb.GetInt( StringTool.Append( "BAL_Count_", 		Global_Pool_Name$ ) );
+		MELEE_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "MELEE_Count_", 		Global_Pool_Name$ ) );
+		RANGED_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "RANGED_Count_", 	Global_Pool_Name$ ) );
+		COMBAT_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "COMBAT_Count_", 	Global_Pool_Name$ ) );
+		NATURE_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "NATURE_Count_", 	Global_Pool_Name$ ) );
+		KILL_Count$		= GameAuditor.GetDb.GetInt( StringTool.Append( "KILL_Count_", 		Global_Pool_Name$ ) );
+		ARCHER_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "ARCHER_Count_", 	Global_Pool_Name$ ) );
+		BIGBAL_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "BIGBAL_Count_", 	Global_Pool_Name$ ) );
+		TANK_Count$		= GameAuditor.GetDb.GetInt( StringTool.Append( "TANK_Count_", 		Global_Pool_Name$ ) );
+		EXPLODE_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "EXPLODE_Count_",	Global_Pool_Name$ ) );
+		DRUID_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "DRUID_Count_", 		Global_Pool_Name$ ) );
+		PATH_Count$		= GameAuditor.GetDb.GetInt( StringTool.Append( "PATH_Count_", 		Global_Pool_Name$ ) );
+		ADVENT_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "ADVENT_Count_", 	Global_Pool_Name$ ) );
+		MAGE_Count$		= GameAuditor.GetDb.GetInt( StringTool.Append( "MAGE_Count_", 		Global_Pool_Name$ ) );
+		DARK_Count$		= GameAuditor.GetDb.GetInt( StringTool.Append( "DARK_Count_", 		Global_Pool_Name$ ) );
+		
+	}
+	else
+	{
+		//Build Local List
+	}
+	
+	/*
+		BUILD THE BIG MASTER LIST
+	*/
+	
+	int i$ = 0;
+	while( i$ < Bal_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "BAL," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < MELEE_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "MELEE," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < RANGED_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "RANGED," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < COMBAT_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "COMBAT," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < NATURE_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "NATURE," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < KILL_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "KILL," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < ARCHER_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "ARCHER," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < BIGBAL_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "BIGBAL," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < TANK_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "TANK," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < EXPLODE_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "EXPLODE," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < DRUID_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "DRUID," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < PATH_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "PATH," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < ADVENT_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "ADVENT," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < MAGE_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "MAGE," );
+		i$ += 1;
+	}
+	i$ = 0;
+	while( i$ < DARK_Count$ )
+	{
+		StringTool.Append( Spawn_List$, "DARK," );
+		i$ += 1;
+	}
+	i$ = 0;
+	
+	Report.GenericF( "collab_ss_mercenary_generator.skrit: Built a Master Spawn list to pull options from: %s \n", Spawn_List$ );
+}
+
+startup state Inactive$
+{
+	transition -> Active$: OnGoHandleMessage( WE_REQ_ACTIVATE );
+}
+
+state Active$
+{
+	transition -> cleanup$: OnTimer( 1 );
+	
+	event OnEnterState$
+	{
+		if( initial_spawn_complete$ == false )
+		{
+			this.CreateTimer( 1, 1 );
+			initial_spawn_complete$ = true;
+		}
+	}
+	event OnExitState$
+	{
+		String 	Squad_Pool$;
+		int 	Squad_Pool_Size$;
+		int 	Random_Selection$;
+		String 	Target_Squad_Type$;
+		Bool	Valid_Squad$ = false;
+		
+		if( Pull_from_global_pool$ )
+		{
+			//First check that the global database hasn't been created.
+			Squad_Pool$ = GameAuditor.Getdb.GetString( Global_Pool_Name$ );
+			
+			string Global_Pool_Check$ = ( StringTool.Append( "Check_", Global_Pool_Name$ ) );
+			if( GameAuditor.GetDb.GetBool( Global_Pool_Check$ ) != TRUE )
+			{
+				//The Squad Pool is empty, so we are going to have to build it and send it to the GameAuditor.
+				GameAuditor.GetDb.SetString( Global_Pool_Name$, Spawn_List$ );
+				Squad_Pool$ = Spawn_List$;
+				
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "BAL_Count_", 		Global_Pool_Name$ ) ), BAL_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "MELEE_Count_", 		Global_Pool_Name$ ) ), MELEE_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "RANGED_Count_", 	Global_Pool_Name$ ) ), RANGED_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "COMBAT_Count_", 	Global_Pool_Name$ ) ), COMBAT_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "NATURE_Count_", 	Global_Pool_Name$ ) ), NATURE_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "KILL_Count_", 		Global_Pool_Name$ ) ), KILL_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "ARCHER_Count_", 	Global_Pool_Name$ ) ), ARCHER_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "BIGBAL_Count_", 	Global_Pool_Name$ ) ), BIGBAL_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "TANK_Count_", 		Global_Pool_Name$ ) ), TANK_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "EXPLODE_Count_",	Global_Pool_Name$ ) ), EXPLODE_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "DRUID_Count_", 		Global_Pool_Name$ ) ), DRUID_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "PATH_Count_", 		Global_Pool_Name$ ) ), PATH_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "ADVENT_Count_", 	Global_Pool_Name$ ) ), ADVENT_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "MAGE_Count_", 		Global_Pool_Name$ ) ), MAGE_Count$ );
+				GameAuditor.GetDb.SetInt( ( StringTool.Append( "DARK_Count_", 		Global_Pool_Name$ ) ), DARK_Count$ );
+				
+			}
+			else
+			{
+				//Global Database was already created.
+				GameAuditor.GetDb.SetBool( Global_Pool_Check$, true );
+			}
+			
+			BuildSquadList$( true );
+			
+			Squad_Pool$ = Spawn_List$;
+			
+			Squad_Pool_Size$ = ( StringTool.GetNumDelimitedValues( Squad_Pool$ ) - 1 ); //Entry zero counts as an entry, so remove one.
+			Random_Selection$ = GoMath.RandomInt( 0, Squad_Pool_Size$ );
+			Target_Squad_Type$ = StringTool.GetDelimitedString( Squad_Pool$, Random_Selection$ );
+		}
+		else	//Not pulling from the global list, use local list only.
+		{
+			BuildSquadList$( false );
+			
+			Squad_Pool$ = Spawn_List$;
+			Squad_Pool_Size$ = ( StringTool.GetNumDelimitedValues( Squad_Pool$ ) - 1 ); //Entry zero counts as an entry, so remove one.
+			Random_Selection$ = GoMath.RandomInt( 0, Squad_Pool_Size$ );
+			Target_Squad_Type$ = StringTool.GetDelimitedString( Squad_Pool$, Random_Selection$ );
+		}
+		
+		/////////////////
+		//Target_Squad_Type$ = "COMBAT";
+		////////////////
+		
+		// Now build the squad from pre-defined types.
+		if( Target_Squad_Type$ != "NONE" )
+		{
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Target_Squad_Type$: %s \n", Target_Squad_Type$ );
+		}
+		else
+		{
+			Report.WarningF( "collab_ss_mercenary_generator.skrit: Target_Squad_Type$: %s is not a valid type so we can't execute! \n", Target_Squad_Type$ );
+			
+			Valid_Squad$ = false;
+		}
+		
+		if( Target_Squad_Type$ == "BAL" )
+		{
+			Squad_Leader$	= "MELEE";
+			Member_1$		= "RANGED";
+			Member_2$		= "COMBAT";
+			Member_3$		= "NATURE";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "BAL_Count_", 		Global_Pool_Name$ ) ), BAL_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "MELEE" )
+		{
+			Squad_Leader$	= "MELEE";
+			Member_1$		= "MELEE";
+			Member_2$		= "MELEE";
+			Member_3$		= "MELEE";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "MELEE_Count_", 		Global_Pool_Name$ ) ), MELEE_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "RANGED" )
+		{
+			Squad_Leader$	= "RANGED";
+			Member_1$		= "RANGED";
+			Member_2$		= "RANGED";
+			Member_3$		= "RANGED";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "RANGED_Count_", 	Global_Pool_Name$ ) ), RANGED_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "COMBAT" )
+		{
+			Squad_Leader$	= "COMBAT";
+			Member_1$		= "COMBAT";
+			Member_2$		= "COMBAT";
+			Member_3$		= "COMBAT";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "COMBAT_Count_", 	Global_Pool_Name$ ) ), COMBAT_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "NATURE" )
+		{
+			Squad_Leader$	= "NATURE";
+			Member_1$		= "NATURE";
+			Member_2$		= "NATURE";
+			Member_3$		= "NATURE";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "NATURE_Count_", 	Global_Pool_Name$ ) ), NATURE_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "KILL" )
+		{
+			Squad_Leader$	= "MELEE";
+			Member_1$		= "MELEE";
+			Member_2$		= "MELEE";
+			Member_3$		= "MELEE";
+			Member_4$		= "COMBAT";
+			Member_5$		= "COMBAT";
+			Member_6$		= "COMBAT";
+			Member_7$		= "COMBAT";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "KILL_Count_", 		Global_Pool_Name$ ) ), KILL_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "ARCHER" )
+		{
+			Squad_Leader$	= "RANGED";
+			Member_1$		= "RANGED";
+			Member_2$		= "RANGED";
+			Member_3$		= "RANGED";
+			Member_4$		= "RANGED";
+			Member_5$		= "RANGED";
+			Member_6$		= "RANGED";
+			Member_7$		= "RANGED";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "ARCHER_Count_", 	Global_Pool_Name$ ) ), ARCHER_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "BIGBAL" )
+		{
+			Squad_Leader$	= "MELEE";
+			Member_1$		= "MELEE";
+			Member_2$		= "RANGED";
+			Member_3$		= "RANGED";
+			Member_4$		= "COMBAT";
+			Member_5$		= "COMBAT";
+			Member_6$		= "NATURE";
+			Member_7$		= "NATURE";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "BIGBAL_Count_", 	Global_Pool_Name$ ) ), BIGBAL_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "TANK" )
+		{
+			Squad_Leader$	= "MELEE";
+			Member_1$		= "MELEE";
+			Member_2$		= "MELEE";
+			Member_3$		= "MELEE";
+			Member_4$		= "NATURE";
+			Member_5$		= "NATURE";
+			Member_6$		= "NATURE";
+			Member_7$		= "NATURE";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "TANK_Count_", 		Global_Pool_Name$ ) ), TANK_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "EXPLODE" )
+		{
+			Squad_Leader$	= "COMBAT";
+			Member_1$		= "COMBAT";
+			Member_2$		= "COMBAT";
+			Member_3$		= "COMBAT";
+			Member_4$		= "COMBAT";
+			Member_5$		= "COMBAT";
+			Member_6$		= "COMBAT";
+			Member_7$		= "COMBAT";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "EXPLODE_Count_",	Global_Pool_Name$ ) ), EXPLODE_Count$ - 1);
+		}
+		else if( Target_Squad_Type$ == "DRUID" )
+		{
+			Squad_Leader$	= "RANGED";
+			Member_1$		= "RANGED";
+			Member_2$		= "RANGED";
+			Member_3$		= "NATURE";
+			Member_4$		= "NATURE";
+			Member_5$		= "NATURE";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "DRUID_Count_", 		Global_Pool_Name$ ) ), DRUID_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "PATH" )
+		{
+			Squad_Leader$	= "RANGED";
+			Member_1$		= "RANGED";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "PATH_Count_", 		Global_Pool_Name$ ) ), PATH_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "ADVENT" )
+		{
+			Squad_Leader$	= "MELEE";
+			Member_1$		= "MELEE";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "ADVENT_Count_", 	Global_Pool_Name$ ) ), ADVENT_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "MAGE" )
+		{
+			Squad_Leader$	= "NATURE";
+			Member_1$		= "NATURE";
+			Member_2$		= "NATURE";
+			Member_3$		= "COMBAT";
+			Member_4$		= "COMBAT";
+			Member_5$		= "COMBAT";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "MAGE_Count_", 		Global_Pool_Name$ ) ), MAGE_Count$ - 1 );
+		}
+		else if( Target_Squad_Type$ == "DARK" )
+		{
+			Squad_Leader$	= "MELEE";
+			Member_1$		= "MELEE";
+			Member_2$		= "COMBAT";
+			Member_3$		= "COMBAT";
+			Member_4$		= "RANGED";
+			Member_5$		= "RANGED";
+			
+			Valid_Squad$ 	= true;
+			
+			GameAuditor.GetDb.SetInt( ( StringTool.Append( "DARK_Count_", 		Global_Pool_Name$ ) ), DARK_Count$ - 1 );
+		}
+		
+		
+		//Build Squad Class Names
+		
+		goid Squad_Leader_Goid$;
+		goid Member_1_Goid$;
+		goid Member_2_Goid$;
+		goid Member_3_Goid$;
+		goid Member_4_Goid$;
+		goid Member_5_Goid$;
+		goid Member_6_Goid$;
+		goid Member_7_Goid$;
+		
+		SiegePos Spawn_Position$;
+		
+		SiegePos Temp_Pos$;
+		
+		if( Squad_leader$ != "NONE" )
+		{
+			Character_Squad_Name$( Squad_leader$ );
+			Squad_Leader$ = Character_Return$;
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Squad Leader Type is: %s \n", Squad_Leader$ );
+			
+			GoCloneReq Squad_Leader_CloneReq$ = MakeGoCloneReq( owner.goid, Squad_leader$ );
+			
+			Squad_Leader_CloneReq$.StartingPos = owner.Go.Placement.Position;
+            Squad_Leader_CloneReq$.SetStartingOrient = owner.Go.Placement.Orientation;
+            Squad_Leader_CloneReq$.SnapToTerrain = true;
+            Squad_Leader_Goid$ = GoDb.SCloneGo( Squad_Leader_CloneReq$ );
+            AIQuery.FindSpotRelativeToSource( Squad_Leader_Goid$.Go, 0, spawn_radius$, 1, Squad_Leader_Goid$.Go.Mind.TempPos1 );
+            Squad_Leader_Goid$.Go.Placement.SSetposition( Squad_Leader_Goid$.Go.Mind.TempPos1, true );
+		}
+		if( Member_1$ != "NONE" )
+		{
+			Character_Squad_Name$( Member_1$ );
+			Member_1$ = Character_Return$;
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Member_1 Type is: %s \n", Member_1$ );
+			
+			GoCloneReq Member_1_CloneReq$ = MakeGoCloneReq( owner.goid, Member_1$ );
+			
+			Member_1_CloneReq$.StartingPos = owner.Go.Placement.Position;
+            Member_1_CloneReq$.SetStartingOrient = owner.Go.Placement.Orientation;
+            Member_1_CloneReq$.SnapToTerrain = true;
+            Member_1_Goid$ = GoDb.SCloneGo( Member_1_CloneReq$ );
+            AIQuery.FindSpotRelativeToSource( Member_1_Goid$.Go, 0, spawn_radius$, 1, Member_1_Goid$.Go.Mind.TempPos1 );
+            Member_1_Goid$.Go.Placement.SSetposition( Member_1_Goid$.Go.Mind.TempPos1, true );
+		}
+		if( Member_2$ != "NONE" )
+		{
+			Character_Squad_Name$( Member_2$ );
+			Member_2$ = Character_Return$;
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Member_2 Type is: %s \n", Member_2$ );
+			
+			GoCloneReq Member_2_CloneReq$ = MakeGoCloneReq( owner.goid, Member_2$ );
+			
+			Member_2_CloneReq$.StartingPos = owner.Go.Placement.Position;
+            Member_2_CloneReq$.SetStartingOrient = owner.Go.Placement.Orientation;
+            Member_2_CloneReq$.SnapToTerrain = true;
+            Member_2_Goid$ = GoDb.SCloneGo( Member_2_CloneReq$ );
+            AIQuery.FindSpotRelativeToSource( Member_2_Goid$.Go, 0, spawn_radius$, 1, Member_2_Goid$.Go.Mind.TempPos1 );
+            Member_2_Goid$.Go.Placement.SSetposition( Member_2_Goid$.Go.Mind.TempPos1, true );
+		}
+		if( Member_3$ != "NONE" )
+		{
+			Character_Squad_Name$( Member_3$ );
+			Member_3$ = Character_Return$;
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Member_3 Type is: %s \n", Member_3$ );
+			
+			GoCloneReq Member_3_CloneReq$ = MakeGoCloneReq( owner.goid, Member_3$ );
+			
+			Member_3_CloneReq$.StartingPos = owner.Go.Placement.Position;
+            Member_3_CloneReq$.SetStartingOrient = owner.Go.Placement.Orientation;
+            Member_3_CloneReq$.SnapToTerrain = true;
+            Member_3_Goid$ = GoDb.SCloneGo( Member_3_CloneReq$ );
+            AIQuery.FindSpotRelativeToSource( Member_3_Goid$.Go, 0, spawn_radius$, 1, Member_3_Goid$.Go.Mind.TempPos1 );
+            Member_3_Goid$.Go.Placement.SSetposition( Member_3_Goid$.Go.Mind.TempPos1, true );
+		}
+		if( Member_4$ != "NONE" )
+		{
+			Character_Squad_Name$( Member_4$ );
+			Member_4$ = Character_Return$;
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Member_4 Type is: %s \n", Member_4$ );
+			
+			GoCloneReq Member_4_CloneReq$ = MakeGoCloneReq( owner.goid, Member_4$ );
+			
+			Member_4_CloneReq$.StartingPos = owner.Go.Placement.Position;
+            Member_4_CloneReq$.SetStartingOrient = owner.Go.Placement.Orientation;
+            Member_4_CloneReq$.SnapToTerrain = true;
+            Member_4_Goid$ = GoDb.SCloneGo( Member_4_CloneReq$ );
+            AIQuery.FindSpotRelativeToSource( Member_4_Goid$.Go, 0, spawn_radius$, 1, Member_4_Goid$.Go.Mind.TempPos1 );
+            Member_4_Goid$.Go.Placement.SSetposition( Member_4_Goid$.Go.Mind.TempPos1, true );
+		}
+		if( Member_5$ != "NONE" )
+		{
+			Character_Squad_Name$( Member_5$ );
+			Member_5$ = Character_Return$;
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Member_5 Type is: %s \n", Member_5$ );
+			
+			GoCloneReq Member_5_CloneReq$ = MakeGoCloneReq( owner.goid, Member_5$ );
+			
+			Member_5_CloneReq$.StartingPos = owner.Go.Placement.Position;
+            Member_5_CloneReq$.SetStartingOrient = owner.Go.Placement.Orientation;
+            Member_5_CloneReq$.SnapToTerrain = true;
+            Member_5_Goid$ = GoDb.SCloneGo( Member_5_CloneReq$ );
+            AIQuery.FindSpotRelativeToSource( Member_5_Goid$.Go, 0, spawn_radius$, 1, Member_5_Goid$.Go.Mind.TempPos1 );
+            Member_5_Goid$.Go.Placement.SSetposition( Member_5_Goid$.Go.Mind.TempPos1, true );
+		}
+		if( Member_6$ != "NONE" )
+		{
+			Character_Squad_Name$( Member_6$ );
+			Member_6$ = Character_Return$;
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Member_1 Type is: %s \n", Member_6$ );
+			
+			GoCloneReq Member_6_CloneReq$ = MakeGoCloneReq( owner.goid, Member_6$ );
+			
+			Member_6_CloneReq$.StartingPos = owner.Go.Placement.Position;
+            Member_6_CloneReq$.SetStartingOrient = owner.Go.Placement.Orientation;
+            Member_6_CloneReq$.SnapToTerrain = true;
+            Member_6_Goid$ = GoDb.SCloneGo( Member_6_CloneReq$ );
+            AIQuery.FindSpotRelativeToSource( Member_6_Goid$.Go, 0, spawn_radius$, 1, Member_6_Goid$.Go.Mind.TempPos1 );
+            Member_6_Goid$.Go.Placement.SSetposition( Member_6_Goid$.Go.Mind.TempPos1, true );
+		}
+		if( Member_7$ != "NONE" )
+		{
+			Character_Squad_Name$( Member_7$ );
+			Member_7$ = Character_Return$;
+			Report.GenericF( "collab_ss_mercenary_generator.skrit: Member_7 Type is: %s \n", Member_7$ );
+			
+			GoCloneReq Member_7_CloneReq$ = MakeGoCloneReq( owner.goid, Member_7$ );
+			
+			Member_7_CloneReq$.StartingPos = owner.Go.Placement.Position;
+            Member_7_CloneReq$.SetStartingOrient = owner.Go.Placement.Orientation;
+            Member_7_CloneReq$.SnapToTerrain = true;
+            Member_7_Goid$ = GoDb.SCloneGo( Member_7_CloneReq$ );
+            AIQuery.FindSpotRelativeToSource( Member_7_Goid$.Go, 0, spawn_radius$, 1, Member_7_Goid$.Go.Mind.TempPos1 );
+            Member_7_Goid$.Go.Placement.SSetposition( Member_7_Goid$.Go.Mind.TempPos1, true );
+		}
+		if( valid_Squad$ == false )
+		{
+			Report.Error( "collab_ss_mercenary_generator.skrit: Something failed so we couldn't generate the squad at the valid_squad$ check" );
+		}
+	}
+}
+
+state cleanup$
+{
+
+}

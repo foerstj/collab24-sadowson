@@ -1,0 +1,106 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_bridge_guards_status.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2024 Sadowson
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool	_server_only$			= true;
+property string	_doc$					= "Sets the visibilty of the actors across the bridge";
+property string	_required_component$	= "placement";
+
+// exported properties
+
+property SCID	actor_one$					doc = "SCID of Actor_One$";
+property SCID	actor_two$					doc = "SCID of Actor_Two$";
+property SCID	actor_three$				doc = "SCID of Actor_Three$";
+
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+// Debug
+
+trigger OnGoDrawDebugHud$
+{
+	goid debug_one$ = actor_one$.Goid;
+	goid debug_two$ = actor_two$.Goid;
+	goid debug_three$ = actor_three$.Goid;
+	
+	if( debug_one$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.placement.position, 
+							debug_one$.go.placement.position, 
+							0xFFFFCC66, 
+							"Actor_One$", 
+							true );
+	}
+	if( debug_two$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.placement.position, 
+							debug_two$.go.placement.position, 
+							0xFFFFCC66, 
+							"Actor_Two$", 
+							true );
+	}
+	if( debug_three$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.placement.position, 
+							debug_three$.go.placement.position, 
+							0xFFFFCC66, 
+							"Actor_Three$", 
+							true );
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+startup state Startup$
+{
+	transition -> Execute$: OnGoHandleMessage( WE_ENTERED_WORLD );
+}
+
+state Execute$
+{
+	event OnEnterState$
+	{
+		//I don't know why but this was having a massive hernia in SE so I've OnlyGamed it
+		#only( game )
+		[[
+			//Check status of the quest
+			if( Victory.IsQuestCompleted( "quest_athena" ) )
+			{
+				//Quest is complete.
+				Actor_One$.go.Aspect.SSetIsVisible = true;
+				Actor_Two$.go.Aspect.SSetIsVisible = true;
+				Actor_Three$.go.Aspect.SSetIsVisible = true;
+				//The quest can only complete once, so self destruct after this is done.
+				SetState Shutdown$;
+			}
+			else
+			{
+				//Quest is NOT complete.
+				//Only activates in game to prevent the actors from going invisible in the editor FOR SOME REASON...
+					Actor_One$.go.Aspect.SSetIsVisible = false;
+					Actor_Two$.go.Aspect.SSetIsVisible = false;
+					Actor_Three$.go.Aspect.SSetIsVisible = false;
+			}
+		]]
+	}
+}
+
+state Shutdown$
+{
+	event OnEnterState$
+	{
+		//Optimisation. Deletes the goid after the quest has been completed and the actors set to be visible.
+		GoDb.SMarkForDeletion( owner.goid );
+	}
+}

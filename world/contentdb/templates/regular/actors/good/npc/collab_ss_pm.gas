@@ -1,0 +1,51 @@
+[t:template,n:collab_pm_nymeria]
+{
+	doc = "collab_pm_nymeria";
+	specializes = base_pm_fg;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_si;
+		[skills]
+		{
+			strength =   		2.16, 0, 10;
+			intelligence =  	0.72, 0, 10;
+			dexterity =   		5.12, 0, 10;
+            melee 	=  			8,0, 0;
+            ranged 	=  			1,0, 0;
+            nature_magic 	=  	1, 0, 0;
+            uber 			=  	8, 0, 0;
+
+		}
+		screen_class = "Scribe";
+	}
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a1;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_09;
+			1 = b_c_pos_a1_026;
+		}
+	}
+	[common]
+	{
+		screen_name = "Nymeria Dionisia";
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+            es_feet = bo_bo_le_f_g_c_avg;
+            es_chest = bd_sl_f_g_c_fun;
+		}
+        [other]
+        {
+            il_main = he_ca_le_avg;
+			il_main = collab_ss_nymeria_sword_strong;
+        }
+
+	}
+	[ee_npc_indicator]
+	{
+	}
+}

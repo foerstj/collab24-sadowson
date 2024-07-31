@@ -1,0 +1,199 @@
+[t:template,n:collab_ss_archivist_base]
+{
+	doc = "collab_ss_archivist_base";
+	specializes = npc;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_sk;
+	}
+	[aspect]
+	{
+		model = m_c_ecm_sk_pos_a0;
+		draw_selection_indicator = false;
+		[textures]
+		{
+			0 = b_c_ecm_sk-02;
+		}
+	}
+	[body]
+	{
+		armor_version = ecm_sk;
+		avg_move_velocity = 2.25;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = Bip01_Spine1;
+			body_posterior = bip01_pelvis;
+			kill_bone = Bip01_Spine1;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gan_sk_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					qffg = dff;
+				}
+		 	  	[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=mg;
+					00=mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					drnk = a_c_gan_sk_fs1_dk;
+					gtup = a_c_gan_sk_fs0_up;
+					frtd = a_c_gan_sk_fs0_dsf-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Archivist";
+    	auto_expiration_class = never;
+		forced_expiration_class = never;
+	}
+	[conversation]
+	{
+	}
+	[defend]
+	{
+		defense = 3;
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_1;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_m_g_c_005;
+			es_feet = bo_ra_bo_le_f_g_c_fin;
+			es_head = he_ca_ro_woven_03;
+			es_weapon_hand = st_g_c_dsx_cry_avg;
+			
+		}
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	
+}
+[t:template,n:collab_ss_archivist_death_valley]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_archivist_death_valley";
+	specializes = collab_ss_archivist_base;
+	[common]
+	{
+		screen_name = "???";
+	}
+}
+[t:template,n:collab_ss_archivist_crypt_entrance]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_archivist_crypt_entrance";
+	specializes = collab_ss_archivist_base;
+	[common]
+	{
+		screen_name = "???";
+	}
+}
+[t:template,n:collab_ss_archivist_crypt_library]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_archivist_crypt_library";
+	specializes = collab_ss_archivist_base;
+	[common]
+	{
+		screen_name = "???";
+	}
+	[collab_ss_archivist_name]
+	{
+	}
+}
+[t:template,n:collab_ss_archivist_crypt_end]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_archivist_crypt_end";
+	specializes = collab_ss_archivist_base;
+	[common]
+	{
+		screen_name = "???";
+	}
+	[collab_ss_archivist_name]
+	{
+	}
+}

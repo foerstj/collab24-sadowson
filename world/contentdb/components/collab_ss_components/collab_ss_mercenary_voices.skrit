@@ -1,0 +1,178 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_mercenary_voices.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2024 Sadowson
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+// Reserved Tags
+property	bool	_server_only$	= true;
+property	string	_doc$			= "Gives the NPC's varying different voices";
+
+property	string	voice_type$		= "NONE"	doc = "Uses voice types from DSLOA. Check skrit for valid types";
+
+			bool	btaskcomplete$	= false;
+					
+/*
+
+Valid Voice Types:
+*MALE*
+	ALGHER
+	JONDAR
+	KONUS
+	KRAAL
+	NAJJ
+	NARDULO
+	FARMBOY
+*FEMALE*
+	JHARMAYA
+	LYSSA
+	MHEAGAN
+	FARMGIRL
+	
+	
+***AI SENSORS***
+
+WE_ALERT_ENEMY_SPOTTED					= Sent to US from ALLY when ENEMY spotted
+WE_ENEMY_SPOTTED						= ENEMY enters OUR sight range.
+WE_ALERT_PROJECTILE_NEAR_MISSED			= ENEMY projectile missed US.
+WE_ENEMY_ENTERED_INNER_COMFORT_ZONE		= ENEMY in OUR inner comfort zone.
+WE_ENEMY_ENTERED_OUTER_COMFORT_ZONE		= ENEMY in OUR outer comfort zone.
+WE_ENGAGED_FLED							= ENEMY is fleeing US.
+WE_FRIEND_SPOTTED						= ALLY entered OUR sight range.
+WE_FRIEND_ENTERED_INNER_COMFORT_ZONE	= ALLY entered our inner comfort zone.
+WE_FRIEND_ENTERED_OUTER_COMFORT_ZONE	= ALLY entered our outer comfort zone.
+WE_MANA_RATIO_REACHED_LOW				= WE Mana is low.
+WE_LIFE_RATIO_REACHED_LOW				= WE Life is low.
+
+WE_KILLED								= WE DIED.
+*/
+
+			//MALE
+			string	ALGHER_die$ 			= "s_v_algher_die";
+			string	ALGHER_enemy_spotted$	= "";
+			string	ALGHER_attack$			= "";
+			
+			string	JONDAR_die$ 			= "s_v_jondar_die";
+			string	JONDAR_enemy_spotted$	= "";
+			string	JONDAR_attack$			= "";
+			
+			string	KONUS_die$ 				= "s_v_konus_die";
+			string	KONUS_enemy_spotted$	= "";
+			string	KONUS_attack$			= "";
+			
+			string	KRAAL_die$ 				= "s_v_kraal_die";
+			string	KRAAL_enemy_spotted$	= "";
+			string	KRAAL_attack$			= "";
+			
+			string	NAJJ_die$ 				= "s_v_najj_die";
+			string	NAJJ_enemy_spotted$		= "";
+			string	NAJJ_attack$			= "";
+			
+			string	NARDULO_die$ 			= "s_v_nardulo_die";
+			string	NARDULO_enemy_spotted$	= "";
+			string	NARDULO_attack$			= "";
+			
+			string	FARMBOY_die$ 			= "s_e_die_male";
+			string	FARMBOY_enemy_spotted$	= "";
+			string	FARMBOY_attack$			= "";
+			
+			//FEMALE
+			
+			string	JHARMAYA_die$ 			= "s_v_jharmaya_die";
+			string	JHARMAYA_enemy_spotted$	= "";
+			string	JHARMAYA_attack$		= "";
+			
+			string	LYSSA_die$ 				= "s_v_lyssa_die";
+			string	LYSSA_enemy_spotted$	= "";
+			string	LYSSA_attack$			= "";
+			
+			string	MHEAGAN_die$ 			= "s_v_mheagan_die";
+			string	MHEAGAN_enemy_spotted$	= "";
+			string	MHEAGAN_attack$			= "";
+			
+			string	FARMGIRL_die$ 			= "s_e_die_female";
+			string	FARMGIRL_enemy_spotted$	= "";
+			string	FARMGIRL_attack$		= "";
+			
+			string	Voice_Types_Male$		= "ALGHER,JONDAR,KONUS,KRAAL,NAJJ,NARDULO,FARMBOY";
+			string	Voice_Types_Female$		= "JHARMAYA,LYSSA,MHEAGAN,FARMGIRL";
+			
+			//Applied Voice type
+			
+			string	VA_DIE$;
+			string	VA_ENEMY_SPOTTED$;
+			string	VA_ATTACK$;
+				
+
+owner	= GoSkritComponent;
+//////////////////////////////////////////////////////////////////////////////
+
+void PlayVoiceRandomList$( string VoiceList$ )
+{
+}
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+{
+	if( e$ == WE_ENTERED_WORLD )
+	{
+		if( voice_type$ == "NONE" )
+		{
+			if( btaskcomplete$ == FALSE )
+			{
+				btaskcomplete$ = TRUE;
+				
+				int List_Voice_Type_Length$;
+				int Rand_Voice$;
+				string Selected_Voice$;
+				
+				if( owner.Go.Actor.IsMale == true )
+				{
+					//Set a Male Voice Type.
+					List_Voice_Type_Length$ = StringTool.GetNumDelimitedValues( Voice_Types_Male$ ) - 1;
+					Rand_Voice$ 			= GoMath.RandomInt( 0, List_Voice_Type_Length$ );
+					Selected_Voice$			= StringTool.GetDelimitedString( VA_ENEMY_SPOTTED$, Rand_Voice$ );
+				}
+				else
+				{
+					// Set a Female Voice Type.
+					List_Voice_Type_Length$ = StringTool.GetNumDelimitedValues( Voice_Types_Female$ ) - 1;
+					Rand_Voice$ 			= GoMath.RandomInt( 0, List_Voice_Type_Length$ );
+					Selected_Voice$ 		= StringTool.GetDelimitedString( VA_ENEMY_SPOTTED$, Rand_Voice$ );
+				}
+				
+				VA_DIE$ 			= StringTool.Append( Selected_Voice$, "_die" );
+				VA_ENEMY_SPOTTED$ 	= StringTool.Append( Selected_Voice$, "_enemy_spotted" );
+				VA_ATTACK$			= StringTool.Append( Selected_Voice$, "_attack" );
+				
+				voice_type$ = Selected_Voice$;
+			}
+		}
+		
+	}
+	
+	if( e$ == WE_ENEMY_SPOTTED )
+	{
+		int List_Voice_Type_Length$;
+		int Rand_Voice$;
+		string	Selected_Voice$;
+		
+		List_Voice_Type_Length$ = StringTool.GetNumDelimitedValues( VA_ENEMY_SPOTTED$ ) - 1;
+		Rand_Voice$				= GoMath.RandomInt( 0, List_Voice_Type_Length$ );
+		Selected_Voice$			= StringTool.GetDelimitedString( VA_ENEMY_SPOTTED$, Rand_Voice$ );
+		if( Selected_Voice$ != "" )
+		{
+			owner.Go.PlayVoiceSound( Selected_Voice$, 6.0, 35.0, false );
+		}
+	}
+	
+	if( e$ == WE_KILLED )
+	{
+		
+	}
+	
+}

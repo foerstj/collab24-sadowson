@@ -1,0 +1,95 @@
+[t:template,n:colab_ss_starting-exp]
+{
+	specializes	= command;
+	doc			= "colab_ss_starting-exp";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_blue;
+	}
+	
+	[colab_ss_starting-exp]
+	{
+	}
+}
+[t:template,n:collab_ss_bridge_guards_status]
+{
+	specializes	= command;
+	doc			= "collab_ss_bridge_guards_status";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_blue;
+	}
+	
+	[collab_ss_bridge_guards_status]
+	{
+	}
+}
+[t:template,n:collab_ss_elevator_spider-dungeon]
+{
+	specializes	= command;
+	doc			= "collab_ss_elevator_spider-dungeon";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_blue;
+	}
+	
+	[collab_ss_elevator_spider-dungeon]
+	{
+	}
+}
+[t:template,n:collab_ss_ruins_combo_lock]
+{
+	specializes	= command;
+	doc			= "collab_ss_ruins_combo_lock";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_blue;
+	}
+	
+	[collab_ss_ruins_combo_lock]
+	{
+	}
+}
+[t:template,n:collab_ss_warding_crystal_placement]
+{
+	specializes	= command;
+	doc			= "collab_ss_warding_crystal_placement";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_blue;
+	}
+	
+	[collab_ss_warding_crystal_placement]
+	{
+	}
+}
+[t:template,n:collab_ss_mercenary_generator]
+{
+	specializes	= command;
+	doc			= "collab_ss_mercenary_generator";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_red;
+	}
+	[collab_ss_mercenary_generator]
+	{
+	}
+}

@@ -1,0 +1,469 @@
+[t:template,n:collab_ss_3_highway_kikclaw]
+{
+	category_name = "ss_3_highway_enemies";
+	doc = "kikclaw";
+	specializes = kikclaw_base;
+	
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 	=  15, 0;
+			intelligence   	=  8, 0;
+			dexterity 	 	=  10, 0;
+			melee 	 		=  13, 0;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 82;
+		damage_min = 74;
+	}
+	[defend]
+	{
+		defense = 140;
+	}
+	[aspect] 
+	{
+		experience_value = 520;
+		life = 337;
+		max_life = 337;
+		mana = 10;
+		max_mana = 10;
+		model = m_c_edm_kc_pos_1; 
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_kikclaw;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_kikclaw_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_kikclaw_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_kikclaw_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_kikclaw_SED;  }
+		}	
+		scale_base	= 0.7;
+	}
+	[common]
+	{
+		screen_name = "Skitterclaw";
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+}
+
+[t:template,n:collab_ss_3_highway_kikclaw_baby]
+{
+	category_name = "ss_3_highway_enemies";
+	doc = "kikclaw_baby";
+	specializes = kikclaw_base;
+	
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 	=  15, 0;
+			intelligence   	=  8, 0;
+			dexterity 	 	=  10, 0;
+			melee 	 		=  13, 0;
+		}
+	}
+	[aspect] 
+	{
+		textures: 0 = b_c_edm_klik-2;
+		scale_base	= 0.4;
+		
+		experience_value = 348;
+		life 			= 173;
+		max_life 		= 173;
+		mana 			= 10;
+		max_mana 		= 10;
+		
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_kikclaw_baby;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_kikclaw_baby_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_kikclaw__baby_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_kikclaw_baby_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_kikclaw_baby_SED;  }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 73;
+		damage_min = 67;
+	}
+	[body]
+	{
+		avg_move_velocity = 5.00000;
+	}
+	[common] 
+	{ 
+		screen_name = "Skitterling";
+	}
+	[defend]
+	{
+		defense = 101;
+	}
+	[mind]  
+	{  
+		jat_fidget                              = world\ai\jobs\common\job_fidget.skrit  
+		?social                                   = 0.5  
+		&delay_min                              = 4.0  
+		&delay_max                              = 10.0  
+		&still                                   = false;  
+	}
+}
+
+[t:template,n:collab_ss_3_highway_mhulliq_one]
+{
+	category_name = "ss_3_highway_enemies";
+	doc = "mhulliq";
+	specializes = dsx_mhulliq_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     9, 0;
+			intelligence = 7, 0;
+			dexterity =    8, 0;
+			melee =        4, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 59;
+		life             = 88;
+		max_life         = 88;
+		mana             = 12;
+		max_mana         = 12;
+		textures:0 = b_c_edm_hb-03;
+		material = flesh;
+		[voice]
+		{
+			[die]			{ priority = high;	* = s_e_die_mhulliq_SED;		}
+			[enemy_spotted]	{ priority = high;  * = s_e_call_mhulliq_SED; }
+			[hit_critical]	{ priority = low;	* = s_e_hit_mhulliq_SED;		}
+			[hit_glance]	{ priority = low;	* = s_e_hit_mhulliq_SED;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_mhulliq_SED;		}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 70;
+		damage_min = 60;
+	}
+	[body]
+	{
+		avg_move_velocity = 5;
+	}
+	[common]
+	{
+		screen_name = "Mhulliq"; 
+		membership = monster;
+	}
+	[defend]
+	{
+		defense = 29;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+[t:template,n:collab_ss_3_highway_mhulliq_boss]
+{
+	category_name = "ss_3_highway_enemies";
+	doc = "mhulliq_boss";
+	specializes = dsx_mhulliq_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     14, 0;
+			intelligence  = 9, 0;
+			dexterity =    11, 0;
+			melee =        12, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 238;
+		life             = 156;
+		max_life         = 156;
+		mana             = 12;
+		max_mana         = 12;
+		textures:0 = b_c_edm_hb-04;
+		material = flesh;
+		[voice]
+		{
+			[die]			{ priority = high;	* = s_e_die_mhulliq_SED;		}
+			[enemy_spotted]	{ priority = high;  * = s_e_call_mhulliq_SED; }
+			[hit_critical]	{ priority = low;	* = s_e_hit_mhulliq_SED;		}
+			[hit_glance]	{ priority = low;	* = s_e_hit_mhulliq_SED;		}
+			[hit_solid]		{ priority = low;	* = s_e_hit_mhulliq_SED;		}
+		}	
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 55;
+		damage_min = 45;
+	}
+	[body]
+	{
+		avg_move_velocity = 4;
+	}
+	[common]
+	{
+		screen_name = "Rending Mhulliq"; 
+		membership = monster;
+	}
+	[defend]
+	{
+		defense = 95;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;	
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+[t:template,n:collab_ss_3_highway_braak]
+{
+	category_name = "ss_3_highway_enemies";
+	doc = "Plains_braak";
+	specializes = base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	9, 0;
+			dexterity =  	11, 0;
+			intelligence =  12, 0;
+            ranged =  		8,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 113;
+		life = 189;
+        max_life = 189;
+		mana = 10;
+		max_mana = 10;
+		[textures]
+		{
+			0 = b_c_ecm_bk-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 42;
+		damage_min = 38;
+	}
+	[body]
+	{
+		max_move_velocity = 7.0;
+	}
+	[common]
+	{
+		screen_name = "Plains Braak" ;
+		membership = party_braak_desert_boss, monster;
+	}
+	[defend]
+	{
+		defense = 52;
+	}
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_braak_boulder; }
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/8-14;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 196;
+					min = 131;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+}
+
+[t:template,n:collab_ss_3_highway_braak_boss]
+{
+	category_name = "ss_3_highway_enemies";
+	doc = "Plains_Braak_boss";
+	specializes = base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 10, 0;
+			intelligence	= 11, 0;
+			dexterity		= 13, 0;
+            ranged			= 10, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 180;
+		life = 279;
+        max_life = 279;
+		mana = 10;
+		max_mana = 10;
+		[textures]
+		{
+			0 = b_c_ecm_bk-04;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 48;
+		damage_min = 42;
+	}
+	[body]
+	{
+		max_move_velocity = 7.0;
+	}
+	[common]
+	{
+		screen_name="Ferocious Braak";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 88;
+	}
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell=spell_braak_boulder;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/130-150;
+					il_main = #armor/367-420;
+                }
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/149-163;
+	                il_main = #armor/-rare(1)/422-434;
+                    il_main = #*/-rare(1)/149-163;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/149-163;
+	                il_main = #armor/-unique(2)/422-434;
+                    il_main = #*/-unique(2)/149-163;
+	            }
+				[gold*]
+				{
+					max = 35123;
+					min = 29890;
+					min_pile = 3050;
+					piles = 4 - 6;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.7
+			&friend_template 	= false
+			&friends			= party_braak_desert_boss
+			&still				= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_braak_desert_boss";
+
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+}

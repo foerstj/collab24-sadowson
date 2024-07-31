@@ -1,0 +1,23 @@
+[t:template,n:collab_ss_grate_wall-spider]
+{
+	specializes		= generator_base_grate_wall;
+	doc 			= "collab_ss_grate_wall-spider";
+
+    [generator_advanced_a2]
+	{
+        Child_Template_Name = collab_ss_spider_stalagnid;
+	}
+
+}
+
+[t:template,n:collab_ss_grate_floor-spider]
+{
+	specializes		= generator_base_grate_floor;
+	doc 			= "collab_ss_grate_floor-spider";
+
+    [generator_advanced_a2]
+	{
+        Child_Template_Name = collab_ss_spider_stalagnid;
+	}
+
+}

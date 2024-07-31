@@ -1,0 +1,42 @@
+[effect_script*]
+{
+	name	=collab_ss_brazier_fire;
+
+	script	=[[
+			if ( #LODFI > 0.5 )
+			{
+				sfx create fire #TARGET 
+					"flamesize(2)offset(0,.4,-.1)dark()grey_tex()color0(0,0,0)color1(0,0,0)
+					instant()scale(.525)min_count(10)count(20)
+					";
+				sfx start #POP;
+			}
+			
+            sfx create fire #TARGET 
+	            "instant()scale(.725)offset(0,0,-.1)min_count(10)count(20)velocity(0,7,0)accel(0,7,0)
+	            texture(b_sfx_fireball-01)flamesize(.5)color0(.75,.35,.24)
+	            color1(.2,0,0)max_radius(1.45)";
+			sfx start #POP;
+			]];
+}
+[effect_script*]
+{
+	name	=collab_ss_brazier_fire_blue;
+
+	script	=[[
+			if ( #LODFI > 0.5 )
+			{
+				sfx create fire #TARGET 
+					"flamesize(2)offset(0,.4,-.1)dark()grey_tex()color0(0,0,0)color1(0,0,0)
+					instant()scale(.525)min_count(10)count(20)
+					";
+				sfx start #POP;
+			}
+			
+            sfx create fire #TARGET 
+	            "instant()scale(.725)offset(0,0,-.1)min_count(10)count(20)velocity(0,7,0)accel(0,7,0)
+	            texture(b_sfx_fireball-01)flamesize(.5)color0(0,.1,1)
+	            color1(0,0,0.2)max_radius(1.45)";
+			sfx start #POP;
+			]];
+}

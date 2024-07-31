@@ -1,0 +1,223 @@
+/*
+  ============================================================================
+  ----------------------------------------------------------------------------
+
+	File		: 	job_talk_ss_athena.skrit
+
+	Author(s)	: 	Sadowson
+
+	Purpose		: 	Generic script that checks the completion of a quest.
+
+	(C)opyright 2024 Sadowson.
+
+  ----------------------------------------------------------------------------
+  ============================================================================
+*/
+
+Go			m_Go$;
+GoMind		m_Mind$;
+GoBody  	m_Body$;
+Job			m_Job$;
+Goid		m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+startup state STARTUP$
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	init
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Face$;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	face the audience
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{
+		if( !m_Go$.HasConversation )
+		{
+			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
+							m_Go$.GetTemplateName,
+							m_Go$.Goid );
+			SetState Exiting$;
+		}
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	blab blab away... pretend you're Lee
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+
+		string conversation_block$;
+		string quest_name$ = "quest_warding_crystal";
+		
+		//conversation_athena_hello								- When you first meet her, activate athena_bridge
+		//conversation_athena_bridge							- Activated by HELLO, activate athena_undead
+		//conversation_athena_undead							- Activated by BRIDGE, activate athena_short OR athena_long
+		
+		//conversation_athena_long								- Activated by UNDEAD, activate quests.
+		//conversation_athena_short								- Activated by UNDEAD, activate quests.
+		
+		//conversation_athena_idle								- Activated by quests, idle status.
+		
+		//conversation_athena_complete							- Activated by end of quest, activates athena_reward
+		//conversation_athena_reward							- Activated by athena_reward. Moves to idle_complete.
+		
+		//conversation_athena_idle_complete						- Activated after quest is complete and reward is given, idle status.
+		//conversation_athena_idle_complete_secret-option		- Activated after quest is complete and reward is given, idle status. Activates athena_know
+		//conversation_athena_know								- Activated by athena_know, self-idles
+		
+		
+		//Part One, say hello because nothing else is valid yet.
+		conversation_block$ = "conversation_athena_hello";
+		
+		
+		if( GameAuditor.GetDb.GetBool( "athena_bridge" ) )
+		{
+			conversation_block$ = "conversation_athena_bridge";
+			
+			if( GameAuditor.GetDb.GetBool( "athena_undead" ) )
+			{
+				conversation_block$ = "conversation_athena_undead";
+			}
+		}
+		
+		//Determine if we're talking about a long or short explanation for what to do...
+		//This actually determines to the player if we're doing long or short dialog for the rest of the quests so set the global variable.
+		//Technically we don't need to declare a false bool but it's a safety catch here.
+		if( GameAuditor.GetDb.GetBool( "athena_short" ) )
+		{
+			conversation_block$ = "conversation_athena_short";
+			GameAuditor.GetDb.SetBool( "collab_ss_dialog_short", true );
+			GameAuditor.GetDb.SetBool( "collab_ss_dialog_long", false );
+			
+			//Kill old variables as a safety net
+			GameAuditor.GetDb.SetBool( "athena_undead", false );
+			GameAuditor.GetDb.SetBool( "athena_bridge", false );
+		}
+		else if( GameAuditor.GetDb.GetBool( "athena_long" ) )
+		{
+			conversation_block$ = "conversation_athena_long";
+			GameAuditor.GetDb.SetBool( "collab_ss_dialog_short", false );
+			GameAuditor.GetDb.SetBool( "collab_ss_dialog_long", true );
+			GameAuditor.GetDb.SetBool( "secret_quest_active", true );
+			
+			//Kill old variables as a safety net
+			GameAuditor.GetDb.SetBool( "athena_undead", false );
+			GameAuditor.GetDb.SetBool( "athena_bridge", false );
+		}
+		
+		//The dialog is done and the quest is activated so switch to idle dialog.
+		//Else show the completion dialog, returning to Lady Athena is required to complete step 4.
+		if( Victory.IsQuestActive( quest_name$ ) )
+		{
+			conversation_block$ = "conversation_athena_idle";
+			
+			if( Victory.GetQuestOrder( quest_name$ ) == 4 )
+			{
+				conversation_block$ = "conversation_athena_complete";
+			}
+			//Kill old variables as a safety net
+			GameAuditor.GetDb.SetBool( "conversation_athena_long", false );
+			GameAuditor.GetDb.SetBool( "conversation_athena_short", false );
+		}
+		
+		//Athena gifts reward to player.
+		if( GameAuditor.GetDb.GetBool( "athena_reward" ) )
+		{
+			conversation_block$ = "conversation_athena_reward";
+			//Kill old variables as a safety net
+			GameAuditor.GetDb.SetBool( "athena_reward", false );
+		}
+		
+		//Athena reverts to a completed idle conversation which can only be overwritten by the "I know" secret ending.
+		//The secret ending becomes the last default if selected.
+		if( Victory.IsQuestCompleted( quest_name$ ) )
+		{
+			if( GameAuditor.GetDb.GetBool( "Athena_secret_known" ) )
+			{
+				conversation_block$ = "conversation_athena_idle_complete_secret-option";
+				if( GameAuditor.GetDb.GetBool( "Athena_know" ) )
+				{
+					conversation_block$ = "conversation_athena_know";
+				}
+			}
+			else
+			{
+				//Secret ending was not unlocked, so give generic response.
+				conversation_block$ = "conversation_athena_idle_complete";
+			}
+		}
+		
+		//Use Conversation
+		m_go$.GetConversation.RSSelectConversation( conversation_block$ );
+		TryAnim$('talk');
+		
+		//Start talking
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	finish blabbing
+state Exiting$
+{
+	event OnEnterState$
+	{
+		// $$$ close up any dialogs here...
+
+		// Send a PL_FACE reguest without a target so that they no longer
+		// continue to face the character they were talking to
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+
+		m_Job$.MarkForDeletion();
+	}
+}
+
+

@@ -1,0 +1,48 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_archivist_name.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2022 SadowSon
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+//////////////////////////////////////////////////////////////////////////////
+
+property	bool	_server_only$	= true;
+property	string	_doc$			= "Changes the Archivists Name at the end of his quest.";
+
+//////////////////////////////////////////////////////////////////////////////
+property	string	bool_variable$	= "archivist_name"	doc = "Name of bool to check before changing Archivist Name";
+
+			owner	= GoSkritComponent;
+			
+//////////////////////////////////////////////////////////////////////////////
+
+startup State Startup$
+{
+	transition -> waiting$: OnGoHandleMessage( WE_ENTERED_WORLD );
+}
+
+state waiting$
+{
+	event OnEnterState$
+	{
+		if( GameAuditor.GetDb.GetBool( bool_variable$ ) )
+		{
+			owner.go.common.SSetScreenName( "Archivist" );
+		}
+	}
+	
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+		{
+			if( GameAuditor.GetDb.GetBool( bool_variable$ ) )
+			{
+				owner.go.common.SSetScreenName( "Archivist" );
+			}
+		}
+	}
+}

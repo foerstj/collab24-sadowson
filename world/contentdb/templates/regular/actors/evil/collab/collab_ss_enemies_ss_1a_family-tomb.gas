@@ -1,0 +1,154 @@
+[t:template,n:collab_ss_1a_family-tomb_skeleton_archer]
+{
+	category_name = "ss_1a_family-tomb_enemies";
+	doc = "skeleton_archer";
+	specializes = base_skeleton;
+	[aspect]
+	{
+		experience_value = 33;
+		life = 27;
+		max_life = 27;
+		mana = 2;
+		max_mana = 2;
+	}
+	[attack]
+	{
+		damage_max = 11;
+		damage_min = 9;
+	}
+	[common]
+	{
+		screen_name = "Skeleton Archer";
+	}
+	[defend]
+	{
+		defense = 28;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+
+   		[pcontent]
+		{
+       		[oneof*]
+			{
+				es_shield_hand = bw_g_c_s_s_r_avg;
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+       				chance = 0.03;
+            	    il_main = #spell/4-7;
+				}
+				[oneof*]
+				{
+					chance = 0.30;
+					il_main = #weapon/14-18;
+					il_main = #*/14-18;
+					il_main = #armor/8-41;
+    			    il_main = potion_health_small;
+				    il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+    			    il_main = potion_health_small;
+				    il_main = potion_mana_small;
+				}
+				[gold*]
+				{
+					chance = 0.1;
+					max = 25;
+					min = 13;
+				}
+			}
+		}
+	}
+
+	[mind]
+	{
+		melee_engage_range = 10.0;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.5
+			&meander						= false
+			&still							= false;
+	}
+
+}
+[t:template,n:collab_ss_1a_family-tomb_skeleton_guard]
+{
+	category_name = "ss_1a_family-tomb_enemies";
+	doc = "Skeleton guard";
+	specializes = base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  14, 0;
+			intelligence =  2, 0;
+			dexterity =  6, 0;
+			melee =  3,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 20;
+		life = 28;
+		max_life = 28;
+		mana = 4;
+		max_mana = 4;
+		model = m_c_ecm_sk_pos_2;
+	}
+	[attack]
+	{
+		damage_max = 10;
+		damage_min = 8;
+	}
+	[common]
+	{
+		screen_name = "Skeleton Guard";
+		membership = skeleton, monster;
+	}
+	[defend]
+	{
+		defense=37;
+	}
+	[inventory]
+	{
+		[pcontent]
+        {
+			[oneof*] { es_shield_hand = sh_m_g_c_r_s_avg; }
+            [oneof*] { es_weapon_hand = ax_d_c_1h1b_avg; }
+
+			[oneof*]
+			{
+				[all*]
+				{
+       				chance = 0.03;
+            	    il_main = #spell/2-4;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = #weapon/10-14;
+					il_main = #armor/5-29;
+				}
+				[gold*]
+				{
+					chance = 0.2;
+					max = 38;
+					min = 20;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+		jat_fidget					= world\ai\jobs\common\job_fidget.skrit;
+	}
+}

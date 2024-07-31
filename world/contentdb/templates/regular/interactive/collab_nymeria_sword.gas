@@ -1,0 +1,93 @@
+[t:template,n:collab_ss_nymeria_sword_weak]
+{
+	doc = "collab_ss_nymeria_sword_weak";
+	specializes = dsx_base_sword;
+	[aspect]
+	{
+		model = m_w_swd_blkstel;
+	}
+	[attack]
+	{
+      f damage_max = 40.0;
+      f damage_min = 30.0;
+		is_two_handed = false;
+    }
+	[common]
+    {
+		screen_name = "Nymeria's Heraldric Sword (Inert)";
+		is_pcontent_allowed = false;
+    }
+	[collab_ss_nymeria_sword_check]
+	{
+	}
+	[gui]
+    {
+		active_icon = b_gui_ig_i_ic_swd_007; //PLACEHOLDER
+		inventory_icon = b_gui_ig_i_w_swd_300;
+		equip_requirements = strength:15;
+		inventory_height = 4;
+		inventory_width = 1;
+		tooltip_color	= "magic";
+	}
+	
+}
+[t:template,n:collab_ss_nymeria_sword_strong]
+{
+	doc = "collab_ss_nymeria_sword_strong";
+	specializes = dsx_base_sword;
+	[aspect]
+	{
+		model = m_w_swd_blkstel;
+	}
+	[attack]
+	{
+      f damage_max = 60.0;
+      f damage_min = 40.0;
+		is_two_handed = false;
+    }
+	[common]
+    {
+		screen_name = "Nymeria's Heraldric Sword";
+		is_pcontent_allowed = false;
+    }
+	[collab_ss_nymeria_sword_check]
+	{
+	}
+	[gui]
+    {
+		active_icon = b_gui_ig_i_ic_swd_007; //PLACEHOLDER
+		inventory_icon = b_gui_ig_i_w_swd_300;
+		inventory_height = 4;
+		inventory_width = 1;
+		tooltip_color	= "unique";
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life_steal;
+				value		= 25;
+				description = "25 health stolen per hit.";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 35;
+			}
+			[*]
+			{
+				alteration = alter_custom_damage_melee;
+				value		= 5;
+				max_value	= 10;
+				description = "Burns enemies for 5 to 10 fire damage.";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 35;
+				effect_script_equip	= dam_fire_7_re;
+				effect_script_hit	= fire_weapon;
+			}
+		}
+	}
+}

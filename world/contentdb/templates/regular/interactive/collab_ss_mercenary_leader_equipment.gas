@@ -1,0 +1,122 @@
+[t:template,n:collab_ss_mercenary_leader_bardiche]	//Version used by the Mercenary Leader. Not droppable.
+{
+	doc = "collab_ss_mercenary_leader_bardiche";
+	specializes = dsx_base_polearm_axe;
+	[aspect]
+	{
+		model = m_w_stf_312;
+		selection_indicator_scale = 0.65;
+		is_visible 		= false;
+		is_selectable 	= false;
+	}
+	[attack]
+	{
+		attack_range = 1.0;
+		f damage_max = 91.0;
+		f damage_min = 80.0;
+		is_two_handed = true;
+	}
+	[common]
+	{
+		screen_name = "Bardiche";
+		is_pcontent_allowed = false;
+	}
+	[gui] 
+	{
+		active_icon = b_gui_ig_i_ic_stf_312;
+		inventory_icon = b_gui_ig_i_w_stf_312;
+		inventory_height = 4;
+		inventory_width = 1;
+		is_droppable = false;
+		tooltip_color	= "unique";
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life_steal;
+				value		= 25;
+				description = "25 health stolen per hit.";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 35;
+			}
+			[*]
+			{
+				alteration = alter_custom_damage_melee;
+				value		= 30;
+				max_value	= 40;
+				description = "Burns enemies for 30 to 40 fire damage.";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 35;
+				effect_script_equip	= dam_fire_7_re;
+				effect_script_hit	= fire_weapon;
+			}
+		}
+	}
+}
+[t:template,n:collab_ss_mercenary_leader_bardiche_droppable]
+{
+	doc = "collab_ss_mercenary_leader_bardiche";
+	specializes = dsx_base_polearm_axe;
+	[aspect]
+	{
+		model = m_w_stf_312;
+		selection_indicator_scale = 0.65;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		f damage_max = 91.0;
+		f damage_min = 80.0;
+		is_two_handed = true;
+	}
+	[common]
+	{
+		screen_name = "Mercenary Boss Bardiche";
+		is_pcontent_allowed = false;
+	}
+	[gui] 
+	{
+		active_icon = b_gui_ig_i_ic_stf_312;
+		inventory_icon = b_gui_ig_i_w_stf_312;
+		equip_requirements = strength:23;
+		inventory_height = 4;
+		inventory_width = 1;
+		tooltip_color	= "unique";
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life_steal;
+				value		= 25;
+				description = "25 health stolen per hit.";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 35;
+			}
+			[*]
+			{
+				alteration = alter_custom_damage_melee;
+				value		= 5;
+				max_value	= 10;
+				description = "Burns enemies for 5 to 10 fire damage.";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 35;
+				effect_script_equip	= dam_fire_7_re;
+				effect_script_hit	= fire_weapon;
+			}
+		}
+	}
+}

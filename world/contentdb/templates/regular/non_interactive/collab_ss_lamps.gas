@@ -1,0 +1,68 @@
+[t:template,n:collab_ss_brazier_glb]
+{
+	category_name = "lighting";
+	doc = "collab_ss_brazier_glb";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		lodfi_lower = 0;
+		lodfi_upper = 0;
+		model = m_i_glb_brazier-01;
+		[textures]
+		{
+			0 = b_i_glb_brazier-01;
+		}
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("collab_ss_brazier_fire");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+			}
+		}
+	}
+	[light_flicker_lightweight]
+	{
+		duration = 0;
+		flicker_frequency_max = 12;
+		flicker_frequency_min = 10;
+		magnitude = 0.15;
+	}
+}
+[t:template,n:collab_ss_brazier_glb_blue]
+{
+	category_name = "lighting";
+	doc = "collab_ss_brazier_glb_blue";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		lodfi_lower = 0;
+		lodfi_upper = 0;
+		model = m_i_glb_brazier-01;
+		[textures]
+		{
+			0 = b_i_glb_brazier-01;
+		}
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("collab_ss_brazier_fire_blue");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+			}
+		}
+	}
+	[light_flicker_lightweight]
+	{
+		duration = 0;
+		flicker_frequency_max = 12;
+		flicker_frequency_min = 10;
+		magnitude = 0.15;
+	}
+}
