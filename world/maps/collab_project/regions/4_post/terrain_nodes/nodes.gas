@@ -1,0 +1,110 @@
+[t:terrain_nodes,n:siege_node_list]
+{
+  x actor_ambient_color = 0xFFFFFFFF;
+  f actor_ambient_intensity = 0.200000;
+  x ambient_color = 0xFFFFFFFF;
+  f ambient_intensity = 0.200000;
+  x object_ambient_color = 0xFFFFFFFF;
+  f object_ambient_intensity = 0.200000;
+  x targetnode = 0x0A9BD5DA;
+	[t:snode,n:0x0a9bd5da]
+	{
+	  b bounds_camera = true;
+	  b camera_fade = false;
+	  x guid = 0x0A9BD5DA;
+	  x mesh_guid = 0x04F006AA;
+	  x nodelevel = 0xFFFFFFFF;
+	  x nodeobject = 0xFFFFFFFF;
+	  x nodesection = 0xFFFFFFFF;
+	  b occludes_camera = true;
+	  b occludes_light = true;
+		texsetabbr = abc01;
+		[door*]
+		{
+		  i fardoor = 2;
+		  x farguid = 0x184E2AA1;
+		  i id = 5;
+		}
+		[door*]
+		{
+		  i fardoor = 1;
+		  x farguid = 0x184E2AA1;
+		  i id = 6;
+		}
+	}
+	[t:snode,n:0x184e2aa1]
+	{
+	  b bounds_camera = true;
+	  b camera_fade = false;
+	  x guid = 0x184E2AA1;
+	  x mesh_guid = 0x04F00A5F;
+	  x nodelevel = 0xFFFFFFFF;
+	  x nodeobject = 0xFFFFFFFF;
+	  x nodesection = 0x00000001;
+	  b occludes_camera = true;
+	  b occludes_light = true;
+		texsetabbr = abc01;
+		[door*]
+		{
+		  i fardoor = 5;
+		  x farguid = 0x0A9BD5DA;
+		  i id = 2;
+		}
+		[door*]
+		{
+		  i fardoor = 1;
+		  x farguid = 0x5AFDA31E;
+		  i id = 7;
+		}
+		[door*]
+		{
+		  i fardoor = 1;
+		  x farguid = 0x24DE4F1E;
+		  i id = 5;
+		}
+		[door*]
+		{
+		  i fardoor = 6;
+		  x farguid = 0x0A9BD5DA;
+		  i id = 1;
+		}
+	}
+	[t:snode,n:0x24de4f1e]
+	{
+	  b bounds_camera = false;
+	  b camera_fade = true;
+	  x guid = 0x24DE4F1E;
+	  x mesh_guid = 0x04F00A61;
+	  x nodelevel = 0xFFFFFFFF;
+	  x nodeobject = 0xFFFFFFFF;
+	  x nodesection = 0x00000001;
+	  b occludes_camera = true;
+	  b occludes_light = true;
+		texsetabbr = abc01;
+		[door*]
+		{
+		  i fardoor = 5;
+		  x farguid = 0x184E2AA1;
+		  i id = 1;
+		}
+	}
+	[t:snode,n:0x5afda31e]
+	{
+	  b bounds_camera = true;
+	  b camera_fade = false;
+	  x guid = 0x5AFDA31E;
+	  x mesh_guid = 0x04F00A60;
+	  x nodelevel = 0xFFFFFFFF;
+	  x nodeobject = 0xFFFFFFFF;
+	  x nodesection = 0x00000001;
+	  b occludes_camera = true;
+	  b occludes_light = true;
+		texsetabbr = abc01;
+		[door*]
+		{
+		  i fardoor = 7;
+		  x farguid = 0x184E2AA1;
+		  i id = 1;
+		}
+	}
+}

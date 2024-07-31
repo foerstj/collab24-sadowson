@@ -2,6 +2,22 @@
 {
 	source_region_guid = 0x01000001;
 	source_region_name = ss_1_valley;
+	[t:stitch_editor,n:4_post]
+	{
+		dest_region = 4_post;
+		[node_ids]
+		{
+			0x00000f45 = 0xEB10AA68,6;
+		}
+	}
+	[t:stitch_editor,n:4_pre]
+	{
+		dest_region = 4_pre;
+		[node_ids]
+		{
+			0x00000f34 = 0x02EA9CC6,10;
+		}
+	}
 	[t:stitch_editor,n:ss_1a_family-tomb]
 	{
 		dest_region = ss_1a_family-tomb;

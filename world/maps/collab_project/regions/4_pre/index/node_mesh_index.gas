@@ -1,0 +1,8 @@
+[node_mesh_index]
+{
+	0x04e006a9 = t_xxx_flr_04x08-v0;
+	0x04e006aa = t_xxx_flr_08x08-v0;
+	0x04e00a78 = t_xxx_wal_cave-tx-abc-base-back-a;
+	0x04e00a7a = t_xxx_wal_cave-tx-abc-sides-back-a;
+	0x04e00a7c = t_xxx_wal_cave-tx-abc-top-back-a;
+}
