@@ -1,0 +1,10 @@
+[t:template,n:ee_wr-chapel-pew]
+{
+	category_name = "indoor";
+	doc = "ee_wr-chapel-pew";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_ee_wr-chapel-pew;
+	}
+}

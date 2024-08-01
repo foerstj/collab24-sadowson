@@ -1,0 +1,34 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ee_fade_remove.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2019 SadowSon  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+//
+//
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool   _server_only$        = true;
+property string _doc$                = "Controls the indicators above an NPC.";
+property string _required_component$ = "placement";
+
+goid			message$
+
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+// local states
+
+trigger OnGoHandleMessage$( WE_REQ_ACTIVATE )
+{
+	message$ = MakeGoid( msg$.GetData1() );
+	
+	
+}

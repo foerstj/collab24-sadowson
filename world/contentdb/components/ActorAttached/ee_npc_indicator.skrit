@@ -1,0 +1,230 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ee_npc_indicator.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2024 SadowSon
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+// This skrit puts an indicator above the head of an NPC depending on certain variable calls.
+
+//Version History:	V1.0 Initial Implementation
+//					V2.0 Indicator changes based off integer packed into the msg of WE_REQ_ACTIVATE
+//					V3.0 Added alot more Indicators.
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// Public Definitions
+
+// Reserved Tags
+property bool		_server_only$	= false;
+property string		_doc$			= "Puts an indicator above the head of an NPC. Only one indicator can be active at a time.";
+
+/*
+This script will only support a single indicator at any given time. The indicator type is stored in the GameAuditor so as to preserve the indicator if the actor is exits the Frustum at any given time.
+If you are wanting to combine a quest with a shop, then you need to use the relevant indicator with the shops indicator, as in the list below.
+
+UNUSED does not mean broken. It means I don't know what its for. You can use it for anything you want.
+
+The Shield and Sword indicators don't support quests purely because GPG never made relevant quests for them. I can make the relevant indicators if someone asks.
+
+ind_custom_id$ will override whatever indicator you request, so only use it for static actors whose indicator never changes.
+
+The indicator script is not required to be attached to an actor. It will work on any object that has an aspect.
+
+indicator_amulet							100 - Sells Reagents.
+indicator_amulet-exclamation_orange			101 - Sells Reagents, has a quest available.
+indicator_amulet-question_grey				102 - Sells Reagents, quest cannot be completed.
+indicator_amulet-question_orange			103 - Sells Reagents, quest can be completed.
+indicator_chat								104 - UNUSED
+indicator_exclamation_green					105 - UNUSED.
+indicator_exclamation_grey					106	- Quest exists, cannot be started yet.
+indicator_exclamation_orange				107 - Quest available.
+indicator_hand								108 - Sells Spells.
+indicator_hand_exclamation_orange			109 - Sells Spells, has a quest available.
+indicator_hand_question_grey				110 - Sells Spells, quest cannot be completed yet.
+indicator_hand_question_orange				111 - Sells Spells, quest can be completed.
+indicator_info								112 - Has info to spew to the player. Maybe lore exposition?
+indicator_inn								113 - Has party members to sell/reclaim.
+indicator_join								114 - Potential Party Member available to be recruited.
+indicator_mug								115 - UNUSED.
+indicator_packmule							116 - Sells Packmule.
+indicator_packmule_exclamation_orange		117 - Sells Packmule, has a quest.
+indicator_packmule_question_grey			118 - Sells Packmule, quest cannot be completed yet.
+indicator_packmule_question_orange			119 - Sells Packmule, quest can be updated or completed.
+indicator_potion							120 - Sells Potions.
+indicator_potion_exclamation_orange			121 - Sells Potions, has a quest.
+indicator_potion_question_grey				122 - Sells Potions, quest cannot be completed.
+indicator_potion_question_orange			123 - Sells Potions, quest can be updated or completed.
+indicator_question_orange					124 - Quest can be updated or completed.
+indicator_question_gold						125 - UNUSED
+indicator_question_grey						126 - Quest cannot be completed.
+indicator_shield							127 - Sells Armor.
+indicator_sword								128 - Sells Weapons.
+indicator_talk2me							129 - UNUSED. Talk to them I guess?
+indicator_tombstone							130 - UNUSED.
+indicator_disable							199 - TURNS OFF THE INDICATOR.
+*/
+
+// exported properties
+//Indicators have the 100-199 range reserved for msg ID's.
+
+property 	int 	ind_custom_ID$			 			doc = "ID to use for custom indicator. Leave blank if using commands to control or plan to change it in-game at some point.";
+
+			bool	debug_reporting$	= false;	//Used for debug checking by enabling the ee_debug bool.
+
+int		int_msg$;
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+void Indicator_Script$()
+{
+		string	actor_goid_ind_check$ = StringTool.Append( "ee_current_indicator_", MakeStringF( "0x%08x", owner.goid ) );
+		bool	use_custom_ID$ = false;
+		
+		string indicator_table$ = ( "amulet,amulet-exclamation_orange,amulet-question_grey,amulet-question_orange,chat,exclamation_green,exclamation_grey,exclamation_orange,hand,hand_exclamation_orange,hand_question_grey,hand_question_orange,info,inn,join,mug,packmule,packmule_exclamation_orange,packmule_question_grey,packmule_question_orange,potion,potion_exclamation_orange,potion_question_grey,potion_question_orange,question_orange,question_gold,question_grey,shield,sword,talk2me,tombstone" );
+			
+		int ind_requestor$ = int_msg$ - 100;
+		string	activate_indicator$ = "Indicator_";
+		string deactivate_indicator$ = "indicator_";
+		
+		//Check for debug reporting. Throws lots of information at the screen.
+		if( GameAuditor.GetDb.GetBool( "ee_debug" ) )
+		{
+			debug_reporting$ = true;
+		}
+		
+		if( GameAuditor.GetDb.GetInt( actor_goid_ind_check$ ) == 0 )
+		{
+			GameAuditor.GetDb.SetInt( actor_goid_ind_check$, 199 );
+		}
+		
+		//Turn off the Indicator.
+		if( int_msg$ == 199 )
+		{
+			//This particular one is needed because if you swing a 199 twice without the check then it errors out on a blank indicator, so instead we'll just force it to blank without alarms.
+			if( ( GameAuditor.GetDb.GetInt( actor_goid_ind_check$ ) - 100 ) <= StringTool.GetNumDelimitedValues( indicator_table$ ) )
+			{
+				StringTool.Append( deactivate_indicator$, StringTool.GetDelimitedString( indicator_table$, GameAuditor.GetDb.GetInt( actor_goid_ind_check$) - 100 ) );
+				if( debug_reporting$ )
+				{
+					Report.ScreenF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
+					Report.ScreenF( "actor_goid_ind_check$ = %i \n" , actor_goid_ind_check$ );
+				}
+			}
+			else
+			{
+				deactivate_indicator$ = "";
+			}
+		}
+		else if( int_msg$ == 198 )	/// No Indicator Identified.
+		{
+			//Do nothing. No indicator is active.
+			Report.ScreenF( "INT_MSG$ == 198" );
+		}
+		else
+		{
+			StringTool.Append( activate_indicator$, StringTool.GetDelimitedString( indicator_table$, ind_requestor$ ) );
+			if( debug_reporting$ )
+			{
+				Report.ScreenF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
+			}
+			///Without this check, the delimiter fails to a blank indicator and reports an error. If the end value doesn't fall within reason, just force a fail to blank instead of erroring on it.
+			if( ( GameAuditor.GetDb.GetInt( actor_goid_ind_check$ ) - 100 ) <= StringTool.GetNumDelimitedValues( indicator_table$ ) )
+			{
+				StringTool.Append( deactivate_indicator$, StringTool.GetDelimitedString( indicator_table$, GameAuditor.GetDb.GetInt( actor_goid_ind_check$) - 100 ) );
+				if( debug_reporting$ )
+				{
+					Report.ScreenF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
+					Report.ScreenF( "actor_goid_ind_check$ = %i \n" , actor_goid_ind_check$ );
+				}
+			}
+			else
+			{
+				deactivate_indicator$ = "";
+			}
+			if( debug_reporting$ )
+			{
+				Report.ScreenF( "INT_MSG$ = %i \n", int_msg$ );
+				Report.ScreenF( StringTool.Append( "Activate_Indicator$ = ", activate_indicator$ ) );
+				Report.ScreenF( StringTool.Append( "deactivate_indicator$ = ", deactivate_indicator$ ) );
+				Report.ScreenF( "DEBUG CHECK actor_goid_ind_check$ = %i \n ", GameAuditor.GetDb.GetInt( actor_goid_ind_check$) );
+			}
+		}
+			
+		///Check that this indicator isn't currently active.
+		if( GameAuditor.GetDb.GetInt( actor_goid_ind_check$ ) != int_msg$ )
+		{
+			if( debug_reporting$ )
+			{
+				Report.ScreenF( "Reporting Code = %i \n", int_msg$ );
+			}
+			
+			if( int_msg$ == 199 )
+			{
+				//A 199 code means to deactivate the existing script and activate nothing else.
+				if( debug_reporting$ )
+				{
+					Report.ScreenF( "Confirmed 199 code recieved" );
+				}
+				SiegeFX.StopScript( owner.goid, deactivate_indicator$ );
+				GameAuditor.GetDb.SetInt( actor_goid_ind_check$, 198 );
+			}
+			else
+			{
+				if( !StringTool.IsEmpty( deactivate_indicator$ ) )
+				{
+					SiegeFX.StopScript( owner.goid, deactivate_indicator$ );
+				}
+				else
+				{
+					//Is null, so do not deactivate anything.
+				}
+				//Activate Indicator
+				SiegeFx.RunScript( activate_indicator$, owner.goid, owner.goid, "", owner.goid, WE_UNKNOWN );
+				GameAuditor.GetDb.SetInt( actor_goid_ind_check$, int_msg$ );
+			}
+		}
+		else
+		{
+			//Indicator is already active. So do nothing.
+		}
+}
+	
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+{
+	if( e$ == WE_REQ_ACTIVATE )
+	{
+		int_msg$ = msg$.GetData1();
+		Indicator_Script$();
+		if( debug_reporting$ )
+		{
+			Report.ScreenF( "ee_npc_indicator.skrit: Recieved a WE_REQ_ACTIVATE command." );
+		}
+	}
+	if( e$ == WE_ENTERED_WORLD ) //This will override an ID that was setup by a WE_REQ_ACTIVATE command.
+	{
+		if( GameAuditor.GetDb.GetBool( "ee_debug" ) )
+		{
+			debug_reporting$ = true;
+		}
+		
+		if( debug_reporting$ )
+		{
+			Report.ScreenF( "ee_npc_indicator.skrit: Recieved a WE_ENTERED_WORLD command." );
+		}
+		
+		if( ind_custom_id$ != 0 )
+		{
+			int_msg$ = ind_custom_id$;
+			Indicator_Script$();
+		}
+		else
+		{
+			//No custom ID set, so do nothing...
+		}
+	}
+}

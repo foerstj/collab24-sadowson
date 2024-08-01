@@ -1,0 +1,77 @@
+#
+# This NNK file was generated from within Siege Max by the dsExtendNamingKey utility function
+#
+# After editing this file (and saving!) you can use the following commmands in the Maxscript
+# Listener Console to verify your changes:
+#
+#  dsLoadNamingKey()                      -- will reload the Naming Key (including your changes)
+#  dsBuildContentLocation "valid_name"    -- returns the location of the file specified by <valid_name>
+#  dsBuildContentDescription "valid_name" -- returns the description of the file specified by <valid_name>
+#
+#  For reference, here are some examples of Naming Key index tree definitions:
+#
+# 	Prefix		Sub-Directory		Description
+# ----------------------------------------------------------------------------
+# TREE = m_i_bid ,	Biddle ,		"Biddle's Item Meshes"
+# TREE = m_c_bid ,	Biddle ,		"Biddle's Character Meshes"
+# TREE = t_bid ,	Biddle ,		"Biddle's Terrain"
+# TREE = b_bid ,	Biddle ,		"Biddle's Bitmaps"
+#
+#========== Enter your additional TREE definitions below =====================
+
+TREE = A_W			, Weapons				, "Weapons"
+TREE = A_W_CSB		, Crossbow				, "Crossbow"
+
+
+Tree = B_I_EE			, Edens_End			, "Edens End"
+
+TREE = T_EE			, Edens_End				, "Edens End"
+TREE = T_EE_DB		, Drawbridge			, "Drawbridge"
+TREE = T_EE_KP		, Keep					, "EE_Keep"
+TREE = T_EE_QP		, Queens_Peak			, "Queens Peak"
+TREE = T_EE_SP		, SHIP					, "Ship"
+TREE = T_EE_WK		, Wardens_Keep			, "Wardens Keep"
+TREE = T_EE_TP		, Teleport_Hub			, "Teleport Hub"
+TREE = T_EE_GL		, Galley				, "Galley"
+TREE = T_EE_GL02	, Galley_03				, "Galley_03"
+TREE = T_EE_NIS		, NIS					, "NIS"
+
+TREE = T_EE_LSM			, LightStone_Mines	, "LightStone Mines"
+TREE = T_EE_LSM_TRACK	, Track				, "Track"
+TREE = T_EE_LSM_ELE		, Elevator			, "Elevator"
+TREE = T_EE_LSM_PIPE	, Pipe				, "Pipe"
+
+Tree = T_EE_WR			, EE_Wardens_Ridge	, "Wardens Ridge"
+Tree = T_EE_WR_CNR		, Corner			, "Corner"
+Tree = T_EE_WR_FLR		, Floor				, "Floor"
+Tree = T_EE_WR_WAL		, Wall				, "Wall"
+Tree = T_EE_WR_ROF		, Roof				, "Roof"
+Tree = T_EE_WR_DOCK		, Dock				, "Dock"
+Tree = T_EE_WR_TWNWL	, Town_Walls		, "Town Walls"
+Tree = T_EE_WR_MODU		, Modules			, "Modules"
+Tree = T_EE_WR_CBBL		, Cobblestone		, "Cobblestone"
+Tree = T_EE_WR_BUILD	, Buildings			, "Buildings"
+Tree = T_EE_WR_FENCE	, Fence				, "Fence"
+Tree = T_EE_WR_MOAT		, Moat				, "Moat"
+Tree = T_EE_WR_GRDN		, Garden			, "Garden"
+
+Tree = T_EE_WR02		, EE_Wardens_Ridge_02	, "Wardens_Ridge_02"
+Tree = T_EE_WR02_ROAD	, Road					, "Road"
+Tree = T_EE_WR02_MODU	, Modules				, "Modules"
+Tree = T_EE_WR02_TWNWL	, Town_Walls			, "Town_Walls"
+
+TREE = M_I_EE		, Edens_End			, "Edens End"
+
+TREE = A_I_EE		, Edens_End			, "Edens End"
+
+TREE = B_T_SEA03	, Seashore_3	, "Seashore 3"
+TREE = T_SEA03		, Seashore_3	, "Seashore 3"
+TREE = B_T_EE		, Edens_End		, "Edens End"
+
+TREE = B_C_POS_ee-warden	, ee-warden		, "Warden Armor"
+
+#Some cool Gen3 stuff
+
+TREE = B_C_GAH_GEN3_FG , gen3_farmgirl    	, "gen3_farmgirl"
+TREE = M_C_GAH_GEN3_FG , gen3_farmgirl		, "gen3_farmgirl"
+TREE = A_C_GAH_GEN3_FG , gen3_farmgirl		, "gen3_farmgirl"
