@@ -1,0 +1,99 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  colab_ss_starting-exp.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2024 SadowSon
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+// Gives free EXP to the player.
+
+//Version History: V1.0 Initial Implementation
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// Public Definitions
+
+// Reserved Tags
+property bool		_server_only$				= false;
+property string		_doc$						= "Gives the player free exp on entering the world";
+property string		_required_component$ 		= "placement";
+
+property int		execute_timer$	= 2				doc = "How many seconds after entering the world before activating?";
+property int		Melee_skill$		= 0			doc = "What level to set Melee to.";
+property int		Ranged_skill$		= 0			doc = "What level to set Ranged to.";
+property int		Nature_skill$		= 0			doc = "What level to set Nature Magic to.";
+property int		Combat_skill$		= 0			doc = "What level to set Combat Magic to.";
+property int		Strength_stat$		= 0			doc = "What level to set Strength to.";
+property int		Dexterity_stat$		= 0			doc = "What level to set Dexterity to.";
+property int		Intelligence_stat$	= 0			doc = "What level to set Intelligence to.";
+
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+startup state Startup$
+{
+	event OnEnterState$
+	{
+	}
+	transition -> HoldFire$: OnGoHandleMessage( WE_ENTERED_WORLD );
+}
+
+state HoldFire$
+{
+	transition -> Execute$: OnTimer( 1 );
+	
+	event OnEnterState$
+	{
+		this.createTimer( 1, execute_timer$ );
+	}
+}
+
+state Execute$
+{
+	event OnEnterState$
+	{
+		goid player$ = Server.ScreenHero.goid;
+		
+		//Make sure that the player is controlled by a human.
+		if( player$.Go.Player.Controller != PC_COMPUTER )
+		{
+			//Set Base Stats
+			player$.go.actor.RCSetSkillLevels( Strength_stat$, Intelligence_stat$, Dexterity_stat$ );
+			
+			//Set Melee skill
+			if( melee_skill$ > 0 )
+			{
+				Rules.RSSetNaturalSkillLevel( player$, "melee", Melee_skill$ );
+			}
+			//Set Ranged Skill
+			if( Ranged_skill$ > 0 )
+			{
+				Rules.RSSetNaturalSkillLevel( player$, "ranged", Ranged_skill$ );
+			}
+			//Set Nature Skill
+			if( Nature_skill$ > 0 )
+			{
+				Rules.RSSetNaturalSkillLevel( player$, "nature magic", Nature_skill$ );
+			}
+			//Set Combat Skill
+			if( Combat_skill$ > 0 )
+			{
+				Rules.RSSetNaturalSkillLevel( player$, "combat magic", Combat_skill$ );
+			}
+		}
+		
+		//Fix an issue where a player would be left in a weakened state
+		float max_life$ = player$.go.aspect.MaxLife;
+		float max_mana$ = player$.go.aspect.MaxMana;
+		
+		player$.go.Aspect.SsetCurrentLife( max_life$ );
+		player$.go.aspect.SSetCurrentMana( max_mana$ );
+		
+		//Self Destruct
+		GoDb.SMarkForDeletion( owner.goid );
+	}
+}

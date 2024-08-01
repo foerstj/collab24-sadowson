@@ -1,0 +1,25 @@
+[t:template,n:ee_gizmo_wall_blocker]
+{
+	specializes	= special;
+	doc			= "ee_gizmo_wall_blocker";
+    category_name = "ee_gizmo_generic";
+	
+	[aspect]
+	{
+		model						= m_i_glb_object-ee-wall;
+		draw_selection_indicator	= false;
+		dynamically_lit				= false;
+		force_no_render				= true;
+		bounding_volume_scale       = 1.0;
+		does_block_path				= true;
+	}
+	[placement]		{}
+	[generic_objblock] {}
+	[gizmo]
+	{
+		model = m_i_glb_object-ee-wall;  
+		texture = b_i_glb_blue;
+		diffuse_color = 1.0, 0.1, 0.85;
+		use_diffuse_color = true;
+	}
+}

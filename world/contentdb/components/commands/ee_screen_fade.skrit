@@ -1,0 +1,62 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  screen_fade.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 20019 Sadowson.
+//----------------------------------------------------------------------------
+//  $Revision: #3 $              $Date: 2003/02/27 $
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool		_server_only$			= false;
+property string		_doc$					= "Fades the screen to black or back out.";
+
+// exported properties
+property float		duration$	= 1.0			doc = "Duration for effect";
+property bool		fade$		= true			doc = "True means FADE TO COLOUR, false means FADE TO BLACK";
+
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoDrawDebugHud$
+{
+	string dur$;
+	string sfade$;
+	
+	StringTool.Assignf( dur$, "Duration: %f", duration$ );
+	StringTool.Assignf( sfade$, "Fade: %s", ( fade$ ) ? "true" : "false" );
+	
+	World.DrawDebugPoint( owner.Go.Placement.Position, 0.3, MakeColor( 0.0, 1.0, 0.0 ), 0.333 , dur$ , MakeColor( 1.0, 1.0, 1.0 ));
+	World.DrawDebugPoint( owner.Go.Placement.Position, 0.3, MakeColor( 0.0, 1.0, 0.0 ), 0.5 , sfade$ , MakeColor( 1.0, 1.0, 1.0 ));
+}
+
+#only( editor )
+[[
+trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+{
+	if( duration$ < 0 )
+	{
+		report.errorf("Invalid duration in %s with scid 0x%08x", owner.go.templatename, owner.scid );
+	}
+}
+]]
+
+#only( game )
+[[
+trigger OnGoHandleMessage$( WE_REQ_ACTIVATE )
+{
+	if( duration$ > 0 )
+	{
+		TimeMgr.AddRapiFader( fade$, duration$ );	
+	}
+}
+]]
+
+
+

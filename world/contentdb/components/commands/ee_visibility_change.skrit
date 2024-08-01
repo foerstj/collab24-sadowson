@@ -1,0 +1,136 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ee_visibility_change.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2019 Sadowson
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+// v1: 2019: Initial Implementation
+// v2: 18/07/2024: Made the skrit not suck. Wow that was bad.
+
+// public definitions
+
+// reserved tags
+property bool   _server_only$        = true;
+property string _doc$                = "Change the state of an actor";
+property string _required_component$ = "placement";
+
+// exported properties
+property scid               target_actor$                                       doc ="Scid of Actor to Manipulate.";
+
+property eActorAlignment 	alignment_activated$ 		= aa_evil				doc ="Alignment of Actor when Activated.";
+property eLifeState         life_state_activated$       = ls_alive_conscious    doc ="Life State of Actor when Activated.";
+property bool				update_anim_activated$		= true					doc ="Can this Actor animate after getting Activated?";
+property bool				invincible_activated$		= false					doc ="Is this Actor invincible after getting Activated?";
+property bool				collide_activated$			= true					doc ="Can this Actor be hit after getting Activated?";
+property bool				may_attacked_activated$		= true					doc ="Can this Actor be attacked after getting Activated?";
+property bool				may_attack_activated$		= true					doc ="Can this Actor attack after getting Activated?";
+property bool				is_visible_activated$		= true					doc ="Is this Actor visible after getting Activated?";
+
+property eActorAlignment    alignment_deactivated$      = aa_neutral            doc ="Alignment of Actor when Deactivated.";
+property eLifeState         life_state_deactivated$     = ls_alive_conscious    doc ="Life State of Actor when Deactivate.";
+property bool				update_anim_deactivated$	= false					doc ="Can this Actor animate after getting Deactivated?";
+property bool				invincible_deactivated$		= true					doc ="Is this Actor invincible after getting Deactivated?";
+property bool				collide_deactivated$		= false					doc ="Can this Actor be hit after getting Deactivated?";
+property bool				may_attacked_deactivated$	= false					doc ="Can this Actor be attacked after getting Deactivated?";
+property bool				may_attack_deactivated$		= false					doc ="Can this Actor attack after getting Deactivated?";
+property bool				is_visible_deactivated$		= false					doc ="Is this Actor visible after getting Deactivated?";
+
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+// local states
+
+trigger OnGoDrawDebugHud$
+{
+	Goid goid$ = target_actor$.Goid;
+	if( goid$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid$.go.Placement.Position,
+									 MakeColor( 0.5, 1.0, 0, 0.5 ),
+									 "Target_Actor" );
+	}
+}
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+{
+	if( e$ == WE_REQ_ACTIVATE )
+	{
+		goid Target$ = Target_Actor$.goid;
+		if( Target$.IsValid )
+		{
+			GoDb.StartWatching( owner.Goid, Target$ );
+		
+			Target$.go.Actor.SSetalignment( alignment_activated$ );
+			Target$.Go.Aspect.SSetLifeState = life_state_activated$;
+
+			if( update_anim_activated$ )
+			{
+				// start moving
+				Target$.Go.Aspect.AspectHandle.SetLockMeshFlag( false );
+			}
+			else
+			{
+				// stop moving
+				Target$.Go.Aspect.AspectHandle.SetLockMeshFlag( true );
+			}
+		
+			Target$.Go.Aspect.IsInvincible = invincible_activated$;		///Set Invincibility
+			Target$.Go.Aspect.IsCollidable = collide_activated$;		///Set Collision
+			Target$.Go.Mind.MayBeAttacked = may_attacked_activated$;	///Set May_Be_Attacked
+			Target$.Go.Mind.SetMayAttack = may_attack_activated$;		///Set May_Attack
+			Target$.Go.Aspect.SSetIsVisible = is_visible_activated$;	///Set Visibility
+		
+			//Reset Mind
+			target_actor$.Go.Mind.ReqResetSensorsSelfAndVisible();
+			GoDb.StopWatching( owner.Goid, Target$ );
+		}
+		else
+		{
+			Report.Error( "ee_visibility_change.skrit: Invalid SCID! " );
+		}
+	}
+	if( e$ == WE_REQ_DEACTIVATE )
+	{
+		goid Target$ = Target_Actor$.goid;
+		if( Target$.IsValid )
+		{
+		
+			GoDb.StartWatching( Owner.Goid, Target$ );
+			
+			if( update_anim_deactivated$ )
+			{
+				// start moving
+				Target$.Go.Aspect.AspectHandle.SetLockMeshFlag( false );
+			}
+			else
+			{
+				// stop moving
+				Target$.Go.Aspect.AspectHandle.SetLockMeshFlag( true );
+			}
+		
+			Target$.go.actor.ssetalignment( alignment_deactivated$ );
+			Target$.Go.Aspect.SSetLifeState = life_state_deactivated$;
+		
+			Target$.Go.Aspect.IsInvincible = invincible_deactivated$;	///Set Invincibility
+			Target$.Go.Aspect.IsCollidable = collide_deactivated$;		///Set Collision
+			Target$.Go.Mind.MayBeAttacked = may_attacked_deactivated$;	///Set May_Be_Attacked
+			Target$.Go.Mind.SetMayAttack = may_attack_deactivated$;		///Set May_Attack
+			Target$.Go.Aspect.SSetIsVisible = is_visible_deactivated$;	///Set Visibility
+		
+			
+			//Reset Mind
+			Target$.Go.Mind.ReqResetSensorsSelfAndVisible();
+			GoDb.StopWatching( Owner.Goid, Target$ );
+		}
+		else
+		{
+			Report.Error( "ee_visibility_change.skrit: Invalid SCID! " );
+		}
+	}
+}

@@ -1,0 +1,156 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ee_npc_indicator_quest_command.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2024 SadowSon
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+// This skrit tells ee_npc_indicator.skrit WHAT skrit to put above their heads.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+// NOTE: This was only ever designed/intended for a single actor to handle a single quest.
+// In Edens End, if an actor handles multiple quests, then it's actually divided between different actors that are subbed in/out with visiblity changes. Because it's *significantly* easier than having a single actor handle multiple quests throughout the entire campaign.
+
+property	bool	_server_only$	= false;
+property	string	_doc$			= "Controls indicators above an actors head, respective to quest states. Runs on a WE_ENTERED_WORLD and WE_REQ_ACTIVATE";
+
+// exported properties
+
+property	scid	target_actor$						doc = "Target Actor for Indicator control.";
+property	bool	Startup$				= false		doc = "Should this command run at WE_ENTERED_WORLD?";
+
+property	string	quest_name$							doc = "Name of Quest to check against";
+property	bool	is_quest_giver$			= false		doc = "Is this the questgiver? If TRUE then turn on relevant indicator";
+property	int		quest_completion_state$	= -1		doc = "If quest is at this state, indicate the can-be-completed indicator. -1 to ignore.";
+property	bool	Edens_End_Mode$			= true		doc = "Is this indicator running in Edens End mode? MUST BE FALSE IF NOT!!!";
+
+owner = GoSkritComponent;
+
+///////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoDrawDebugHud$
+{
+	goid goid_target$ = target_actor$.goid;
+	if( goid_target$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.placement.position,
+									goid_target$.go.placement.position,
+									MakeColor( 0.5, 1.0, 0, 0.5 ),
+									"Target Actor" );
+	}
+}
+
+void Indicator_Request$()
+{
+	goid target$ = target_actor$.goid;
+	int	Indicator$ = 0;
+	int Current_Quest_State$;
+	if( target_actor$.IsValid )
+	{
+		//Is Valid	
+		if( StringTool.IsEmpty( quest_name$ ) )
+		{
+			//quest_name is invalid.
+			Report.ErrorF( "ee_npc_indicator_quest_command.skrit: Empty quest_name$! Can't check against it!" );
+		}
+		else
+		{
+			//Quest_Name can be checked...				
+			if( Victory.IsQuestActive( quest_name$ ) )
+			{
+				if( quest_completion_state$ != -1 )
+				{
+					//Quest completion state check request
+					Current_Quest_State$ = Victory.GetQuestOrder( quest_name$ ); //This returns the current quest state which is ALWAYS an int.
+					if( Current_Quest_State$ == quest_completion_state$ )
+					{
+						//Current Quest State is ready to end the quest.
+						Indicator$ = 102;
+					}
+					else if( Current_Quest_State$ < quest_completion_state$ )
+					{
+						//Current Quest State is LESS than the completion state.
+						Indicator$ = 103;
+					}
+					else if( Current_Quest_State$ > quest_completion_state$ )
+					{
+						//Current Quest State is GREATER than the completion state...		
+						
+						if( Edens_End_Mode$ )
+						{
+							if( GameAuditor.GetDb.GetBool( "Edens_End_Map_Compatible" ) )
+							{
+								//Yes, we are running on Edens End compatibility.
+								//Set the Indicator to 114.
+								Indicator$ = 114;
+							}
+							else
+							{
+								//WE ARENT RUNNING IN EDENS END! WARNING!
+								Report.Error( "ee_npc_indicator_quest_command.skrit: DANGER DANGER! \n **DO NOT IGNORE - TELL SADOWSON!!!** You said we're running in Edens End mode, but this map is NOT reporting as Edens End! Change your Edens_End_Mode$ variable to be false OR BAD STUFF WITH YOUR QUESTS AND INDICATORS WILL HAPPEN!! \n Did you forget to include the ee_startup_settings gizmo at your map loading for compatibility?" );
+							}
+						}
+						else
+						{
+						}
+					}
+				}
+				else
+				{
+					//Quest Completion state is -1... Do nothing.
+				}
+			}
+			else if( is_quest_giver$ )
+			{
+				//The quest is not active AND they are the questgiver, so set the indicator value.
+				Indicator$ = 104;
+			}
+			else
+			{
+				if( Victory.IsQuestCompleted( Quest_Name$ ) )
+				{
+					//The quest has been completed. Shut down the indicator.
+					Report.Generic( "ee_npc_indicator_quest_command.skrit: Quest is complete, shut down the indicator." );
+					Indicator$ = 199;
+				}
+				else
+				{
+					//Do nothing. They are not the quest giver and the quest is not active.
+					Report.Generic( "ee_npc_indicator_quest_command.skrit: Entered the world. Target actor is not the quest giver and the quest is not active. Shut down the indicator." );
+					Indicator$ = 199;
+				}
+			}				
+			if( Indicator$ != 0 )
+			{
+				SendWorldMessage( WE_REQ_ACTIVATE, owner.goid, target$, Indicator$ );
+				Report.Generic( "ee_npc_indicator_quest_command.skrit: Sent an Indicator command to the target actor" );
+			}
+			else
+			{
+				//Indicator$ hasn't been told to change, so do nothing.
+			}
+		}
+	}
+	else
+	{
+		//Invalid Actor
+		Report.Error( "ee_npc_indicator_quest_command.skrit: Invalid SCID for target_actor$!" );
+	}
+}
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+{
+	if( e$ == WE_ENTERED_WORLD )
+	{
+		Indicator_Request$;
+	}
+	if( e$ == WE_REQ_ACTIVATE )
+	{
+		Indicator_Request$;
+		Report.Generic( "ee_npc_indicator_quest_command.skrit: We recieved a WE_REQ_ACTIVATE command" );
+	}
+}

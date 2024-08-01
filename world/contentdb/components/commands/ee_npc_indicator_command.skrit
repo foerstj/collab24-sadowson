@@ -1,0 +1,72 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ee_npc_indicator_command.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2024 SadowSon
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+// This skrit tells ee_npc_indicator.skrit WHAT skrit to put above their heads.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// Public Definitions
+
+// Reserved Tags
+property bool		_server_only$	= false;
+property string		_doc$			= "On recieving a WE_REQ_ACTIVATE, change the indicator on the target actor.";
+
+// exported properties
+property scid		target_actor$						doc = "Target Actor for Indicator control";
+property int		Indicator$				= 0			doc = "INT type of indicator to activate. Check ee_npc_indicator.skrit for valid types.";
+property bool		Stop_Indicator$			= FALSE		doc = "Should we stop the active indicator instead?";
+
+owner = GoSkritComponent;
+
+///////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoDrawDebugHud$
+{
+	Goid goid$ = target_actor$.Goid;
+	if( goid$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid$.go.Placement.Position,
+									 MakeColor( 0.5, 1.0, 0, 0.5 ),
+									 "Target Actor" );
+	}
+}
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+{
+	if( e$ == WE_REQ_ACTIVATE )
+	{
+		goid target$ = target_actor$.goid;
+		if( target$.IsValid )
+		{
+			if( Stop_Indicator$ == TRUE )
+			{
+				//Stop Indicator. Send a 199 code.
+				SendWorldMessage( WE_REQ_ACTIVATE, owner.goid, target$, 199 );
+			}
+			else
+			{
+				if( Indicator$ >= 100 ) && ( Indicator$ <= 199 )
+				{
+					SendWorldMessage( WE_REQ_ACTIVATE, owner.goid, target$, indicator$ );
+				}
+				else
+				{
+					Report.WarningF( "ee_npc_indicator_command.skrit was told to send indicator INT: %i which is not a valid INT! Must be between 100-199 for valid Integers. Check ee_npc_indicator.skrit for valid Indicator types!", Indicator$ );
+				}
+			}
+		}
+		else
+		{
+			Report.Error( "ee_npc_indicator_command.skrit: Invalid SCID, can't change their indicator!" );
+		}
+	}
+}

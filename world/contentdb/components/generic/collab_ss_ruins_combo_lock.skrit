@@ -1,0 +1,498 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_ruins_combo_lock.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2024 SadowSon
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+//////////////////////////////////////////////////////////////////////////////
+// Reserved Tags
+property	bool	_server_only$			= false;
+property	string	_doc$					= "Controls access to the ruins HUB elevator.";
+property	string	_required_component$	= "placement";
+
+// Exported Properties
+property	SCID		Target$				= 0					doc = "Target to send message to on successful unlock";
+property	eWorldEvent	Target_Message$		= WE_REQ_ACTIVATE	doc = "Message to send to Target$";
+property	SCID		Camera_Quake$		= 0					doc = "SCID of camera_quake Command";
+property	string		Elevator_Unlocked$						doc = "Game Auditor String that other entities can reference for if the elevator is active";
+
+property	SCID		Elevator_Elddim$	= 0					doc = "Elevator SCID for Elddim";
+property	SCID		EFX_Elddim$			= 0					doc = "EFX SCID for Elddim";
+property	SCID		Trigger_Elddim$		= 0					doc = "Trigger SCID for Elddim";
+
+property	SCID		Elevator_Crystwind$	= 0					doc = "Elevator SCID for Crystwind";
+property	SCID		EFX_Crystwind$		= 0					doc = "EFX SCID for Crystwind";
+property	SCID		Trigger_Crystwind$	= 0					doc = "Trigger SCID for Crystwind";
+
+property	SCID		Elevator_Fallraen$	= 0					doc = "Elevator SCID for Fallraen";
+property	SCID		EFX_Fallraen$		= 0					doc = "EFX SCID for Fallraen";
+property	SCID		Trigger_Fallraen$	= 0					doc = "Trigger SCID for Fallraen";
+
+property	SCID		Elevator_Lang$		= 0					doc = "Elevator SCID for Lang";
+property	SCID		EFX_Lang$			= 0					doc = "EFX SCID for Lang";
+property	SCID		Trigger_Lang$		= 0					doc = "Trigger SCID for Lang";
+
+property	SCID		Elevator_Meren$		= 0					doc = "Elevator SCID for Meren";
+property	SCID		EFX_Meren$			= 0					doc = "EFX SCID for Meren";
+property	SCID		Trigger_Meren$		= 0					doc = "Trigger SCID for Elddim";
+
+property	SCID		Elevator_Quillrabe$	= 0					doc = "Elevator SCID for Quillrabe";
+property	SCID		EFX_Quillrabe$		= 0					doc = "EFX SCID for Quillrabe";
+property	SCID		Trigger_Quillrabe$	= 0					doc = "Trigger SCID for Quillrabe";
+
+property	SCID		Elevator_Hiroth$	= 0					doc = "Elevator SCID for Hiroth";
+property	SCID		EFX_Hiroth$			= 0					doc = "EFX SCID for Hiroth";
+property	SCID		Trigger_Hiroth$		= 0					doc = "Trigger SCID for Hiroth";
+
+property	SCID		Elevator_Grescal$	= 0					doc = "Elevator SCID for Grescal";
+property	SCID		EFX_Grescal$		= 0					doc = "EFX SCID for Grescal";
+property	SCID		Trigger_Grescal$	= 0					doc = "Trigger SCID for Grescal";
+
+property	string		Key$				= "ELDDIM,CRYSTWIND,FALLRAEN,MEREN,LANG,QUILLRABE,HIROTH,GRESCAL"	doc = "Correct order to unlock combo.";
+
+property	SCID		Lower_Elevator$		= 0					doc = "Elevator SCID to lower the elevator all the way down";
+property	SCID		Hide_Archivist$		= 0					doc = "SCID of trigger to hide the Archivist";
+
+			int			Combo_Current_Stage$	= 1;
+			bool		bDeactivateClamp$	= false;
+						owner = GoSkritComponent;
+						
+//////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoDrawDebugHud$
+{
+	goid debug_Elevator_1$	= Elevator_Elddim$.goid;
+	goid debug_Elevator_2$	= Elevator_Crystwind$.goid;
+	goid debug_Elevator_3$	= Elevator_Fallraen$.goid;
+	goid debug_Elevator_4$	= Elevator_Lang$.goid;
+	goid debug_Elevator_5$	= Elevator_Meren$.goid;
+	goid debug_Elevator_6$	= Elevator_Quillrabe$.goid;
+	goid debug_Elevator_7$	= Elevator_Hiroth$.goid;
+	goid debug_Elevator_8$	= Elevator_Grescal$.goid;
+	
+	goid debug_EFX_1$		= EFX_Elddim$.goid;
+	goid debug_EFX_2$		= EFX_Crystwind$.goid;
+	goid debug_EFX_3$		= EFX_Fallraen$.goid;
+	goid debug_EFX_4$		= EFX_Lang$.goid;
+	goid debug_EFX_5$		= EFX_Meren$.goid;
+	goid debug_EFX_6$		= EFX_Quillrabe$.goid;
+	goid debug_EFX_7$		= EFX_Hiroth$.goid;
+	goid debug_EFX_8$		= EFX_Grescal$.goid;
+	
+	goid debug_Trigger_1$	= Trigger_Elddim$.goid;
+	goid debug_Trigger_2$	= Trigger_Crystwind$.goid;
+	goid debug_Trigger_3$	= Trigger_Fallraen$.goid;
+	goid debug_Trigger_4$	= Trigger_Lang$.goid;
+	goid debug_Trigger_5$	= Trigger_Meren$.goid;
+	goid debug_Trigger_6$	= Trigger_Quillrabe$.goid;
+	goid debug_Trigger_7$	= Trigger_Hiroth$.goid;
+	goid debug_Trigger_8$	= Trigger_Grescal$.goid;
+	
+	if( debug_Elevator_1$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Elevator_1$.go.placement.position,
+							0xFFFFCC66, "Elevator_Elddim", true );
+	}
+	if( debug_Elevator_2$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Elevator_2$.go.placement.position,
+							0xFFFFCC66, "Elevator_Crystwind", true );
+	}
+	if( debug_Elevator_3$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Elevator_3$.go.placement.position,
+							0xFFFFCC66, "Elevator_Fallraen", true );
+	}
+	if( debug_Elevator_4$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Elevator_4$.go.placement.position,
+							0xFFFFCC66, "Elevator_Lang", true );
+	}
+	if( debug_Elevator_5$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Elevator_5$.go.placement.position,
+							0xFFFFCC66, "Elevator_Meren", true );
+	}
+	if( debug_Elevator_6$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Elevator_6$.go.placement.position,
+							0xFFFFCC66, "Elevator_Quillrabe", true );
+	}
+	if( debug_Elevator_7$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Elevator_7$.go.placement.position,
+							0xFFFFCC66, "Elevator_Hiroth", true );
+	}
+	if( debug_Elevator_8$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Elevator_8$.go.placement.position,
+							0xFFFFCC66, "Elevator_Grescal", true );
+	}
+	
+	if( debug_EFX_1$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_EFX_1$.go.placement.position,
+							0xFF75F94D, "EFX_Elddim", true );
+	}
+	if( debug_EFX_2$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_EFX_2$.go.placement.position,
+							0xFF75F94D, "EFX_Crystwind", true );
+	}
+	if( debug_EFX_3$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_EFX_3$.go.placement.position,
+							0xFF75F94D, "EFX_Fallraen", true );
+	}
+	if( debug_EFX_4$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_EFX_4$.go.placement.position,
+							0xFF75F94D, "EFX_Lang", true );
+	}
+	if( debug_EFX_5$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_EFX_5$.go.placement.position,
+							0xFF75F94D, "EFX_Meren", true );
+	}
+	if( debug_EFX_6$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_EFX_6$.go.placement.position,
+							0xFF75F94D, "EFX_Quillrabe", true );
+	}
+	if( debug_EFX_7$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_EFX_7$.go.placement.position,
+							0xFF75F94D, "EFX_Hiroth", true );
+	}
+	if( debug_EFX_8$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_EFX_8$.go.placement.position,
+							0xFF75F94D, "EFX_Grescal", true );
+	}
+	
+	if( debug_Trigger_1$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Trigger_1$.go.placement.position,
+							0xFF75F94D, "Trigger_Elddim", true );
+	}
+	if( debug_Trigger_2$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Trigger_2$.go.placement.position,
+							0xFF75F94D, "Trigger_Crystwind", true );
+	}
+	if( debug_Trigger_3$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Trigger_3$.go.placement.position,
+							0xFF75F94D, "Trigger_Fallraen", true );
+	}
+	if( debug_Trigger_4$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Trigger_4$.go.placement.position,
+							0xFF75F94D, "Trigger_Lang", true );
+	}
+	if( debug_Trigger_5$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Trigger_5$.go.placement.position,
+							0xFF75F94D, "Trigger_Meren", true );
+	}
+	if( debug_Trigger_6$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Trigger_6$.go.placement.position,
+							0xFF75F94D, "Trigger_Quillrabe", true );
+	}
+	if( debug_Trigger_7$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Trigger_7$.go.placement.position,
+							0xFF75F94D, "Trigger_Hiroth", true );
+	}
+	if( debug_Trigger_8$.IsValid )
+	{
+		World.DrawDebugArc( owner.go.Placement.Position,
+							debug_Trigger_8$.go.placement.position,
+							0xFF75F94D, "Trigger_Grescal", true );
+	}
+}
+
+void trigger_lock$( bool State_Request$ )
+{
+	// TRUE will ACTIVATE the triggers. FALSE will DEACTIVATE them.
+	if( State_Request$ )
+	{
+		Report.Generic( "collab_ss_ruins_combo_lock.skrit: Unlocking Triggers! \n" );
+		PostWorldMessage( WE_TRIGGER_ACTIVATE, owner.goid, Trigger_Elddim$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_ACTIVATE, owner.goid, Trigger_Crystwind$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_ACTIVATE, owner.goid, Trigger_Fallraen$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_ACTIVATE, owner.goid, Trigger_Lang$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_ACTIVATE, owner.goid, Trigger_Meren$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_ACTIVATE, owner.goid, Trigger_Quillrabe$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_ACTIVATE, owner.goid, Trigger_Grescal$.goid, 0.0 );
+	}
+	else
+	{
+		Report.Generic( "collab_ss_ruins_combo_lock.skrit: Locking Triggers! \n" );
+		PostWorldMessage( WE_TRIGGER_DEACTIVATE, owner.goid, Trigger_Elddim$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_DEACTIVATE, owner.goid, Trigger_Crystwind$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_DEACTIVATE, owner.goid, Trigger_Fallraen$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_DEACTIVATE, owner.goid, Trigger_Lang$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_DEACTIVATE, owner.goid, Trigger_Meren$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_DEACTIVATE, owner.goid, Trigger_Quillrabe$.goid, 0.0 );
+		PostWorldMessage( WE_TRIGGER_DEACTIVATE, owner.goid, Trigger_Grescal$.goid, 0.0 );
+	}
+}
+
+void elevator_reset$()
+{
+	//Raise the elevators.
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, Elevator_Elddim$.goid, 1.1 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, Elevator_Crystwind$.goid, 1.1 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, Elevator_Fallraen$.goid, 1.1 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, Elevator_Lang$.goid, 1.1 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, Elevator_Meren$.goid, 1.1 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, Elevator_Quillrabe$.goid, 1.1 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, Elevator_Hiroth$.goid, 1.1 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, Elevator_Grescal$.goid, 1.1 );
+	
+	//Disable the EFX
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, EFX_Elddim$.goid, 0.0 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, EFX_Crystwind$.goid, 0.0 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, EFX_Fallraen$.goid, 0.0 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, EFX_Lang$.goid, 0.0 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, EFX_Meren$.goid, 0.0 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, EFX_Quillrabe$.goid, 0.0 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, EFX_Hiroth$.goid, 0.0 );
+	PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, EFX_Grescal$.goid, 0.0 );
+}
+
+startup state Startup$
+{
+	transition -> Idle$: OnGoHandleMessage( WE_ENTERED_WORLD );
+	event OnExitState$
+	{
+		Combo_Current_Stage$ = 1;
+		int AuditorGoid$ = MakeInt( Owner.goid );
+		GameAuditor.GetDb.SetInt( "collab_ss_ruins_combo_lock_goid", AuditorGoid$ );
+	}
+}
+
+//Sitting idle ready for a new request to check the system.
+state Idle$
+{
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$)
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+		{
+			bool Operation_Check$ = false;
+			goid Trigger_Messenger$ = msg$.GetSendFrom;
+			
+			//Shut down the Pressure Plates while we check.
+			//trigger_lock$( false );
+			
+			//If we should actually be deactivated, shut us down without allowing operation.
+			if( bDeactivateClamp$ )
+			{
+				SetState Shutdown$;
+			}
+			else
+			{
+				Operation_Check$ = true;
+			}
+			
+			If( Operation_Check$ )
+			{
+				
+				String	Key_Name$;
+				String	Key_Check$;
+				bool	Reset_Key_Combo$ = true; //Safely always presume that you screwed up so reset the lock.
+				bool	Open_Lock$ = false;
+				bool	Valid_Key$ = false;
+				Goid	EFX_Target$;
+				goid	Camera_Quake_Goid$ = Camera_Quake$.goid;
+				goid	debug_goid_check$;
+								
+				//Check the origin of the trigger against a valid trigger goid.
+				if( Trigger_Messenger$ == Trigger_Elddim$.goid )
+				{
+					Key_Name$ = "ELDDIM";
+					EFX_Target$ = EFX_Elddim$.goid;
+					debug_goid_check$ = Trigger_Elddim$.goid;
+					Valid_Key$ = true;
+				}
+				else if( Trigger_Messenger$ == Trigger_Crystwind$.goid )
+				{
+					Key_Name$ = "CRYSTWIND";
+					EFX_Target$ = EFX_Crystwind$.goid;
+					debug_goid_check$ = Trigger_Crystwind$.goid;
+					Valid_Key$ = true;
+				}
+				else if( Trigger_Messenger$ == Trigger_Fallraen$.goid )
+				{
+					Key_Name$ = "FALLRAEN";
+					EFX_Target$ = EFX_Fallraen$.goid;
+					debug_goid_check$ = Trigger_Fallraen$.goid;
+					Valid_Key$ = true;
+				}
+				else if( Trigger_Messenger$ == Trigger_Lang$.goid )
+				{
+					Key_Name$ = "LANG";
+					EFX_Target$ = EFX_Lang$.goid;
+					debug_goid_check$ = Trigger_Lang$.goid;
+					Valid_Key$ = true;
+				}
+				if( Trigger_Messenger$ == Trigger_Meren$.goid )
+				{
+					Key_Name$ = "MEREN";
+					EFX_Target$ = EFX_Meren$.goid;
+					debug_goid_check$ = Trigger_Meren$.goid;
+					Valid_Key$ = true;
+				}
+				else if( Trigger_Messenger$ == Trigger_Quillrabe$.goid )
+				{
+					Key_Name$ = "QUILLRABE";
+					EFX_Target$ = EFX_Quillrabe$.goid;
+					debug_goid_check$ = Trigger_Quillrabe$.goid;
+					Valid_Key$ = true;
+				}
+				else if( Trigger_Messenger$ == Trigger_Hiroth$.goid )
+				{
+					Key_Name$ = "HIROTH";
+					EFX_Target$ = EFX_Hiroth$.goid;
+					debug_goid_check$ = Trigger_Hiroth$.goid;
+					Valid_Key$ = true;
+				}
+				else if( Trigger_Messenger$ == Trigger_Grescal$.goid )
+				{
+					Key_Name$ = "GRESCAL";
+					EFX_Target$ = EFX_Grescal$.goid;
+					debug_goid_check$ = Trigger_Grescal$.goid;
+					Valid_Key$ = true;
+				}
+				
+				if( !Valid_Key$ )
+				{
+					Report.WarningF( "collab_ss_ruins_combo_lock: Invalid Trigger_Messenger$: %i \n", MakeInt( Trigger_messenger$ ) );
+					Report.WarningF( "collab_ss_ruins_combo_lock: Invalid debug_goid_check$:  %i \n", MakeInt( debug_goid_check$ ) );
+					Report.WarningF( "collab_ss_ruins_combo_lock: Invalid Key_Name$: %s \n", Key_Name$ );
+					Reset_Key_Combo$ = true;
+				}
+				
+				Key_Check$ = StringTool.GetDelimitedString( key$, Combo_Current_stage$ - 1 );
+				Report.GenericF( "collab_ss_ruins_combo_lock.skrit has found a Key_Check$ of: %s \n", Key_Check$ );
+				Report.GenericF( "collab_ss_ruins_combo_lock.skrit: Key_Name$: %s \n", key_name$ );
+				if( key_name$ == Key_Check$ )
+				{
+					//YES VALID!
+					if( Combo_Current_Stage$ == 8 )
+					{
+						//KEY IS UNLOCKED!
+						Reset_Key_Combo$ = false;
+						Open_Lock$ = true;
+						Report.Generic( "collab_ss_ruins_combo_lock.skrit: Lock is open! \n" );
+					}
+					else
+					{
+						Combo_Current_Stage$ = Combo_Current_Stage$ + 1;
+						Reset_Key_Combo$ = false;
+						Report.GenericF( "collab_ss_ruins_combo_lock.skrit: Key is valid, incrementing Combo_Current_Stage to: %i \n", Combo_Current_Stage$ );
+					}
+				}
+				else
+				{
+					//NOT VALID
+					Reset_Key_Combo$ = true;
+				}
+				
+				if( Reset_Key_Combo$ )
+				{
+					//You dun goofed. Reset the locks!
+					
+					//Unlock the triggers.
+					//trigger_lock$( true );
+					elevator_reset$();
+					Combo_Current_Stage$ = 1;
+				}
+				else
+				{
+					if( EFX_Target$.IsValid )
+					{
+						Report.Genericf( "collab_ss_ruins_combo_lock.skrit: Sent Activation message to EFX_TARGET: %i \n", MakeInt( EFX_Target$ ) );
+						PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, EFX_Target$, 1.0 );
+						/*
+						if( Camera_Quake_Goid$.IsValid )
+						{
+							PostWorldMessage( WE_REQ_ACTIVATE, Camera_Quake_Goid$, owner.goid, 1.0 );
+						}
+						*/
+						
+					}
+					If( Open_Lock$ )
+					{
+						//Key is valid! Progress onwards!
+						if( target$.goid.IsValid )
+						{
+							PostWorldMessage( Target_Message$, owner.goid, target$.goid, 2.0 );
+							GameAuditor.GetDb.SetBool( Elevator_Unlocked$, true );
+							
+							//triger_lock$( false ); //Removed this because the pressure plates are already locked so we don't need to modify it.
+							
+							//bDeactivateClamp$ = true;
+						}
+						else
+						{
+							Report.Warning( "collab_ss_ruins_combo_lock.skrit: Invalid target to unlock the combo lock!" );
+						}
+					}
+					else
+					{
+						//trigger_lock$( true );
+					}
+				}
+			}
+		}
+		if( e$ == WE_REQ_DEACTIVATE )
+		{
+			SetState( Shutdown$ );
+		}
+	}
+	
+	event OnExitState$
+	{
+		
+	}
+}
+
+state Shutdown$
+{
+	//We have finished our intial orders, so now we wait for final dispensation.
+	
+	event OnEnterState$
+	{
+			PostWorldMessage( WE_REQ_DEACTIVATE, owner.goid, target$.goid, 0.0 );
+	}
+}

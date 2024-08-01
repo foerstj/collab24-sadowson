@@ -1,0 +1,226 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_elevator_spider-dungeon.skrit
+// Author(s):  SadowSon
+//
+// Copyright © 2024 SadowSon
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+//////////////////////////////////////////////////////////////////////////////
+// Reserved Tags
+property	bool		_server_only$			= false;
+property	string		_doc$					= "Controls the big elevator and clamps in the spider dungeon. Activated by WE_REQ_ACTIVATE.";
+property	string		_required_component$	= "placement";
+
+//Exported Properties
+
+property	SCID		Elevator$				= 0			doc = "SCID of main Elevator";
+property	SCID		Clamp_Left$				= 0			doc = "SCID of Left Clamp. Door 3/4";
+property	SCID		Clamp_Center$			= 0			doc = "SCID of Center Clamp. Door 1/2";
+property	SCID		Clamp_Right$			= 0			doc = "SCID of Right Clamp. Door 7/8";
+property	string		Release_Type$			= "NORMAL"	doc = "Method of 'releasing' the Elevator. Valid types are NORMAL, CLOCKWISE, COUNTERCLOCKWISE";
+property	string		Clamp_Type$				= "NORMAL"	doc = "Method of 'clamping' the Elevator. Valid Types are NORMAL, CLOCKWISE, COUNTERCLOCKWISE";
+property	bool		Clamps_OneShot$			= false		doc = "Clamps release once, never move again";
+
+			bool		bDeactivateClamps$		= false;
+			float		Elevator_Delay$			= 4.0;
+			float		Clamp_Left_Delay$		= 0.0;
+			float		Clamp_Center_Delay$		= 0.0;
+			float		Clamp_Right_Delay$		= 0.0;
+			owner = GoSkritComponent;
+			
+//////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoDrawDebugHud$
+{
+	goid	goid1$ = Elevator$.goid;
+	goid	goid2$ = Clamp_left$.goid;
+	goid	goid3$ = Clamp_Center$.goid;
+	goid	goid4$ = Clamp_Right$.goid;
+	
+	if( goid1$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid1$.go.Placement.Position,
+									 MakeColor( 0, 1.0, 0, 0.5 ),
+									 "Elevator" );
+	}
+
+	if( goid2$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid2$.go.Placement.Position,
+									 MakeColor( 1.0, 1.0, 0, 0.5 ),
+									 "Clamp_Left" );
+	}
+
+	if( goid3$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid3$.go.Placement.Position,
+									 MakeColor( 0, 1.0, 0, 0.5 ),
+									 "Clamp_Center" );
+	}
+
+	if( goid4$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid4$.go.Placement.Position,
+									 MakeColor( 1.0, 1.0, 0, 0.5 ),
+									 "Clamp_Right" );
+	}
+}
+
+startup state wait$
+{
+	transition -> L1_Wait$: OnGoHandleMessage( WE_ENTERED_WORLD );
+}
+
+state L1_Wait$
+{
+	transition -> L1_Moving$: OnGoHandleMessage( WE_REQ_ACTIVATE );
+	
+	event OnExitState$
+	{
+		bool Execute$ = FALSE;
+		if( RELEASE_TYPE$ == "NORMAL" )
+		{
+			Execute$ = TRUE;
+			float		Elevator_Delay$			= 4.0;
+			float		Clamp_Left_Delay$		= 1.0;
+			float		Clamp_Center_Delay$		= 2.0;
+			float		Clamp_Right_Delay$		= 1.0;
+		}
+		else if( RELEASE_TYPE$ == "CLOCKWISE" )
+		{
+			Execute$ = TRUE;
+			float		Elevator_Delay$			= 4.0;
+			float		Clamp_Left_Delay$		= 1.0;
+			float		Clamp_Center_Delay$		= 2.0;
+			float		Clamp_Right_Delay$		= 3.0;
+		}
+		else if( RELEASE_TYPE$ == "COUNTERCLOCKWISE" )
+		{
+			Execute$ = TRUE;
+			float		Elevator_Delay$			= 4.0;
+			float		Clamp_Left_Delay$		= 3.0;
+			float		Clamp_Center_Delay$		= 2.0;
+			float		Clamp_Right_Delay$		= 1.0;
+		}
+		else
+		{
+			Execute$ = FALSE;
+			Report.ErrorF( "collab_ss_elevator_spider-dungeon.skrit: Type %s is not a valid release type! We won't move!", RELEASE_TYPE$ );
+		}
+		
+		if( Execute$ == TRUE )
+		{
+			PostWorldMessage( WE_REQ_ACTIVATE, elevator$.goid, owner.goid, Elevator_Delay$ );
+			
+			if( Clamps_OneShot$ )
+			{
+				if( bDeactivateClamps$ )
+				{
+					//Do nothing, Clamps have been deactivated.
+				}
+				else
+				{
+					bDeactivateClamps$ = true;
+					PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Left$.goid, Clamp_Left_Delay$ );
+					PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Center$.goid, Clamp_Center_Delay$ );
+					PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Right$.goid, Clamp_Right_Delay$ );
+					
+					PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Elevator$.goid, Elevator_Delay$ );
+				}
+			}
+			else
+			{
+				PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Left$.goid, Clamp_Left_Delay$ );
+				PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Center$.goid, Clamp_Center_Delay$ );
+				PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Right$.goid, Clamp_Right_Delay$ );
+				
+				PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Elevator$.goid, Elevator_Delay$ );
+			}
+		}
+	}
+}
+
+state L1_Moving$
+{
+	transition -> L2_Wait$: OnTimer( 1 );
+	
+	event OnEnterState$
+	{
+		This.CreateTimer( 1, 12 );
+	}
+}
+
+state L2_Wait$
+{
+	transition -> L2_Slumber$: OnGoHandleMessage( WE_REQ_ACTIVATE );
+	
+	event OnExitState$
+	{
+		bool Execute$ = false;
+		if( RELEASE_TYPE$ == "NORMAL" )
+		{
+			Execute$ = TRUE;
+			float		Elevator_Delay$			= 1.0;
+			float		Clamp_Left_Delay$		= 6.0;
+			float		Clamp_Center_Delay$		= 7.0;
+			float		Clamp_Right_Delay$		= 6.0;
+		}
+		else if( RELEASE_TYPE$ == "CLOCKWISE" )
+		{
+			Execute$ = TRUE;
+			float		Elevator_Delay$			= 1.0;
+			float		Clamp_Left_Delay$		= 6.0;
+			float		Clamp_Center_Delay$		= 7.0;
+			float		Clamp_Right_Delay$		= 8.0;
+		}
+		else if( RELEASE_TYPE$ == "COUNTERCLOCKWISE" )
+		{
+			Execute$ = TRUE;
+			float		Elevator_Delay$			= 1.0;
+			float		Clamp_Left_Delay$		= 8.0;
+			float		Clamp_Center_Delay$		= 7.0;
+			float		Clamp_Right_Delay$		= 6.0;
+		}
+		else
+		{
+			Execute$ = FALSE;
+			Report.ErrorF( "collab_ss_elevator_spider-dungeon.skrit: Type %s is not a valid release type! We won't move!", RELEASE_TYPE$ );
+		}
+		
+		if( Execute$ == TRUE )
+		{
+			PostWorldMessage( WE_REQ_ACTIVATE, elevator$.goid, owner.goid, Elevator_Delay$ );
+			
+			//Check if the clamps have been deactivated.
+			if( bDeactivateClamps$ )
+			{
+				//Clamps were deactivated, so do nothing.
+			}
+			else
+			{
+				PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Left$.goid, Clamp_Left_Delay$ );
+				PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Center$.goid, Clamp_Center_Delay$ );
+				PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Clamp_Right$.goid, Clamp_Right_Delay$ );
+				
+				PostWorldMessage( WE_REQ_ACTIVATE, owner.goid, Elevator$.goid, Elevator_Delay$ );
+			}
+		}
+	}
+}
+
+state L2_Slumber$
+{
+	transition -> L2_Wait$: OnTimer( 2 );
+	
+	event OnEnterState$
+	{
+		This.CreateTimer( 2, 12 );
+	}
+}

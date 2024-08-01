@@ -1,0 +1,903 @@
+///EMITTERS FOR THE QUEST AND SHOP ICONS.
+///
+
+///INDICATOR AMULETS
+[effect_script*]
+{
+	name	=indicator_amulet;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_amulet)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_amulet-exclamation_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_amulet-exclamation)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_amulet-question_grey;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_amulet-q-mark-g)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_amulet-question_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_amulet-q-mark-o)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_chat;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_chat)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_exclamation_green;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_exclamation-green)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_exclamation_grey;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_exclamation-grey)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_exclamation_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_exclamation-orange)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_hand;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_hand)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_hand_exclamation_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_hand-exclamation)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_hand_question_grey;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_hand-q-mark-g)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_hand_question_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_hand-q-mark-o)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_info;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_info)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_inn;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_inn)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_join;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_join)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_mug;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_mug)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_packmule;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_pack-mule)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_packmule_exclamation_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_pack-mule-exclamation)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_packmule_question_grey;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_pack-mule-q-mark-g)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_packmule_question_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_pack-mule-q-mark-o)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_potion;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_potion)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_potion_exclamation_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_potion-eclamation)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_potion_question_grey;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_potion-q-mark-g)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_potion_question_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_potion-q-mark-o)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_question_orange;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_question-mark)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_question_gold;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_question-mark_gold)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_question_grey;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_question-mark_grey)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_shield;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_shield)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_sword;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_sword)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_talk2me;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_talk2me)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]
+{
+	name	=indicator_tombstone;
+
+	script	=[[
+
+			sfx create fire #TARGET 
+				"texture(b_gui_el_talk2me)
+				color0(0,0,0)
+				color1(0,0,0)
+				instant()
+				velocity(0,0,0)
+				accel(0,0,0)
+				flamesize(1)
+				fctrl(2,2,0)
+				alphafade(0)
+				count(1)
+				min_count(1)
+				radius_rmax(0)
+				min_displace(10)
+				max_displace(10)
+				yorient()
+				dark()
+				offset(0,1.5,0)";
+			
+			sfx start #POP;
+
+			]];
+}
