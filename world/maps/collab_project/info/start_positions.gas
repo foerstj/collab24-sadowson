@@ -3,10 +3,10 @@
 	[t:start_group,n:test_crypt_altar]
 	{
 	  b default = false;
-		description = "";
+		description = "test_crypt_altar";
 	  b dev_only = false;
 	  i id = 470;
-		screen_name = "";
+		screen_name = "test_crypt_altar";
 		[start_position]
 		{
 		  i id = 1;
@@ -49,10 +49,10 @@
 	[t:start_group,n:test_prison]
 	{
 	  b default = false;
-		description = "";
+		description = "test_prison";
 	  b dev_only = false;
 	  i id = 420;
-		screen_name = "";
+		screen_name = "test_prison";
 		[start_position]
 		{
 		  i id = 1;
@@ -72,10 +72,10 @@
 	[t:start_group,n:test_valley]
 	{
 	  b default = true;
-		description = "";
+		description = "test_valley";
 	  b dev_only = false;
 	  i id = 410;
-		screen_name = "";
+		screen_name = "test_valley";
 		[start_position]
 		{
 		  i id = 1;
