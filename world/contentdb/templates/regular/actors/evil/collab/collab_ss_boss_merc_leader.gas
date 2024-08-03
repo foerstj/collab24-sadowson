@@ -8,6 +8,8 @@
 		alignment		= aa_good;	//Determined by first talking to him which turns him evil.
 		can_level_up	= false;
 		race 			= other;
+
+		[skills]
 		{
 			strength		= 22, 0;
 			intelligence	= 11, 0;
