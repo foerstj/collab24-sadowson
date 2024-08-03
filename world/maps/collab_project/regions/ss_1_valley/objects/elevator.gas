@@ -1,4 +1,4 @@
-[t:elevator_2s_1c_2n,n:0x00100ca6]
+[t:elevator_2s_1c_2n,n:0x41000ca6]
 {
 	[elevator_2s_1c_2n]
 	{
@@ -15,7 +15,7 @@
 	  p position = 0.206073,0.850758,-4.297,0xf27a6bf5;
 	}
 }
-[t:elevator_2s_2c_2n,n:0x00100cc2]
+[t:elevator_2s_2c_2n,n:0x41000cc2]
 {
 	[elevator_2s_2c_2n]
 	{
@@ -36,7 +36,7 @@
 	  p position = 0.00114298,1.18439,-3.60564,0x72e5307c;
 	}
 }
-[t:elevator_hidden_stairwell,n:0x00100d06]
+[t:elevator_hidden_stairwell,n:0x41000d06]
 {
 	[elevator_hidden_stairwell]
 	{

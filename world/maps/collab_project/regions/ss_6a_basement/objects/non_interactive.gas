@@ -1,4 +1,4 @@
-[t:torch_glb_holder_03,n:0x00a1200e]
+[t:torch_glb_holder_03,n:0x46a1200e]
 {
 	[light_flicker_lightweight]
 	{
@@ -10,7 +10,7 @@
 	  p position = -2.009,-0.500874,0.0370255,0x3d88dfca;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12011]
+[t:torch_glb_holder_03,n:0x46a12011]
 {
 	[light_flicker_lightweight]
 	{
@@ -22,7 +22,7 @@
 	  p position = -2.03121,-0.500874,0.0396595,0x12208386;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12010]
+[t:torch_glb_holder_03,n:0x46a12010]
 {
 	[light_flicker_lightweight]
 	{
@@ -34,7 +34,7 @@
 	  p position = -1.93528,-0.500874,0.0303345,0x0bd16170;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12013]
+[t:torch_glb_holder_03,n:0x46a12013]
 {
 	[light_flicker_lightweight]
 	{
@@ -46,7 +46,7 @@
 	  p position = -1.98037,-0.500874,0.0441132,0x3c5e93ed;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12014]
+[t:torch_glb_holder_03,n:0x46a12014]
 {
 	[light_flicker_lightweight]
 	{
@@ -58,7 +58,7 @@
 	  p position = 1.9869,-0.500874,0.0400047,0xb0402132;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12015]
+[t:torch_glb_holder_03,n:0x46a12015]
 {
 	[light_flicker_lightweight]
 	{
@@ -70,7 +70,7 @@
 	  p position = 3.04343,-2.66059,-5.43491,0x86579a69;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12012]
+[t:torch_glb_holder_03,n:0x46a12012]
 {
 	[light_flicker_lightweight]
 	{
@@ -82,7 +82,7 @@
 	  p position = -0.00208282,-0.500874,0.0295184,0x04155747;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a1200f]
+[t:torch_glb_holder_03,n:0x46a1200f]
 {
 	[light_flicker_lightweight]
 	{
@@ -94,7 +94,7 @@
 	  p position = -1.78668,-0.500874,0.0317106,0x44786632;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a1200d]
+[t:torch_glb_holder_03,n:0x46a1200d]
 {
 	[light_flicker_lightweight]
 	{
@@ -106,7 +106,7 @@
 	  p position = 1.97353,-0.500874,0.020041,0x6abd7d32;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12006]
+[t:torch_glb_holder_03,n:0x46a12006]
 {
 	[light_flicker_lightweight]
 	{
@@ -118,7 +118,7 @@
 	  p position = -0.030169,-0.500874,-0.743232,0x6265968f;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a1200c]
+[t:torch_glb_holder_03,n:0x46a1200c]
 {
 	[light_flicker_lightweight]
 	{
@@ -130,7 +130,7 @@
 	  p position = -1.97414,-0.500874,0.0285215,0xdf3fd76f;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12002]
+[t:torch_glb_holder_03,n:0x46a12002]
 {
 	[light_flicker_lightweight]
 	{
@@ -142,7 +142,7 @@
 	  p position = -1.99436,-0.401517,0.0555,0xe1f3e786;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12004]
+[t:torch_glb_holder_03,n:0x46a12004]
 {
 	[light_flicker_lightweight]
 	{
@@ -154,7 +154,7 @@
 	  p position = -2.01441,-0.401517,0.0395584,0xedaa4567;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12005]
+[t:torch_glb_holder_03,n:0x46a12005]
 {
 	[light_flicker_lightweight]
 	{
@@ -166,7 +166,7 @@
 	  p position = 1.95394,-0.401517,0.0448532,0xedaa4567;
 	}
 }
-[t:torch_glb_holder_03,n:0x00a12003]
+[t:torch_glb_holder_03,n:0x46a12003]
 {
 	[light_flicker_lightweight]
 	{

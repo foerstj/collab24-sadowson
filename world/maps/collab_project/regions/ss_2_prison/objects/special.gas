@@ -1,4 +1,4 @@
-[t:trigger_generic,n:0x0020004d]
+[t:trigger_generic,n:0x4200004d]
 {
 	[common]
 	{
@@ -27,14 +27,14 @@
 	  p position = 0.148269,0,0.0733757,0x81a06348;
 	}
 }
-[t:use_point,n:0x0020004c]
+[t:use_point,n:0x4200004c]
 {
 	[placement]
 	{
 	  p position = 1.36199,0,-0.355391,0xea914580;
 	}
 }
-[t:trigger_generic,n:0x0020001f]
+[t:trigger_generic,n:0x4200001f]
 {
 	[common]
 	{
@@ -63,7 +63,7 @@
 	  p position = 0.00475311,-1.45,-1.49696,0x9bb6dfb2;
 	}
 }
-[t:trigger_generic,n:0x0020001d]
+[t:trigger_generic,n:0x4200001d]
 {
 	[common]
 	{
@@ -92,7 +92,7 @@
 	  p position = -0.0493622,-0.0441927,-0.140678,0xb2ad58dc;
 	}
 }
-[t:use_point,n:0x0020002d]
+[t:use_point,n:0x4200002d]
 {
 	[placement]
 	{

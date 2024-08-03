@@ -1,4 +1,4 @@
-[t:use_point,n:0x00a1200b]
+[t:use_point,n:0x46a1200b]
 {
 	[placement]
 	{
@@ -6,7 +6,7 @@
 	  p position = -1.95988,-1.5,-0.996288,0xde9e6786;
 	}
 }
-[t:use_point,n:0x00a1200a]
+[t:use_point,n:0x46a1200a]
 {
 	[placement]
 	{

@@ -2,10 +2,10 @@
 {
 	created = battlestation,dowde;
 	description = none;
-  x guid = 0x06A0000A;
-	lastmodified = BATTLESTATION,dowde;
-  x mesh_range = 0x06A0000A;
+  x guid = 0x0000046A;
+	lastmodified = FLUPSNPUPS,flups;
+  x mesh_range = 0x0000046A;
 	notes = none;
-  x scid_range = 0x06A0000A;
+  x scid_range = 0x0000046A;
 	se_version = 1.70.0.4;
 }

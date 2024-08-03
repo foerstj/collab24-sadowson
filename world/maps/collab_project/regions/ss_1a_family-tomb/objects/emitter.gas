@@ -1,4 +1,4 @@
-[t:emitter_glb_fire_01,n:0x00a00037]
+[t:emitter_glb_fire_01,n:0x41a00037]
 {
 	[light_flicker_lightweight]
 	{
@@ -9,7 +9,7 @@
 	  p position = -2.03868,0,-1.01853,0x06f7f6c3;
 	}
 }
-[t:emt_sound_act,n:0x00a00043]
+[t:emt_sound_act,n:0x41a00043]
 {
 	[placement]
 	{

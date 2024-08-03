@@ -1,9 +1,9 @@
-[t:cmd_animation_command,n:0x00200031]
+[t:cmd_animation_command,n:0x42000031]
 {
 	[cmd_animation_command]
 	{
 	  i animation = 1936290865;
-	  x client_scid = 0x00200030;
+	  x client_scid = 0x42000030;
 	}
 	[placement]
 	{

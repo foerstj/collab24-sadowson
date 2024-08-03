@@ -1,4 +1,4 @@
-[t:collab_ss_nymeria_sword_weak,n:0x00a00006]
+[t:collab_ss_nymeria_sword_weak,n:0x41a00006]
 {
 	[common]
 	{
@@ -25,10 +25,10 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -0.507286,-0.5,-0.0269413,0xb686f4bc;
-		use_point_scids = 0x00a00008;
+		use_point_scids = 0x41a00008;
 	}
 }
-[t:collab_ss_spellbook_1a_family-tomb,n:0x00a0001e]
+[t:collab_ss_spellbook_1a_family-tomb,n:0x41a0001e]
 {
 	[common]
 	{
@@ -36,7 +36,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00A00014,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x41A00014,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message");
 			  f delay = 0.000000;
@@ -55,6 +55,6 @@
 	{
 	  q orientation = 0,0.923879,0,-0.382684;
 	  p position = 0.0233378,1,0.00730896,0x32778e7b;
-		use_point_scids = 0x00a00039;
+		use_point_scids = 0x41a00039;
 	}
 }

@@ -1,8 +1,8 @@
-[t:door_glb_fort_01,n:0x00400794]
+[t:door_glb_fort_01,n:0x44000794]
 {
 	[door_basic]
 	{
-	  x second_door = 0x00400795;
+	  x second_door = 0x44000795;
 	  b use_toggle = true;
 	}
 	[placement]
@@ -10,11 +10,11 @@
 	  p position = 3.10403,-5,26.7928,0x800b9b55;
 	}
 }
-[t:door_glb_fort_right_01,n:0x00400795]
+[t:door_glb_fort_right_01,n:0x44000795]
 {
 	[door_basic]
 	{
-	  x second_door = 0x00400794;
+	  x second_door = 0x44000794;
 	  b use_toggle = true;
 	}
 	[placement]

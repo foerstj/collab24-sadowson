@@ -1,4 +1,4 @@
-[t:elevator_2s_2c_1n,n:0x005000ac]
+[t:elevator_2s_2c_1n,n:0x450000ac]
 {
 	[elevator_2s_2c_1n]
 	{
@@ -23,7 +23,7 @@
 	  p position = 0.0160217,-1.5,-1.60744,0xff21e95c;
 	}
 }
-[t:elevator_2s_2c_1n,n:0x00500002]
+[t:elevator_2s_2c_1n,n:0x45000002]
 {
 	[elevator_2s_2c_1n]
 	{
@@ -47,7 +47,7 @@
 	  p position = 0.0405273,-2,-1.25538,0x9d5daf7a;
 	}
 }
-[t:elevator_2s_1c_2n,n:0x0050000d]
+[t:elevator_2s_1c_2n,n:0x4500000d]
 {
 	[elevator_2s_1c_2n]
 	{
@@ -60,15 +60,15 @@
 	  i elevator_door_level2 = 1;
 	  x elevator_node = 0x1BEC4D00;
 		material = "sd_large";
-		moving1_actioninfo = "0x05000005,2,-1,-1,out:black,collab_ss_5_dungeon_3";
-		moving2_actioninfo = "0x05000005,2,-1,-1,in,collab_ss_5_dungeon_2";
+		moving1_actioninfo = "0x00000450,2,-1,-1,out:black,collab_ss_5_dungeon_3";
+		moving2_actioninfo = "0x00000450,2,-1,-1,in,collab_ss_5_dungeon_2";
 	}
 	[placement]
 	{
 	  p position = -0.035141,-15.3,0.359779,0x1bec4d00;
 	}
 }
-[t:elevator_2s_1c_1n,n:0x0050002a]
+[t:elevator_2s_1c_1n,n:0x4500002a]
 {
 	[elevator_2s_1c_1n]
 	{
@@ -86,7 +86,7 @@
 	  p position = 0.195351,25.3,-1.3653,0xfa19632f;
 	}
 }
-[t:elevator_2s_1c_1n,n:0x0050003b]
+[t:elevator_2s_1c_1n,n:0x4500003b]
 {
 	[elevator_2s_1c_1n]
 	{
@@ -104,7 +104,7 @@
 	  p position = 0.110794,23.6676,-0.0806885,0xbcd18854;
 	}
 }
-[t:elevator_2s_2c_1n,n:0x005000bb]
+[t:elevator_2s_2c_1n,n:0x450000bb]
 {
 	[elevator_2s_2c_1n]
 	{
@@ -128,7 +128,7 @@
 	  p position = 0.0867767,-2,-0.97081,0x83f17458;
 	}
 }
-[t:elevator_2s_2c_1n,n:0x005000b7]
+[t:elevator_2s_2c_1n,n:0x450000b7]
 {
 	[elevator_2s_2c_1n]
 	{
@@ -152,7 +152,7 @@
 	  p position = 0.0144653,-2,1.19818,0xbc2d9f2f;
 	}
 }
-[t:elevator_2s_2c_1n,n:0x005000b6]
+[t:elevator_2s_2c_1n,n:0x450000b6]
 {
 	[elevator_2s_2c_1n]
 	{
@@ -176,7 +176,7 @@
 	  p position = 0.00488281,-2,1.16286,0x0c8589eb;
 	}
 }
-[t:elevator_2s_1c_1n,n:0x00500063]
+[t:elevator_2s_1c_1n,n:0x45000063]
 {
 	[elevator_2s_1c_1n]
 	{
@@ -194,7 +194,7 @@
 	  p position = 0.196686,25.3,-1.57497,0xd55d89d1;
 	}
 }
-[t:elevator_2s_1c_1n,n:0x0050004e]
+[t:elevator_2s_1c_1n,n:0x4500004e]
 {
 	[elevator_2s_1c_1n]
 	{
@@ -212,7 +212,7 @@
 	  p position = 0.200539,25.7769,-1.54984,0x598bf6a9;
 	}
 }
-[t:elevator_2s_1c_1n,n:0x00500053]
+[t:elevator_2s_1c_1n,n:0x45000053]
 {
 	[elevator_2s_1c_1n]
 	{
@@ -230,7 +230,7 @@
 	  p position = -0.00279236,23.8381,0.117615,0x9eb8ce7c;
 	}
 }
-[t:elevator_2s_2c_1n,n:0x005000c1]
+[t:elevator_2s_2c_1n,n:0x450000c1]
 {
 	[elevator_2s_2c_1n]
 	{
@@ -254,7 +254,7 @@
 	  p position = -0.101337,-2,1.0193,0xf5a767d0;
 	}
 }
-[t:elevator_2s_1c_2n,n:0x0050003a]
+[t:elevator_2s_1c_2n,n:0x4500003a]
 {
 	[elevator_2s_1c_2n]
 	{
@@ -267,15 +267,15 @@
 	  i elevator_door_level2 = 1;
 	  x elevator_node = 0x538B5525;
 		material = "sd_large";
-		moving1_actioninfo = "0x05000005,2,-1,-1,out:black,collab_ss_5_dungeon_3";
-		moving2_actioninfo = "0x05000005,2,-1,-1,in,collab_ss_5_dungeon_2";
+		moving1_actioninfo = "0x00000450,2,-1,-1,out:black,collab_ss_5_dungeon_3";
+		moving2_actioninfo = "0x00000450,2,-1,-1,in,collab_ss_5_dungeon_2";
 	}
 	[placement]
 	{
 	  p position = -0.112152,-15.3,1.57922,0x538b5525;
 	}
 }
-[t:elevator_2s_2c_1n,n:0x005000bd]
+[t:elevator_2s_2c_1n,n:0x450000bd]
 {
 	[elevator_2s_2c_1n]
 	{
@@ -299,7 +299,7 @@
 	  p position = -0.0160675,-2,-1.03476,0x91132e98;
 	}
 }
-[t:elevator_2s_1c_1n,n:0x0050004d]
+[t:elevator_2s_1c_1n,n:0x4500004d]
 {
 	[elevator_2s_1c_1n]
 	{

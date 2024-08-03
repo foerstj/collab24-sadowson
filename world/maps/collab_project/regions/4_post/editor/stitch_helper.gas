@@ -1,6 +1,6 @@
 [stitch_helper_data]
 {
-	source_region_guid = 0x0900004F;
+	source_region_guid = 0x000004F0;
 	source_region_name = 4_post;
 	[t:stitch_editor,n:ss_1_valley]
 	{

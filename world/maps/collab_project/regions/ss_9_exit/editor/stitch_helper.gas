@@ -1,6 +1,6 @@
 [stitch_helper_data]
 {
-	source_region_guid = 0x09000009;
+	source_region_guid = 0x00000490;
 	source_region_name = ss_9_exit;
 	[t:stitch_editor,n:ss_1_valley]
 	{

@@ -1,4 +1,4 @@
-[t:elevator_instant_4s_1c,n:0x00800001]
+[t:elevator_instant_4s_1c,n:0x48000001]
 {
 	[elevator_instant_4s_1c]
 	{
@@ -27,14 +27,14 @@
 		location2_moving_to_lv1_actioninfo = "collab_ss_9_exit_1";
 		location2_moving_to_lv2_actioninfo = "collab_ss_teleport_up";
 		material = "hub";
-	  x other_elevator = 0x0090000F;
+	  x other_elevator = 0x4900000F;
 	}
 	[placement]
 	{
 	  p position = 0.0365735,4.3159,1.04336,0xf1a6e42f;
 	}
 }
-[t:elevator_2s_2c_2n,n:0x00800009]
+[t:elevator_2s_2c_2n,n:0x48000009]
 {
 	[elevator_2s_2c_2n]
 	{
@@ -51,15 +51,15 @@
 	  x elevator_node = 0xAA9C1023;
 		level1_message = we_req_deactivate;
 	  f level1_message_delay = 0;
-	  x level1_scid = 0x0080000B;
+	  x level1_scid = 0x4800000B;
 		level2_message = we_req_deactivate;
 	  f level2_message_delay = 0;
-	  x level2_scid = 0x0080000B;
+	  x level2_scid = 0x4800000B;
 		material = "dc_pulley";
 	  f moving1_message_delay = 0;
-	  x moving1_scid = 0x0080000B;
+	  x moving1_scid = 0x4800000B;
 	  f moving2_message_delay = 0;
-	  x moving2_scid = 0x0080000B;
+	  x moving2_scid = 0x4800000B;
 	}
 	[placement]
 	{

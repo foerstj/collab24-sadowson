@@ -1,4 +1,4 @@
-[t:emt_fire,n:0x00700034]
+[t:emt_fire,n:0x47000034]
 {
 	[fire_emitter]
 	{
@@ -13,7 +13,7 @@
 	  p position = -0.0150455,0.3,-0.173607,0x0d90392f;
 	}
 }
-[t:emt_fire,n:0x00700084]
+[t:emt_fire,n:0x47000084]
 {
 	[fire_emitter]
 	{

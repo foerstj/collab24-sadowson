@@ -1,25 +1,25 @@
-[t:collab_ss_elevator_spider-dungeon,n:0x00500005]
+[t:collab_ss_elevator_spider-dungeon,n:0x45000005]
 {
 	[collab_ss_elevator_spider-dungeon]
 	{
-	  x clamp_center = 0x0050003B;
-	  x clamp_left = 0x0050002A;
-	  x clamp_right = 0x0050004D;
-	  x elevator = 0x0050000D;
+	  x clamp_center = 0x4500003B;
+	  x clamp_left = 0x4500002A;
+	  x clamp_right = 0x4500004D;
+	  x elevator = 0x4500000D;
 	}
 	[placement]
 	{
 	  p position = 1.75952,-15.3,-0.311501,0x1bec4d00;
 	}
 }
-[t:collab_ss_elevator_spider-dungeon,n:0x0050007f]
+[t:collab_ss_elevator_spider-dungeon,n:0x4500007f]
 {
 	[collab_ss_elevator_spider-dungeon]
 	{
-	  x clamp_center = 0x00500053;
-	  x clamp_left = 0x0050004E;
-	  x clamp_right = 0x00500063;
-	  x elevator = 0x0050003A;
+	  x clamp_center = 0x45000053;
+	  x clamp_left = 0x4500004E;
+	  x clamp_right = 0x45000063;
+	  x elevator = 0x4500003A;
 	}
 	[placement]
 	{

@@ -1,4 +1,4 @@
-[t:elevator_instant_4s_1c,n:0x0090000f]
+[t:elevator_instant_4s_1c,n:0x4900000f]
 {
 	[elevator_instant_4s_1c]
 	{
@@ -27,7 +27,7 @@
 		location2_moving_to_lv1_actioninfo = "collab_ss_8_lava_caverns_3";
 		location2_moving_to_lv2_actioninfo = "collab_ss_teleport_up";
 		material = "hub";
-	  x other_elevator = 0x00800001;
+	  x other_elevator = 0x48000001;
 	}
 	[placement]
 	{
