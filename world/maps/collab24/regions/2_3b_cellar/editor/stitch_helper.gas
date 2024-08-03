@@ -1,0 +1,13 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x0000002A;
+	source_region_name = 2_3b_cellar;
+	[t:stitch_editor,n:2_3_town_and_outskirts]
+	{
+		dest_region = 2_3_town_and_outskirts;
+		[node_ids]
+		{
+			0x0000002e = 0xEAB21FF5,1;
+		}
+	}
+}

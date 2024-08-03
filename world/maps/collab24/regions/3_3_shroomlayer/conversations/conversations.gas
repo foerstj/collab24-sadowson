@@ -1,0 +1,18 @@
+[underland]
+{
+	[text*]
+	{
+		screen_text = "Well hello there, Overling, welcome to Underland! We Underlings live down here amid the beautiful forests of the Shroomlayer. Do visit our town, Shroomington, just a few steps down the road!
+
+Me hopes ya didn't have too many troubles going through the Crystlayer. There's goddamn mages up there these days, and they make nothing but trouble!";
+	}
+}
+[shroomwood]
+{
+	[text*]
+	{
+		screen_text = "Hello there, Overling, how's your journey? Me hopes the Slingers out there aren't any trouble for ya?
+
+Yes, just continue following the road, Shroomington isn't much further. You'll be there in a minute!";
+	}
+}

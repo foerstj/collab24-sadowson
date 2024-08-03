@@ -7,25 +7,25 @@
 	{
 		[skills]
 		{
-			strength =  14, 0;
-			intelligence =  2, 0;
-			dexterity =  6, 0;
-			melee =  3,  0;
+			strength 		= 20, 0;
+			dexterity 		= 14, 0;
+			intelligence 	= 11,  0;
+			melee 			= 17,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 20;
-		life = 28;
-		max_life = 28;
-		mana = 4;
-		max_mana = 4;
+		experience_value = 36;
+		life 			= 429;
+		max_life 		= 429;
+		mana 			= 97;
+		max_mana 		= 97;
 		model = m_c_ecm_sk_pos_2;
 	}
 	[attack]
 	{
-		damage_max = 10;
-		damage_min = 8;
+		damage_max = 20;
+		damage_min = 15;
 	}
 	[common]
 	{
@@ -34,7 +34,7 @@
 	}
 	[defend]
 	{
-		defense = 37;
+		defense = 17;
 	}
 	[inventory]
 	{
@@ -86,27 +86,31 @@
 	{
 		[skills]
 		{
-			strength =  16, 0;
-			intelligence =  3, 0;
-			dexterity =  7, 0;
-			melee =  5,  0;
+			strength 		= 20, 0;
+			dexterity 		= 14, 0;
+			intelligence 	= 11,  0;
+			melee 			= 17,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 40;
-		life = 68;
-		max_life = 68;
-		mana = 4;
-		max_mana = 4;
+		experience_value = 36;
+		life 			= 429;
+		max_life 		= 429;
+		mana 			= 97;
+		max_mana 		= 97;
 		model = m_c_ecm_sk_pos_2;
 		textures:0 = b_c_ecm_skg-02;
         scale_base = 1.2;
 	}
 	[attack]
 	{
-		damage_max = 6;
-		damage_min = 3;
+		damage_max = 20;
+		damage_min = 15;
+	}
+	[defend]
+	{
+		defense = 39;
 	}
 	[common]
 	{
@@ -122,10 +126,6 @@
 				action* = call_sfx_script("unique_light_red(sgx)");
 			}
 		}
-	}
-	[defend]
-	{
-		defense=39;
 	}
 	[inventory]
 	{
@@ -174,26 +174,36 @@
 	category_name = "ss_5_dungeon_enemies";
 	doc = "Skeleton_archer";
 	specializes = base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 14, 0;
+			dexterity 		= 20, 0;
+			intelligence 	= 12,  0;
+			ranged 			= 17,  0;
+		}
+	}
 	[aspect]
 	{
-		experience_value = 33;
-		life = 27;
-		max_life = 27;
-		mana = 2;
-		max_mana = 2;
+		experience_value = 36;
+		life 			= 299;
+		max_life 		= 299;
+		mana 			= 132;
+		max_mana 		= 132;
 	}
 	[attack]
 	{
-		damage_max = 11;
-		damage_min = 9;
+		damage_max = 24;
+		damage_min = 18;
 	}
 	[common]
 	{
-		screen_name="Skeleton Archer";
+		screen_name = "Skeleton Archer";
 	}
 	[defend]
 	{
-		defense=28;
+		defense = 21;
 	}
 	[inventory]
 	{
@@ -258,26 +268,30 @@
 	{
 		[skills]
 		{
-			strength =  	9,0;
-			intelligence =  	3,0;
-			dexterity =  	4,0;
-			melee =  		3,0;
+			strength 		= 20, 0;
+			dexterity 		= 14, 0;
+			intelligence 	= 11, 0;
+			melee 			= 17, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 22;
-		life = 36;
-		max_life = 36;
-		mana = 6;
-		max_mana = 6;
-		[textures] { 0=b_c_edm_zo-02; }
+		experience_value = 36;
+		life 			= 429;
+		max_life 		= 429;
+		mana 			= 97;
+		max_mana 		= 97;
+		[textures]{ 0=b_c_edm_zo-02; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 13;
 		damage_min = 9;
+	}
+	[defend]
+	{
+		defense = 17;
 	}
 	[body]
 	{
@@ -334,10 +348,7 @@
 	{
 		screen_name = "Walking Corpse";
 	}
-	[defend]
-	{
-		defense = 41;
-	}
+	
    	[inventory]
 	{
     	[pcontent]
@@ -397,19 +408,19 @@
 	{
 		[skills]
 		{
-			strength =  10, 0;
-			intelligence =  6, 0;
-			dexterity =  18, 0;
-			melee =  3,  0;
+			strength 		= 20, 0;
+			dexterity 		= 14, 0;
+			intelligence 	= 11,  0;
+			melee 			= 17,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 391;
-		life = 294;
-		max_life = 294;
-		mana = 12;
-		max_mana = 12;
+		experience_value = 36;
+		life 			= 429;
+		max_life 		= 429;
+		mana 			= 97;
+		max_mana 		= 97;
 		model = m_c_edm_sn_pos_1;
 		[voice]
 		{
@@ -419,8 +430,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 62;
-		damage_min = 54;
+		damage_max = 20;
+		damage_min = 15;
+	}
+	[defend]
+	{
+		defense = 17;
 	}
 	[body]
 	{
@@ -483,10 +498,7 @@
 	{
 		screen_name="Stalagnid";
 	}
-	[defend]
-	{
-		defense=85;
-	}
+	
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;

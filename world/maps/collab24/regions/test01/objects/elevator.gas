@@ -1,0 +1,18 @@
+[t:elevator_2s_2c_12n,n:0x00100001]
+{
+	[elevator_2s_2c_12n]
+	{
+	  i door1_level1 = 3;
+	  i door1_level2 = 8;
+	  f duration = 5;
+	  i elevator_door1_level1 = 1;
+	  i elevator_door1_level2 = 1;
+	  x elevator_node = 0x2C4C9209;
+	  x node1_level1 = 0xFA193928;
+	  x node1_level2 = 0xFA193928;
+	}
+	[placement]
+	{
+	  p position = -2.12463,0,-1.55011,0xfa193928;
+	}
+}

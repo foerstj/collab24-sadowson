@@ -1,0 +1,241 @@
+[t:use_point,n:0x034000f0]
+{
+	[placement]
+	{
+	  p position = 0.00675988,5.95,0.00351548,0x8f981fba;
+	}
+}
+[t:use_point,n:0x034000f1]
+{
+	[placement]
+	{
+	  p position = 0.0261292,-1.5,-2.48712,0xca0033e5;
+	}
+}
+[t:use_point,n:0x034000f5]
+{
+	[placement]
+	{
+	  p position = 0.0190315,5.95,0.0262575,0xf56c4d6f;
+	}
+}
+[t:use_point,n:0x034000f4]
+{
+	[placement]
+	{
+	  p position = -0.0212517,-1.5,-0.69174,0xb2bbd2e7;
+	}
+}
+[t:trigger_generic,n:0x03400004]
+{
+	[common]
+	{
+		dev_instance_text = "STARTPOS - FADE & MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_3_shroomlayer_town");
+				action* = fade_nodes(0x00000035,1,-1,-1,"out:instant"), doc("ground above");
+				action* = fade_nodes(0x00000034,2,-1,-1,"out:instant"), doc("own ele tubes");
+				action* = fade_nodes(0x00000035,2,-1,-1,"out:instant"), doc("ele tube");
+				action* = fade_nodes(0x00000036,1,-1,-1,"out:instant"), doc("crystlayer up");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(16.000000,2.000000,16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-8.9407e-008,0,1;
+	  p position = 0.0271969,-1.90735e-006,1.31754,0x02ab4f69;
+	}
+}
+[t:trigger_change_mood_box,n:0x0340015a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_3_shroomlayer_town_tavern");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0364685,-1.5,1.51608,0x553c946c;
+	}
+}
+[t:trigger_change_mood_box,n:0x0340018c]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_3_shroomlayer_town");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.00838089,-1.5,-1.50602,0x553c946c;
+	}
+}
+[t:trigger_change_mood_box,n:0x03400190]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_3_shroomlayer_town_tavern");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = 0.0105839,0,0.95163,0xc58eac67;
+	}
+}
+[t:trigger_change_mood_box,n:0x0340018f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_3_shroomlayer_town_tavern");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.942354,0,0.0147247,0x30d7b0d4;
+	}
+}
+[t:trigger_generic,n:0x034000fa]
+{
+	[common]
+	{
+		dev_instance_text = "COMPANION - WAKEUP";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x0340012E,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x03400100,0f,"default","every",0), delay(6);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = 0.133429,-1.5,-1.84224,0xeb1f0d3a;
+	}
+}
+[t:trigger_generic,n:0x034000f7]
+{
+	[common]
+	{
+		dev_instance_text = "COMPANION - FADE & MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_3_shroomlayer_town");
+				action* = fade_nodes(0x00000035,1,-1,-1,"out:instant"), doc("ground above");
+				action* = fade_nodes(0x00000034,2,-1,-1,"out:instant"), doc("own ele tubes");
+				action* = fade_nodes(0x00000035,2,-1,-1,"out:instant"), doc("ele tube");
+				action* = fade_nodes(0x00000036,1,-1,-1,"out:instant"), doc("crystlayer up");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.3517,0,-0.715527,0x5b31af17;
+	}
+}

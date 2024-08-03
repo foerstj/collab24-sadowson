@@ -1,0 +1,24 @@
+[t:st_un_ice_c_d_b_avg,n:0x02300134]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.29642,6.78385,2.64098,0x5f75e7ba;
+	}
+}
+[t:sh_un_kite_ice,n:0x02300135]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.415627,0.572061,-0.572062,-0.415627;
+	  p position = 2.9003,7.00771,3.36445,0x5f75e7ba;
+	}
+}

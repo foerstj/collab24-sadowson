@@ -1,0 +1,411 @@
+[t:trigger_generic,n:0x02900007]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900008,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900001,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900002,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900005,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900003,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900004,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900006,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,1,1;
+	}
+	[placement]
+	{
+	  p position = -2.75861,0,1.51346,0xd72fd100;
+	}
+}
+[t:trigger_generic,n:0x02900009]
+{
+	[common]
+	{
+		dev_instance_text = "SUMMON THE COW HERE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900007,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",16);
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(8.000000,0x00000000,"c24_slice2_friendly_cow","on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.628,0,1.50208,0xd72fd100;
+	}
+}
+[t:trigger_generic,n:0x0290002c]
+{
+	[common]
+	{
+		dev_instance_text = "ON HASSAT UNDER TOWER TALKED TO";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x02900009,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.602516,0,1.39174,0xd72fd100;
+	}
+}
+[t:trigger_generic,n:0x02900021]
+{
+	[common]
+	{
+		dev_instance_text = "ON HASSAT READY TO FIGHT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900017,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900022,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900023,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(2.500000,0x0290000A,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.80695,0,-0.601593,0xea1ad916;
+	}
+}
+[t:set_bool,n:0x02900023]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707106;
+	  p position = -2.36757,0,3.34614,0xea1ad916;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_r4_flag_quest_hassat_under_tower";
+	}
+}
+[t:trigger_generic,n:0x0290000b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900026,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",17);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0189972,0,0.544144,0x27716690;
+	}
+}
+[t:accumulate_trigger,n:0x02900025]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 7;
+	  x send_to_scid = 0x0290000B;
+	}
+	[placement]
+	{
+	  p position = -1.24777,0,0.458923,0x27716690;
+	}
+}
+[t:set_bool,n:0x02900026]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707106;
+	  p position = 1.19015,0,0.997665,0x27716690;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_r4_flag_quest_hassat_leopard_killed";
+	}
+}
+[t:trigger_generic,n:0x02900013]
+{
+	[common]
+	{
+		dev_instance_text = "DISABLE LEVERS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900012,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900015,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-2.98023e-008;
+	  p position = -0.130577,0,-0.892004,0x7ff3a5ad;
+	}
+}
+[t:trigger_generic,n:0x02900017]
+{
+	[common]
+	{
+		dev_instance_text = "ENABLE LEVERS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900016,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900018,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 3.42886,0,0.976364,0x5c6404e3;
+	}
+}
+[t:trigger_generic,n:0x02900020]
+{
+	[common]
+	{
+		dev_instance_text = "ON HASSAT DOWN ON ELEVATOR";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0290001E,0f,"default","every",0), delay(2);
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(3.500000,0x0290000A,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.91592,0,-1.46661,0x5c6404e3;
+	}
+}
+[t:use_point,n:0x0290000e]
+{
+	[placement]
+	{
+	  q orientation = 0,6.46033e-009,0,1;
+	  p position = -3.59375,0.584455,-2.18766,0xc8009592;
+	}
+}
+[t:use_point,n:0x02900011]
+{
+	[placement]
+	{
+	  p position = -0.130386,12,0.0991211,0xc8009592;
+	}
+}
+[t:trigger_generic,n:0x02900019]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900013,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(5.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.581776,12,-0.337158,0xc8009592;
+	}
+}
+[t:trigger_generic,n:0x0290001a]
+{
+	[common]
+	{
+		dev_instance_text = "ON TALK ENDED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0290001C,0f,"default","every",0), doc("hassat unselectable");
+				action* = send_world_message("we_req_activate",0x02900014,0f,"default","every",0), doc("make hassat walk");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.83593,12,1.93005,0x1e45abb7;
+	}
+}
+[t:use_point,n:0x0290001b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.03519,12,-1.82706,0x1e45abb7;
+	}
+}
+[t:use_point,n:0x02900024]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -2.16301,12,1.59113,0x1e45abb7;
+	}
+}
+[t:use_point,n:0x0290000d]
+{
+	[placement]
+	{
+	  p position = -2.28512,12,-0.00993347,0x93f8f547;
+	}
+}
+[t:trigger_change_mood_box,n:0x02900027]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_slice2_mood_r3_pastures");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(10.000000,2.000000,0.100000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.702038,1.90735e-006,0.212716,0x26c8fc57;
+	}
+}

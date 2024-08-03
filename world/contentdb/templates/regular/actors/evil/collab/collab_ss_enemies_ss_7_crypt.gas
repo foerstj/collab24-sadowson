@@ -7,27 +7,31 @@
 	{
 		[skills]
 		{
-			strength = 		18, 0;
-			intelligence = 	9, 0;
-			dexterity = 	9, 0;
-   			melee =  		35,  0;
+			strength		= 22, 0;
+			intelligence	= 11, 0;
+			dexterity		= 15, 0;
+   			melee			= 19, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 16000;
-		life = 960;
-		max_life = 960;
-		mana = 18;
-		max_mana = 18;
+		experience_value = 39;
+		life 			= 474;
+		max_life 		= 474;
+		mana 			= 105;
+		max_mana 		= 105;
 		model = m_c_ecm_wr_pos_1;
 		[textures] { 0=b_c_ecm_wr; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 170;
-		damage_min = 150;
+		damage_max = 21;
+		damage_min = 16;
+	}
+	[defend]
+	{
+		defense = 19;
 	}
 	[body]
 	{
@@ -105,7 +109,6 @@
 			}
 		}
 	}
-   	[defend] { defense=395; }
    	[inventory]
 	{
     	[pcontent]
@@ -172,27 +175,31 @@
 	{
 		[skills]
 		{
-			strength = 		19, 0;
-			intelligence = 	9, 0;
-			dexterity = 	9, 0;
-   			melee =  		35,  0;
+			strength = 		24, 0;
+			intelligence = 	11, 0;
+			dexterity = 	15, 0;
+   			melee =  		22,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30000;
-		life = 1212;
-		max_life = 1212;
-		mana = 18;
-		max_mana = 18;
+		experience_value = 39;
+		life 			= 541;
+		max_life 		= 541;
+		mana 			= 117;
+		max_mana 		= 117;
 		model = m_c_ecm_wr_pos_1;
 		[textures] { 0=b_c_ecm_wr-05; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 175;
-		damage_min = 155;
+		damage_max = 24;
+		damage_min = 17;
+	}
+	[defend]
+	{
+		defense = 25;
 	}
 	[body]
 	{
@@ -278,7 +285,7 @@
 			}
 		}
 	}
-   	[defend] { defense=720; }
+   	
    	[inventory]
 	{
     	[pcontent]
@@ -345,28 +352,27 @@
 	{
 		[skills]
 		{
-			strength = 		26, 0;
-			intelligence = 	9, 0;
-			dexterity = 	27, 0;
-            melee =  		27, 0;
-            ranged = 		27, 0;
+			strength = 		14, 0;
+			intelligence = 	12, 0;
+			dexterity = 	21, 0;
+            ranged = 		19, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 77000;
-		life = 765;
-		max_life = 765;
-		mana = 16;
-		max_mana = 16;
+		experience_value = 39;
+		life 			= 328;
+		max_life 		= 328;
+		mana 			= 144;
+		max_mana 		= 144;
 		model = m_c_ecm_wr_pos_2;
 		[textures] { 0=b_c_ecm_wr-03; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 151;
-		damage_min = 118;
+		damage_max = 26;
+		damage_min = 19;
 	}
 	[body]
 	{
@@ -494,27 +500,31 @@
 	{
 		[skills]
 		{
-			strength = 		24, 0;
-			intelligence = 	13, 0;
+			strength = 		12, 0;
+			intelligence = 	23, 0;
 			dexterity = 	13, 0;
-   			combat_magic =  32,  0;
+   			combat_magic =  19,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 77000;
-		life = 630;
-		max_life = 630;
-		mana = 18;
-		max_mana = 18;
+		experience_value = 39;
+		life 			= 284;
+		max_life 		= 284;
+		mana 			= 392;
+		max_mana 		= 392;
 		model = m_c_ecm_wr_pos_1;
 		[textures] { 0=b_c_ecm_wr-04; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 200;
-		damage_min = 180;
+		damage_max = 22;
+		damage_min = 16;
+	}
+	[defend]
+	{
+		defense = 19;
 	}
 	[body]
 	{
@@ -591,7 +601,7 @@
 	}
 	[common]
 	{
-		screen_name="Wraith Warlock";
+		screen_name = "Wraith Warlock";
 		[template_triggers]
 		{
 			[*]
@@ -603,7 +613,7 @@
 			}
 		}
 	}
-   	[defend] { defense=420; }
+   	
    	[inventory]
 	{
     	selected_active_location = il_active_primary_spell;
@@ -664,7 +674,6 @@
 		}
 	}
 }
-
 [t:template,n:collab_ss_7_crypt_death_knight]
 {
 	category_name = "ss_7_crypt_enemies";
@@ -674,32 +683,35 @@
 	{
 		[skills]
 		{
-			strength =  	17, 0;
-			intelligence =  9, 0;
-			dexterity =  	8, 0;
-			melee =  		37,  0;
+			strength		= 22, 0;
+			intelligence	= 11, 0;
+			dexterity		= 15, 0;
+   			melee			= 19, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 17980;
-		life = 752;
-		max_life = 752;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 39;
+		life 			= 474;
+		max_life 		= 474;
+		mana 			= 105;
+		max_mana 		= 105;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 120;
-		damage_min = 90;
+		damage_max = 21;
+		damage_min = 16;
 	}
 	[common]
 	{
 		screen_name = "Death Knight";
 		membership = monster, party_skeleton_mercenary_archer;
 	}
-	[defend] { defense=480; }
+	[defend]
+	{
+		defense = 19;
+	}
 
    	[mind]
 	{
@@ -770,34 +782,37 @@
 	category_name = "ss_7_crypt_enemies";
 	doc = "Death_knight_boss";
 	specializes = skeleton_mercenary_base;
-
 	[actor]
 	{
 		[skills]
 		{
-			strength =  	19, 0;
-			intelligence =  13, 0;
-			dexterity =  	15, 0;
-			melee =  		40,  0;
+			strength = 		24, 0;
+			intelligence = 	11, 0;
+			dexterity = 	15, 0;
+   			melee =  		22,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 42420;
-		life = 924;
-		max_life = 924;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 39;
+		life 			= 541;
+		max_life 		= 541;
+		mana 			= 117;
+		max_mana 		= 117;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 145;
-		damage_min = 115;
+		damage_max = 24;
+		damage_min = 17;
+	}
+	[defend]
+	{
+		defense = 30;
 	}
 	[common]
 	{
-		screen_name="Death Knight Captain";
+		screen_name = "Death Knight Captain";
 		membership = monster, party_skeleton_mercenary_archer;
 		[template_triggers]
 		{
@@ -810,10 +825,7 @@
 			}
 		}
 	}
-	[defend]
-	{
-		defense = 567;
-	}
+	
    	[mind]
 	{
 		sight_origin_height	= 1.3;
@@ -821,7 +833,6 @@
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
 	}
-
 	[inventory]
 	{
 		[pcontent]
@@ -868,7 +879,6 @@
 		}
 	}
 }
-
 [t:template,n:collab_ss_7_crypt_mounted_knight]
 {
 // Boss, balanced up from level 15, hard melee
@@ -879,19 +889,19 @@
 	{
 		[skills]
 		{
-			strength	= 16, 0;
-			intelligence	= 8, 0;
-			dexterity	= 12, 0;
-			melee		= 13, 0;
+			strength	 = 24, 0;
+			intelligence = 11, 0;
+			dexterity	 = 15, 0;
+			melee		 = 22, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value 	= 388;
-		life			= 578;
-		max_life		= 578;
-		mana			= 100;
-		max_mana		= 100;
+		experience_value 	= 45;
+		life			= 541;
+		max_life		= 541;
+		mana			= 117;
+		max_mana		= 117;
 		model = m_c_ebb_dk_pos_1;
 		[voice]
 		{
@@ -904,8 +914,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_min = 100;
-		damage_max = 85;
+		damage_min = 24;
+		damage_max = 17;
+	}
+	[defend]
+	{
+		defense = 250;
 	}
 	[body]
 	{
@@ -1017,7 +1031,7 @@
 			frag_glb_bone_dirty_06 = 1;
 		}
 	}
-	[defend] { defense = 250; }
+	
 	[inventory]
 	{
 		[equipment]

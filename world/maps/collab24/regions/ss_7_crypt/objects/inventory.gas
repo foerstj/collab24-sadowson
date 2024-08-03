@@ -1,0 +1,37 @@
+[t:bo_ra_bo_le_f_g_c_fin,n:0x00700234]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -1.10505,-2,0.790619,0xfd6fe849;
+	}
+}
+[t:collab_ss_warding_crystal,n:0x007000d9]
+{
+	[placement]
+	{
+	  p position = 2.88506,-2,4.34929,0x05b13576;
+	}
+}
+[t:sd_g_c_bl_1h_avg,n:0x0070011d]
+{
+	[placement]
+	{
+	  p position = 2.68418,-2,5.73062,0x05b13576;
+	}
+}
+[t:collab_ss_warding_crystal,n:0x007000f8]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  p position = 1.24824,-0.888819,1.85559,0x47cbd5c3;
+	}
+}

@@ -1,0 +1,57 @@
+[t:emt_sound,n:0x053005cf]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 7.91679,-2,3.93139,0xb07043cc;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	  f max_dist = 20;
+	  f min_dist = 1;
+	}
+}
+[t:emt_sound,n:0x053005cd]
+{
+	[placement]
+	{
+	  p position = -1.94535,-1.25,-1.30627,0x16574014;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	  f max_dist = 20;
+	  f min_dist = 1;
+	}
+}
+[t:emt_sound,n:0x053005d0]
+{
+	[placement]
+	{
+	  p position = -1.97998,0,2.7744,0x1397913a;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	  f max_dist = 25;
+	  f min_dist = 1;
+	}
+}
+[t:emt_sound,n:0x053005d1]
+{
+	[placement]
+	{
+	  p position = -2.33026,2.46789,2.69676,0x19091d48;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_blast_furnace";
+	  f max_dist = 25;
+	  f min_dist = 5;
+	}
+}

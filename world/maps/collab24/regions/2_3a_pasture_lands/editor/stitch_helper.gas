@@ -1,0 +1,17 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000029;
+	source_region_name = 2_3a_pasture_lands;
+	[t:stitch_editor,n:2_3_town_and_outskirts]
+	{
+		dest_region = 2_3_town_and_outskirts;
+		[node_ids]
+		{
+			0x00000036 = 0x61AA9234,8;
+			0x00000037 = 0x11B3C79E,4;
+			0x00000038 = 0x26C8FC57,4;
+			0x00000039 = 0xCCBDCECA,3;
+			0x00000040 = 0x5E701EF3,2;
+		}
+	}
+}

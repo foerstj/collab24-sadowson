@@ -1,0 +1,123 @@
+[conversation_uddonlim_accept]
+{
+	[text*]
+	{
+		screen_text = "accept convo
+TODO add text";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_uddonlim_disband]
+{
+	[text*]
+	{
+		screen_text = "disband convo
+TODO add text";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_uddonlim_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "disband rejoin coinvo
+TODO add text";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_uddonlim_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "join convo
+TODO add text";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_uddonlim_reject]
+{
+	[text*]
+	{
+		screen_text = "reject convo
+TODO add text";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_uddonlim_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "rejoin convo
+TODO add text";
+	  f scroll_rate = 10.000000;
+	}
+}
+[doorkeeper]
+{
+	[text*]
+	{
+	  i order = 0;
+		screen_text = "Sorry for being so unfriendly, we had our share of misery lately. What brings you here? Have you come after the goblin’s wave of destruction? I think they made their nest here, just under this mine. I don’t know what they are looking for, but it can’t be good.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+	  i order = 1;
+		screen_text = "I’ll keep watch, darklings and scorpions might come for our supplies. I don’t think they like goblin meat.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[listener]
+{
+	[text*]
+	{
+		screen_text = "Thank you for clearing the metal things, I grew tired of hearing them rattling in the halls. Oh, how did I hear them? Well this is my job, I was trained for it. We miners always have listeners like myself. My job is to keep my ear to the wall, literally, and listen to the earth. Sometimes I hear a chasm or a vein before we hit it, other times I hear monsters behind the corner. But that time I heard them, the metal things. I had no idea what I heard, but our crew hurried into the halls, where we barricaded the doors. If not for my skill we would’ve been goners for sure.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mine_door_1]
+{
+	[text*]
+	{
+		activate_quest* = clb24a_locked_halls,0;
+	  i order = 0;
+	  b quest_dialog = true;
+		screen_text = "Hello? Who is there? Did they send a talking robot now? I can’t let you in no matter how good your language skills are. How is your sword arm? That I am interested in. Does it topple those metal abominations infesting our mines? Darklings and rock beasts we know how to handle, believe me - much experience in that area. But these metal beasts we can only hide from. If you manage to clear all of them around this area between the two elevators, I will unlock the door for you. Some of us here are tired of hiding, and our supplies might run out before the energy banks of these machines deplete. Hurry now, we might need to blow up the whole mine if it comes to that..";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+	  i order = 1;
+		screen_text = "Have you cleared all of them? Our listeners can still feel them here. Destroy every last one of them!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mine_door_complete]
+{
+	[text*]
+	{
+		complete_quest* = clb24a_locked_halls;
+		screen_text = "Did we feel right? Is it done? Oh thank the *** (Dwarves Have a Deity?? TODO). Come on in!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mine_door_complete_first_convo]
+{
+	[text*]
+	{
+		screen_text = "Hello? Who is there? What was that ruckus out there just now? Our listener said he heard all these metal machines battle and fall, and now all is silent. That was your doing? Well then don’t stay out there, come on in!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[quartermaster]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "You haven’t come at the best of times, traveler, but we thank you for your aid. We do have some equipment and supplies that might help you in your journey, would you like to browse our collection?";
+	  f scroll_rate = 10.000000;
+	}
+}

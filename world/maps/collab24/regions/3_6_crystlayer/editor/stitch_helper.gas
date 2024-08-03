@@ -1,0 +1,21 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000036;
+	source_region_name = 3_6_crystlayer;
+	[t:stitch_editor,n:3_5_shroomlayer]
+	{
+		dest_region = 3_5_shroomlayer;
+		[node_ids]
+		{
+			0x00003561 = 0xD54DA38F,14;
+		}
+	}
+	[t:stitch_editor,n:3_7_wormlayer]
+	{
+		dest_region = 3_7_wormlayer;
+		[node_ids]
+		{
+			0x00003671 = 0xB07E7CA3,1;
+		}
+	}
+}

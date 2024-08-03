@@ -1,0 +1,45 @@
+[t:generator_generic,n:0x05300256]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_5_scorpiot_melee_1_active";
+	  x initial_command = 0x053001B8;
+	  i max_alive_children = 2;
+	  i num_children_incubating = 2;
+	  f spawn_period = 4;
+	}
+	[placement]
+	{
+	  p position = -1.23539,-0.05,-1.22188,0x1e43ba0b;
+	}
+}
+[t:generator_generic,n:0x05300259]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_5_scorpiot_melee_1_active";
+	  x initial_command = 0x053001E1;
+	  i max_alive_children = 2;
+	  i num_children_incubating = 2;
+	  f spawn_period = 4;
+	}
+	[placement]
+	{
+	  p position = 2.1305,-0.05,-1.63715,0x1e43ba0b;
+	}
+}
+[t:generator_generic,n:0x05300258]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_5_scorpiot_ranged_1_active";
+	  x initial_command = 0x053001C1;
+	  i max_alive_children = 2;
+	  i num_children_incubating = 2;
+	  f spawn_period = 4;
+	}
+	[placement]
+	{
+	  p position = 1.94671,-0.05,1.10507,0x5609061f;
+	}
+}

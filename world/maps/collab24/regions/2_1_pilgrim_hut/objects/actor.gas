@@ -1,0 +1,367 @@
+[t:c24_2_r2_bortusk_melee,n:0x0220001d]
+{
+	[placement]
+	{
+	  p position = -3.04966,0,-0.372864,0x9c6633fe;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x0220001e]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.13498,0,1.72919,0x9c6633fe;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200016]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.49492,0,-1.88161,0xb27a1ba0;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200017]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.47546,0,0.669346,0xb27a1ba0;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200018]
+{
+	[placement]
+	{
+	  p position = 0.686718,0,-0.162119,0xb27a1ba0;
+	}
+}
+[t:c24_2_r2_bortusk_roar,n:0x02200029]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = -2.38467,7.95574,4.84085,0xd7ae58d3;
+	}
+}
+[t:c24_2_r2_bortusk_enrager,n:0x02200007]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.14204,0,2.9006,0x05dfb30a;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x0220001f]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.723721,0,2.23147,0x05dfb30a;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200019]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.81939,0,-1.94541,0x233de73b;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x0220001a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.934715,0,-0.723511,0x233de73b;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x0220001b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.67951,0,0.743462,0xaf47db40;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200001]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.44036,0,-1.33953,0x07393b53;
+	}
+}
+[t:c24_2_r2_bortusk_enrager,n:0x02200005]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.693684,0,0.776188,0x062c55d9;
+	}
+}
+[t:c24_2_r2_bortusk_roar,n:0x02200014]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = -3.18742,-5.83778,0.0931473,0x4430677c;
+	}
+}
+[t:c24_slice_2_r2_hermit,n:0x02200041]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_c24_r2_hermit_first;
+			* = conv_c24_r2_hermit_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_hermit_r2.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = -0.52713,-1.5,-0.127914,0x1576ddc6;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x02200033]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.27376,0,-2.75354,0x19f4b5f4;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x0220007b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.18633,0,-1.86714,0x19f4b5f4;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x0220007c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.912254,0,-2.44259,0x19f4b5f4;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x02200076]
+{
+	[placement]
+	{
+	  q orientation = 0,8.9407e-008,0,1;
+	  p position = 3.26112,-1.2,3.56462,0x3fbfc2b8;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x02200077]
+{
+	[placement]
+	{
+	  q orientation = 0,8.9407e-008,0,1;
+	  p position = 0.60305,0,-2.86006,0x67cb982f;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x02200079]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.35622,0,-3.69296,0x67cb982f;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x02200078]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.4192,0,-1.71652,0x1b3fc800;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x02200081]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-8.9407e-008;
+	  p position = -3.7137,0,-3.67518,0x1f3a409d;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x02200080]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-8.9407e-008;
+	  p position = -1.77887,0,2.93009,0x4efc3136;
+	}
+}
+[t:c24_2_r2_wolf_white,n:0x02200082]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-8.9407e-008;
+	  p position = -1.60251,0,1.30099,0xfb8ddb88;
+	}
+}
+[t:c24_2_r2_wolf_white_boss_01,n:0x02200083]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.65997,0,-1.6827,0xfb8ddb88;
+	}
+}
+[t:c24_2_r2_bortusk_wizard_boss_01,n:0x0220002a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02200075,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = -0.0253754,0,-0.238644,0x63eb97bb;
+	}
+}
+[t:c24_2_r2_bortusk_enrager,n:0x0220003a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.878922,0,0.451515,0xc2fb6015;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x0220003c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.91443,0,0.268806,0xc2fb6015;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x0220003d]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.802917,0,0.138763,0xc2fb6015;
+	}
+}
+[t:c24_2_r2_bortusk_roar,n:0x02200043]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = -0.826153,0,-0.878761,0xc2fb6015;
+	}
+}
+[t:c24_2_r2_bortusk_roar,n:0x02200028]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = -1.68124,0,1.69189,0x09c8f748;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200024]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.43684,0,0.946892,0x8f7c891e;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200027]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 2.9862,0,0.67524,0x8f7c891e;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200022]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.284447,0,1.21305,0x8645c981;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200023]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.635704,0,0.254883,0x8645c981;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200025]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = -3.41892,4,0.671061,0x7c918afe;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200026]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = -3.0928,3.90928,-0.807264,0x7c918afe;
+	}
+}
+[t:c24_2_r2_bortusk_enrager,n:0x02200042]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.85979,3.99751,0.0941124,0x7c918afe;
+	}
+}
+[t:c24_2_r2_bortusk_melee,n:0x02200020]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.452454,0,-1.28437,0x6d18ba8c;
+	}
+}
+[t:c24_2_r2_bortusk_mele_boss_01,n:0x02200021]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.84842,0,-1.84757,0xb5b83b8b;
+	}
+}
+[t:c24_2_r2_bortusk_roar,n:0x0220001c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.267994,0,1.28029,0x231d0777;
+	}
+}

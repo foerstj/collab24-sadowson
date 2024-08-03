@@ -1,0 +1,35 @@
+[t:elevator_2s_1c_2n,n:0x03100013]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 4;
+	  i connect_door_level2 = 4;
+	  x connect_node_level1 = 0x2FBFB9BC;
+	  x connect_node_level2 = 0x971B0609;
+	  f duration = 16;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x9C7AB717;
+		material = "dm_small";
+		moving1_actioninfo = "
+            collab24_3_ele_down,0;
+            0x00000031,1,-1,-1,out:black,8;
+            0x00000032,2,-1,-1,out:black,8;
+            0x00000032,1,-1,-1,in,8;
+            collab24_3_crystlayer_green,8;
+            0x00000033,1,-1,-1,out:instant,16
+        ";
+		moving2_actioninfo = "
+            0x00000033,1,-1,-1,in:instant,0;
+            collab24_3_ele_up,0;
+            0x00000032,1,-1,-1,out:black,8;
+            0x00000032,2,-1,-1,in,8;
+            0x00000031,1,-1,-1,in,8;
+            collab24_3_wormlayer_1_quick,15
+        ";
+	}
+	[placement]
+	{
+	  p position = -0.00989389,-1.5,-0.165545,0x9c7ab717;
+	}
+}

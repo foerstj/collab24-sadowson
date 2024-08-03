@@ -60,7 +60,7 @@
 	{
 	  q orientation = -0.0492858,-0.708503,-0.0122487,0.703878;
 	  p position = 1.46738,-0.204054,-1.77402,0x639534ea;
-		use_point_scids = 0x00100E08;
+		use_point_scids = 0x00100e08;
 	}
 }
 [t:door_glb_keep_01,n:0x00100a1b]

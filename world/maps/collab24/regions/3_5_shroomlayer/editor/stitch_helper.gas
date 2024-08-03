@@ -1,0 +1,42 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000035;
+	source_region_name = 3_5_shroomlayer;
+	[t:stitch_editor,n:3_3_shroomlayer]
+	{
+		dest_region = 3_3_shroomlayer;
+		[node_ids]
+		{
+			0x00afffd1 = 0x3309647C,6;
+			0x00afffd2 = 0x3309647C,5;
+			0x00afffd3 = 0x45A7575B,6;
+			0x00afffd4 = 0x59631520,2;
+			0x00afffd5 = 0x59631520,1;
+			0x00afffd6 = 0x4533DCD1,8;
+			0x00afffd7 = 0x4533DCD1,7;
+			0x00afffd8 = 0x5DD2053E,3;
+			0x00afffd9 = 0x501C7D50,8;
+		}
+	}
+	[t:stitch_editor,n:3_4_town]
+	{
+		dest_region = 3_4_town;
+		[node_ids]
+		{
+			0x00003451 = 0xB350AE15,7;
+			0x00003452 = 0xC091C6D6,7;
+			0x00003453 = 0xBB05AA9D,7;
+			0x00003454 = 0x3F1BF4AD,7;
+			0x0000345a = 0xE7730047,9;
+			0x0000345b = 0x527CE2B0,9;
+		}
+	}
+	[t:stitch_editor,n:3_6_crystlayer]
+	{
+		dest_region = 3_6_crystlayer;
+		[node_ids]
+		{
+			0x00003561 = 0x87C74BF8,1;
+		}
+	}
+}

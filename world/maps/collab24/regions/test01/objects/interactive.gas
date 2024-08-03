@@ -1,0 +1,13 @@
+[t:lever_des_01,n:0x00100002]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x00100001;
+	  x on_scid = 0x00100001;
+	}
+	[placement]
+	{
+	  p position = -2.18019,0,-0.0579872,0xfa193928;
+	}
+}

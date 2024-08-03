@@ -1,0 +1,54 @@
+[conv_c24_r4_hassat_start]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,14;
+	  b quest_dialog = true;
+		screen_text = "Help me destroy panthers.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r4_hassat_start_before_summon_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,15;
+	  b quest_dialog = true;
+		screen_text = "Time to summon a cow.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r4_hassat_start_before_summon_next]
+{
+	[text*]
+	{
+		screen_text = "I ask you again to summon a cow.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r4_hassat_after_leopards_killed_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,18;
+	  b quest_dialog = true;
+		screen_text = "We have slain the leopards.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r4_hassat_after_leopards_killed_next]
+{
+	[text*]
+	{
+		screen_text = "I rejoice again about slaying the leopards.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r4_hassat_final]
+{
+	[text*]
+	{
+		screen_text = "All is well now.";
+	  f scroll_rate = 10.000000;
+	}
+}

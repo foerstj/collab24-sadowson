@@ -1,0 +1,98 @@
+[t:trigger_generic,n:0x05200041]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x05200042,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x05200006,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0520003D,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0520003E,2f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0520003A,4f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0520003A,5f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x05200040,8f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0520002F,10f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0520003C,14f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0520003F,15f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,2.000000,2.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.022141,-0.846735,-1.26095,0xb93dbcf1;
+	}
+}
+[t:use_point,n:0x05200057]
+{
+	[placement]
+	{
+	  p position = -1.15946,0,0.464158,0x5a06e3e0;
+	}
+}
+[t:set_bool,n:0x05200002]
+{
+	[placement]
+	{
+	  p position = -3.45804,0,1.38501,0x70739e38;
+	}
+	[set_bool]
+	{
+		bool_variable = "clb24a_bandit_boss_dead";
+	}
+}
+[t:use_point,n:0x05200058]
+{
+	[placement]
+	{
+	  p position = 1.19368,0,0.738804,0x97b000a3;
+	}
+}
+[t:use_point,n:0x05200059]
+{
+	[placement]
+	{
+	  p position = -0.600853,0,1.56737,0x621d5d21;
+	}
+}
+[t:use_point,n:0x0520005a]
+{
+	[placement]
+	{
+	  p position = -0.633619,0,0.960903,0x0b508425;
+	}
+}
+[t:use_point,n:0x0520005b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.170511,0,1.68599,0x0b508425;
+	}
+}
+[t:use_point,n:0x0520005c]
+{
+	[placement]
+	{
+	  p position = 0.0528145,0,-1.50078,0x9630d3eb;
+	}
+}
+[t:use_point,n:0x05200083]
+{
+	[placement]
+	{
+	  p position = -2.50129,0,1.20902,0x363c76bf;
+	}
+}

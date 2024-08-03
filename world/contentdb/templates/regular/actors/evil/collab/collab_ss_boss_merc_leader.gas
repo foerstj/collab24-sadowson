@@ -8,6 +8,13 @@
 		alignment		= aa_good;	//Determined by first talking to him which turns him evil.
 		can_level_up	= false;
 		race 			= other;
+		{
+			strength		= 22, 0;
+			intelligence	= 11, 0;
+			dexterity		= 15, 0;
+			melee 			= 25, 0;
+			combat_magic	= 25, 0;
+		}
 	}
 	[aspect]
 	{
@@ -17,11 +24,11 @@
 		life_recovery_unit		= 1;
 		mana_recovery_period	= 3;
 		mana_recovery_unit		= 1;
-		experience_value = 17980;
-		life = 752;
-		max_life = 752;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 3100;
+		life = 1000;
+		max_life = 1000;
+		mana = 109;
+		max_mana = 109;
 		scale_base 		= 1.1;
 		[voice]
 		{

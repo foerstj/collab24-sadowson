@@ -1,0 +1,133 @@
+[alafair_give_quest]
+{
+	[text*]
+	{
+		activate_quest* = clb24a_bandit_boss,0;
+	  i order = 0;
+	  b quest_dialog = true;
+		screen_text = "Greetings. Not many wanderers come to the Sunset Slopes these days, with the bandits terrorizing the cliffs. We traveled here in our never ending voyage to see the world, but we can't keep going with how dangerous the path is. I heard the bandits talk about a base they have, in a cave just west of here. I believe that getting rid of their leader will make them less aggressive for a while, while they will be licking their wounds. You seem a fearsome warrior. If you manage to clear that cave of theirs we will be able to go on our way, much to the relief of our neighboring hermit here. He even might reward you for such a deed himself.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+	  i order = 1;
+		screen_text = "Hope you will have luck on your journey. Do tell us if you manage to get to the bandit’s leader to the west of here. Jeremy told us he will reward however makes us leave, but you might find raiding their cave rewarding by itself. They managed to steal many artifacts in their endeavors.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[alafair_quest_done]
+{
+	[text*]
+	{
+		complete_quest* = clb24a_bandit_boss;
+	  i order = 0;
+		screen_text = "Have you done it, cleared the bandit’s cave? You are even stronger than I had hoped. That means we can be on our way soon. Thank you! Don’t forget to visit Jeremy, he might have something stashed away for you.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+	  i order = 1;
+		screen_text = "We will be on our way soon, thank you again!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[fortuneteller]
+{
+	[text*]
+	{
+		screen_text = "TODO Text";
+	  f scroll_rate = 10.000000;
+	}
+}
+[jeremy_shop]
+{
+	[text*]
+	{
+		choice = shop;
+	  i order = 0;
+		screen_text = "Well hello oh noble one! If you also want to go and pitch a tent on my cliff then you are welcome to do so. Oh, what? There is no place? No no, there is a spot, RIGHT OUTSIDE MY WINDOW! Now you either buy some stuff, or make these damn travelers get out of here. I might even reward you if you do. No promises though, times are tough you know.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = shop;
+	  i order = 1;
+		screen_text = "You are still here, and these travelers are too. So if you could kindly get one of you out of here that would be the dream. Yeah yeah you can still buy stuff, just don't expect discounts. And no paybacks! I don't need your sword with troll blood all over it, yuck.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[jeremy_shop_after_quest]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Are you here still? You are clear to browse what I have, but don't expect any more presents from me.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[jeremy_travellers_quest_done]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "So, what news about the travelers? Well you say you have helped them but they are still here. Well, nevermind. I'll take your word for it, let’s hope I won’t regret it. I am generous though, some freebies are stashed in a chest upstairs, at least, there should be some there. If you like them - great, take them. If not.... well... fine, I'll give you gold compensation for them. Anything other is extra.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[nifelix]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Oh, hello. don't be afraid, you are safe now. This damn thing here broke but the other one still works, or at least the bandits think it does... You are welcome to browse master Jeremy's collection, he has a short temper but otherwise he will be happy to trade. Just... don't take his insults to heart.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "I'm not sure when master Jeremy set up shop here, but he did find this house abandoned. I guess the dwarves that built the walkways to the mines had to sleep somewhere. Are you looking for a way into the mines? The bandits have taken residence in this part of the mountain, and even trained the troll to do their bidding. I don't know if through magic or torture... It won't be an easy trek, you better get some supplies from master Jeremy.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+	  i order = 2;
+		screen_text = "Oh, I'm fine, thank you. Master Jeremy looks after me and we get along... more or less. Anyway it is not like I can go anywhere else. These travelers however do seem lost, might you try and help them? It will cheer master Jeremy up for sure, he doesn’t like them setting up shop in his, well, shop... I'm sorry, I really have to get back to this thing here.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "join?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[test_shop]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Buy some stuff bro";
+	  f scroll_rate = 10.000000;
+	}
+}
+[traveller_female]
+{
+	[text*]
+	{
+		screen_text = "I don’t want to stay here anymore, these places are pretty to look at, but one wrong step and it is the last thing you see. I prefer walking through plains and forests, not these metal walkways.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[traveller_male]
+{
+	[text*]
+	{
+		screen_text = "You saw these trolls? I don’t know what these bandits did to them, but it is not a friendship you see there. Once, I saw a troll attack a bandit he fought alongside a moment ago. But as soon as his tamer struck him with his magic he got all quiet and obedient. I wonder if getting the tamer out of the picture will make the trolls attack their masters.";
+	  f scroll_rate = 10.000000;
+	}
+}

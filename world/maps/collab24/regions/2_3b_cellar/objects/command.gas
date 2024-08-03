@@ -1,0 +1,12 @@
+[t:cmd_t_delete,n:0x02a0006a]
+{
+	[cmd_t_delete]
+	{
+	  x target_scid = 0x02A0006C;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.93126,0,-0.162388,0x8166b3c8;
+	}
+}

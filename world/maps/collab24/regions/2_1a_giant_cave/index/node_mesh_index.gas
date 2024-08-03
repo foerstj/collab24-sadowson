@@ -1,0 +1,34 @@
+[node_mesh_index]
+{
+	0x02700540 = t_xxx_cnr_04-cnvx;
+	0x02700545 = t_xxx_cnr_24-ccav;
+	0x02700546 = t_xxx_cnr_24-cnvx;
+	0x027006ab = t_xxx_flr_04x04-v0;
+	0x027006af = t_xxx_flr_04x08-v0;
+	0x027006b0 = t_xxx_flr_08x08-v0;
+	0x027006fa = t_xxx_flr_stalagmite-4k;
+	0x0270087d = t_xxx_rmp_cnr-cnvx;
+	0x0270087e = t_xxx_rmp_ctx-04-l;
+	0x0270087f = t_xxx_rmp_ctx-04-r;
+	0x02700886 = t_xxx_rmp_pth-thin;
+	0x0270088b = t_xxx_rmp_thck;
+	0x0270088c = t_xxx_rmp_thin;
+	0x02700890 = t_xxx_rmp_tx-rmp-r;
+	0x02700894 = t_xxx_rmp_tx-wal-04-thck-r;
+	0x02700895 = t_xxx_rmp_tx-wal-04-thin-l;
+	0x02700896 = t_xxx_rmp_tx-wal-04-thin-r;
+	0x02700a01 = t_xxx_wal_04-thck;
+	0x02700a38 = t_xxx_wal_24-diag-thick-l;
+	0x02700a39 = t_xxx_wal_24-diag-thick-r;
+	0x02700a3a = t_xxx_wal_24-diag-thin-l;
+	0x02700a3c = t_xxx_wal_24-thck;
+	0x02700a3d = t_xxx_wal_24-thin;
+	0x02700a40 = t_xxx_wal_24-tx-rmp-l;
+	0x02700a41 = t_xxx_wal_24-tx-rmp-r;
+	0x02700a58 = t_xxx_wal_cave-24-base;
+	0x02700a59 = t_xxx_wal_cave-24-sides;
+	0x02700a5a = t_xxx_wal_cave-24-top;
+	0x02700a6d = t_xxx_wal_cave-split-24-back-base-tx;
+	0x02700a71 = t_xxx_wal_cave-split-24-back-sides;
+	0x02700a73 = t_xxx_wal_cave-split-24-back-top;
+}

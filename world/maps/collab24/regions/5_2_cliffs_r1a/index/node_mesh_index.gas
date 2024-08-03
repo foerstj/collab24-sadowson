@@ -1,0 +1,35 @@
+[node_mesh_index]
+{
+	0x05200533 = t_xxx_cnr_02a-ccav;
+	0x05200534 = t_xxx_cnr_02a-cnvx;
+	0x05200538 = t_xxx_cnr_02a-tx-02b-ccav-thin-r;
+	0x05200545 = t_xxx_cnr_24-ccav;
+	0x05200546 = t_xxx_cnr_24-cnvx;
+	0x052006a5 = t_xxx_flr_04x04-v0;
+	0x052006a9 = t_xxx_flr_04x08-v0;
+	0x05200847 = t_xxx_pth_02b-thick;
+	0x05200849 = t_xxx_pth_04x04-a;
+	0x0520084a = t_xxx_pth_04x04-b;
+	0x0520084b = t_xxx_pth_04x04-c;
+	0x0520084d = t_xxx_pth_04x04-e;
+	0x0520084e = t_xxx_pth_04x04-f;
+	0x05200850 = t_xxx_pth_08x04-a;
+	0x05200851 = t_xxx_pth_08x04-b;
+	0x05200852 = t_xxx_pth_08x04-c;
+	0x05200853 = t_xxx_pth_08x04-d;
+	0x05200854 = t_xxx_pth_08x04-e;
+	0x05200855 = t_xxx_pth_08x04-f;
+	0x05200857 = t_xxx_pth_08x04-h;
+	0x052009dd = t_xxx_wal_02a-thin;
+	0x052009de = t_xxx_wal_02a-tx-02b-ccav-thick-l;
+	0x052009e4 = t_xxx_wal_02a-tx-02b-cnvx-thin-l;
+	0x05200a31 = t_xxx_wal_24-diag-thick-l;
+	0x05200a32 = t_xxx_wal_24-diag-thick-r;
+	0x05200a35 = t_xxx_wal_24-thck;
+	0x05200a36 = t_xxx_wal_24-thin;
+	0x05200a37 = t_xxx_wal_24-tx-02b-l;
+	0x05200a38 = t_xxx_wal_24-tx-02b-r;
+	0x05200a67 = t_xxx_wal_cave-split-24-back-base;
+	0x05200a6a = t_xxx_wal_cave-split-24-back-sides;
+	0x05200a6c = t_xxx_wal_cave-split-24-back-top;
+}

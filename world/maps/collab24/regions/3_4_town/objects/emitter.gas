@@ -1,0 +1,155 @@
+[t:emt_sound,n:0x03400062]
+{
+	[placement]
+	{
+	  p position = -3.93479,1.75,2.00632,0x70430fe7;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x03400063]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.95037,1.75,-2.02962,0x70430fe7;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x03400064]
+{
+	[placement]
+	{
+	  p position = 3.96646,1.75,1.92333,0x70430fe7;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x03400065]
+{
+	[placement]
+	{
+	  p position = 3.89875,1.75,-2.04234,0x70430fe7;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_healing_well,n:0x0340008d]
+{
+	[placement]
+	{
+	  p position = -0.0776825,1.75,0.00473166,0x70430fe7;
+	}
+}
+[t:emt_sound,n:0x0340002c]
+{
+	[placement]
+	{
+	  p position = -1.84209,1.75,-3.9549,0x7714dfbe;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x0340002d]
+{
+	[placement]
+	{
+	  p position = 2.02354,1.75,-3.91399,0x7714dfbe;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x0340002e]
+{
+	[placement]
+	{
+	  p position = -1.95366,1.75,3.94648,0x7714dfbe;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x03400057]
+{
+	[placement]
+	{
+	  p position = 2.0073,1.75,3.95634,0x7714dfbe;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_healing_well,n:0x0340008c]
+{
+	[placement]
+	{
+	  p position = -0.0899582,1.75,-0.0505905,0x7714dfbe;
+	}
+}
+[t:emt_sound,n:0x03400011]
+{
+	[placement]
+	{
+	  p position = -0.662453,0,1.13199,0xa6912b74;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_blast_furnace";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x03400066]
+{
+	[placement]
+	{
+	  p position = 0.000123978,0,-1.91093,0xe5c97b92;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 16;
+	  f min_dist = 2;
+	}
+}

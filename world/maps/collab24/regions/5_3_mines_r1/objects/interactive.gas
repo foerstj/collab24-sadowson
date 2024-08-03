@@ -1,0 +1,758 @@
+[t:debris_glb_bone_rock_breakable_01,n:0x053004ae]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.05691;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.988504,0,-0.151192;
+	  p position = -6.14935,-3.94822,-5.98258,0x3726dd4c;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x053004b2]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.01504;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.519278,0,0.854605;
+	  p position = -2.4399,0,1.20717,0x578f870d;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x053004b3]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.94659;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.216356,0,0.976315;
+	  p position = -0.385811,0,-0.536161,0x578f870d;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x053004c4]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.16587;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.610534,0,0.79199;
+	  p position = -0.859917,0,0.758202,0x578f870d;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x053004fb]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.722438;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.994771,0,-0.102132;
+	  p position = 0.694107,0,1.73726,0x578f870d;
+	}
+}
+[t:debris_glb_bone_rock_breakable_04,n:0x053000e7]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.18896;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.844445,0,0.535642;
+	  p position = -0.277227,-0.0500002,2.36598,0x41a4427f;
+	}
+}
+[t:wall_cav_boarded,n:0x05300016]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.37114e-008;
+	  p position = 4.12025,-2.7442,-2.25767,0xd8a4c12c;
+	}
+}
+[t:wall_cav_boarded,n:0x0530001b]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.37114e-008;
+	  p position = 0.109322,-2.7442,-2.25118,0xd8a4c12c;
+	}
+}
+[t:wall_cav_boarded,n:0x0530001c]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.37114e-008;
+	  p position = -4.15311,-2.7442,-2.29596,0xd8a4c12c;
+	}
+}
+[t:lightstand_lightable,n:0x053000b1]
+{
+	[light_enable]
+	{
+	  f flare_magnitude = 1;
+	  x siege_light = 0xA8105D51;
+	  b use_flare = true;
+	}
+	[light_flicker]
+	{
+	  f magnitude = 0.1;
+	  x siege_light = 0xA8105D51;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.37114e-008;
+	  p position = -1.51844,-2.76052,-0.257,0x8126170d;
+	}
+}
+[t:lightstand_lightable,n:0x053000ac]
+{
+	[light_enable]
+	{
+	  f flare_magnitude = 1;
+	  x siege_light = 0x0544B73D;
+	  b use_flare = true;
+	}
+	[light_flicker]
+	{
+	  f magnitude = 0.1;
+	  x siege_light = 0x0544B73D;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.12686e-007;
+	  p position = 2.06639,-0.675373,-0.761241,0x9ef65018;
+	}
+}
+[t:lightstand_lightable,n:0x053000ad]
+{
+	[light_enable]
+	{
+	  f flare_magnitude = 1;
+	  x siege_light = 0xDD18AC32;
+	  b use_flare = true;
+	}
+	[light_flicker]
+	{
+	  f magnitude = 0.1;
+	  x siege_light = 0xDD18AC32;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.12686e-007;
+	  p position = -1.91164,-0.675373,-0.756628,0x9ef65018;
+	}
+}
+[t:lightstand_lightable,n:0x053000ae]
+{
+	[light_enable]
+	{
+	  f flare_magnitude = 1;
+	  x siege_light = 0x21D9F9B9;
+	  b use_flare = true;
+	}
+	[light_flicker]
+	{
+	  f magnitude = 0.1;
+	  x siege_light = 0x21D9F9B9;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.12686e-007;
+	  p position = 0.622299,-1.1346,-2.76236,0x69ce26c8;
+	}
+}
+[t:lightstand_lightable,n:0x053000af]
+{
+	[light_enable]
+	{
+	  f flare_magnitude = 1;
+	  x siege_light = 0xF2D3533C;
+	  b use_flare = true;
+	}
+	[light_flicker]
+	{
+	  f magnitude = 0.1;
+	  x siege_light = 0xF2D3533C;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.12686e-007;
+	  p position = -4.54701,-1.1346,-2.75723,0x69ce26c8;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x053003fe]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.977078;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.629546,0,0.776964;
+	  p position = -0.851498,0,0.271874,0x5aac5e12;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x05300401]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.675544;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.864474,0,0.502677;
+	  p position = -1.0409,0,-1.58397,0x5aac5e12;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300408]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.684151;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.920415,0,0.390944;
+	  p position = -0.151646,0,1.40902,0x5aac5e12;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x05300431]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.14136;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.0253557,0,0.999678;
+	  p position = -2.3091,0,-1.66563,0x5aac5e12;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300406]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.700456;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.658717,0,0.752391;
+	  p position = -0.0562724,0,2.22834,0x0f850565;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300445]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.10634;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.187914,0,0.982186;
+	  p position = -0.765795,0,0.977104,0x0f850565;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x0530040a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.18567;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.900293,0,0.435285;
+	  p position = -0.0289995,0,-2.39349,0x07b969c2;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x0530040c]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.85407;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.95229,0,0.305194;
+	  p position = -1.79362,0,-2.28705,0x07b969c2;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300420]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.19286;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.651227,0,0.758883;
+	  p position = 1.23538,0,-0.0486184,0xe3442654;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x05300432]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.15208;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.552138,0,0.833753;
+	  p position = 0.68811,0,0.799667,0xe3442654;
+	}
+}
+[t:lever_glb_07,n:0x053005ce]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x053005CC;
+	  x on_scid = 0x053005CC;
+	  f reset_time = 2;
+	  f reset_time_2 = 2;
+	}
+	[placement]
+	{
+	  p position = 2.57046,-6.35,-1.49811,0x08d888b7;
+		use_point_scids = 0x053005d2,0x053005d3;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x05300451]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.6755;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.888323,0,0.459219;
+	  p position = -3.05141,-3.96464,-5.75245,0x8e51ee92;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x0530046b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.71707;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.420064,0,0.907495;
+	  p position = -3.88174,-3.98431,-5.61982,0x8e51ee92;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300448]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.684496;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999999,0,0.00140031;
+	  p position = -3.029,0,-1.04379,0xd638ab65;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x0530044a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.09502;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.991952,0,0.126616;
+	  p position = -3.50397,0,0.41029,0xd638ab65;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300461]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.693081;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.779988,0,0.625795;
+	  p position = -3.31225,0,1.07999,0xd638ab65;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300475]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.800361;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.948123,0,0.317903;
+	  p position = -2.95734,0,1.57243,0xd638ab65;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300446]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.864791;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999883,0,0.0152635;
+	  p position = -1.72285,-6,-1.78503,0x82244626;
+	}
+}
+[t:lever_glb_06,n:0x05300015]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x053002BC;
+	  x on_scid = 0x053002BC;
+	  f reset_time_2 = 1;
+	}
+	[placement]
+	{
+	  p position = 2.63402,-0.350841,2.06343,0x0fd15853;
+		use_point_scids = 0x05300018;
+	}
+}
+[t:lever_glb_06,n:0x05300020]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x05300012;
+	  x on_scid = 0x05300012;
+	  f reset_time = 4;
+	  f reset_time_2 = 4;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.37114e-008;
+	  p position = -2.4944,-0.350841,-2.05658,0x0fd15853;
+		use_point_scids = 0x05300023;
+	}
+}
+[t:wall_cav_boarded,n:0x05300010]
+{
+	[aspect]
+	{
+	  f life = 1;
+	  f max_life = 1;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x05300011,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,7.4503e-008;
+	  p position = -0.0476688,-0.501674,-2.25711,0x0d3d8733;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300449]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.779666;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.99767,0,-0.068223;
+	  p position = 1.78783,0,-0.820332,0x695919d1;
+	}
+}
+[t:lever_glb_06,n:0x0530001e]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x0530001A;
+	  x on_scid = 0x0530001A;
+	  f reset_time = 2;
+	  f reset_time_2 = 2;
+	}
+	[placement]
+	{
+	  p position = 2.54276,-0.350841,2.05104,0xc0971e49;
+		use_point_scids = 0x0530001d;
+	}
+}
+[t:lever_glb_06,n:0x05300024]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x05300019;
+	  x on_scid = 0x05300019;
+	  f reset_time = 2;
+	  f reset_time_2 = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,2.51448e-008;
+	  p position = -2.48666,-0.350841,-2.04558,0xc0971e49;
+		use_point_scids = 0x05300026;
+	}
+}
+[t:barrier_breakable_01,n:0x053003b8]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	  f scale_multiplier = 0.8;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 5.71816,-2,-1.9841,0xbef8a9f3;
+	}
+}
+[t:lever_glb_06,n:0x0530002a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x05300029;
+	  x on_scid = 0x05300029;
+	  f reset_time = 2;
+	  f reset_time_2 = 2;
+	}
+	[placement]
+	{
+	  p position = 2.55749,-0.350841,2.05589,0x3a3be9c9;
+		use_point_scids = 0x0530002c;
+	}
+}
+[t:lever_glb_06,n:0x0530002d]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x05300027;
+	  x on_scid = 0x05300027;
+	  f reset_time = 2;
+	  f reset_time_2 = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.58772e-008;
+	  p position = -2.51178,-0.350841,-2.04933,0x3a3be9c9;
+		use_point_scids = 0x0530002f;
+	}
+}
+[t:wall_cav_boarded,n:0x0530000e]
+{
+	[aspect]
+	{
+	  f life = 1;
+	  f max_life = 1;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0530000F,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,7.4503e-008;
+	  p position = 0.274826,-0.580977,-2.29135,0xb5a9059a;
+	}
+}
+[t:wall_cav_boarded,n:0x0530000c]
+{
+	[aspect]
+	{
+	  f life = 1;
+	  f max_life = 1;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0530000D,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,7.4503e-008;
+	  p position = -0.126419,-0.552361,-2.28708,0xc5553053;
+	}
+}
+[t:wall_cav_boarded,n:0x05300021]
+{
+	[aspect]
+	{
+	  f life = 1;
+	  f max_life = 1;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0530000B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,7.4503e-008;
+	  p position = -0.00202211,-0.582663,-2.26422,0x94306e3c;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x05300499]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.891458;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.771185,0,0.636611;
+	  p position = 0.931425,-6,-1.93076,0x7b1f8283;
+	}
+}
+[t:debris_glb_bone_rock_breakable_02,n:0x053004fc]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.750675;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.688967,0,0.724792;
+	  p position = 2.15311,0,-1.97463,0x75cbb1ef;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x053004fd]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.15296;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.66186,0,0.749627;
+	  p position = 0.968666,0,-1.13923,0x75cbb1ef;
+	}
+}
+[t:debris_glb_bone_rock_breakable_01,n:0x053004fe]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.740821;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.920292,0,0.391231;
+	  p position = -0.874924,0,-1.37732,0x75cbb1ef;
+	}
+}

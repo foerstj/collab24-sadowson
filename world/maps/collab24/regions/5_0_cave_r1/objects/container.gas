@@ -1,0 +1,58 @@
+[t:clb24_5_1_chest_med,n:0x050000d0]
+{
+	[placement]
+	{
+		drop_point_scids = 0x050000db;
+	  q orientation = 0,-0.923879,0,-0.382684;
+	  p position = -0.715072,0,0.765472,0x9bfcb2d4;
+		use_point_scids = 0x050000db;
+	}
+}
+[t:clb24_5_3_barrel_low,n:0x050000d5]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.896405,0,0.443235;
+	  p position = -1.22385,0,0.89429,0x6a489aa6;
+	}
+}
+[t:clb24_5_3_barrel_low,n:0x050000d6]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.966451,0,0.25685;
+	  p position = -0.672966,0,1.50982,0x6a489aa6;
+	}
+}
+[t:clb24_5_3_barrel_low,n:0x050000d7]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.676504,0,0.736439;
+	  p position = 0.40871,0,1.45618,0x6a489aa6;
+	}
+}
+[t:clb24_5_3_crate_low,n:0x050000d8]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.22433,0,0.974513;
+	  p position = -0.161999,0,0.721124,0x6a489aa6;
+	}
+}
+[t:clb24_5_3_crate_low,n:0x050000d9]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.594376,0,0.804188;
+	  p position = 1.44585,0,1.2018,0x6a489aa6;
+	}
+}
+[t:clb24_5_3_crate_low,n:0x050000da]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.860691,0,0.509127;
+	  p position = -1.48962,0,-0.0201077,0x6a489aa6;
+	}
+}

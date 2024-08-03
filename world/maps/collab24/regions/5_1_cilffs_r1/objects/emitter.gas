@@ -1,0 +1,193 @@
+[t:emt_sound,n:0x05100181]
+{
+	[placement]
+	{
+	  p position = 0.401055,0,0.639297,0xdb5f9a90;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 1;
+	  i start_hour = 1;
+	  i stop_hour = 4;
+	  i time_chunk = 1;
+	}
+}
+[t:emt_sound,n:0x05100185]
+{
+	[placement]
+	{
+	  q orientation = 0,0.909961,0,-0.414693;
+	  p position = 0.550305,0,1.84653,0xdb5f9a90;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 25;
+	  i start_hour = 5;
+	  i stop_hour = 20;
+	}
+}
+[t:emt_sound,n:0x0510015e]
+{
+	[placement]
+	{
+	  p position = 7.53137,5.84877,8.16391,0xef3f45b4;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "s_e_env_waterfall";
+	  f max_dist = 30;
+	}
+}
+[t:emt_sound,n:0x05100186]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.1255,4,3.08514,0xf5912522;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 1;
+	  i start_hour = 1;
+	  i stop_hour = 4;
+	  i time_chunk = 1;
+	}
+}
+[t:emt_sound,n:0x0510022b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.350207,0,0.936672;
+	  p position = -0.0817337,4,3.23439,0xf5912522;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 25;
+	  i start_hour = 5;
+	  i stop_hour = 20;
+	}
+}
+[t:emt_sound,n:0x05100177]
+{
+	[placement]
+	{
+	  p position = -0.821892,-1.95642,-9.53243,0xf011a100;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "s_e_env_waterfall";
+	}
+}
+[t:emt_sound,n:0x0510017f]
+{
+	[placement]
+	{
+	  p position = -1.05219,0,-0.248607,0x2c0c5cca;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 1;
+	  i start_hour = 1;
+	  i stop_hour = 4;
+	  i time_chunk = 1;
+	}
+}
+[t:emt_sound,n:0x05100180]
+{
+	[placement]
+	{
+	  q orientation = 0,0.909961,0,-0.414693;
+	  p position = -0.902935,0,0.958622,0x2c0c5cca;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds2";
+	  f max_repeat_rate = 25;
+	  i start_hour = 5;
+	  i stop_hour = 20;
+	}
+}
+[t:emt_sound,n:0x0510017d]
+{
+	[placement]
+	{
+	  p position = 1.51786,-0.25,1.17413,0x9f16b259;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 1;
+	  i start_hour = 1;
+	  i stop_hour = 4;
+	  i time_chunk = 1;
+	}
+}
+[t:emt_sound,n:0x0510017e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.909961,0,-0.414693;
+	  p position = -0.377815,0.17092,0.0175858,0x9f16b259;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds1";
+	  f max_repeat_rate = 25;
+	  i start_hour = 5;
+	  i stop_hour = 20;
+	}
+}
+[t:emt_sound,n:0x05100179]
+{
+	[placement]
+	{
+	  q orientation = 0,0.909961,0,-0.414693;
+	  p position = 1.3527,12,2.91248,0x532f04f4;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 25;
+	  i start_hour = 5;
+	  i stop_hour = 20;
+	}
+}
+[t:emt_sound,n:0x0510015f]
+{
+	[placement]
+	{
+	  p position = 1.45702,-0.25,-0.244061,0x457e1984;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 1;
+	  i start_hour = 1;
+	  i stop_hour = 4;
+	  i time_chunk = 1;
+	}
+}
+[t:emt_sound,n:0x05100164]
+{
+	[placement]
+	{
+	  p position = 2.47435,5.84877,-1.56366,0x84a410ed;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "s_e_env_waterfall";
+	}
+}

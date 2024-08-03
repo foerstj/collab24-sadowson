@@ -1,0 +1,18 @@
+[conv_c24_r2_hermit_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,1;
+	  b quest_dialog = true;
+		screen_text = "Ah, you startled me. I was expecting a krug attack. One of those bastards made my mules fall off a cliff. What do you mean you met HIM? You talked to the beast? Look, if you're not completely out of your mind. You need to prove your intentions first. Mules I can replace, but the cart not so much. So you and your krug friend should obtain me a new one. Past the fence by my hut there are is tree ripe for felling. I believe its wood would make a fine cart. Bring it outside the hut, and get busy with my tools. When the wagon is ready, I might be willing to speak with you krug friend.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r2_hermit_next]
+{
+	[text*]
+	{
+		screen_text = "I do not see any wagon on you, you know.";
+	  f scroll_rate = 10.000000;
+	}
+}

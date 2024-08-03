@@ -1,0 +1,21 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000025;
+	source_region_name = 2_4_ice_fields;
+	[t:stitch_editor,n:2_3_town_and_outskirts]
+	{
+		dest_region = 2_3_town_and_outskirts;
+		[node_ids]
+		{
+			0x00000041 = 0x117C672D,7;
+		}
+	}
+	[t:stitch_editor,n:2_5_ice_caverns]
+	{
+		dest_region = 2_5_ice_caverns;
+		[node_ids]
+		{
+			0x00000042 = 0x10299C2F,7;
+		}
+	}
+}

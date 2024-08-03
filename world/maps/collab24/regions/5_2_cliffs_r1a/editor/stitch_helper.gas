@@ -1,0 +1,13 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000052;
+	source_region_name = 5_2_cliffs_r1a;
+	[t:stitch_editor,n:5_1_cilffs_r1]
+	{
+		dest_region = 5_1_cilffs_r1;
+		[node_ids]
+		{
+			0x51520000 = 0x27A36137,7;
+		}
+	}
+}

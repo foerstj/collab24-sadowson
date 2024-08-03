@@ -1,0 +1,225 @@
+[t:cmd_animation_command,n:0x03400132]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1819504178;
+	  x client_scid = 0x03400070;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 0.691014,0,1.90402,0x8b12dd5e;
+	}
+}
+[t:cmd_animation_command,n:0x0340012f]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1936290865;
+	  x client_scid = 0x03400072;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 1.51076,-9.53674e-007,-1.6646,0xb19fd6b6;
+	}
+}
+[t:cmd_animation_command,n:0x03400130]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1936290867;
+	  x client_scid = 0x03400071;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = -1.76188,0,-1.69488,0xb19fd6b6;
+	}
+}
+[t:cmd_animation_command,n:0x03400131]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 2004446565;
+	  x client_scid = 0x03400074;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = -0.451967,0,0.504094,0x7e4fb36b;
+	}
+}
+[t:cmd_animation_command,n:0x03400126]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811953;
+	  x client_scid = 0x03400123;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 0.410033,0,0.0808443,0xb42f684f;
+	}
+}
+[t:cmd_animation_command,n:0x03400127]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811956;
+	  x client_scid = 0x03400124;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 1.81605,0,1.37581,0xb42f684f;
+	}
+}
+[t:cmd_animation_command,n:0x03400128]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811957;
+	  x client_scid = 0x03400125;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 0.791994,0,1.26248,0x5c75c61e;
+	}
+}
+[t:cmd_animation_command,n:0x0340012c]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1819504178;
+	  x client_scid = 0x03400078;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = -0.682735,-1.5,-2.40679,0xb098f4ee;
+	}
+}
+[t:cmd_animation_command,n:0x0340012b]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1952541803;
+	  x client_scid = 0x03400077;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 0.163782,-1.5,-2.85034,0x9c04800e;
+	}
+}
+[t:cmd_animation_command,n:0x0340012d]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811954;
+	  x client_scid = 0x0340006C;
+	  b initially_active = true;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+	}
+	[placement]
+	{
+	  p position = 1.95915,0,-1.25871,0x5b31af17;
+	}
+}
+[t:cmd_animation_command,n:0x0340012a]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811957;
+	  x client_scid = 0x03400122;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 0.555672,0,-0.14418,0xc49e2375;
+	}
+}
+[t:cmd_animation_command,n:0x03400129]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811956;
+	  x client_scid = 0x03400121;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = -0.997407,0,1.78768,0xb21c7c35;
+	}
+}
+[t:cmd_animation_command,n:0x034000fc]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811955;
+	  x client_scid = 0x03400076;
+	  b repeat_animation = false;
+	  b start_fidget = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SP WAKE";
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  p position = -0.545857,0,-0.875344,0xdd083b93;
+	}
+}
+[t:cmd_alignment_changer,n:0x03400100]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  x target_actor = 0x03400076;
+	}
+	[placement]
+	{
+	  p position = 0.155552,-9.53674e-007,-0.204662,0xdd083b93;
+	}
+}
+[t:cmd_animation_command,n:0x0340012e]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811954;
+	  x client_scid = 0x03400076;
+	  b hold_animation = true;
+	  b initially_active = true;
+	  x next_scid = 0x034000FC;
+	}
+	[common]
+	{
+		dev_instance_text = "SP SLEEP";
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  p position = -1.12983,0,-1.64006,0xdd083b93;
+	}
+}
+[t:cmd_animation_command,n:0x0340006b]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1650811953;
+	  x client_scid = 0x0340006A;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 0.00229454,0,0.031456,0x1772cec4;
+	}
+}

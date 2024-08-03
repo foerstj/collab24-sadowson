@@ -1,0 +1,980 @@
+[t:collab_ss_1_valley_skrubb_small,n:0x00100d87]
+{
+	[placement]
+	{
+	  q orientation = 0,0.873115,0,0.487514;
+	  p position = 1.80196,0,1.94179,0xd9bef7b8;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100d97]
+{
+	[placement]
+	{
+	  q orientation = 0,0.811508,0,0.584342;
+	  p position = 1.11041,0,0.476128,0xd9bef7b8;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dae]
+{
+	[placement]
+	{
+	  q orientation = 0,0.494938,0,0.868928;
+	  p position = 3.29456,-9.53674e-007,1.18489,0x29e7ef85;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dc5]
+{
+	[placement]
+	{
+	  q orientation = 0,0.0438988,0,0.999036;
+	  p position = -3.56548,0,-0.634933,0x15047e19;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100db3]
+{
+	[placement]
+	{
+	  q orientation = 0,0.510184,0,0.860065;
+	  p position = 1.33387,0,0.912994,0x8be2201e;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dc4]
+{
+	[placement]
+	{
+	  q orientation = 0,0.292745,0,0.956191;
+	  p position = -1.31404,0,1.05501,0x8be2201e;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dc6]
+{
+	[placement]
+	{
+	  q orientation = 0,0.974929,0,0.222518;
+	  p position = -3.87471,1.90735e-006,-0.543171,0xf646e7b5;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dc7]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.770416,0,1.88802,0x672f76af;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dc8]
+{
+	[placement]
+	{
+	  q orientation = 0,0.93443,0,-0.356147;
+	  p position = 0.519512,0,1.81043,0x672f76af;
+	}
+}
+[t:collab_ss_1_valley_skrubb_small,n:0x00100d84]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -2.29673,0,-0.358475,0x477edff4;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100d8a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.568902,0,0.822405;
+	  p position = -3.92535,0,-0.127331,0x477edff4;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100d91]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.405239,0,0.914211;
+	  p position = -1.32515,0,1.57835,0x4b5fc2b5;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100ddf]
+{
+	[placement]
+	{
+	  q orientation = 0,0.907221,0,-0.420655;
+	  p position = 1.49949,0,1.88878,0x0522a34e;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100de0]
+{
+	[placement]
+	{
+	  q orientation = 0,0.357916,0,0.933754;
+	  p position = 2.97943,-1.90735e-006,-0.404512,0x0522a34e;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100de2]
+{
+	[placement]
+	{
+	  q orientation = 0,0.547728,0,0.836656;
+	  p position = 3.47186,0,1.73853,0x0522a34e;
+	}
+}
+[t:collab_ss_1_valley_skrubb_small,n:0x00100dd9]
+{
+	[placement]
+	{
+	  q orientation = 0,0.405365,0,0.914155;
+	  p position = -0.982651,0.999998,1.73199,0x2c084ede;
+	}
+}
+[t:collab_ss_1_valley_skrubb_small,n:0x00100dd8]
+{
+	[placement]
+	{
+	  q orientation = 0,0.379271,0,0.925286;
+	  p position = 1.48987,0.999998,2.3598,0xde03aa64;
+	}
+}
+[t:collab_ss_1_valley_skrubb_small,n:0x00100dda]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.0272461,0,0.999629;
+	  p position = -1.58739,0,-1.11681,0xdfa581b1;
+	}
+}
+[t:collab_ss_1_valley_forest_klaw,n:0x00100dcc]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.724505,0,0.68927;
+	  p position = 3.39111,0,0.699871,0x40a9eb64;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100de3]
+{
+	[placement]
+	{
+	  q orientation = 0,0.440387,0,0.897808;
+	  p position = -1.33913,0,-0.397579,0x648a778c;
+	}
+}
+[t:collab_ss_1_valley_forest_klaw,n:0x00100dce]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.22263,0,0.974903;
+	  p position = 1.85581,0,-0.307924,0xc822529c;
+	}
+}
+[t:collab_ss_1_valley_forest_klaw,n:0x00100dcd]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.021262,0,-0.999774;
+	  p position = 1.82594,0,-0.785067,0x0e5420b0;
+	}
+}
+[t:collab_ss_1_valley_skrubb_small,n:0x00100dc9]
+{
+	[placement]
+	{
+	  q orientation = 0,0.999979,0,0.00643276;
+	  p position = -1.31184,9.53674e-007,1.93774,0x2196acae;
+	}
+}
+[t:collab_ss_1_valley_skrubb_small,n:0x00100dca]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.638073,0,0.769976;
+	  p position = -1.94742,9.53674e-007,0.464569,0x00a34141;
+	}
+}
+[t:collab_ss_1_valley_forest_klaw,n:0x00100dcb]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.484133,0,0.874994;
+	  p position = 0.37883,1.90735e-006,-1.8434,0x11d92800;
+	}
+}
+[t:collab_ss_guard_m_01,n:0x00100bad]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_m_01;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = 2.29285,-6,-5.92789,0x3ee19cd7;
+	}
+}
+[t:collab_ss_guard_g_04,n:0x00100bb1]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_g_04;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,-0.382684;
+	  p position = -2.22253,-6,-5.91451,0x3ee19cd7;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100ddb]
+{
+	[placement]
+	{
+	  q orientation = 0,0.52678,0,0.850002;
+	  p position = 1.48748,0,-1.88904,0x4eeef755;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100ddd]
+{
+	[placement]
+	{
+	  q orientation = 0,0.711953,0,0.702227;
+	  p position = 3.78103,-1.90735e-006,-1.47951,0x4eeef755;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100ddc]
+{
+	[placement]
+	{
+	  q orientation = 0,0.305922,0,0.952057;
+	  p position = -1.92789,0,0.0151978,0xc92294ca;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dde]
+{
+	[placement]
+	{
+	  q orientation = 0,0.950451,0,0.310874;
+	  p position = -3.36554,1.90735e-006,0.496429,0xc92294ca;
+	}
+}
+[t:collab_ss_bodrus,n:0x00100bb0]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_bodrus_complete;
+			* = conversation_bodrus_hello;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab_bodrus.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.13739,0,1.96901,0xfaafa64c;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dcf]
+{
+	[placement]
+	{
+	  q orientation = 0,0.990673,0,-0.136264;
+	  p position = -3.7139,-0.35,5.39685,0x1580f314;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dd2]
+{
+	[placement]
+	{
+	  q orientation = 0,0.847874,0,0.530198;
+	  p position = -5.80501,-0.350001,0.00642776,0x1580f314;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dd5]
+{
+	[placement]
+	{
+	  q orientation = 0,0.922969,0,-0.384874;
+	  p position = -3.19487,9.53674e-007,-0.960251,0x97e768a7;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dd1]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.173113,0,0.984902;
+	  p position = 3.27258,9.53674e-007,-3.80292,0xb55c6fc9;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dd0]
+{
+	[placement]
+	{
+	  q orientation = 0,0.996131,0,0.0878809;
+	  p position = 1.24156,0,-3.25454,0x5ded8504;
+	}
+}
+[t:collab_ss_1_valley_wolf_black_boss,n:0x00100dd3]
+{
+	[placement]
+	{
+	  q orientation = 0,0.983392,0,-0.181495;
+	  p position = -2.78395,-9.53674e-007,-2.89219,0x5ded8504;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100dd4]
+{
+	[placement]
+	{
+	  q orientation = 0,0.464956,0,0.885334;
+	  p position = 0.912888,0,0.166382,0x0f6ffaea;
+	}
+}
+[t:collab_ss_guard_m_10,n:0x00100be9]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -3.69501,0,-1.70311,0xa1796a60;
+	}
+}
+[t:collab_ss_guard_g_10,n:0x00100bea]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.64339,0,1.6853,0xa1796a60;
+	}
+}
+[t:collab_ss_guard_m_05,n:0x00100bec]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_m_05;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.825821,0,-0.0218973,0xa1796a60;
+	}
+}
+[t:collab_ss_guard_g_09,n:0x00100bee]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100A1C,0f,"default","every",0), doc("front left door");
+				action* = send_world_message("we_req_activate",0x00100A1B,0f,"default","every",0), doc("front right door");
+				action* = send_world_message("we_req_activate",0x00100A1E,0f,"default","every",0), delay(1), doc("rear left door");
+				action* = send_world_message("we_req_activate",0x00100A1D,0f,"default","every",0), delay(1), doc("rear right door");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_end",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_g_09;
+		}
+	}
+	[placement]
+	{
+	  p position = 2.241,-6,4.72786,0xf043ae52;
+	}
+}
+[t:mp_gypsy_female_02,n:0x00100da5]
+{
+	[common]
+	{
+		screen_name = "Andrea";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tent_f;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 0.337036,0.300001,1.66068,0x96a7e3c3;
+	}
+}
+[t:mp_townfolk_m_03,n:0x00100da6]
+{
+	[common]
+	{
+		screen_name = "Woadren";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tent_m;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.96791,0.3,0.252487,0x96a7e3c3;
+	}
+}
+[t:mp_gypsy_female_01,n:0x00100da2]
+{
+	[common]
+	{
+		screen_name = "Melinda";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tent_f;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.96576,-0.0500002,3.1684,0xf48b10c1;
+	}
+}
+[t:mp_townfolk_male_03,n:0x00100da3]
+{
+	[common]
+	{
+		screen_name = "Kylstan";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tent_m;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,-0.382684;
+	  p position = -0.719574,-0.0500021,3.64069,0xf48b10c1;
+	}
+}
+[t:mp_townfolk_f_02,n:0x00100da7]
+{
+	[common]
+	{
+		screen_name = "Karlia";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tent_f;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382684;
+	  p position = 3.85263,-0.0500002,-1.69832,0xf48b10c1;
+	}
+}
+[t:collab_ss_guard_m_04,n:0x00100bc3]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_m_04;
+			* = conversation_guard_m_04_complete;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_guard_m_04.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = 2.8184,-0.0499992,-4.99235,0x508f7392;
+	}
+}
+[t:collab_ss_blacksmith,n:0x00100447]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -3.84154,9.53674e-007,0.797531,0x787255e6;
+	}
+}
+[t:collab_ss_seraphine,n:0x00100434]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_seraphine_complete_combat;
+			* = conversation_seraphine_complete_melee;
+			* = conversation_seraphine_complete_nature;
+			* = conversation_seraphine_complete_ranged;
+			* = conversation_seraphine_hello_combat;
+			* = conversation_seraphine_hello_melee;
+			* = conversation_seraphine_hello_nature;
+			* = conversation_seraphine_hello_ranged;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_seraphine.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 2.17339,0,-3.12869,0x9b1f974a;
+		use_point_scids = 0x00100c50;
+	}
+}
+[t:collab_ss_tiberius,n:0x00100bae]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tiberius_complete_combat;
+			* = conversation_tiberius_complete_melee;
+			* = conversation_tiberius_complete_nature;
+			* = conversation_tiberius_complete_ranged;
+			* = conversation_tiberius_hello_combat;
+			* = conversation_tiberius_hello_melee;
+			* = conversation_tiberius_hello_nature;
+			* = conversation_tiberius_hello_ranged;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_tiberius.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.0921173,0,0.699478,0x9b1f974a;
+		use_point_scids = 0x00100c54;
+	}
+}
+[t:mp_townfolk_male_01,n:0x00100c62]
+{
+	[common]
+	{
+		screen_name = "Armourer";
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = bo_bo_le_light;
+			es_weapon_hand = hm_g_c_1h1m_avg;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.87138,0,-3.43367,0x9b1f974a;
+	}
+}
+[t:collab_ss_guard_m_03,n:0x00100bc1]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_m_03;
+		}
+	}
+	[placement]
+	{
+	  p position = -1.83797,-2,1.11322,0xbe07f9c6;
+		use_point_scids = 0x00100bc2;
+	}
+}
+[t:collab_ss_guard_g_08,n:0x00100c2c]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_g_08;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = 0.839157,0,-3.21618,0x0f7add99;
+	}
+}
+[t:collab_ss_guard_g_07,n:0x00100c2d]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_g_07;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.02043,0,1.84935,0x478addc7;
+	}
+}
+[t:mp_townfolk_female_04,n:0x00100436]
+{
+	[common]
+	{
+		screen_name = "Healer Trianni";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_trianni;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.722221,0,-0.6427,0x219b6a72;
+	}
+}
+[t:collab_ss_aurelia,n:0x00100baf]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_aurelia_complete_combat;
+			* = conversation_aurelia_complete_melee;
+			* = conversation_aurelia_complete_nature;
+			* = conversation_aurelia_complete_ranged;
+			* = conversation_aurelia_hello_combat;
+			* = conversation_aurelia_hello_melee;
+			* = conversation_aurelia_hello_nature;
+			* = conversation_aurelia_hello_ranged;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_aurelia.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = -0.0234909,0,1.23508,0x219b6a72;
+	}
+}
+[t:collab_ss_guard_m_02,n:0x00100bb2]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100C85,0f,"default","every",0), doc("move");
+				action* = send_world_message("we_req_activate",0x00100A2D,0f,"default","every",0), doc("door left");
+				action* = send_world_message("we_req_activate",0x00100A2C,0f,"default","every",0), doc("door right");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_end",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_m_02;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -0.0199018,-3.5,-1.98937,0x41cc8656;
+	}
+}
+[t:mp_soldier_wounded_01,n:0x00100421]
+{
+	[common]
+	{
+		screen_name = "Wounded Guard";
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.0969391,-3.5,-0.79422,0xb89af74a;
+	}
+}
+[t:mp_village_idiot,n:0x00100da4]
+{
+	[common]
+	{
+		screen_name = "Jerico";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tent_m;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -0.911652,0.3,1.50963,0x3b4ad878;
+	}
+}
+[t:collab_ss_lady_athena,n:0x00100c2e]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_athena_bridge;
+			* = conversation_athena_complete;
+			* = conversation_athena_hello;
+			* = conversation_athena_idle;
+			* = conversation_athena_idle_complete;
+			* = conversation_athena_idle_complete_secret-option;
+			* = conversation_athena_know;
+			* = conversation_athena_long;
+			* = conversation_athena_reward;
+			* = conversation_athena_short;
+			* = conversation_athena_undead;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_athena.skrit;
+	}
+	[placement]
+	{
+	  p position = 0.0193787,0,0.890472,0x82a8e5a4;
+	}
+}
+[t:collab_pm_nymeria,n:0x00100c93]
+{
+	[aspect]
+	{
+	  f max_life = 49;
+	  f max_mana = 30;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_nymeria_accept;
+			* = conversation_nymeria_decline;
+			* = conversation_nymeria_disband;
+			* = conversation_nymeria_disband_rejoin;
+			* = conversation_nymeria_join;
+			* = conversation_nymeria_quest_accept;
+			* = conversation_nymeria_quest_decline;
+			* = conversation_nymeria_quest_hello;
+			* = conversation_nymeria_reject;
+			* = conversation_nymeria_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab_nymeria.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 0.06987,0,0.0925369,0x19fe45e0;
+	}
+}
+[t:collab_ss_guard_m_captain,n:0x00100d17]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_captain_complete;
+			* = conversation_captain_hello;
+			* = conversation_captain_quest;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_guard_m_captain.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = 0.75145,0.5,0.579056,0x2ce0c033;
+	}
+}
+[t:mp_townfolk_male_05,n:0x00100c4d]
+{
+	[common]
+	{
+		screen_name = "Advisor Synod";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_synod;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = 0.902161,0.5,0.808151,0x597a1556;
+	}
+}
+[t:mp_soldier_wounded_02,n:0x00100422]
+{
+	[common]
+	{
+		screen_name = "Wounded Guard";
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.210564,-2,-0.715164,0x0337fabb;
+	}
+}
+[t:mp_townfolk_female_03,n:0x00100d85]
+{
+	[common]
+	{
+		screen_name = "Priestess Miralanna";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_miralanna;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ra_ro_m_g_c_094;
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = -0.0110321,0,0.140091,0xdc5a5881;
+		use_point_scids = 0x00100d88;
+	}
+}
+[t:collab_ss_1_valley_forest_klaw,n:0x00100dd6]
+{
+	[placement]
+	{
+	  q orientation = 0,0.117065,0,0.993124;
+	  p position = 1.16672,1.90735e-006,0.380912,0xd7480707;
+	}
+}
+[t:collab_ss_1_valley_forest_klaw,n:0x00100dd7]
+{
+	[placement]
+	{
+	  q orientation = 0,0.860067,0,0.510181;
+	  p position = -2.39572,0,-0.395297,0xd7480707;
+	}
+}
+[t:collab_ss_1_valley_wolf_black,n:0x00100de1]
+{
+	[placement]
+	{
+	  q orientation = 0,0.7787,0,0.627396;
+	  p position = 1.15885,-2.38419e-006,-0.745314,0x89926cce;
+	}
+}
+[t:collab_ss_1_valley_forest_klaw,n:0x00100de4]
+{
+	[placement]
+	{
+	  q orientation = 0,0.201668,0,0.979454;
+	  p position = 0.900584,0.94881,3.24405,0xd67314e7;
+	}
+}

@@ -1,0 +1,58 @@
+[t:sign_glb_01,n:0x05100063]
+{
+	[common]
+	{
+		screen_name = "Jeremy's Cliff Shop";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.694658,0,-0.71934;
+	  p position = 0.112053,-0.206605,-0.106071,0x65fb5053;
+	}
+}
+[t:sign_glb_01,n:0x05100064]
+{
+	[common]
+	{
+		screen_name = "Dirgnon Mines";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,-0.92388;
+	  p position = 0.876484,0,0.58139,0x65fb5053;
+	}
+}
+[t:sign_glb_01,n:0x05100066]
+{
+	[common]
+	{
+		screen_name = "TODO Sadow's Region";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.902586,0,-0.430511;
+	  p position = 1.05334,0,-0.351563,0x65fb5053;
+	}
+}
+[t:coil_gob_02,n:0x05100061]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.207912,0,-0.978148;
+	  p position = -3.30809,-2.05,-3.70591,0x5fa45e41;
+	}
+}
+[t:door_grs_peasant_right,n:0x05100059]
+{
+	[placement]
+	{
+	  q orientation = 0,0.984808,0,-0.173648;
+	  p position = 0.060936,-3.75,-2.93461,0x5c937ddd;
+		use_point_scids = 0x0510005a,0x0510005b;
+	}
+}

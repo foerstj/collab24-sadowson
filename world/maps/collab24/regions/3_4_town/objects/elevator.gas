@@ -1,0 +1,82 @@
+[t:elevator_2s_1c_2n,n:0x034000ed]
+{
+	[common]
+	{
+		dev_instance_text = "A - MAYOR - 16m";
+	}
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 5;
+	  i connect_door_level2 = 5;
+	  x connect_node_level1 = 0x64CDBAA7;
+	  x connect_node_level2 = 0xE7730047;
+	  f duration = 4;
+	  i elevator_door_level1 = 4;
+	  i elevator_door_level2 = 4;
+	  x elevator_node = 0x8F981FBA;
+		material = "dm_small";
+		moving1_actioninfo = "
+            collab24_3_ele_down,0;
+            0x00000034,1,-1,-1,out:black,1;
+            0x00000035,3,-1,-1,out:black,1;
+            0x00000034,2,-1,-1,in,2;
+            0x00000035,1,-1,-1,in,2;
+            0x00000035,3,-1,-1,in,2;
+            collab24_3_shroomlayer_town_viewpoint,3
+        ";
+		moving2_actioninfo = "
+            collab24_3_ele_down,0;
+            0x00000035,1,-1,-1,out:black,1;
+            0x00000035,3,-1,-1,out:black,1;
+            0x00000034,2,-1,-1,out:black,1;
+            0x00000034,1,-1,-1,in,2;
+            0x00000035,3,-1,-1,in,2;
+            collab24_3_shroomlayer_town,3
+        ";
+	}
+	[placement]
+	{
+	  p position = 0.577125,5.95,0.555571,0x8f981fba;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x034000f6]
+{
+	[common]
+	{
+		dev_instance_text = "B - PUBLIC - 20m";
+	}
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 5;
+	  i connect_door_level2 = 5;
+	  x connect_node_level1 = 0x71CE9F06;
+	  x connect_node_level2 = 0x527CE2B0;
+	  f duration = 5;
+	  i elevator_door_level1 = 4;
+	  i elevator_door_level2 = 4;
+	  x elevator_node = 0xF56C4D6F;
+		material = "dm_small";
+		moving1_actioninfo = "
+            collab24_3_ele_down,0;
+            0x00000034,1,-1,-1,out:black,1;
+            0x00000035,3,-1,-1,out:black,1;
+            0x00000034,2,-1,-1,in,3;
+            0x00000035,1,-1,-1,in,3;
+            0x00000035,3,-1,-1,in,3;
+            collab24_3_shroomlayer_town_viewpoint,4
+        ";
+		moving2_actioninfo = "
+            collab24_3_ele_down,0;
+            0x00000035,1,-1,-1,out:black,1;
+            0x00000035,3,-1,-1,out:black,1;
+            0x00000034,2,-1,-1,out:black,1;
+            0x00000034,1,-1,-1,in,3;
+            0x00000035,3,-1,-1,in,3;
+            collab24_3_shroomlayer_town,4
+        ";
+	}
+	[placement]
+	{
+	  p position = 0.533733,5.95,0.531804,0xf56c4d6f;
+	}
+}

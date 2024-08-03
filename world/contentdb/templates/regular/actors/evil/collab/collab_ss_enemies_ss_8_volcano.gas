@@ -15,7 +15,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 13885;
+		experience_value = 39;
 		life = 740;
 		max_life = 740;
 		mana = 16;
@@ -114,7 +114,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 913;
+		experience_value = 39;
 		life 			 = 640;
 		max_life 		 = 640;
 		mana 			 = 800;
@@ -166,7 +166,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 130000;
+		experience_value = 39;
 		life = 1325;
 		material = stone;
 		max_life = 1325;
@@ -264,7 +264,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 199000;
+		experience_value = 39;
 		life = 1353;
 		material = stone;
 		max_life = 1353;
@@ -396,7 +396,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 100000;
+		experience_value = 39;
 		life = 1040;
 		max_life = 1040;
 		mana = 10;

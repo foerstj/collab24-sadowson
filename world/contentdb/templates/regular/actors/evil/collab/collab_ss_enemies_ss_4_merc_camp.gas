@@ -11,6 +11,7 @@ DO NOT MODIFY ANYTHING AFTER THE BASE BALANCING TEMPLATES.
 v1 - 13/07/24: Initial Implementation
 
 */
+
 [t:template,n:collab_ss_mercenary_melee_base]
 {
 	doc = "collab_ss_mercenary_melee_base";
@@ -19,19 +20,29 @@ v1 - 13/07/24: Initial Implementation
 	{
 		[skills]
 		{
-			strength 		= 18, 0;
-			dexterity 		= 10, 0;
-			intelligence 	= 4,  0;
-			melee 			= 7,  0;
+			strength 		= 20, 0;
+			dexterity 		= 14, 0;
+			intelligence 	= 11,  0;
+			melee 			= 17,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 350;
-		life = 300;
-		mana = 8;
-		max_life = 300;
-		max_mana = 8;
+		experience_value = 36;
+		life 			= 429;
+		max_life 		= 429;
+		mana 			= 97;
+		max_mana 		= 97;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 20;
+		damage_min = 15;
+	}
+	[defend]
+	{
+		defense = 17;
 	}
 	[inventory]
 	{
@@ -104,10 +115,7 @@ v1 - 13/07/24: Initial Implementation
 		screen_name = "Mercenary Warrior";
 		membership = monster, party_bandit_ranged, bandit;
 	}
-	[defend]
-	{
-		defense = 98;
-	}
+
    	[mind]
    	{
 		disposition_orders				= ad_offensive;
@@ -133,19 +141,29 @@ v1 - 13/07/24: Initial Implementation
 	{
 		[skills]
 		{
-			strength 		= 13, 0;
-			dexterity 		= 16, 0;
-			intelligence 	= 5,  0;
-			ranged 			= 6,  0;
+			strength 		= 14, 0;
+			dexterity 		= 20, 0;
+			intelligence 	= 12,  0;
+			ranged 			= 17,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 261;
-		life = 243;
-		mana = 10;
-		max_life = 243;
-		max_mana = 10;
+		experience_value = 36;
+		life 			= 299;
+		max_life 		= 299;
+		mana 			= 132;
+		max_mana 		= 132;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 51;
+		damage_min = 48;
+	}
+	[defend]
+	{
+		defense = 21;
 	}
 	[inventory]
 	{
@@ -205,20 +223,10 @@ v1 - 13/07/24: Initial Implementation
 			}
 		}
 	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 51;
-		damage_min = 48;
-	}
 	[common]
 	{
 		screen_name = "Mercenary Archer";
 		membership = monster, party_bandit_ranged, bandit;
-	}
-	[defend]
-	{
-		defense = 75;
 	}
 	[mind]
     {
@@ -246,25 +254,29 @@ v1 - 13/07/24: Initial Implementation
 	{
 		[skills]
 		{
-			strength 		= 8,  0;
-			dexterity 		= 9,  0;
-			intelligence 	= 13, 0;
-			combat_magic 	= 8,  0;
+			strength 		= 12,  0;
+			dexterity 		= 12,  0;
+			intelligence 	= 21, 0;
+			combat_magic 	= 17,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 261;
-		life = 100;
-		mana = 100;
-		max_life = 100;
-		max_mana = 100;
+		experience_value = 36;
+		life = 259;
+		mana = 341;
+		max_life = 259;
+		max_mana = 341;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 60;
-		damage_min = 55;
+		damage_max = 21;
+		damage_min = 15;
+	}
+	[defend]
+	{
+		defense = 18;
 	}
 	[inventory]
 	{
@@ -302,10 +314,6 @@ v1 - 13/07/24: Initial Implementation
 	{
 		screen_name = "Mercenary Combat Mage";
 		membership = monster, party_bandit_ranged, bandit;
-	}
-	[defend]
-	{
-		defense = 150;
 	}
 	[mind]
     {
@@ -354,19 +362,23 @@ v1 - 13/07/24: Initial Implementation
 	{
 		[skills]
 		{
-			strength 		= 8, 0;
-			dexterity 		= 9, 0;
-			intelligence 	= 13, 0;
-			nature_magic 	= 8, 0;
+			strength 		= 11, 0;
+			dexterity 		= 13, 0;
+			intelligence 	= 22, 0;
+			nature_magic 	= 17, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value	= 261;
-		life				= 100;
-		mana				= 56;
-		max_life			= 100;
-		max_mana			= 56;
+		experience_value	= 36;
+		life				= 246;
+		max_life			= 246;
+		mana				= 354;
+		max_mana			= 354;
+	}
+	[defend]
+	{
+		defense = 18;
 	}
 	[inventory]
 	{
@@ -429,10 +441,6 @@ v1 - 13/07/24: Initial Implementation
 	{
 		screen_name = "Mercenary Nature Mage";
 		membership = monster, party_bandit_ranged, bandit;
-	}
-	[defend]
-	{
-		defense = 150;
 	}
 	[mind]
     {

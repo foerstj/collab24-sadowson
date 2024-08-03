@@ -1,0 +1,18 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000034;
+	source_region_name = 3_4_town;
+	[t:stitch_editor,n:3_5_shroomlayer]
+	{
+		dest_region = 3_5_shroomlayer;
+		[node_ids]
+		{
+			0x00003451 = 0x15C8CF03,4;
+			0x00003452 = 0x30D7B0D4,2;
+			0x00003453 = 0xC58EAC67,3;
+			0x00003454 = 0xEAEE937C,1;
+			0x0000345a = 0xFDA4319F,1;
+			0x0000345b = 0x22E71538,1;
+		}
+	}
+}

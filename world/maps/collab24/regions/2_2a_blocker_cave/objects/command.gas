@@ -1,0 +1,13 @@
+[t:c24_slice_2_cmd_activate_container,n:0x0280000b]
+{
+	[cmd_c24_activate_container]
+	{
+	  b selectable = true;
+	  x target_container = 0x02800007;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.30326,0,1.54188,0xc26a6125;
+	}
+}

@@ -10,21 +10,21 @@
 		can_level_up	= false;
 		[skills]
 		{
-			strength		= 19, 0;
-			intelligence	= 13, 0;
-			dexterity		= 15, 0;
-			melee 			= 40, 0;
-			combat_magic	= 40, 0;
+			strength		= 26, 0;
+			intelligence	= 12, 0;
+			dexterity		= 16, 0;
+			melee 			= 50, 0;
+			combat_magic	= 25, 0;
 		}
 	}
 	[aspect]
 	{
 		
-		experience_value = 17980;
-		life = 752;
-		max_life = 752;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 6200;
+		life = 1216;
+		max_life = 1216;
+		mana = 258;
+		max_mana = 258;
 		[voice]
 		{
 			[die]			{ priority = high; * = s_e_die_skeleton; }

@@ -1,0 +1,26 @@
+[t:emt_sound,n:0x0310068e]
+{
+	[placement]
+	{
+	  p position = -1.25874,12,-0.939728,0x5d68cc81;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound,n:0x0310068a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.77679,16.3741,-1.10054,0x4c72d1ca;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_spider_scurry";
+	  f max_repeat_rate = 37;
+	  f repeat_rate = 11;
+	}
+}

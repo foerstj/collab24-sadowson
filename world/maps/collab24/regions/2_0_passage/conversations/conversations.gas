@@ -1,0 +1,166 @@
+[conv_giant_agg_barricade_smashed]
+{
+	[text*]
+	{
+		screen_text = "Now that I think about it...perhaps it would be best if you destroy the creature. You know, my brother would accept it much easier if it was not me doing the violence.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_agg_found_club]
+{
+	[text*]
+	{
+		screen_text = "Oh, you have found the club. Drop it on the ground so that I can use it to smash the barricade.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_agg_killed_insect_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_giants,5;
+		complete_quest* = c24_slice_2_quest_giants;
+	  b quest_dialog = true;
+		screen_text = "I cannot express my thanks enough, little traveler. You have saved my relationship with my brother, and quite possibly the local fauna as well.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_agg_killed_insect_next]
+{
+	[text*]
+	{
+		screen_text = "Such a relief. Now I can rejoin my brother and ask him for forgiveness. In peace.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_agg_start_quest]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_giants,0;
+	  b quest_dialog = true;
+		screen_text = "Hello there, traveler. How is, eh...your travelling going? Yeah, your are right, I am terrible at holding a conversation. See, I have a favor to ask for you. See, me and my brother have lived in this cavern for some time. We come from mating of a Cyclops and an Ice Giant, so we have no choice but to live in the wilderness on our own. Lately, this cave has been having a new inhabitant, an insect of sorts. My brother is of very peaceful nature, and is curious to see what will become of it. Myself, I see it as a threat. Even the local fauna has grown more aggressive. When was the last time you have seen a pack of rats attack an armed traveller? That being is not alright, and should be dealt with, regardless of what my brother thinks about it. It should be as easy as smashing this boulder to pieces, then the creature. However, my brother hid my club. Without it, neither can be done. Could you help? See if you can make him talk.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_agg_started_quest]
+{
+	[text*]
+	{
+		screen_text = "See if you can bring my brother to reason. You can find him nearby on a slope, in our campsite.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_after_quest]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_giants,1;
+	  b quest_dialog = true;
+		screen_text = "So, my brother sends tiny travelers to find his club? Fear not, you'll never find it. I masterfully disguised it under that rock over there.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_b4_quest_first]
+{
+	[text*]
+	{
+		screen_text = "Greetings, little one. What a lovely encounter. Out for a stroll, are you? Do you fancy the local plants and creatures? Most intriguing, this cave. See, the tiger grass is an ideal place for the rats to take shelter in. It is also delicious for them to chew on, I noticed. Unfortunately for the rats, the locals spiders evolved to conceal themselves in the grass quite aptly. I wonder how many of them really live here? Nevertheless, the spiders love to munch on the rats. Just as much as the rats love to munch on the spiders' eggs. Their tiny battlefields leave behind enough organic matter for the tiger grass to slurp and grow even further. More grass means more nutrition for rats, just as more rats mean more nutrition for the spiders. This constant cycle of growth is just unbelievable. I am thinking of writing a book about it. How would I name the phenomenon? Growthloop? Feastmutuality? Ecosystem? None of it sounds right. I need to contemplate on this further. I wonder how that new insect specimen fits into it. I even got into a fight with my brother over this...but that has been taken care of.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "It's you again. Care for more lore on this cave? You're much more pleasant to talk to than the previous passersby. Both the merchant and then the krug just walked by. They did not even thank me for intimidating the spiders and rats from attacking them. How impolite!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_final]
+{
+	[text*]
+	{
+		screen_text = "I am quite sure you have forgotten the knowledge of this cave I had bestowed upon you before, right? Most intriguing, this cave. See, the tiger grass is an ideal place for the rats to take shelter in. It is also delicious for them to chew on, I noticed. Unfortunately for the rats, the locals spiders evolved to conceal themselves in the grass quite aptly. I wonder how many of them really live here? Nevertheless, the spiders love to munch on the rats. Just as much as the rats love to munch on the spiders' eggs. Their tiny battlefields leave behind enough organic matter for the tiger grass to slurp and grow even further. More grass means more nutrition for rats, just as more rats mean more nutrition for the spiders. This constant cycle of growth is just unbelievable. I am thinking of writing a book about it. How would I name the phenomenon? Growthloop? Feastmutuality? Ecosystem? None of it sounds right. I need to contemplate on this further. It's a pity I will not get to see how the new insect specimen fits into it.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_found_club]
+{
+	[text*]
+	{
+		screen_text = "Oh no, you've found the club. Please, I beg of you, do not bring it to my brother. I do not wish to see him commit violence agains such a marvelous specimen.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_killed_insect]
+{
+	[text*]
+	{
+		screen_text = "So, you have killed the insect. I cannot say I'm very enthusiastic about that. But I am happy it was not my brother's hand to have destroyed the creature. For that I am thankfull. I believe we wil be able to see eye to eye now. Come speak with me some other time. I may have some interesting topics to share with you.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_start_quest_third_brother]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_kill_brother,0;
+	  b quest_dialog = true;
+		screen_text = "My brother may have mentioned that we come from mating of an Ice Giant and a Cyclops, right? Well, mixed breed such as we are doomed to living far away from our people. What my brother may not have mentioned is that we also have a third brother, Nutlech. While we inherited the cyclop intelligence from our mother, Nutlech was not that lucky. Growing up with him was tough, but we loved him nevertheless. At some point, his aggressivity became unbearable, and we chased him out. We hoped this was the last time we had to deal with him. But rumours reached us that he frequently harasses passersby, terrorizes wild game, and generally causes genuine mayhem. You have most surely noticed that I avoid violence when possible, but Nutlech needs to be stopped. The local humans do not deserve to have such threat in their neighbourhood. I ask you to find him and destroy him. No doubt he has made his home in some sort of cave nearby.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_start_quest_wishing_pond]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_pond,0;
+	  b quest_dialog = true;
+		screen_text = "You seem to take pleasure in investigating curious occurences, do you? Not a rare trait for a traveller, I presume. You see, there is this particular pond just a little bit along the way, located in an alcove to to your right. There are rumors that dropping a gold coin in it will grant you a wish of any kind. As tempting as it may sound, woe to those who try doing that. The gold coins attract attention of the Pond keeper. I do not know his name, but he certainly loves to challenge his summoners to a friendly potentially lethal duel. If you wish to prove your skills, you may try challenging him, too. Even one gold coin is enough. Be wary, for he does not return the offerings. You may need to drop a coin several times, as he sends his minions first to see if you're even worth duelling. I used to meet him in a friendly fight from time to time, but at some point I ran out of gold. I should not be visiting casinos, I guess. Oh, and I have another matter to discuss with you, if you'd care.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_third_brother_killed]
+{
+	[text*]
+	{
+		screen_text = "You took down Nutlech? My heart is saddened with his death, but there was no other way this could have ended. I thank you for your service, my dear friend.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_agg_barricade_smashed]
+{
+	[text*]
+	{
+		screen_text = "Now that I think about it...perhaps it would be best if you destroy the creature. You know, my brother would accept it much easier if it was not me doing the violence.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r1_krug_start_quest]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,0;
+	  b quest_dialog = true;
+		screen_text = "Greetings, traveler. Dartakk is the name. I can tell you're a decent sort because you did not run away when spoken to. You see, I am here to fulfill my dying father's wish. He grabbed me by my hand and said 'I want you to become merchant'. His was a little hard to hear. It is also quite possible that he said 'I become enchant'. He was dying of a witch's curse, you see. But that's another story. Anyway, a wish is a wish, and I decided to honor it. I set out for the town of Frostfingers, to learn how to do merchanting right. You see, a few moments ago, I tried to help this traveler pushing a cart across this bridge. However, he panicked, and pressed his mules harder to pull his cart. A little too harder, it seems. The mules misstepped and fell down onto the stalagmites along with the cart. The man looked at the scene in horror, and started to run. I understand it is hard to believe that such low price for Phrak bacon is suspicious, but I think he overreacted. I would like to set things right with him. He murmured something about being home soon to one of the mules before I approached them. Listen, would you mind dropping a good word for me? He probably lives nearby. I believe a third person might reason with him more successfully. I cannot become a merchant with such a debt with a potential customer.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r1_krug_start_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Oh, I sure hope he'll listen to you. You seem trustworthy and intimidating at the same time. Hmmmph, perhaps I might employ you to deal with difficult customers?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[shop]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Trade, bitch";
+	  f scroll_rate = 10.000000;
+	}
+}

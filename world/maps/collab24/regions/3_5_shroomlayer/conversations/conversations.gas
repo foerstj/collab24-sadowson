@@ -1,0 +1,20 @@
+[guard_captain]
+{
+	[text*]
+	{
+		order = 0;
+		screen_text = "This is a bad business, but we're no' the only ones in it! These crystals up there in the Crystlayer are getting stirred up by these mages, but there'll be a blasted goblin behind this or I'm a mule's father!";
+        choice = more;
+	}
+	[text*]
+	{
+		order = 1;
+		screen_text = "If you're going up through the Crystlayer, be careful with the mages! Especially with their leader, the Crystal Master. My men have been making double shifts all week to guard the elevators, and are getting exhausted...";
+        choice = more;
+	}
+	[text*]
+	{
+		screen_text = "If you happen to come across the Crystal Master and aren't afraid of him, it would be a big relief for us if you could take him out.";
+        activate_quest* = c24_3_crystal_master;
+	}
+}

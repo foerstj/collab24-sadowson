@@ -1,0 +1,8 @@
+[guard]
+{
+	[text*]
+	{
+		screen_text = "Hello there, Overling, are ya alright? On the way to Shroomington? Right this way, take the elevator down to the Shroomlayer, it's safer down there! Me's trying to keep them crystals at bay, but these darned mages keep on stirring them up. Take care!";
+	  f scroll_rate = 10.000000;
+	}
+}

@@ -1,0 +1,8 @@
+[guard]
+{
+	[text*]
+	{
+		screen_text = "Hello there, Overling, howyadoin? On the way to Sadowland? Right this way, follow the river up to next elevator. Take care - the Crystal Master is walking around somewhere in these parts!";
+	  f scroll_rate = 10.000000;
+	}
+}

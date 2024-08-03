@@ -1,0 +1,11 @@
+[t:region,n:region]
+{
+	created = ruth tomandl,mach041;
+	description = none;
+  x guid = 0x00000036;
+	lastmodified = FLUPSNPUPS,flups;
+  x mesh_range = 0x00000036;
+	notes = none;
+  x scid_range = 0x00000036;
+	se_version = 1.70.0.4;
+}

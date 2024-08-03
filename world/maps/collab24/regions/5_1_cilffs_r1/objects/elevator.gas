@@ -1,0 +1,182 @@
+[t:elevator_2s_2c_12n,n:0x05100157]
+{
+	[elevator_2s_2c_12n]
+	{
+	  i door1_level1 = 5;
+	  i door1_level2 = 2;
+	  i door2_level1 = 4;
+	  i door3_level1 = 4;
+	  i door4_level1 = 2;
+	  i door5_level1 = 3;
+	  i door6_level1 = 1;
+	  i door7_level1 = 5;
+	  i door8_level1 = 4;
+	  i elevator_door1_level1 = 1;
+	  i elevator_door1_level2 = 1;
+	  i elevator_door2_level1 = 2;
+	  i elevator_door2_level2 = 2;
+	  i elevator_door3_level1 = 3;
+	  i elevator_door3_level2 = 3;
+	  i elevator_door4_level1 = 4;
+	  i elevator_door4_level2 = 4;
+	  i elevator_door5_level1 = 5;
+	  i elevator_door5_level2 = 5;
+	  i elevator_door6_level1 = 6;
+	  i elevator_door6_level2 = 6;
+	  i elevator_door7_level1 = 7;
+	  i elevator_door7_level2 = 7;
+	  i elevator_door8_level1 = 8;
+	  i elevator_door8_level2 = 8;
+	  x elevator_node = 0x41717A63;
+	  x node1_level1 = 0x9C050D84;
+	  x node1_level2 = 0x643FCB16;
+	  x node2_level1 = 0x9C050D84;
+	  x node3_level1 = 0x226F12B5;
+	  x node4_level1 = 0xFF46A3CF;
+	  x node5_level1 = 0x9A3A9413;
+	  x node6_level1 = 0xAFE02F8F;
+	  x node7_level1 = 0x2272DAB1;
+	  x node8_level1 = 0x2272DAB1;
+	}
+	[placement]
+	{
+	  p position = -5.85521,-0.0500002,-1.00398,0x9ae8699d;
+	}
+}
+[t:elevator_2s_2c_12n,n:0x05100158]
+{
+	[elevator_2s_2c_12n]
+	{
+	  i door1_level1 = 1;
+	  i door1_level2 = 1;
+	  i door2_level1 = 1;
+	  i door3_level1 = 1;
+	  i door4_level1 = 4;
+	  i door5_level1 = 5;
+	  i door6_level1 = 2;
+	  i door7_level1 = 2;
+	  i door8_level1 = 1;
+	  i elevator_door1_level1 = 1;
+	  i elevator_door1_level2 = 1;
+	  i elevator_door2_level1 = 2;
+	  i elevator_door2_level2 = 2;
+	  i elevator_door3_level1 = 3;
+	  i elevator_door3_level2 = 3;
+	  i elevator_door4_level1 = 4;
+	  i elevator_door4_level2 = 4;
+	  i elevator_door5_level1 = 5;
+	  i elevator_door5_level2 = 5;
+	  i elevator_door6_level1 = 6;
+	  i elevator_door6_level2 = 6;
+	  i elevator_door7_level1 = 7;
+	  i elevator_door7_level2 = 7;
+	  i elevator_door8_level1 = 8;
+	  i elevator_door8_level2 = 8;
+	  x elevator_node = 0xD1D93C9C;
+	  x node1_level1 = 0x9AE8699D;
+	  x node1_level2 = 0x22FD165A;
+	  x node2_level1 = 0x141140F0;
+	  x node3_level1 = 0x5C937DDD;
+	  x node4_level1 = 0x382A0099;
+	  x node5_level1 = 0x4B8E1EA9;
+	  x node6_level1 = 0x2E04A35E;
+	  x node7_level1 = 0x9C050D84;
+	  x node8_level1 = 0x9C050D84;
+	}
+	[placement]
+	{
+	  p position = -1.73026,0.0113096,-1.09099,0x9ae8699d;
+	}
+}
+[t:elevator_2s_2c_12n,n:0x0510016d]
+{
+	[elevator_2s_2c_12n]
+	{
+	  i door1_level1 = 3;
+	  i door1_level2 = 1;
+	  i door2_level2 = 1;
+	  i door3_level2 = 1;
+	  i door4_level2 = 4;
+	  i door5_level2 = 5;
+	  i door6_level2 = 2;
+	  i door7_level2 = 2;
+	  i door8_level2 = 1;
+	  i elevator_door1_level1 = 1;
+	  i elevator_door1_level2 = 1;
+	  i elevator_door2_level1 = 2;
+	  i elevator_door2_level2 = 2;
+	  i elevator_door3_level1 = 3;
+	  i elevator_door3_level2 = 3;
+	  i elevator_door4_level1 = 4;
+	  i elevator_door4_level2 = 4;
+	  i elevator_door5_level1 = 5;
+	  i elevator_door5_level2 = 5;
+	  i elevator_door6_level1 = 6;
+	  i elevator_door6_level2 = 6;
+	  i elevator_door7_level1 = 7;
+	  i elevator_door7_level2 = 7;
+	  i elevator_door8_level1 = 8;
+	  i elevator_door8_level2 = 8;
+	  x elevator_node = 0x5CFF9341;
+	  x node1_level1 = 0xDDA2DBEC;
+	  x node1_level2 = 0x9AE8699D;
+	  x node2_level2 = 0x141140F0;
+	  x node3_level2 = 0x5C937DDD;
+	  x node4_level2 = 0x382A0099;
+	  x node5_level2 = 0x4B8E1EA9;
+	  x node6_level2 = 0x2E04A35E;
+	  x node7_level2 = 0x9C050D84;
+	  x node8_level2 = 0x9C050D84;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.67193,-0.0146332,-1.66338,0x9ae8699d;
+	}
+}
+[t:elevator_2s_2c_12n,n:0x05100172]
+{
+	[elevator_2s_2c_12n]
+	{
+	  i door1_level1 = 4;
+	  i door1_level2 = 5;
+	  i door2_level2 = 4;
+	  i door3_level2 = 5;
+	  i door4_level2 = 4;
+	  i door5_level2 = 4;
+	  i door6_level2 = 2;
+	  i door7_level2 = 3;
+	  i door8_level2 = 1;
+	  i elevator_door1_level1 = 1;
+	  i elevator_door1_level2 = 1;
+	  i elevator_door2_level1 = 2;
+	  i elevator_door2_level2 = 2;
+	  i elevator_door3_level1 = 3;
+	  i elevator_door3_level2 = 3;
+	  i elevator_door4_level1 = 4;
+	  i elevator_door4_level2 = 4;
+	  i elevator_door5_level1 = 5;
+	  i elevator_door5_level2 = 5;
+	  i elevator_door6_level1 = 6;
+	  i elevator_door6_level2 = 6;
+	  i elevator_door7_level1 = 7;
+	  i elevator_door7_level2 = 7;
+	  i elevator_door8_level1 = 8;
+	  i elevator_door8_level2 = 8;
+	  x elevator_node = 0xF2B8F0C9;
+	  x node1_level1 = 0xB76DE71E;
+	  x node1_level2 = 0x2272DAB1;
+	  x node2_level2 = 0x2272DAB1;
+	  x node3_level2 = 0x9C050D84;
+	  x node4_level2 = 0x9C050D84;
+	  x node5_level2 = 0x226F12B5;
+	  x node6_level2 = 0xFF46A3CF;
+	  x node7_level2 = 0x9A3A9413;
+	  x node8_level2 = 0xAFE02F8F;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -4.78629,-0.05,-1.65096,0x9ae8699d;
+	}
+}

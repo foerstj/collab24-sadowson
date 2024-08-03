@@ -1,0 +1,174 @@
+[t:elevator_2s_2c_2n,n:0x0530000a]
+{
+	[elevator_2s_2c_2n]
+	{
+	  i additional_door_level2 = 5;
+	  x additional_node_level2 = 0x21B00DC0;
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 6;
+	  x connect_node_level1 = 0x5B11D4C1;
+	  x connect_node_level2 = 0x21B00DC0;
+	  f duration = 4;
+	  i elevator_additionaldoor_level2 = 2;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x8E09C5F2;
+		material = "dm_crane";
+	}
+	[placement]
+	{
+	  p position = -0.403271,-7.2,-0.221668,0x8e09c5f2;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x053005cc]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 9;
+	  x connect_node_level1 = 0x08D888B7;
+	  x connect_node_level2 = 0x808FCBA1;
+	  f duration = 6;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x9DEB892E;
+		material = "dm_small";
+		moving1_actioninfo = "clb24a_lava_1;0x00000053,1,-1,-1,out:black;0x00000054,1,-1,-1,in";
+		moving2_actioninfo = "clb24a_mines-5;0x00000053,1,-1,-1,in,5.5;0x00000054,1,-1,-1,out:black,5.5";
+	}
+	[placement]
+	{
+	  p position = -0.0574035,-17.7,0.854881,0x9deb892e;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x05300008]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 9;
+	  x connect_node_level1 = 0x4F273A61;
+	  x connect_node_level2 = 0xE1DD12CD;
+	  f duration = 7;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x0EC3CF2A;
+		material = "dm_crane";
+	}
+	[placement]
+	{
+	  p position = -0.270424,-7.2,-0.152035,0x0ec3cf2a;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x05300019]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0xC0971E49;
+	  f duration = 2;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x82CEA1A6;
+		material = "grate";
+	}
+	[placement]
+	{
+	  p position = 0.131859,2,0.260025,0x82cea1a6;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x05300027]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x3A3BE9C9;
+	  f duration = 2;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x4D75126F;
+		material = "grate";
+	}
+	[placement]
+	{
+	  p position = 0.202217,2,0.334869,0x4d75126f;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x05300012]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x0FD15853;
+	  f duration = 4;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x599E4757;
+		material = "grate";
+	}
+	[placement]
+	{
+	  p position = 0.194916,2,0.174423,0x599e4757;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x05300004]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 9;
+	  x connect_node_level1 = 0x7AF65B2D;
+	  x connect_node_level2 = 0x80F841F4;
+	  f duration = 7;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xAC70F6CA;
+		material = "dm_crane";
+	}
+	[placement]
+	{
+	  p position = 0.76992,-7.2,-0.0677128,0xac70f6ca;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x05300006]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 9;
+	  x connect_node_level1 = 0x5403C329;
+	  x connect_node_level2 = 0xC0EC6BEF;
+	  f duration = 7;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xE8262AF0;
+		material = "dm_crane";
+	}
+	[placement]
+	{
+	  p position = 0.0451106,-7.2,-0.450874,0xe8262af0;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x05300002]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 1;
+	  i connect_door_level2 = 2;
+	  x connect_node = 0x06CC8ABE;
+	  f duration = 5;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x1571B131;
+		level1_trans2_hint = ah_yaxis_positive;
+		level2_trans1_hint = ah_yaxis_negative;
+		material = "dm_crane";
+	}
+	[placement]
+	{
+	  p position = 7.00183,-2.2,0.180952,0x1571b131;
+	}
+}

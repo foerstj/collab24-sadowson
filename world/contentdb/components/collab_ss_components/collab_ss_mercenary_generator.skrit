@@ -149,7 +149,6 @@ void BuildSquadList$( bool Global_list$ )
 		ADVENT_Count$	= GameAuditor.GetDb.GetInt( StringTool.Append( "ADVENT_Count_", 	Global_Pool_Name$ ) );
 		MAGE_Count$		= GameAuditor.GetDb.GetInt( StringTool.Append( "MAGE_Count_", 		Global_Pool_Name$ ) );
 		DARK_Count$		= GameAuditor.GetDb.GetInt( StringTool.Append( "DARK_Count_", 		Global_Pool_Name$ ) );
-		
 	}
 	else
 	{
@@ -307,7 +306,6 @@ state Active$
 				GameAuditor.GetDb.SetInt( ( StringTool.Append( "ADVENT_Count_", 	Global_Pool_Name$ ) ), ADVENT_Count$ );
 				GameAuditor.GetDb.SetInt( ( StringTool.Append( "MAGE_Count_", 		Global_Pool_Name$ ) ), MAGE_Count$ );
 				GameAuditor.GetDb.SetInt( ( StringTool.Append( "DARK_Count_", 		Global_Pool_Name$ ) ), DARK_Count$ );
-				
 			}
 			else
 			{

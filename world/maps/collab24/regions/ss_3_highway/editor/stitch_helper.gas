@@ -1,0 +1,28 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x01000003;
+	source_region_name = ss_3_highway;
+	[t:stitch_editor,n:ss_2_prison]
+	{
+		dest_region = ss_2_prison;
+		[node_ids]
+		{
+			0x01985021 = 0x9EFD3012,10;
+		}
+	}
+	[t:stitch_editor,n:ss_4_merc_camp]
+	{
+		dest_region = ss_4_merc_camp;
+		[node_ids]
+		{
+			0x01985031 = 0xFB504EBC,3;
+			0x01985032 = 0x1B5F9211,8;
+			0x01985033 = 0x1B5F9211,7;
+			0x01985034 = 0x7B1C5EC7,2;
+			0x01985035 = 0x7B1C5EC7,1;
+			0x01985036 = 0x631048AB,4;
+			0x01985037 = 0x631048AB,3;
+			0x01985038 = 0xBC3BA8C7,6;
+		}
+	}
+}

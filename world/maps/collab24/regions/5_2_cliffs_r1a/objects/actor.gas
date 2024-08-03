@@ -1,0 +1,211 @@
+[t:c24_5_bandit_ranged,n:0x0520002e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.0964745,0,0.995335;
+	  p position = 0.247007,0,0.6725,0xd42416ac;
+	}
+}
+[t:c24_5_bandit,n:0x05200027]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.837089,0,0.547066;
+	  p position = -2.95819,0,1.11097,0xf776d018;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x0520002d]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.375015,0,0.927019;
+	  p position = -0.714374,0,-0.953806,0xf776d018;
+	}
+}
+[t:c24_5_bandit,n:0x05200026]
+{
+	[placement]
+	{
+	  q orientation = 0,0.998983,0,0.0450894;
+	  p position = 1.98565,0,-1.63111,0xf3c9a958;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x0520002b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.839228,0,0.543779;
+	  p position = 0.919209,0,-1.69509,0xcbd33635;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x0520002c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.43206,0,0.901845;
+	  p position = -0.725437,0,0.303443,0xcbd33635;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x05200043]
+{
+	[placement]
+	{
+	  q orientation = 0,0.96029,0,0.279002;
+	  p position = -0.236206,0,-1.88623,0x169ff5fc;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x05200044]
+{
+	[placement]
+	{
+	  q orientation = 0,0.844805,0,0.535074;
+	  p position = -0.332601,0,-0.852639,0x592dc59d;
+	}
+}
+[t:c24_5_bandit,n:0x05200050]
+{
+	[inventory]
+	{
+		[equipment]
+		{
+			es_weapon_hand = meat_bone;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.795555,0,0.605881;
+	  p position = 1.519,0,-1.14655,0x685c39f0;
+	}
+}
+[t:c24_5_bandit,n:0x0520004b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.859101,0,0.511806;
+	  p position = -2.25522,0,-0.807684,0x70739e38;
+	}
+}
+[t:c24_5_bandit_boss,n:0x05200001]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x05200002,0f,"default","every",0);
+				action* = change_quest_state("clb24a_bandit_boss","active",1);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.882948,0,0.469472;
+	  p position = 0.562248,0,-1.04676,0x2a776f81;
+	}
+}
+[t:c24_5_bandit,n:0x0520004d]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.424893,0,0.905243;
+	  p position = 1.98284,0,0.92962,0x2a776f81;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x0520004a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.568466,0,0.822706;
+	  p position = -0.846812,0,0.0761728,0xf80ec73f;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x05200049]
+{
+	[placement]
+	{
+	  q orientation = 0,0.615273,0,0.788314;
+	  p position = 1.45052,0,0.914478,0x621d5d21;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x05200048]
+{
+	[placement]
+	{
+	  q orientation = 0,0.879962,0,0.475045;
+	  p position = -2.55768,0,1.32484,0x0b508425;
+	}
+}
+[t:c24_5_bandit,n:0x0520004c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.105185,0,0.994453;
+	  p position = 1.75154,0,-0.995443,0x9630d3eb;
+	}
+}
+[t:c24_5_bandit,n:0x0520004e]
+{
+	[inventory]
+	{
+		[equipment]
+		{
+			es_weapon_hand = fire_poker;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.290375,0,0.956913;
+	  p position = -2.87171,0,0.371155,0x363c76bf;
+	}
+}
+[t:c24_5_bandit,n:0x0520004f]
+{
+	[inventory]
+	{
+		[equipment]
+		{
+			es_weapon_hand = meat_bone;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.522776,0,0.85247;
+	  p position = 0.655643,0,-1.78392,0xbc0724a6;
+	}
+}
+[t:c24_5_bandit_ranged,n:0x0520002a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.628568,0,0.777755;
+	  p position = 1.10282,0,1.34773,0x81a2dda0;
+	}
+}
+[t:c24_5_bandit,n:0x05200028]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.464451,0,0.885599;
+	  p position = 1.99333,0,-0.24921,0xecf438ab;
+	}
+}
+[t:c24_5_bandit,n:0x05200029]
+{
+	[placement]
+	{
+	  q orientation = 0,0.554338,0,0.832292;
+	  p position = 0.96148,9.53674e-007,1.31739,0xecf438ab;
+	}
+}

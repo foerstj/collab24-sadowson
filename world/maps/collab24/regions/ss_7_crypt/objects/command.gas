@@ -1,0 +1,50 @@
+[t:ee_actor_state,n:0x00700003]
+{
+	[ee_visibility_change]
+	{
+	  x target_actor = 0x00700001;
+	}
+	[placement]
+	{
+	  p position = 1.20424,-2,-2.64039,0xd464edce;
+	}
+}
+[t:ee_actor_state,n:0x007000ec]
+{
+	[ee_visibility_change]
+	{
+	  x target_actor = 0x007000E1;
+	}
+	[placement]
+	{
+	  p position = -6.46365,-5,-10.4551,0xcc7ae009;
+	}
+}
+[t:light_flicker,n:0x00700082]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x24BFCE74;
+	}
+	[placement]
+	{
+	  p position = -0.210345,-1.1,-1.45816,0x0d90392f;
+	}
+}
+[t:light_flicker,n:0x00700081]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x64648B05;
+	}
+	[placement]
+	{
+	  p position = -0.446627,-1.1,-1.38147,0x64fefc63;
+	}
+}

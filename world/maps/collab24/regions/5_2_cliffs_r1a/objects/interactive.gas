@@ -1,0 +1,52 @@
+[t:barrier_breakable_01,n:0x05200016]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.292372,0,-0.956305;
+	  p position = 1.23416,0.888242,0.847452,0x209361c9;
+	}
+}
+[t:barrier_breakable_01,n:0x0520001a]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.18222,-0.949743,-0.573978,0x9ea977e1;
+	}
+}
+[t:barrier_breakable_01,n:0x0520001b]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.529919,0,0.848048;
+	  p position = -0.3139,-0.925335,-2.18201,0x9ea977e1;
+	}
+}
+[t:barrier_breakable_01,n:0x0520001c]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.713251,0,-0.700909;
+	  p position = 2.51616,-1,-2.4348,0x9ea977e1;
+	}
+}

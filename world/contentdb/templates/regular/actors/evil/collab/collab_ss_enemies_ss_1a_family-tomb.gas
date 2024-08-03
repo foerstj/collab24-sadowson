@@ -3,18 +3,28 @@
 	category_name = "ss_1a_family-tomb_enemies";
 	doc = "skeleton_archer";
 	specializes = base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		=  13, 0;
+			intelligence 	=  11, 0;
+			dexterity 		=  19, 0;
+			ranged 			=  15, 0;
+		}
+	}
 	[aspect]
 	{
-		experience_value = 33;
-		life = 27;
-		max_life = 27;
-		mana = 2;
-		max_mana = 2;
+		experience_value	= 33;
+		life 				= 270;
+		max_life 			= 270;
+		mana 				= 120;
+		max_mana			= 120;
 	}
 	[attack]
 	{
-		damage_max = 11;
-		damage_min = 9;
+		damage_max = 22;
+		damage_min = 16;
 	}
 	[common]
 	{
@@ -22,7 +32,7 @@
 	}
 	[defend]
 	{
-		defense = 28;
+		defense = 19;
 	}
 	[inventory]
 	{
@@ -87,25 +97,25 @@
 	{
 		[skills]
 		{
-			strength =  14, 0;
-			intelligence =  2, 0;
-			dexterity =  6, 0;
-			melee =  3,  0;
+			strength 		=  19, 0;
+			intelligence 	=  11, 0;
+			dexterity 		=  14, 0;
+			melee 			=  15, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 20;
-		life = 28;
-		max_life = 28;
-		mana = 4;
-		max_mana = 4;
+		experience_value	= 33;
+		life				= 384;
+		max_life			= 384;
+		mana				= 90;
+		max_mana			= 90;
 		model = m_c_ecm_sk_pos_2;
 	}
 	[attack]
 	{
-		damage_max = 10;
-		damage_min = 8;
+		damage_max = 19;
+		damage_min = 14;
 	}
 	[common]
 	{

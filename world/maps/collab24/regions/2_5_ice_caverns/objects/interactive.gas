@@ -1,0 +1,229 @@
+[t:c24_slice2_r6_ctn_bookcase,n:0x02600034]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.399994,-1.4,11.5501,0xe2ad1f60;
+		use_point_scids = 0x0260009f;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x0260005d]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 5.59399,-1.4,11.6033,0xe2ad1f60;
+		use_point_scids = 0x026000a0;
+	}
+}
+[t:c24_slice2_r6_ctn_rack_wpn,n:0x02600081]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  p position = 2.91799,0,1.91132,0x6143eb87;
+		use_point_scids = 0x02600099;
+	}
+}
+[t:c24_slice2_r6_ctn_rack_wpn,n:0x02600082]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  p position = 0.111911,0,1.89937,0x6143eb87;
+		use_point_scids = 0x0260009a;
+	}
+}
+[t:c24_slice2_r6_ctn_rack_wpn,n:0x02600083]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  p position = -2.597,0,1.8459,0x6143eb87;
+		use_point_scids = 0x0260009b;
+	}
+}
+[t:c24_slice2_r6_ctn_rack_amr,n:0x0260008d]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 0.781939,-1.5,-0.824539,0xc2e58472;
+		use_point_scids = 0x02600098;
+	}
+}
+[t:c24_slice2_r6_ctn_rack_amr,n:0x02600090]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 0.763031,-1.5,-0.921421,0x89c20833;
+		use_point_scids = 0x02600098;
+	}
+}
+[t:c24_slice2_r6_ctn_rack_wpn,n:0x02600095]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 2.91313,0,-1.60455,0xe120dec4;
+		use_point_scids = 0x0260009e;
+	}
+}
+[t:c24_slice2_r6_ctn_rack_wpn,n:0x02600096]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  p position = 0.107049,0,-1.6165,0xe120dec4;
+		use_point_scids = 0x0260009d;
+	}
+}
+[t:c24_slice2_r6_ctn_rack_wpn,n:0x02600097]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  p position = -2.60186,0,-1.66997,0xe120dec4;
+		use_point_scids = 0x0260009c;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x02600010]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = 0.160126,-1.5,-1.43855,0xf929dd0d;
+		use_point_scids = 0x026000a3;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x02600030]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.41357,-1.5,-0.132492,0xf929dd0d;
+		use_point_scids = 0x026000a1;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x02600011]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.38552,-1.5,-0.152985,0x72d19c3d;
+		use_point_scids = 0x026000a4;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x0260001d]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.0333786,-1.5,-1.35136,0x72d19c3d;
+		use_point_scids = 0x026000a5;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x0260001e]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.29617,-1.5,-0.161781,0x24f1d299;
+		use_point_scids = 0x026000a6;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x02600027]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,6.46033e-009;
+	  p position = 0.211105,-1.5,-1.42168,0x24f1d299;
+		use_point_scids = 0x026000a7;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x02600024]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.41738,-1.5,-0.141876,0xbc4dc14a;
+		use_point_scids = 0x026000a8;
+	}
+}
+[t:c24_slice2_r6_ctn_bookcase,n:0x0260002e]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = 0.171173,-1.5,-1.5025,0xbc4dc14a;
+		use_point_scids = 0x026000a2;
+	}
+}

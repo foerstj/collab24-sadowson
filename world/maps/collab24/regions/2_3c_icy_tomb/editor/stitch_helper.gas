@@ -1,0 +1,13 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x0000002B;
+	source_region_name = 2_3c_icy_tomb;
+	[t:stitch_editor,n:2_3_town_and_outskirts]
+	{
+		dest_region = 2_3_town_and_outskirts;
+		[node_ids]
+		{
+			0x0000002f = 0xE2AB61FE,6;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000022;
+	source_region_name = 2_1_pilgrim_hut;
+	[t:stitch_editor,n:2_0_passage]
+	{
+		dest_region = 2_0_passage;
+		[node_ids]
+		{
+			0x00000021 = 0xFC0875C9,7;
+		}
+	}
+	[t:stitch_editor,n:2_1a_giant_cave]
+	{
+		dest_region = 2_1a_giant_cave;
+		[node_ids]
+		{
+			0x00000022 = 0x7968E38E,7;
+		}
+	}
+	[t:stitch_editor,n:2_2_snow_canyon]
+	{
+		dest_region = 2_2_snow_canyon;
+		[node_ids]
+		{
+			0x00000023 = 0x9C2BFD45,2;
+			0x00000024 = 0x9D38D46A,1;
+			0x00000025 = 0x41FA851D,2;
+			0x00000026 = 0x15C001C2,3;
+			0x00000027 = 0x1C1FD8EF,8;
+		}
+	}
+}

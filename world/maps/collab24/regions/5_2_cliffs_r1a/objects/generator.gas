@@ -1,0 +1,126 @@
+[t:gen_tent_flap-krug_grunt,n:0x0520002f]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200031;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.956305,0,0.292372;
+	  p position = 1.77955,0,-0.241845,0x13c8d23d;
+	}
+}
+[t:gen_tent_flap-krug_grunt,n:0x05200006]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200031;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.731354,0,0.681999;
+	  p position = -1.03837,0,-1.23416,0x2cc4acae;
+	}
+}
+[t:gen_tent_flap-krug_grunt,n:0x0520003c]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200036;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.887012,0,0.461748;
+	  p position = -0.0103569,0,-0.568749,0xeab185ce;
+	}
+}
+[t:gen_tent_flap-krug_grunt,n:0x0520003b]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200036;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.976296,0,0.21644;
+	  p position = 3.48454,-12,-5.41899,0xe034f595;
+	}
+}
+[t:gen_tent_flap-krug_grunt,n:0x0520003a]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200036;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.267238,0,-0.963631;
+	  p position = 0.115082,0,-1.5908,0xc19624c5;
+	}
+}
+[t:gen_tent_flap-krug_grunt,n:0x0520003d]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200036;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.267238,0,-0.963631;
+	  p position = -0.547119,0,-1.58805,0x94b88bb7;
+	}
+}
+[t:gen_tent_flap-krug_grunt,n:0x0520003e]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200037;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.19081,0,-0.981627;
+	  p position = -0.902094,0,-0.388239,0x4fea0317;
+	}
+}
+[t:gen_tent_flap-krug_grunt,n:0x05200040]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200037;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.139172,0,-0.990268;
+	  p position = 2.21476,0,-0.428963,0xc1ed4013;
+	}
+}
+[t:gen_tent_flap-krug_grunt,n:0x0520003f]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_5_bandit";
+	  x initial_command = 0x05200037;
+	  f trigger_range = -1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.130525,0,-0.991445;
+	  p position = 2.49089,0,-0.963453,0xcf9f7efd;
+	}
+}

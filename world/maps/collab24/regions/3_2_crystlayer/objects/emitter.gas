@@ -1,0 +1,8 @@
+[t:c24_3_emt_shroom_sparkles,n:0x03200363]
+{
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = -0.804474,-3,3.79155,0x4894d590;
+	}
+}

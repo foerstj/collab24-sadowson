@@ -8,25 +8,25 @@
 	{
 		[skills]
 		{
-			strength 	 	=  15, 0;
-			intelligence   	=  8, 0;
-			dexterity 	 	=  10, 0;
-			melee 	 		=  13, 0;
+			strength 	 	= 20, 0;
+			intelligence	= 11, 0;
+			dexterity		= 14, 0;
+			melee			= 16, 0;
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 82;
-		damage_min = 74;
+		damage_max = 19;
+		damage_min = 14;
 	}
 	[defend]
 	{
-		defense = 140;
+		defense = 17;
 	}
 	[aspect] 
 	{
-		experience_value = 520;
+		experience_value = 36;
 		life = 337;
 		max_life = 337;
 		mana = 10;
@@ -62,10 +62,10 @@
 	{
 		[skills]
 		{
-			strength 	 	=  15, 0;
-			intelligence   	=  8, 0;
-			dexterity 	 	=  10, 0;
-			melee 	 		=  13, 0;
+			strength 	 	=  19, 0;
+			intelligence   	=  11, 0;
+			dexterity 	 	=  14, 0;
+			melee 	 		=  15, 0;
 		}
 	}
 	[aspect] 
@@ -73,11 +73,11 @@
 		textures: 0 = b_c_edm_klik-2;
 		scale_base	= 0.4;
 		
-		experience_value = 348;
-		life 			= 173;
-		max_life 		= 173;
-		mana 			= 10;
-		max_mana 		= 10;
+		experience_value = 36;
+		life 			= 384;
+		max_life 		= 384;
+		mana 			= 90;
+		max_mana 		= 90;
 		
 		[voice]
 		{
@@ -125,19 +125,29 @@
 	{
 		[skills]
 		{
-			strength =     9, 0;
-			intelligence = 7, 0;
-			dexterity =    8, 0;
-			melee =        4, 0;
+			strength 	 	= 20, 0;
+			intelligence	= 11, 0;
+			dexterity		= 14, 0;
+			melee			= 16, 0;
 		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 19;
+		damage_min = 14;
+	}
+	[defend]
+	{
+		defense = 17;
 	}
 	[aspect]
 	{
-		experience_value = 59;
-		life             = 88;
-		max_life         = 88;
-		mana             = 12;
-		max_mana         = 12;
+		experience_value = 36;
+		life             = 407;
+		max_life         = 407;
+		mana             = 94;
+		max_mana         = 94;
 		textures:0 = b_c_edm_hb-03;
 		material = flesh;
 		[voice]
@@ -148,12 +158,6 @@
 			[hit_glance]	{ priority = low;	* = s_e_hit_mhulliq_SED;		}
 			[hit_solid]		{ priority = low;	* = s_e_hit_mhulliq_SED;		}
 		}
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 70;
-		damage_min = 60;
 	}
 	[body]
 	{
@@ -190,19 +194,29 @@
 	{
 		[skills]
 		{
-			strength =     14, 0;
-			intelligence  = 9, 0;
-			dexterity =    11, 0;
-			melee =        12, 0;
+			strength 		= 15, 0;
+			intelligence	= 12, 0;
+			dexterity		= 22, 0;
+            ranged			= 20, 0;
 		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 27;
+		damage_min = 20;
+	}
+	[defend]
+	{
+		defense = 23;
 	}
 	[aspect]
 	{
-		experience_value = 238;
-		life             = 156;
-		max_life         = 156;
-		mana             = 12;
-		max_mana         = 12;
+		experience_value = 36;
+		life             = 451;
+		max_life         = 451;
+		mana             = 101;
+		max_mana         = 101;
 		textures:0 = b_c_edm_hb-04;
 		material = flesh;
 		[voice]
@@ -214,12 +228,6 @@
 			[hit_solid]		{ priority = low;	* = s_e_hit_mhulliq_SED;		}
 		}	
 	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 55;
-		damage_min = 45;
-	}
 	[body]
 	{
 		avg_move_velocity = 4;
@@ -228,10 +236,6 @@
 	{
 		screen_name = "Rending Mhulliq"; 
 		membership = monster;
-	}
-	[defend]
-	{
-		defense = 95;
 	}
 	[mind]
 	{
@@ -255,19 +259,19 @@
 	{
 		[skills]
 		{
-			strength =  	9, 0;
-			dexterity =  	11, 0;
-			intelligence =  12, 0;
-            ranged =  		8,  0;
+			strength		= 13, 0;
+			dexterity 		= 19, 0;
+			intelligence	= 11, 0;
+            ranged			= 15, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 113;
-		life = 189;
-        max_life = 189;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 36;
+		life 			= 270;
+        max_life 		= 270;
+		mana 			= 120;
+		max_mana 		= 120;
 		[textures]
 		{
 			0 = b_c_ecm_bk-02;
@@ -359,19 +363,19 @@
 	{
 		[skills]
 		{
-			strength 		= 10, 0;
-			intelligence	= 11, 0;
-			dexterity		= 13, 0;
-            ranged			= 10, 0;
+			strength 		= 15, 0;
+			intelligence	= 12, 0;
+			dexterity		= 22, 0;
+            ranged			= 20, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 180;
-		life = 279;
-        max_life = 279;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 36;
+		life 			= 343;
+        max_life 		= 343;
+		mana 			= 150;
+		max_mana 		= 150;
 		[textures]
 		{
 			0 = b_c_ecm_bk-04;
@@ -380,8 +384,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 48;
-		damage_min = 42;
+		damage_max = 27;
+		damage_min = 20;
+	}
+	[defend]
+	{
+		defense = 23;
 	}
 	[body]
 	{
@@ -402,10 +410,7 @@
 			}
 		}
 	}
-	[defend]
-	{
-		defense = 88;
-	}
+	
 	[inventory]
 	{
     	selected_active_location = il_active_primary_spell;

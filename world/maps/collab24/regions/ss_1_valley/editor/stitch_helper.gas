@@ -1,0 +1,49 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x01000001;
+	source_region_name = ss_1_valley;
+	[t:stitch_editor,n:5_0_cave_r1]
+	{
+		dest_region = 5_0_cave_r1;
+		[node_ids]
+		{
+			0x00000f45 = 0xEB10AA68,6;
+		}
+	}
+	[t:stitch_editor,n:3_7_wormlayer]
+	{
+		dest_region = 3_7_wormlayer;
+		[node_ids]
+		{
+			0x00000f34 = 0x02EA9CC6,10;
+		}
+	}
+	[t:stitch_editor,n:ss_1a_family-tomb]
+	{
+		dest_region = ss_1a_family-tomb;
+		[node_ids]
+		{
+			0x01985011 = 0x0349373F,45;
+			0x01985012 = 0x0349373F,44;
+			0x01985013 = 0x0349373F,43;
+		}
+	}
+	[t:stitch_editor,n:ss_2_prison]
+	{
+		dest_region = ss_2_prison;
+		[node_ids]
+		{
+			0x01985001 = 0xFD5F5E68,8;
+			0x01985002 = 0xFD5F5E68,7;
+			0x01985003 = 0xFD5F5E68,6;
+		}
+	}
+	[t:stitch_editor,n:ss_9_exit]
+	{
+		dest_region = ss_9_exit;
+		[node_ids]
+		{
+			0x01985004 = 0x6CB27951,8;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+[t:c24_slice02_npc_hassat,n:0x0290000a]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_c24_r4_hassat_after_leopards_killed_first;
+			* = conv_c24_r4_hassat_after_leopards_killed_next;
+			* = conv_c24_r4_hassat_final;
+			* = conv_c24_r4_hassat_start;
+			* = conv_c24_r4_hassat_start_before_summon_first;
+			* = conv_c24_r4_hassat_start_before_summon_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_hassat_r4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 0.506317,12,-0.221901,0xc8009592;
+	}
+}

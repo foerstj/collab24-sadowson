@@ -1,0 +1,505 @@
+[start_positions]
+{
+	[t:start_group,n:c24_5_test]
+	{
+	  b default = false;
+		description = "A test start position in Andreouland.";
+	  b dev_only = false;
+	  i id = 500;
+		screen_name = "Andreouland test";
+		[start_position]
+		{
+		  i id = 1;
+			position = -0.051981,-6.000000,5.350830,0x7203AC06;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.051981,-6.000000,5.350830,0x7203AC06;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:z_clb24_test]
+	{
+	  b default = false;
+		description = "This is the default group.";
+	  b dev_only = true;
+	  i id = 5000;
+		screen_name = "z_clb24_test";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.000000,0.000000,0.000000,0xFA193928;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xFA193928;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:default]
+	{
+	  b default = true;
+		description = "This is the default group.";
+	  b dev_only = false;
+	  i id = 0;
+		screen_name = "Rock Bottom";
+		[start_position]
+		{
+		  i id = 2;
+			position = 0.536602,-1.500000,-2.573017,0xC0F545AA;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.536602,-1.500000,-2.573017,0xC0F545AA;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:collab24_slice_02]
+	{
+	  b default = false;
+		description = "A test start position in Ghanawaland.";
+	  b dev_only = false;
+	  i id = 200;
+		screen_name = "Ghanawaland test";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.000000,0.000000,0.000000,0xCF394DA6;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xCF394DA6;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_test_cld_eled]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 322;
+		screen_name = "CL-D ELE-D";
+		[start_position]
+		{
+		  i id = 1;
+			position = -6.572748,2.000000,1.732552,0x7B480FDD;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -6.572748,2.000000,1.732552,0x7B480FDD;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_test_cld_eleu]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 321;
+		screen_name = "CL-D ELE-U";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.676938,0.000000,-0.024368,0x26B2A132;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.676938,0.000000,-0.024368,0x26B2A132;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_test_clu_eled]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 361;
+		screen_name = "CL-U ELE-D";
+		[start_position]
+		{
+		  i id = 1;
+			position = 3.229518,0.000000,1.304366,0xF375A863;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 3.229518,0.000000,1.304366,0xF375A863;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_test_clu_eleu]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 362;
+		screen_name = "CL-U ELE-U";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.201075,-3.000000,-3.577621,0xF6250803;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.201075,-3.000000,-3.577621,0xF6250803;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_test_sld_eleu]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 330;
+		screen_name = "SL-D ELE-U";
+		[start_position]
+		{
+		  i id = 1;
+			position = 3.131752,0.000000,3.880371,0x5D7760D6;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 3.131752,0.000000,3.880371,0x5D7760D6;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_test_slu_eleu]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 350;
+		screen_name = "SL-U ELE-U";
+		[start_position]
+		{
+		  i id = 1;
+			position = -3.751499,4.000000,1.799446,0x0D89EA2D;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -3.751499,4.000000,1.799446,0x0D89EA2D;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_test_wld_eled]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 310;
+		screen_name = "WL-D ELE-D";
+		[start_position]
+		{
+		  i id = 1;
+			position = 1.337239,0.000000,-0.528990,0x2B4FD50B;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 1.337239,0.000000,-0.528990,0x2B4FD50B;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_test_wlu_eled]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 370;
+		screen_name = "WL-U ELE-D";
+		[start_position]
+		{
+		  i id = 1;
+			position = 1.702818,0.000000,1.624865,0x386B26E2;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 1.702818,0.000000,1.624865,0x386B26E2;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:3_underland]
+	{
+	  b default = false;
+		description = "The Underling town of Shroomington.";
+	  b dev_only = false;
+	  i id = 30;
+		screen_name = "Underland";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.033010,0.000000,0.013102,0x02AB4F69;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.033010,0.000000,0.013102,0x02AB4F69;
+			}
+		}
+		[start_position]
+		{
+		  i id = 2;
+			position = -0.979822,0.000000,0.024516,0x02AB4F69;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.979822,0.000000,0.024516,0x02AB4F69;
+			}
+		}
+		[start_position]
+		{
+		  i id = 3;
+			position = 1.056240,0.000000,0.017408,0x02AB4F69;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 1.056240,0.000000,0.017408,0x02AB4F69;
+			}
+		}
+		[start_position]
+		{
+		  i id = 4;
+			position = 1.911425,0.000000,0.040385,0x217392D8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 1.911425,0.000000,0.040385,0x217392D8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 5;
+			position = 0.015898,0.000000,1.977535,0xD6F03D86;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.015898,0.000000,1.977535,0xD6F03D86;
+			}
+		}
+		[start_position]
+		{
+		  i id = 6;
+			position = 0.913813,0.000000,0.018395,0x217392D8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.913813,0.000000,0.018395,0x217392D8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 7;
+			position = -0.004297,-0.000002,1.000589,0xD6F03D86;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.004297,-0.000002,1.000589,0xD6F03D86;
+			}
+		}
+		[start_position]
+		{
+		  i id = 8;
+			position = -0.010330,0.000000,0.046057,0x217392D8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.010330,0.000000,0.046057,0x217392D8;
+			}
+		}
+		[world_levels]
+		{
+			[regular]
+			{
+				required_level = 6;
+			}
+		}
+	}
+	[t:start_group,n:test_crypt_altar]
+	{
+	  b default = false;
+		description = "test_crypt_altar";
+	  b dev_only = false;
+	  i id = 470;
+		screen_name = "test_crypt_altar";
+		[start_position]
+		{
+		  i id = 1;
+			position = -9.713576,-5.900000,-13.662422,0x3461F0A3;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -9.713576,-5.900000,-13.662422,0x3461F0A3;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_death_valley]
+	{
+	  b default = false;
+		description = "test_death_valley";
+	  b dev_only = false;
+	  i id = 460;
+		screen_name = "test_death_valley";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.341949,0.000002,-0.784531,0xC624A8C3;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.341949,0.000002,-0.784531,0xC624A8C3;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_prison]
+	{
+	  b default = false;
+		description = "test_prison";
+	  b dev_only = false;
+	  i id = 420;
+		screen_name = "test_prison";
+		[start_position]
+		{
+		  i id = 1;
+			position = 1.398616,0.000000,0.197551,0x81A06348;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 1.398616,0.000000,0.197551,0x81A06348;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_valley]
+	{
+	  b default = false;
+		description = "test_valley";
+	  b dev_only = false;
+	  i id = 410;
+		screen_name = "test_valley";
+		[start_position]
+		{
+		  i id = 1;
+			position = -0.069748,0.000000,1.950455,0x55B6944C;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.069748,0.000000,1.950455,0x55B6944C;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_volcano]
+	{
+	  b default = false;
+		description = "Test_Volcano";
+	  b dev_only = false;
+	  i id = 480;
+		screen_name = "Test_Volcano";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.771525,0.000000,0.423355,0x6DEEF7F1;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.771525,0.000000,0.423355,0x6DEEF7F1;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+}

@@ -1,0 +1,29 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000051;
+	source_region_name = 5_1_cilffs_r1;
+	[t:stitch_editor,n:5_0_cave_r1]
+	{
+		dest_region = 5_0_cave_r1;
+		[node_ids]
+		{
+			0x05051000 = 0xDC0C73C8,6;
+		}
+	}
+	[t:stitch_editor,n:5_2_cliffs_r1a]
+	{
+		dest_region = 5_2_cliffs_r1a;
+		[node_ids]
+		{
+			0x51520000 = 0xAA322DE2,7;
+		}
+	}
+	[t:stitch_editor,n:5_3_mines_r1]
+	{
+		dest_region = 5_3_mines_r1;
+		[node_ids]
+		{
+			0x51530000 = 0x0DE523A3,10;
+		}
+	}
+}

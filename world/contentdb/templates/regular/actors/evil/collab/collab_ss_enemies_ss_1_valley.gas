@@ -7,26 +7,26 @@
 	{
 		[skills]
 		{
-			strength =  22, 0;
-			dexterity =  15, 0;
-			intelligence =  11, 0;
-            melee =  20,  0;
+			strength 		=  19, 0;
+			dexterity 		=  14, 0;
+			intelligence 	=  11, 0;
+            melee 			=  15,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 1019;
-		life = 496;
-        max_life = 496;
-        mana = 110;
-		max_mana = 110;
+		experience_value = 33;
+		life = 384;
+        max_life = 384;
+        mana = 90;
+		max_mana = 90;
 		textures:0 = b_c_edm_kw-02;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 89;
-		damage_min = 87;
+		damage_max = 19;
+		damage_min = 14;
 	}
 	[common]
 	{
@@ -109,7 +109,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 758;
+		experience_value = 33;
 		life = 300;
         max_life = 300;
         mana = 109;
@@ -119,8 +119,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 74;
-		damage_min = 70;
+		damage_max = 19;
+		damage_min = 14;
 	}
 
 	[defend]
@@ -141,7 +141,7 @@
 			?run_chance 						= 1.0;
 	}
 }
-[t:template,n:collab_ss_1_valley_wolf_black_boss]
+[t:template,n:collab_ss_1_valley_wolf_black_boss]	//Level 18
 {
 	category_name = "ss_1_valley_enemies";
 	doc = "wolf_black_boss_01";
@@ -156,31 +156,31 @@
 	{
 		[skills]
 		{
-			strength =  20, 0;
-			dexterity =  15, 0;
-			intelligence =  11, 0;
-            melee =  20,  0;
+			strength		=  21, 0;
+			dexterity		=  14, 0;
+			intelligence	=  11, 0;
+            melee			=  18,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 1387;
-		life = 500;
-        max_life = 500;
-        mana = 110;
-        max_mana = 110;
+		experience_value = 33;
+		life = 451;
+        max_life = 451;
+        mana = 101;
+        max_mana = 101;
 		textures:0 = b_c_edm_wf-05;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 95;
-		damage_min = 85;
+		damage_max = 21;
+		damage_min = 15;
 	}
 
 	[defend]
 	{
-		defense=198;
+		defense = 18;
 	}
 	[common]
 	{
@@ -261,19 +261,20 @@
 	{
 		[skills]
 		{
-			strength =  15, 0;
-			dexterity =  22, 0;
-			intelligence = 12, 0;
+			strength 		= 11, 0;
+			dexterity 		= 12, 0;
+			intelligence 	= 20, 0;
+			combat_magic	= 15, 0;
 		}
 	}
 	[aspect]
 	{
 		draw_shadow = false;
-		experience_value = 20;
-		life = 55;
-		max_life = 55;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 33;
+		life = 234;
+		max_life = 234;
+		mana = 305;
+		max_mana = 305;
 		model = m_c_edm_sb_pos_1;
 		[textures]
 		{

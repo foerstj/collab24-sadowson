@@ -1,0 +1,11 @@
+[t:region,n:region]
+{
+	created = desktop-nehdqsj,lukawh;
+	description = none;
+  x guid = 0x00000027;
+	lastmodified = DESKTOP-NEHDQSJ,Lukawh;
+  x mesh_range = 0x00000027;
+	notes = none;
+  x scid_range = 0x00000027;
+	se_version = 1.70.0.4;
+}

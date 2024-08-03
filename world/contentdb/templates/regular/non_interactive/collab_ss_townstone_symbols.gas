@@ -33,10 +33,12 @@
 	}
 }
 
+//Variant that supports conversations
+
 [t:template,n:collab_ss_stone_elddim]
 {
 	category_name = "outdoor";
-	doc = "collab_ss_stone_elddim";
+	doc = "collab_ss_stone_elddim_convo";
 	specializes = collab_ss_stone_base;
 	[aspect]
 	{
@@ -50,7 +52,7 @@
 [t:template,n:collab_ss_stone_crystwind]
 {
 	category_name = "outdoor";
-	doc = "collab_ss_stone_crystwind";
+	doc = "collab_ss_stone_crystwind_convo";
 	specializes = collab_ss_stone_base;
 	[aspect]
 	{
@@ -64,7 +66,7 @@
 [t:template,n:collab_ss_stone_fallraen]
 {
 	category_name = "outdoor";
-	doc = "collab_ss_stone_fallraen";
+	doc = "collab_ss_stone_fallraen_convo";
 	specializes = collab_ss_stone_base;
 	[aspect]
 	{
@@ -78,7 +80,7 @@
 [t:template,n:collab_ss_stone_lang]
 {
 	category_name = "outdoor";
-	doc = "collab_ss_stone_lang";
+	doc = "collab_ss_stone_lang_convo";
 	specializes = collab_ss_stone_base;
 	[aspect]
 	{
@@ -92,7 +94,7 @@
 [t:template,n:collab_ss_stone_meren]
 {
 	category_name = "outdoor";
-	doc = "collab_ss_stone_meren";
+	doc = "collab_ss_stone_meren_convo";
 	specializes = collab_ss_stone_base;
 	[aspect]
 	{
@@ -106,7 +108,7 @@
 [t:template,n:collab_ss_stone_quillrabe]
 {
 	category_name = "outdoor";
-	doc = "collab_ss_stone_quillrabe";
+	doc = "collab_ss_stone_quillrabe_convo";
 	specializes = collab_ss_stone_base;
 	[aspect]
 	{
@@ -120,7 +122,7 @@
 [t:template,n:collab_ss_stone_hiroth]
 {
 	category_name = "outdoor";
-	doc = "collab_ss_stone_hiroth";
+	doc = "collab_ss_stone_hiroth_convo";
 	specializes = collab_ss_stone_base;
 	[aspect]
 	{
@@ -134,8 +136,125 @@
 [t:template,n:collab_ss_stone_grescal]
 {
 	category_name = "outdoor";
-	doc = "collab_ss_stone_grescal";
+	doc = "collab_ss_stone_grescal_convo";
 	specializes = collab_ss_stone_base;
+	[aspect]
+	{
+		model = m_i_glb_stone-grescal;
+	}
+	[common]
+	{
+		screen_name = "Shooting Star Stone";
+	}
+}
+
+///////////////
+//Dummy Variant
+///////////////
+
+[t:template,n:collab_ss_stone_elddim_blank]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_elddim_blank";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_stone-elddim;
+	}
+	[common]
+	{
+		screen_name = "Rising Sun Stone";
+	}
+}
+[t:template,n:collab_ss_stone_crystwind_blank]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_crystwind_blank";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_stone-crystwind;
+	}
+	[common]
+	{
+		screen_name = "Hammer Stone";
+	}
+}
+[t:template,n:collab_ss_stone_fallraen_blank]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_fallraen_blank";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_stone-fallraen;
+	}
+	[common]
+	{
+		screen_name = "Snow Stone";
+	}
+}
+[t:template,n:collab_ss_stone_lang_blank]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_lang_blank";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_stone-lang;
+	}
+	[common]
+	{
+		screen_name = "Insect Stone";
+	}
+}
+[t:template,n:collab_ss_stone_meren_blank]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_meren_blank";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_stone-meren;
+	}
+	[common]
+	{
+		screen_name = "Fish Stone";
+	}
+}
+[t:template,n:collab_ss_stone_quillrabe_blank]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_quillrabe_blank";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_stone-quillrabe;
+	}
+	[common]
+	{
+		screen_name = "Watcher Stone";
+	}
+}
+[t:template,n:collab_ss_stone_hiroth_blank]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_hiroth_blank";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_stone-hiroth;
+	}
+	[common]
+	{
+		screen_name = "Lord Stone";
+	}
+}
+[t:template,n:collab_ss_stone_grescal_blank]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_stone_grescal_blank";
+	specializes = non_interactive_blocking;
 	[aspect]
 	{
 		model = m_i_glb_stone-grescal;

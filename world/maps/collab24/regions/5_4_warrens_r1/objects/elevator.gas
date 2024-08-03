@@ -1,0 +1,126 @@
+[t:elevator_2s_2c_2n,n:0x05400123]
+{
+	[elevator_2s_2c_2n]
+	{
+	  i additional_door_level1 = 2;
+	  i additional_door_level2 = 2;
+	  x additional_node_level1 = 0x631AF1C2;
+	  x additional_node_level2 = 0x631AF1C2;
+	  i connect_door_level1 = 12;
+	  i connect_door_level2 = 12;
+	  x connect_node_level1 = 0x4604EF19;
+	  x connect_node_level2 = 0x4604EF19;
+	  f duration = 0.5;
+	  i elevator_additionaldoor_level1 = 3;
+	  i elevator_additionaldoor_level2 = 4;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0xF92176C8;
+		material = "gi_gears";
+	  f moving2_message_delay = 0.5;
+	  x moving2_scid = 0x05400124;
+	}
+	[placement]
+	{
+	  p position = 0.812885,4,1.59045,0xa45ffa64;
+	}
+}
+[t:elevator_2s_2c_2n,n:0x05400130]
+{
+	[elevator_2s_2c_2n]
+	{
+	  i additional_door_level1 = 2;
+	  i additional_door_level2 = 2;
+	  x additional_node_level1 = 0x3B82A25E;
+	  x additional_node_level2 = 0x3B82A25E;
+	  i connect_door_level1 = 12;
+	  i connect_door_level2 = 12;
+	  x connect_node_level1 = 0xC2A245A2;
+	  x connect_node_level2 = 0xC2A245A2;
+	  f duration = 0.5;
+	  i elevator_additionaldoor_level1 = 3;
+	  i elevator_additionaldoor_level2 = 4;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0xEF0D9066;
+		material = "gi_gears";
+	  f moving2_message_delay = 0.5;
+	  x moving2_scid = 0x05400131;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.96624,0,-1.448,0x677d3eff;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x05400003]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 2;
+	  i connect_door_level2 = 5;
+	  x connect_node_level1 = 0xC677FA42;
+	  x connect_node_level2 = 0xBED2F839;
+	  f duration = 2;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xF1EB42BB;
+		material = "gi_pneum";
+	}
+	[placement]
+	{
+	  p position = -0.109455,0.399999,-0.0443277,0xf1eb42bb;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x0540000a]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 18;
+	  i connect_door_level2 = 37;
+	  x connect_node_level1 = 0x16BEEA04;
+	  x connect_node_level2 = 0x61DFFB36;
+	  f duration = 7;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x458FC6A2;
+	  f level1_message_delay = 0;
+	  x level1_scid = 0x05400284;
+	  f level2_message_delay = 0;
+	  x level2_scid = 0x05400296;
+		material = "gi_slide";
+		moving1_actioninfo = "0x00000054,1,-1,-1,out:black;0x00000054,2,-1,-1,out:black,6;0x00000055,1,-1,-1,in";
+		moving2_actioninfo = "0x00000054,1,-1,-1,in,6.5;0x00000054,2,-1,-1,in,1;0x00000055,1,-1,-1,out:black,6.5";
+	}
+	[placement]
+	{
+	  p position = -8.57272,30.5,-2.6681,0x458fc6a2;
+	}
+}
+[t:elevator_2s_2c_2n,n:0x0540020f]
+{
+	[elevator_2s_2c_2n]
+	{
+	  i additional_door_level1 = 2;
+	  i additional_door_level2 = 2;
+	  x additional_node_level1 = 0x3BDA8E1A;
+	  x additional_node_level2 = 0x3BDA8E1A;
+	  i connect_door_level1 = 12;
+	  i connect_door_level2 = 12;
+	  x connect_node_level1 = 0x4397B055;
+	  x connect_node_level2 = 0x4397B055;
+	  f duration = 0.5;
+	  i elevator_additionaldoor_level1 = 3;
+	  i elevator_additionaldoor_level2 = 4;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x8CBBC359;
+		material = "gi_gears";
+	  f moving2_message_delay = 0.5;
+	  x moving2_scid = 0x05400217;
+	}
+	[placement]
+	{
+	  p position = -3.85077,0,-1.26272,0xa7fcc142;
+	}
+}

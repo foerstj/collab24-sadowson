@@ -1,0 +1,22 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000054;
+	source_region_name = 5_4_warrens_r1;
+	[t:stitch_editor,n:5_3_mines_r1]
+	{
+		dest_region = 5_3_mines_r1;
+		[node_ids]
+		{
+			0x53540000 = 0x808FCBA1,11;
+			0x53540001 = 0x808FCBA1,12;
+		}
+	}
+	[t:stitch_editor,n:5_5_lava_boss_r1]
+	{
+		dest_region = 5_5_lava_boss_r1;
+		[node_ids]
+		{
+			0x54550000 = 0xAF553C9A,1;
+		}
+	}
+}

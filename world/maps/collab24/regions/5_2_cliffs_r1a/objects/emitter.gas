@@ -1,0 +1,13 @@
+[t:emt_sound_act,n:0x05200042]
+{
+	[placement]
+	{
+	  p position = -0.412451,4.13195,1.88871,0xb93dbcf1;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_maniacal_laughter";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}

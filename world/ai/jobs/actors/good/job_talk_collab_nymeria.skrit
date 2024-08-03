@@ -152,31 +152,32 @@ state Talk$
 			}
 			else
 			{
-				if( Goid.InValidGoid != 
-					UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_nymeria_sword_weak", m_target$ ) )
-				{
-					//Player is ready to complete the quest.
+				#only( game )
+				[[
+					if( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_nymeria_sword_weak", m_target$ ) )
+					{
+						//Player is ready to complete the quest.
+						goid quest_weapon$ = UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_nymeria_sword_weak", m_target$ );
 					
-					goid quest_weapon$ = UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_nymeria_sword_weak", m_target$ );
+						m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_join" );
+						GameAuditor.GetDb.SetBool( "nymeria_quest_complete", true );
 					
-					m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_join" );
-					GameAuditor.GetDb.SetBool( "nymeria_quest_complete", true );
+						//Remove the weapon from the player.
+						quest_weapon$.Go.parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, quest_weapon$ ) );
+						PostWorldMessage( WE_REQ_DELETE, quest_weapon$, quest_weapon$, 0.1 );
 					
-					//Remove the weapon from the player.
-					quest_weapon$.Go.parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, quest_weapon$ ) );
-					PostWorldMessage( WE_REQ_DELETE, quest_weapon$, quest_weapon$, 0.1 );
+						//Have Nymeria equip the better version of the weapon.
+						go equip_weapon$;
+						equip_weapon$ = m_go$.inventory.GetItemFromTemplate( "collab_ss_nymeria_sword_strong" );
+						m_go$.inventory.RSEquip( es_weapon_hand, equip_weapon$.goid, AO_REFLEX );
 					
-					//Have Nymeria equip the better version of the weapon.
-					go equip_weapon$;
-					equip_weapon$ = m_go$.inventory.GetItemFromTemplate( "collab_ss_nymeria_sword_strong" );
-					m_go$.inventory.RSEquip( es_weapon_hand, equip_weapon$.goid, AO_REFLEX );
-					
-					PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 114, 1.0 );	// Change indicator to join
-				}
-				else
-				{
-					m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_accept" );
-				}
+						PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 114, 1.0 );	// Change indicator to join
+					}
+					else
+					{
+						m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_accept" );
+					}
+				]]
 			}
 		}
 		

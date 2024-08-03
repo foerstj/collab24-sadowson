@@ -1,0 +1,13 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000028;
+	source_region_name = 2_2a_blocker_cave;
+	[t:stitch_editor,n:2_2_snow_canyon]
+	{
+		dest_region = 2_2_snow_canyon;
+		[node_ids]
+		{
+			0x00000028 = 0xB7FC5431,7;
+		}
+	}
+}
