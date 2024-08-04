@@ -1,0 +1,78 @@
+[t:template,n:collab_ss_Lady_Athena]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_Lady_Athena";
+	specializes = base_npc_fg;
+	[aspect]
+	{
+		draw_selection_indicator = FALSE;
+		model = m_c_gah_fg_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_16;
+			1 = b_c_pos_a2_046;
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fg;
+		avg_move_velocity = 4.500000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			[chore_default]
+			{
+				chore_stances = ignore;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = a_c_gah_fg_fs0_ath-static;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = ignore;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = a_c_gah_fg_fs0_ath-look;
+					01 = a_c_gah_fg_fs0_ath-idle;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					talk = a_c_gah_fg_fs0_ath-talk;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Lady Athena";
+	}
+	[conversation]
+	{
+	}
+	[ee_npc_indicator]
+	{
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = collab_ss_athena_boots;
+		}
+	}
+}

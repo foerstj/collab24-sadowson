@@ -16578,15 +16578,6 @@
 		{
 		}
 	}
-	[t:lf_snode,n:0xaa2335ba]
-	{
-		[t:lf_lnode,n:0]
-		{
-			* = lf_human_player;
-			* = lf_computer_player;
-			* = lf_dirt;
-		}
-	}
 	[t:lf_snode,n:0xaa389659]
 	{
 		[t:lf_lnode,n:0]

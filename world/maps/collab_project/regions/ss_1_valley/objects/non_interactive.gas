@@ -23513,9 +23513,13 @@
 }
 [t:throne_csl,n:0x41000a39]
 {
+	[aspect]
+	{
+	  f scale_multiplier = 0.8;
+	}
 	[placement]
 	{
-	  p position = -0.00254729,0,0.0116363,0x82a8e5a4;
+	  p position = 0.00114441,0,0.299042,0x82a8e5a4;
 	}
 }
 [t:candlestand_csl_02,n:0x41000a3b]

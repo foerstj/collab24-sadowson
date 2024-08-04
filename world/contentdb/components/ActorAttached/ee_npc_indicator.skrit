@@ -34,6 +34,8 @@ ind_custom_id$ will override whatever indicator you request, so only use it for 
 
 The indicator script is not required to be attached to an actor. It will work on any object that has an aspect.
 
+If a quest is specified, then when the actor enters the world and the quest is at that relevant state, then they will already be prepared with a 
+
 indicator_amulet							100 - Sells Reagents.
 indicator_amulet-exclamation_orange			101 - Sells Reagents, has a quest available.
 indicator_amulet-question_grey				102 - Sells Reagents, quest cannot be completed.
@@ -65,17 +67,26 @@ indicator_shield							127 - Sells Armor.
 indicator_sword								128 - Sells Weapons.
 indicator_talk2me							129 - UNUSED. Talk to them I guess?
 indicator_tombstone							130 - UNUSED.
-indicator_disable							199 - TURNS OFF THE INDICATOR.
+
+
+FORCE_UPDATE								198 - Blank request to update an indicator based off its QUEST_STATE.
+DISABLE										199 - TURNS OFF THE INDICATOR.
 */
 
 // exported properties
 //Indicators have the 100-199 range reserved for msg ID's.
 
 property 	int 	ind_custom_ID$			 			doc = "ID to use for custom indicator. Leave blank if using commands to control or plan to change it in-game at some point.";
+property	string	Quest_Name$								doc = "Name of quest to check";
+property	int		Quest_State_start$						doc = "If this value, quest can be started or updated.";
+property	int		Quest_State_finish$						doc = "If this value, quest can be finished.";
+property	int		Quest_Indicator_before$					doc = "Quest Indicator can't be started.";
+property	int		Quest_Indicator_start$					doc = "Quest Indicator can be started.";
+property	int		Quest_Indicator_finish$					doc = "Quest Indicator can be finished.";
 
 			bool	debug_reporting$	= false;	//Used for debug checking by enabling the ee_debug bool.
 
-int		int_msg$;
+			int		int_msg$;
 owner = GoSkritComponent;
 
 //////////////////////////////////////////////////////////////////////////////
@@ -120,10 +131,10 @@ void Indicator_Script$()
 				deactivate_indicator$ = "";
 			}
 		}
-		else if( int_msg$ == 198 )	/// No Indicator Identified.
+		else if( int_msg$ == 198 )	/// Do nothing as we've been told to update based off a quest request.
 		{
 			//Do nothing. No indicator is active.
-			Report.ScreenF( "INT_MSG$ == 198" );
+			Report.Generic( "ee_npc_indicator.skrit recieved a request to update based off quest." );
 		}
 		else
 		{
@@ -193,17 +204,54 @@ void Indicator_Script$()
 			//Indicator is already active. So do nothing.
 		}
 }
+void check_quest$()
+{
+	int local_quest_state$ = Victory.GetQuestOrder( Quest_Name$ );
 	
+	//Check if before quest starting
+	if( Victory.IsQuestActive( quest_name$ ) )
+	{
+		if( local_quest_state$ < Quest_State_start$ )
+		{
+			//Have not yet reached the stage at which point we can start or update the quest.
+			int_msg$ = Quest_Indicator_before$;
+			Indicator_Script$;
+		}
+		else if( local_quest_state$ == Quest_State_start$ )
+		{
+			//Quest is ready to be started.
+			int_msg$ = Quest_Indicator_start$;
+			Indicator_Script$;
+		}
+		else if( Local_Quest_State$ == Quest_State_finish$ )
+		{
+			//Quest is ready to be completed.
+			int_msg$ = Quest_Indicator_finish$;
+			Indicator_Script$;
+		}
+	}
+}	
 event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
 {
 	if( e$ == WE_REQ_ACTIVATE )
 	{
 		int_msg$ = msg$.GetData1();
-		Indicator_Script$();
+		
+		if( int_msg$ == 198 )
+		{
+			//Recieved a request to update based on quest status.
+			if( StringTool.IsEmpty( Quest_Name$ ) == false )
+			{
+				check_quest$();
+			}
+		}
+		
 		if( debug_reporting$ )
 		{
 			Report.ScreenF( "ee_npc_indicator.skrit: Recieved a WE_REQ_ACTIVATE command." );
 		}
+		
+		Indicator_Script$();
 	}
 	if( e$ == WE_ENTERED_WORLD ) //This will override an ID that was setup by a WE_REQ_ACTIVATE command.
 	{
@@ -225,6 +273,12 @@ event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
 		else
 		{
 			//No custom ID set, so do nothing...
+		}
+		
+		//Check some fancy quest bits
+		if( StringTool.IsEmpty( Quest_Name$ ) == false )
+		{
+			check_quest$();
 		}
 	}
 }

@@ -1,29 +1,3 @@
-[t:template,n:collab_ss_Lady_Athena]
-{
-	category_name = "1W_townsperson";
-	doc = "collab_ss_Lady_Athena";
-	specializes = base_npc_fg;
-	[aspect]
-	{
-		draw_selection_indicator = FALSE;
-		model = m_c_gah_fg_pos_b1;
-		[textures]
-		{
-			0 = b_c_gah_fg_skin_16;
-			1 = b_c_pos_b1_003;
-		}
-	}
-	[common]
-	{
-		screen_name = "Lady Athena";
-	}
-	[conversation]
-	{
-	}
-	[ee_npc_indicator]
-	{
-	}
-}
 [t:template,n:collab_ss_Bodrus]
 {
 	category_name = "1W_townsperson";

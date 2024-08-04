@@ -136,6 +136,8 @@ state Talk$
 			GameAuditor.GetDb.SetBool( "collab_ss_dialog_short", true );
 			GameAuditor.GetDb.SetBool( "collab_ss_dialog_long", false );
 			
+			PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 126, 1.0 );
+			
 			//Kill old variables as a safety net
 			GameAuditor.GetDb.SetBool( "athena_undead", false );
 			GameAuditor.GetDb.SetBool( "athena_bridge", false );
@@ -146,6 +148,8 @@ state Talk$
 			GameAuditor.GetDb.SetBool( "collab_ss_dialog_short", false );
 			GameAuditor.GetDb.SetBool( "collab_ss_dialog_long", true );
 			GameAuditor.GetDb.SetBool( "secret_quest_active", true );
+			
+			PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 126, 1.0 );
 			
 			//Kill old variables as a safety net
 			GameAuditor.GetDb.SetBool( "athena_undead", false );
@@ -161,6 +165,7 @@ state Talk$
 			if( Victory.GetQuestOrder( quest_name$ ) == 4 )
 			{
 				conversation_block$ = "conversation_athena_complete";
+				PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 199, 1.0 );	//Kill the Indicator.
 			}
 			//Kill old variables as a safety net
 			GameAuditor.GetDb.SetBool( "conversation_athena_long", false );
@@ -193,6 +198,35 @@ state Talk$
 			conversation_block$ = "conversation_athena_reward";
 			//Kill old variables as a safety net
 			GameAuditor.GetDb.SetBool( "athena_reward", false );
+			
+			//Give Reward
+			SiegePos 	SpawnPos$;
+			string 		Quest_Reward_Item$ = "collab_ss_athena_reward";
+			int			Quest_Reward_Cash$ = 1000;
+			GoCloneReq clonereq_Item$ = MakeGoCloneReq( Quest_Reward_Item$ );
+			SpawnPos$ = m_Target$.go.placement.position;
+			if( m_Target$.Go.Hasmind )
+			{
+				if( AIQuery.FindSpotRelativeToSource( m_Target$.Go, .25, .5, 2.0, m_Target$.Go.Mind.TempPos1 ) )
+				{
+					clonereq_Item$.StartingPos = m_target$.Go.Mind.TempPos1;
+				}
+			}
+			clonereq_Item$.SnapToTerrain = true;
+			GoDb.SCloneGo( clonereq_Item$ );
+			
+			GoCloneReq clonereq_Gold$ = MakeGoCloneReq( "gold" );
+			SpawnPos$ = m_Target$.go.placement.position;
+			if( m_Target$.Go.Hasmind )
+			{
+				if( AIQuery.FindSpotRelativeToSource( m_Target$.Go, .25, .5, 2.0, m_Target$.Go.Mind.TempPos1 ) )
+				{
+					clonereq_Gold$.StartingPos = m_target$.Go.Mind.TempPos1;
+				}
+			}
+			clonereq_Gold$.SnapToTerrain = true;
+			goid gold$ = GoDb.SCloneGo( clonereq_Gold$ );
+			gold$.Go.Aspect.SetGoldValue( Quest_Reward_Cash$ );
 		}
 		
 		//Use Conversation
