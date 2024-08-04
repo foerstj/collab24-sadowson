@@ -14,8 +14,12 @@ The bridge was destroyed a short while ago when a Goblin war band came through. 
 {
 	[text*]
 	{
+		activate_quest* = quest_athena,2;
+		activate_quest* = quest_warding_crystal,5;
 		button_1_text = reward please!;
 		button_1_value = athena_reward;
+		complete_quest* = quest_athena;
+		complete_quest* = quest_warding_crystal;
 		screen_text = "It is good to see you again traveller.
 I foresaw your victory in the stars before you arrived, such is natural in my family.
 

@@ -16,6 +16,7 @@
 	[aspect]
 	{
 		is_invincible = true;
+		draw_selection_indicator = false;
 	}
 	[conversation]
 	{
@@ -42,6 +43,7 @@
 	[aspect]
 	{
 		is_invincible = true;
+		draw_selection_indicator = false;
 	}
 	[conversation]
 	{
@@ -68,6 +70,7 @@
 	[aspect]
 	{
 		is_invincible = true;
+		draw_selection_indicator = false;
 	}
 	[conversation]
 	{
@@ -94,6 +97,7 @@
 	[aspect]
 	{
 		is_invincible = true;
+		draw_selection_indicator = false;
 	}
 	[conversation]
 	{
@@ -120,6 +124,7 @@
 	[aspect]
 	{
 		is_invincible = true;
+		draw_selection_indicator = false;
 	}
 	[conversation]
 	{
@@ -146,6 +151,7 @@
 	[aspect]
 	{
 		is_invincible = true;
+		draw_selection_indicator = false;
 	}
 	[conversation]
 	{
@@ -172,6 +178,7 @@
 	[aspect]
 	{
 		is_invincible = true;
+		draw_selection_indicator = false;
 	}
 	[conversation]
 	{
@@ -198,6 +205,7 @@
 	[aspect]
 	{
 		is_invincible = true;
+		draw_selection_indicator = false;
 	}
 	[conversation]
 	{

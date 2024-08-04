@@ -30,6 +30,10 @@
 			es_forearms = collab_ss_guard_gloves;
 		}
 	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.923879,0,-0.382684;

@@ -167,14 +167,6 @@ state Talk$
 			GameAuditor.GetDb.SetBool( "conversation_athena_short", false );
 		}
 		
-		//Athena gifts reward to player.
-		if( GameAuditor.GetDb.GetBool( "athena_reward" ) )
-		{
-			conversation_block$ = "conversation_athena_reward";
-			//Kill old variables as a safety net
-			GameAuditor.GetDb.SetBool( "athena_reward", false );
-		}
-		
 		//Athena reverts to a completed idle conversation which can only be overwritten by the "I know" secret ending.
 		//The secret ending becomes the last default if selected.
 		if( Victory.IsQuestCompleted( quest_name$ ) )
@@ -192,6 +184,15 @@ state Talk$
 				//Secret ending was not unlocked, so give generic response.
 				conversation_block$ = "conversation_athena_idle_complete";
 			}
+		}
+		
+		//Athena gifts reward to player.
+		//This has to occur after the idle option because otherwise it'll never trigger properly.
+		if( GameAuditor.GetDb.GetBool( "athena_reward" ) )
+		{
+			conversation_block$ = "conversation_athena_reward";
+			//Kill old variables as a safety net
+			GameAuditor.GetDb.SetBool( "athena_reward", false );
 		}
 		
 		//Use Conversation

@@ -1,0 +1,70 @@
+[t:template,n:collab_ss_athena_reward]
+{
+	specializes = amulet;
+	doc = "collab_ss_athena_reward";
+	[aspect]
+	{
+		gold_value = 2000;
+	}
+	[common]
+	{
+		screen_name = "Athenian Amulet";
+		is_pcontent_allowed = false;
+	}
+	[gui]
+	{
+		inventory_icon = b_gui_ig_i_it_amulet_034;
+		tooltip_color = unique;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= ALTER_LIFE_RECOVERY_UNIT;
+				value				= 10;
+				description			= "+10 to Life recovery";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_MELEE;
+				value				= 2;
+				description			= "+2 to Melee";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_RANGED;
+				value				= 2;
+				description			= "+2 to Ranged";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_NATURE_MAGIC;
+				value				= 2;
+				description			= "+2 to Nature Magic";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_COMBAT_MAGIC;
+				value				= 2;
+				description			= "+2 to Combat Magic";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+}

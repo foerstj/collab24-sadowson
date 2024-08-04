@@ -10,6 +10,7 @@
 	[aspect]
 	{
 		is_collidable = true;
+		draw_selection_indicator = false;
 	}
 	[body]
 	{
@@ -367,6 +368,7 @@
 	[aspect]
 	{
 		is_collidable = true;
+		draw_selection_indicator = false;
 	}
 	[common]
 	{

@@ -18128,7 +18128,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,0.382683;
-	  p position = 4.37186,-0.0500002,-1.16052,0xf48b10c1;
+	  p position = 4.26486,-0.077033,-1.23659,0xf48b10c1;
 	}
 }
 [t:bench_glb_01,n:0x41000dab]

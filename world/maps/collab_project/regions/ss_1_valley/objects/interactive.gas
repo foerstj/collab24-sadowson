@@ -63,6 +63,100 @@
 		use_point_scids = 0x41000e08;
 	}
 }
+[t:lever_gob_01,n:0x41000a1c]
+{
+	[common]
+	{
+		screen_name = "DEBUG DO NOT TOUCH";
+	}
+	[on_off_lever]
+	{
+	  x on_scid = 0x41000A30;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.483963,0,1.71457,0xfe669797;
+		use_point_scids = 0x41000a1e;
+	}
+}
+[t:collab_ss_1_keep_tall_left,n:0x41000002]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_warding_crystal";
+	  i quest_state = 4;
+	  x second_door = 0x41000617;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = -0.0211487,-6,3.1965,0xf043ae52;
+		use_point_scids = 0x41000a22,0x41000a20;
+	}
+}
+[t:collab_ss_1_keep_tall_right,n:0x41000617]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_warding_crystal";
+	  i quest_state = 4;
+	  x second_door = 0x41000002;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = -3.05176e-005,-6,3.19786,0xf043ae52;
+		use_point_scids = 0x41000a22,0x41000a20;
+	}
+}
+[t:collab_ss_1_keep_tall_left,n:0x41000618]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_warding_crystal";
+	  i quest_state = 4;
+	  x second_door = 0x41000619;
+	}
+	[placement]
+	{
+	  q orientation = 0,-3.12407e-007,0,-1;
+	  p position = 0.00479126,-6,-3.19748,0xf043ae52;
+		use_point_scids = 0x41000a1f,0x41000a21;
+	}
+}
+[t:collab_ss_1_keep_tall_right,n:0x41000619]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_warding_crystal";
+	  i quest_state = 4;
+	  x second_door = 0x41000618;
+	}
+	[placement]
+	{
+	  q orientation = 0,-3.12407e-007,0,-1;
+	  p position = -0.00177002,-6,-3.20006,0xf043ae52;
+		use_point_scids = 0x41000a1f,0x41000a21;
+	}
+}
 [t:door_glb_keep_02,n:0x41000bcd]
 {
 	[door_basic]
@@ -235,12 +329,158 @@
 		use_point_scids = 0x41000a2f,0x41000a2e;
 	}
 }
+[t:collab_ss_1_keep_tall_left,n:0x41000e19]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_athena";
+	  i quest_state = 1;
+	  x second_door = 0x41000E1A;
+	}
+	[placement]
+	{
+	  q orientation = 0,-3.12407e-007,0,-1;
+	  p position = -0.00915527,-3.5,0.794601,0x00fcc993;
+		use_point_scids = 0x41000a32,0x41000a33;
+	}
+}
+[t:collab_ss_1_keep_tall_right,n:0x41000e1a]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_athena";
+	  i quest_state = 1;
+	  x second_door = 0x41000E19;
+	}
+	[placement]
+	{
+	  q orientation = 0,-3.12407e-007,0,-1;
+	  p position = -0.00259399,-3.5,0.79718,0x00fcc993;
+		use_point_scids = 0x41000a32,0x41000a33;
+	}
+}
 [t:statue_csl_69,n:0x41000cde]
 {
 	[placement]
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = -0.57457,-2,-0.717377,0xba44bdad;
+	}
+}
+[t:collab_ss_1_keep_short_left,n:0x41000e1b]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_athena";
+	  i quest_state = 1;
+	  x second_door = 0x41000E1C;
+	}
+	[placement]
+	{
+	  p position = -0.00724792,-2,0.0224304,0x33391f27;
+		use_point_scids = 0x41000be7,0x41000be8;
+	}
+}
+[t:collab_ss_1_keep_short_right,n:0x41000e1c]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_athena";
+	  i quest_state = 1;
+	  x second_door = 0x41000E1B;
+	}
+	[placement]
+	{
+	  p position = -0.0116425,-2,0.0256195,0x33391f27;
+		use_point_scids = 0x41000be7,0x41000be8;
+	}
+}
+[t:collab_ss_1_keep_short_left,n:0x41000e1d]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_athena";
+	  i quest_state = 1;
+	  x second_door = 0x41000E1C;
+	}
+	[placement]
+	{
+	  p position = -0.0112457,-2,0.028717,0xfb514201;
+		use_point_scids = 0x41000be3,0x41000be4;
+	}
+}
+[t:collab_ss_1_keep_short_right,n:0x41000e1e]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_athena";
+	  i quest_state = 1;
+	  x second_door = 0x41000E1B;
+	}
+	[placement]
+	{
+	  p position = -0.0156403,-2,0.0319061,0xfb514201;
+		use_point_scids = 0x41000be3,0x41000be4;
+	}
+}
+[t:collab_ss_1_keep_short_left,n:0x41000e1f]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_warding_crystal";
+	  i quest_state = 0;
+	  x second_door = 0x41000E20;
+	}
+	[placement]
+	{
+	  p position = -0.00741577,-2,0.0396881,0xd73e39f3;
+		use_point_scids = 0x41000bcb,0x41000bcc;
+	}
+}
+[t:collab_ss_1_keep_short_right,n:0x41000e20]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[collab_ss_door_use_toggle]
+	{
+		quest_name = "quest_warding_crystal";
+	  i quest_state = 0;
+	  x second_door = 0x41000E1F;
+	}
+	[placement]
+	{
+	  p position = -0.0118103,-2,0.0428772,0xd73e39f3;
+		use_point_scids = 0x41000bcb,0x41000bcc;
 	}
 }
 [t:door_glb_keep_02,n:0x41000bdd]
@@ -289,227 +529,5 @@
 	{
 	  p position = -0.00888062,-2,0.0392914,0xe2e5bf5a;
 		use_point_scids = 0x41000bd3,0x41000bd4;
-	}
-}
-[t:collab_ss_1_keep_tall_left,n:0x41000002]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_warding_crystal";
-	  i quest_state = 4;
-	  x second_door = 0x41000617;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.66939e-007;
-	  p position = -0.0211487,-6,3.1965,0xf043ae52;
-		use_point_scids = 0x41000A22,0x41000A20;
-	}
-}
-[t:collab_ss_1_keep_tall_right,n:0x41000617]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_warding_crystal";
-	  i quest_state = 4;
-	  x second_door = 0x41000002;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.66939e-007;
-	  p position = -3.05176e-005,-6,3.19786,0xf043ae52;
-		use_point_scids = 0x41000A22,0x41000A20;
-	}
-}
-[t:collab_ss_1_keep_tall_left,n:0x41000618]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_warding_crystal";
-	  i quest_state = 4;
-	  x second_door = 0x41000619;
-	}
-	[placement]
-	{
-	  q orientation = 0,-3.12407e-007,0,-1;
-	  p position = 0.00479126,-6,-3.19748,0xf043ae52;
-		use_point_scids = 0x41000A1F,0x41000A21;
-	}
-}
-[t:collab_ss_1_keep_tall_right,n:0x41000619]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_warding_crystal";
-	  i quest_state = 4;
-	  x second_door = 0x41000618;
-	}
-	[placement]
-	{
-	  q orientation = 0,-3.12407e-007,0,-1;
-	  p position = -0.00177002,-6,-3.20006,0xf043ae52;
-		use_point_scids = 0x41000A1F,0x41000A21;
-	}
-}
-[t:collab_ss_1_keep_tall_left,n:0x41000e19]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_athena";
-	  i quest_state = 1;
-	  x second_door = 0x41000E1A;
-	}
-	[placement]
-	{
-	  q orientation = 0,-3.12407e-007,0,-1;
-	  p position = -0.00915527,-3.5,0.794601,0x00fcc993;
-		use_point_scids = 0x41000A32,0x41000A33;
-	}
-}
-[t:collab_ss_1_keep_tall_right,n:0x41000e1a]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_athena";
-	  i quest_state = 1;
-	  x second_door = 0x41000E19;
-	}
-	[placement]
-	{
-	  q orientation = 0,-3.12407e-007,0,-1;
-	  p position = -0.00259399,-3.5,0.79718,0x00fcc993;
-		use_point_scids = 0x41000A32,0x41000A33;
-	}
-}
-[t:collab_ss_1_keep_short_left,n:0x41000e1b]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_athena";
-	  i quest_state = 1;
-	  x second_door = 0x41000E1C;
-	}
-	[placement]
-	{
-	  p position = -0.00724792,-2,0.0224304,0x33391f27;
-		use_point_scids = 0x41000BE7,0x41000BE8;
-	}
-}
-[t:collab_ss_1_keep_short_right,n:0x41000e1c]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_athena";
-	  i quest_state = 1;
-	  x second_door = 0x41000E1B;
-	}
-	[placement]
-	{
-	  p position = -0.0116425,-2,0.0256195,0x33391f27;
-		use_point_scids = 0x41000BE7,0x41000BE8;
-	}
-}
-[t:collab_ss_1_keep_short_left,n:0x41000e1d]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_athena";
-	  i quest_state = 1;
-	  x second_door = 0x41000E1C;
-	}
-	[placement]
-	{
-	  p position = -0.0112457,-2,0.028717,0xfb514201;
-		use_point_scids = 0x41000BE3,0x41000BE4;
-	}
-}
-[t:collab_ss_1_keep_short_right,n:0x41000e1e]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_athena";
-	  i quest_state = 1;
-	  x second_door = 0x41000E1B;
-	}
-	[placement]
-	{
-	  p position = -0.0156403,-2,0.0319061,0xfb514201;
-		use_point_scids = 0x41000BE3,0x41000BE4;
-	}
-}
-[t:collab_ss_1_keep_short_left,n:0x41000e1f]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_warding_crystal";
-	  i quest_state = 0;
-	  x second_door = 0x41000E20;
-	}
-	[placement]
-	{
-	  p position = -0.00741577,-2,0.0396881,0xd73e39f3;
-		use_point_scids = 0x41000BCB,0x41000BCC;
-	}
-}
-[t:collab_ss_1_keep_short_right,n:0x41000e20]
-{
-	[aspect]
-	{
-	  b does_block_path = true;
-	}
-	[collab_ss_door_use_toggle]
-	{
-		quest_name = "quest_warding_crystal";
-	  i quest_state = 0;
-	  x second_door = 0x41000E1F;
-	}
-	[placement]
-	{
-	  p position = -0.0118103,-2,0.0428772,0xd73e39f3;
-		use_point_scids = 0x41000BCB,0x41000BCC;
 	}
 }

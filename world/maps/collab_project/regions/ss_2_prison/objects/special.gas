@@ -1,3 +1,14 @@
+[t:set_bool,n:0x42000042]
+{
+	[placement]
+	{
+	  p position = 1.52514,0,1.62761,0xea914580;
+	}
+	[set_bool]
+	{
+		bool_variable = "ss_2_prison_secret_door_open";
+	}
+}
 [t:use_point,n:0x4200004c]
 {
 	[placement]
@@ -69,16 +80,5 @@
 	{
 	  q orientation = 0,0.382684,0,0.92388;
 	  p position = -1.90528,-12,-4.25433,0x40fb1161;
-	}
-}
-[t:set_bool,n:0x42000042]
-{
-	[placement]
-	{
-	  p position = 1.52514,0,1.62761,0xea914580;
-	}
-	[set_bool]
-	{
-		bool_variable = "ss_2_prison_secret_door_open";
 	}
 }

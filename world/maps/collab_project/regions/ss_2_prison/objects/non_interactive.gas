@@ -197,7 +197,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.382683,0,0.92388;
-	  p position = -1.24543,-4.76837e-007,-0.926963,0xc0fd9071;
+	  p position = -1.18062,-0.0658264,-0.753539,0xc0fd9071;
 	}
 }
 [t:torch_glb_holder_01,n:0x4200000c]

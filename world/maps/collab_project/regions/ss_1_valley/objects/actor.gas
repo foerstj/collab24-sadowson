@@ -268,26 +268,6 @@
 	  p position = -3.36554,1.90735e-006,0.496429,0xc92294ca;
 	}
 }
-[t:collab_ss_bodrus,n:0x41000bb0]
-{
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_bodrus_complete;
-			* = conversation_bodrus_hello;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_collab_bodrus.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -0.875015,0,1.84285,0x4275c55a;
-	}
-}
 [t:collab_ss_1_valley_wolf_black,n:0x41000dcf]
 {
 	[placement]
@@ -342,6 +322,26 @@
 	{
 	  q orientation = 0,0.464956,0,0.885334;
 	  p position = 0.912888,0,0.166382,0x0f6ffaea;
+	}
+}
+[t:collab_ss_bodrus,n:0x41000bb0]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_bodrus_complete;
+			* = conversation_bodrus_hello;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab_bodrus.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -0.875015,0,1.84285,0x4275c55a;
 	}
 }
 [t:collab_ss_guard_m_10,n:0x41000be9]
@@ -496,6 +496,7 @@
 	}
 	[mind]
 	{
+	  b actor_auto_fidgets = false;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
@@ -803,6 +804,7 @@
 	[placement]
 	{
 	  p position = 0.0193787,0,0.890472,0x82a8e5a4;
+		use_point_scids = 0x41000a1b;
 	}
 }
 [t:collab_pm_nymeria,n:0x41000c93]
@@ -838,27 +840,6 @@
 	  p position = 0.06987,0,0.0925369,0x19fe45e0;
 	}
 }
-[t:collab_ss_guard_m_captain,n:0x41000d17]
-{
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_captain_complete;
-			* = conversation_captain_hello;
-			* = conversation_captain_quest;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_ss_guard_m_captain.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = 0.75145,0.5,0.579056,0x2ce0c033;
-	}
-}
 [t:mp_townfolk_male_05,n:0x41000c4d]
 {
 	[common]
@@ -880,6 +861,7 @@
 	{
 	  q orientation = 0,0.923879,0,0.382684;
 	  p position = 0.902161,0.5,0.808151,0x597a1556;
+		use_point_scids = 0x41000a1b;
 	}
 }
 [t:mp_soldier_wounded_02,n:0x41000422]
