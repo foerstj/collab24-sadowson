@@ -7,7 +7,7 @@
 		dest_region = ss_1_valley;
 		[node_ids]
 		{
-			0x01985004 = 0xE646C5F3,1;
+			0x01985004 = 0xEB63C46D,1;
 		}
 	}
 }

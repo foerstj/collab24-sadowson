@@ -1,9 +1,20 @@
 [bookmarks]
 {
+	[t:bookmark,n:test_lava_tele]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0x66817AF2;
+		[camera]
+		{
+		  f azimuth = 0.740797;
+		  f distance = 28.000000;
+		  f orbit = 0.420000;
+		}
+	}
 	[t:bookmark,n:test_keep]
 	{
 		description = "";
-		position = 0.000000,0.000000,0.000000,0xBCF95156;
+		position = 0.000000,0.000000,0.000000,0xbcf95156;
 		[camera]
 		{
 		  f azimuth = 0.750797;

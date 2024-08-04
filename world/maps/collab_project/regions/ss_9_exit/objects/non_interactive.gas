@@ -1,36 +1,3 @@
-[t:firepit_des_dragon,n:0x49000026]
-{
-	[light_flicker_lightweight]
-	{
-	  x siege_light = 0x869B6D97;
-	}
-	[placement]
-	{
-	  p position = -1.5987,0,2.18593,0x6cfb897e;
-	}
-}
-[t:firepit_des_dragon,n:0x49000022]
-{
-	[light_flicker_lightweight]
-	{
-	  x siege_light = 0x45BC5859;
-	}
-	[placement]
-	{
-	  p position = -3.22633,1,16.145,0x417bc27e;
-	}
-}
-[t:firepit_des_dragon,n:0x49000023]
-{
-	[light_flicker_lightweight]
-	{
-	  x siege_light = 0x92DB1693;
-	}
-	[placement]
-	{
-	  p position = 3.2345,1,-15.8217,0x417bc27e;
-	}
-}
 [t:firepit_des_dragon,n:0x49000020]
 {
 	[light_flicker_lightweight]
@@ -233,14 +200,74 @@
 	  p position = -1.98441,-0.0710454,-1.47648,0x7559b1a4;
 	}
 }
-[t:firepit_des_dragon,n:0x49000027]
+[t:egg_des_dragon_large_01,n:0x4900004f]
 {
-	[light_flicker_lightweight]
-	{
-	  x siege_light = 0x3D653DA7;
-	}
 	[placement]
 	{
-	  p position = -3.85263,0,1.81792,0x60b2016d;
+	  q orientation = 0,-0.906531,0,0.422138;
+	  p position = -3.07909,0,-0.702252,0x41db197a;
+	}
+}
+[t:egg_des_dragon_large_01,n:0x49000050]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.51375,0,0.85794;
+	  p position = -0.33026,0,0.302589,0x41db197a;
+	}
+}
+[t:egg_des_dragon_large_02,n:0x49000051]
+{
+	[placement]
+	{
+	  q orientation = 0,0.977666,0,-0.210164;
+	  p position = -5.843,-1.54645,4.72369,0x6e41c2fa;
+	}
+}
+[t:egg_des_dragon_large_02,n:0x49000052]
+{
+	[placement]
+	{
+	  q orientation = 0,0.602891,0,0.797824;
+	  p position = -3.42747,-1.90735e-006,-0.686682,0x26c09ede;
+	}
+}
+[t:egg_des_dragon_large_01,n:0x49000053]
+{
+	[placement]
+	{
+	  q orientation = 0,0.939027,0,0.343844;
+	  p position = -0.438162,0,-1.31876,0x26c09ede;
+	}
+}
+[t:egg_des_dragon_large_01,n:0x49000054]
+{
+	[placement]
+	{
+	  p position = -1.66831,0,0.906229,0x26c09ede;
+	}
+}
+[t:egg_des_dragon_large_01,n:0x49000055]
+{
+	[placement]
+	{
+	  q orientation = 0,0.0287011,0,0.999588;
+	  p position = -3.89982,1.90735e-006,-0.889929,0x994b7427;
+	}
+}
+[t:egg_des_dragon_large_02,n:0x49000056]
+{
+	[placement]
+	{
+	  q orientation = 0,0.64211,0,0.766613;
+	  p position = 0.956061,0,3.99762,0x065c820a;
+	}
+}
+[t:egg_des_dragon_large_02,n:0x49000057]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.954701,0,0.297567;
+	  p position = -1.41373,0,-0.616402,0x994b7427;
 	}
 }

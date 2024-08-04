@@ -84,3 +84,119 @@
 	  p position = -1.101,0.15,-0.23262,0x0378d6c2;
 	}
 }
+[t:trigger_generic,n:0x4800002a]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD CHANGE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_8_lava_caverns_3");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.178051,0,-0.0444489,0x467a35e7;
+	}
+}
+[t:trigger_generic,n:0x4800002b]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD CHANGE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_8_lava_caverns_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.14777,0.527522,-3.69873,0x467a35e7;
+	}
+}
+[t:trigger_generic,n:0x4800002c]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD CHANGE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_8_lava_caverns_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0199851,-12,-3.9313,0x76400909;
+	}
+}
+[t:trigger_generic,n:0x4800002d]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD CHANGE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_8_lava_caverns_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0307007,-11.9993,0.843666,0x76400909;
+	}
+}

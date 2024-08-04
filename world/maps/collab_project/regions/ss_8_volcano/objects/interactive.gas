@@ -125,3 +125,42 @@
 		use_point_scids = 0x4800001b,0x4800001d;
 	}
 }
+[t:lever_glb_06,n:0x4800002f]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	  b is_usable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.707106,-0.00051003,-0.000509945,0.707107;
+	  p position = -0.0109482,6.40262,-0.132214,0xc65fabbf;
+	}
+}
+[t:lever_glb_06,n:0x48000030]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	  b is_usable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.707106,-0.00051003,-0.000509945,0.707107;
+	  p position = 0.0176271,6.40262,-0.092153,0xb1b2c8a5;
+	}
+}
+[t:lever_glb_06,n:0x4800003d]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	  b is_usable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.707106,-0.00051003,-0.000509945,0.707107;
+	  p position = -0.00132116,6.40262,-0.0890389,0xb8273062;
+	}
+}
