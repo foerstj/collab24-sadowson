@@ -881,7 +881,7 @@
 }
 [t:template,n:collab_ss_7_crypt_mounted_knight]
 {
-// Boss, balanced up from level 15, hard melee
+// Pseudo Boss, balanced up from level 15, hard melee
 	category_name = "ss_7_crypt_enemies";
 	doc = "Mounted_knight";
 	specializes = actor_evil;

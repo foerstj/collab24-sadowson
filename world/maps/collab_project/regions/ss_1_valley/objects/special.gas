@@ -2,7 +2,7 @@
 {
 	[activate_chapter]
 	{
-		chapter = "chapter_shattered_crossings";
+		chapter = "chapter_04";
 	}
 	[placement]
 	{
@@ -46,7 +46,7 @@
 	[interface_fade]
 	{
 	  f duration = 10;
-		interface = "ch04-empty";
+		interface = "chapter_4-shattered-crossings";
 	}
 	[placement]
 	{
@@ -333,36 +333,6 @@
 	  p position = -0.000315428,-6,-1.99507,0x3ee19cd7;
 	}
 }
-[t:trigger_generic,n:0x41000a23]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD CHANGE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("collab_ss_1_valley_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,5.96046e-008,0,1;
-	  p position = -0.0420837,0,-0.831947,0xbcf95156;
-	}
-}
 [t:trigger_generic,n:0x41000bef]
 {
 	[common]
@@ -498,7 +468,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.64586,0,-1.49174,0x56e3c743;
+	  p position = 1.66806,0,-1.49236,0x56e3c743;
 	}
 }
 [t:trigger_generic,n:0x41000caa]
@@ -951,70 +921,6 @@
 	  p position = 0.0071106,-2,-0.851685,0xfb514201;
 	}
 }
-[t:trigger_generic,n:0x41000c84]
-{
-	[common]
-	{
-		dev_instance_text = "SEND CHECK QUEST REQUEST";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x41000C7F,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.00088501,0,0.601028,0xa13b2785;
-	}
-}
-[t:trigger_generic,n:0x41000bc6]
-{
-	[common]
-	{
-		dev_instance_text = "UNLOCK DOORS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x41000BC4,0f,"default","every",0), doc("left door");
-				action* = send_world_message("we_req_activate",0x41000BC5,0f,"default","every",0), doc("right door");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0,1,0;
-	}
-	[placement]
-	{
-	  p position = -1.19643,-2,0.945038,0xd73e39f3;
-	}
-}
 [t:use_point,n:0x41000bcb]
 {
 	[placement]
@@ -1027,49 +933,6 @@
 	[placement]
 	{
 	  p position = -0.0164795,-2,-0.913437,0xd73e39f3;
-	}
-}
-[t:check_quest,n:0x41000c7f]
-{
-	[check_quest]
-	{
-		quest_name = "quest_warding_crystal";
-	  x send_to_scid = 0x41000BC6;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.3777,-2,1.15062,0xd73e39f3;
-	}
-}
-[t:trigger_generic,n:0x41000cff]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x41000A30,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x41000A33,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,0.500000,6.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.897354,9.53674e-007,-0.9021,0xd2b8dc0b;
 	}
 }
 [t:use_point,n:0x41000bdf]
@@ -1176,7 +1039,7 @@
 	}
 	[placement]
 	{
-	  p position = -0.646774,-5.5,59.0085,0x6cb27951;
+	  p position = -0.582809,-5.5,59.7352,0x6cb27951;
 	}
 }
 [t:trigger_generic,n:0x41000d53]
@@ -1189,6 +1052,7 @@
 			[*]
 			{
 				action* = mood_change("collab_ss_1_valley_3-castle-ext");
+				action* = fade_nodes(0x00000410,1,2,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,1.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1334,5 +1198,71 @@
 	[placement]
 	{
 	  p position = 2.79599,-3.02913,0.233578,0x1acab97f;
+	}
+}
+[t:trigger_generic,n:0x41000d61]
+{
+	[common]
+	{
+		dev_instance_text = "Activate Indicator";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x41000A23,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_entered_world",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  p position = 0.205249,0,1.08424,0x4275c55a;
+	}
+}
+[t:trigger_generic,n:0x41000e18]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD CHANGE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_1_valley_3-castle-ext");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.500000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = 0.0259094,-6,-0.0087738,0x3ee19cd7;
 	}
 }

@@ -101,6 +101,7 @@ state Talk$
 		else
 		{
 			m_Go$.GetConversation.RSSelectConversation( "conversation_bodrus_hello" );
+			PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 199, 1.0 );
 		}
 		TryAnim$('talk');
 		m_Go$.GetConversation.RSActivateDialogue();

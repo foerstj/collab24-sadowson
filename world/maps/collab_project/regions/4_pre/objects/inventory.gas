@@ -1,0 +1,42 @@
+[t:sd_g_c_bl_1h_avg,n:0x40000008]
+{
+	[placement]
+	{
+	  p position = 0.546995,0,1.02318,0xbac0d0a4;
+	}
+}
+[t:bd_ch_r_g_c_avg,n:0x4000000e]
+{
+	[placement]
+	{
+	  p position = 2.02581,0,1.26336,0xbac0d0a4;
+	}
+}
+[t:bo_ra_gr_bl_f_g_c_fin,n:0x40000018]
+{
+	[placement]
+	{
+	  p position = 3.25116,0,1.01016,0xbac0d0a4;
+	}
+}
+[t:gl_ra_gl_sl_f_g_c_fin,n:0x4000001e]
+{
+	[placement]
+	{
+	  p position = 3.19063,0,1.86427,0xbac0d0a4;
+	}
+}
+[t:he_op_pl_avg,n:0x40000024]
+{
+	[placement]
+	{
+	  p position = 0.885138,0,1.65582,0xbac0d0a4;
+	}
+}
+[t:sh_w_g_c_h_m_avg,n:0x40000028]
+{
+	[placement]
+	{
+	  p position = 1.53683,0,2.54682,0xbac0d0a4;
+	}
+}

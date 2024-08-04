@@ -14,7 +14,9 @@
 	[on_off_lever]
 	{
 	  f on_message_delay = 3;
+	  f on_message_delay_2 = 2;
 	  x on_scid = 0x42000038;
+	  x on_scid_2 = 0x42000042;
 	  b one_shot = true;
 	}
 	[placement]

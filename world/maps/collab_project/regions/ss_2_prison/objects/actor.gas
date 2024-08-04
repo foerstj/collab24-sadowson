@@ -46,6 +46,10 @@
 			* = conversation_guard_g_03_open;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_guard_g_03.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,-5.96046e-008,0,1;

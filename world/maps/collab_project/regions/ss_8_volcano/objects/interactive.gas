@@ -1,30 +1,18 @@
-[t:dsx_utraean_obj_01,n:0x48000005]
+[t:lever_glb_06,n:0x4800000e]
 {
-	[aspect]
+	[on_off_lever]
 	{
-	  f scale_multiplier = 0.5;
-	}
-	[common]
-	{
-		screen_name = "Reliquary";
+		off_message = we_req_activate;
+	  x off_scid = 0x48000001;
+	  x on_scid = 0x48000001;
+	  f reset_time = 20;
+	  f reset_time_2 = 20;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = -0.635918,0,3.94775,0x9a5610d4;
-	}
-}
-[t:lever_glb_06,n:0x4800000c]
-{
-	[aspect]
-	{
-	  b is_selectable = false;
-	  b is_usable = false;
-	}
-	[placement]
-	{
-	  q orientation = -0.707107,0,0,0.707107;
-	  p position = 0.0306068,6.40815,-0.130602,0x51e1f41e;
+	  q orientation = -0.707106,-0.00051003,-0.000509945,0.707107;
+	  p position = 0.0104796,6.40262,-0.119461,0x96756f91;
+		use_point_scids = 0x48000011,0x48000013,0x48000012,0x48000016,0x48000010,0x48000015,0x4800000f,0x48000014;
 	}
 }
 [t:dsx_utraean_obj_01,n:0x48000002]
@@ -39,19 +27,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = -0.694221,0,1.95694,0x8f272d75;
+	  q orientation = 0,0.707107,0,-0.707106;
+	  p position = 3.54825,0,3.39516,0x43e6fc19;
 	}
 }
-[t:lever_glb_06,n:0x4800000d]
-{
-	[placement]
-	{
-	  q orientation = -0.707107,0,0,0.707107;
-	  p position = -0.0163744,6.40815,-0.0940636,0xf0379002;
-	}
-}
-[t:dsx_utraean_obj_01,n:0x48000007]
+[t:dsx_utraean_obj_01,n:0x48000005]
 {
 	[aspect]
 	{
@@ -59,12 +39,12 @@
 	}
 	[common]
 	{
-		screen_name = "Temple Entrance";
+		screen_name = "Reliquary";
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = -0.625977,0,3.93451,0x96dcc858;
+	  q orientation = 0,0.707107,0,-0.707106;
+	  p position = 3.50049,0,-3.59283,0x43e6fc19;
 	}
 }
 [t:dsx_utraean_obj_01,n:0x48000006]
@@ -79,38 +59,24 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = -0.654663,0,1.93677,0x234e342c;
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -3.48703,0,-3.38319,0x43e6fc19;
 	}
 }
-[t:lever_glb_06,n:0x48000008]
+[t:dsx_utraean_obj_01,n:0x48000007]
 {
 	[aspect]
 	{
-	  b is_selectable = false;
-	  b is_usable = false;
+	  f scale_multiplier = 0.5;
+	}
+	[common]
+	{
+		screen_name = "Temple Entrance";
 	}
 	[placement]
 	{
-	  q orientation = -0.707107,0,0,0.707107;
-	  p position = 0.010562,6.40815,-0.107781,0xfd7e6824;
-	}
-}
-[t:lever_glb_06,n:0x4800000e]
-{
-	[on_off_lever]
-	{
-		off_message = we_req_activate;
-	  x off_scid = 0x48000001;
-	  x on_scid = 0x48000001;
-	  f reset_time = 20;
-	  f reset_time_2 = 20;
-	}
-	[placement]
-	{
-	  q orientation = -0.707107,0,0,0.707107;
-	  p position = -0.0018894,6.40815,-0.112948,0xf1a6e42f;
-		use_point_scids = 0x48000011,0x48000013,0x48000012,0x48000016,0x48000010,0x48000015,0x4800000f,0x48000014;
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -3.45976,0,3.59779,0x43e6fc19;
 	}
 }
 [t:lever_glb_05,n:0x48000017]
@@ -131,8 +97,8 @@
 	}
 	[placement]
 	{
-	  q orientation = -1.26441e-007,-0.707107,0.707107,-7.3757e-008;
-	  p position = -4.15563,-6.71382,0.845551,0x85402928;
+	  q orientation = -8.42937e-008,-0.707107,0.707107,-8.42937e-008;
+	  p position = -4.43801,-7.02932,0.880211,0x6cf5339d;
 		use_point_scids = 0x4800001c,0x4800001d;
 	}
 }
@@ -154,8 +120,8 @@
 	}
 	[placement]
 	{
-	  q orientation = -1.26441e-007,-0.707107,0.707107,-7.3757e-008;
-	  p position = -4.73398,17.2421,3.70282,0xffb582b6;
+	  q orientation = -5.52428e-006,-0.707107,0.707107,-5.4716e-006;
+	  p position = -4.72723,1.2421,3.71687,0x6cf5339d;
 		use_point_scids = 0x4800001b,0x4800001d;
 	}
 }

@@ -1,6 +1,6 @@
 [chapters]
 {
-	[chapter_shattered_crossings]
+	[chapter_04]
 	{
 		chapter_image = b_gui_ig_mnu_jnl_chapter_04;
 		screen_name = chapter iv: shattered crossings;
@@ -15,7 +15,7 @@
 {
 	[quest_athena]
 	{
-		chapter = chapter_shattered_crossings;
+		chapter = chapter_04;
 		quest_image = b_gui_ig_mnu_jnl_quest_19;
 		screen_name = lady athena and the broken bridge;
 		victory_sample = s_e_level_up_quest;
@@ -46,7 +46,7 @@
 	}
 	[quest_mercenaries]
 	{
-		chapter = chapter_shattered_crossings;
+		chapter = chapter_04;
 		quest_image = b_gui_ig_mnu_jnl_quest_14;
 		screen_name = the mercenary problem;
 		victory_sample = s_e_level_up_quest;
@@ -77,7 +77,7 @@
 	}
 	[quest_nymeria_sword]
 	{
-		chapter = chapter_shattered_crossings;
+		chapter = chapter_04;
 		quest_image = b_gui_ig_mnu_jnl_quest_41;
 		screen_name = nymeria's family sword;
 		victory_sample = s_e_level_up_quest;
@@ -116,7 +116,7 @@
 	}
 	[quest_warding_crystal]
 	{
-		chapter = chapter_shattered_crossings;
+		chapter = chapter_04;
 		quest_image = b_gui_ig_mnu_jnl_quest_24;
 		screen_name = return the warding crystal;
 		victory_sample = s_e_level_up_quest;

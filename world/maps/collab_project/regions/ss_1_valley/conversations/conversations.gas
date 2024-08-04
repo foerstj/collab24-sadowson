@@ -2,6 +2,7 @@
 {
 	[text*]
 	{
+		activate_quest* = quest_athena,0;
 		button_1_text = what danger?;
 		button_1_value = athena_undead;
 		screen_text = "I wish I could offer you better options.
@@ -120,6 +121,7 @@ If you can retrieve the Warding Crystal and return it to the Sleeping Catacombs,
 	{
 		activate_quest* = quest_mercenaries,0;
 		activate_quest* = quest_warding_crystal,0;
+		activate_quest* = quest_athena,1;
 		screen_text = "I will instruct my guards to unlock the jail cells for you. There is a secret passage... an emergency exit of sorts for us should we need it, that will allow you direct passage to the plains and to Lake Liamore.
 Confront the mercenaries and reclaim the Warding Crystal.
 Return it to the Sleeping Catacombs and I will reward you handsomly.";
@@ -140,6 +142,7 @@ Return it to the Sleeping Catacombs and I will reward you handsomly.";
 	{
 		activate_quest* = quest_mercenaries,0;
 		activate_quest* = quest_warding_crystal,0;
+		activate_quest* = quest_athena,1;
 		screen_text = "Not one for wasting time aye? Very well.
 A mercenary company, gladly taking gold given by the goblins in order to distract us and cause chaos, has stolen the Warding Crystal from the Sleeping Catacombs which have caused to undead to rise.
 

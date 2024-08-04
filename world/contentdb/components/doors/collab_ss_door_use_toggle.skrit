@@ -1,0 +1,478 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  door_basic.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2024 Gas Powered Games, Inc.  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//
+// Scid Bits Key
+// 0 = changed.
+// 1 = Done.  true = Done
+// 2 & 3 = State. 1 0 = closed, 0 0 = opening, 0 1 = open, 1 1 = closing
+//
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool   _server_only$        	= true;
+property string _doc$                	= "Door locked by a quest or global variable";
+property string _required_component$	= "placement";
+
+// Exported Properties
+//Use Toggle Stuff
+property string			Quest_Name$									doc = "Name of Quest to allow the door to action. Leave empty to ignore.";
+property int			Quest_State$			= -1				doc = "Quest State to allow the door to action. -1 to just check if the quest is active";
+property bool			Quest_Complete$			= false				doc = "If true, quest must be complete to allow the door to action";
+property string			Global_Variable$							doc = "Global Variable Bool to check state if door can action. Leave blank to ignore.";
+property bool			Global_Variable_State$	= true				doc = "Global Variable must be this state to allow the door to action";
+property bool			Show_Locked_Message$	= true				doc = "If true, door will show message if locked. If false, will disable door selection";
+property string			Locked_Message$								doc = "Message to show if the door is locked";
+
+// General Properties
+property bool			oneshot$				= false				doc = "If TRUE, door can only be opened one";
+property bool			usable_on_open$			= true				doc = "Door can always be actioned once opened";
+property bool			delete_on_open$			= false				doc = "Delete the door after it has opened";
+
+// Double Door
+property scid			second_door$								doc = "SCID of second door to open if double doors";
+
+//Close Effects
+property Scid			sfxpoint$									doc = "SCID of spawnpoint to attach sfx if applicable";
+property bool			close_sfx_on$			= false				doc = "Is the closing dust effect on?";
+property bool			close_sfx_at_sfxpoint$	= true				doc = "Use an external spawnpoint for the effect location?";
+property string			close_sfx$				= "door_dust"		doc = "Must Specify SiegeFX Script if Close SFX on";
+property string			close_sfx_params$		= ""				doc = "Parameters for the SiegeFX Script";
+property string			open_sfx$				= ""				doc = "Must Specify SiegeFX Script if Close SFX on";
+
+//Messaging
+property scid			msg_scid_opening$							doc = "SCID to send message to when door is opening.";
+property eWorldEvent	msg_type_opening$		= WE_REQ_ACTIVATE	doc = "Message to send when door is opening.";
+property scid			msg_scid_open$								doc = "SCID to send message to when door is open.";
+property eWorldEvent	msg_type_open$			= WE_REQ_ACTIVATE	doc = "Message to send when door is open.";
+
+property scid			msg_scid_closing$							doc = "SCID to send message to when door is closing.";
+property eWorldEvent	msg_type_closing$		= WE_REQ_ACTIVATE	doc = "Message to send when door is closing.";
+property scid			msg_scid_close$							doc = "SCID to send message to when door is closed.";
+property eWorldEvent	msg_type_close$		= WE_REQ_ACTIVATE	doc = "Message to send when door is closed.";
+
+						owner					= GoSkritComponent;
+			bool		Enable_Door$			= true;	//Initially presume it is safe to use the door.
+						
+//////////////////////////////////////////////////////////////////////////////
+
+void Door_Lock_Check$()
+{
+	int Current_Quest_State$;
+	#only( game )
+	[[
+	if( StringTool.IsEmpty( Quest_Name$ ) == false )
+	{
+		if( Quest_Complete$ )
+		{
+			if( Victory.IsQuestCompleted( Quest_Name$ ) )
+			{
+				//Quest is complete, enable door.
+				Enable_Door$ = true;
+			}
+			else
+			{
+				//Quest is not complete, disable door.
+				Enable_Door$ = false;
+			}
+		}
+		else
+		{
+			if( Quest_State$ > -1 )
+			{
+				Current_Quest_State$ = Victory.GetQuestOrder( Quest_Name$ );
+				if( Current_Quest_State$ >= Quest_State$ )
+				{
+					//Quest state is above required level to action the door.
+					Enable_Door$ = true;
+				}
+				else
+				{
+					//Quest state is not above required level to action the door.
+					Enable_Door$ = false;
+				}
+			}
+			else
+			{
+				//Just check if the quest is active.
+				if( Victory.IsQuestActive( Quest_Name$ ) )
+				{
+					//Quest is active, allow the door to action.
+					Enable_Door$ = true;
+				}
+				else
+				{
+					//Quest is not active, do not allow door to action.
+					Enable_Door$ = false;
+				}
+			}
+		}
+	}
+			
+	if( StringTool.IsEmpty( Global_Variable$ ) == false )
+	{	
+		if( GameAuditor.GetDb.GetBool( Global_Variable$ ) == Global_Variable_State$ )
+		{
+			//Global_Variable$ is equal to Global_Variable_State$ so enable the door.
+			Enable_Door$ = true;
+		}
+		else
+		{
+			//Global_Variable$ is NOT equal to Global_Variable_State$ so disable the door.
+			Enable_Door$ = false;
+		}
+	}
+	]]
+}
+
+event OnGoDrawDebugHud$
+{
+#only( game )
+[[
+	World.DrawDebugPoint(	owner.Go.Placement.Position, 
+							0.3, 
+							MakeColor( 0.0, 1.0, 0.0 ), 
+							0.333 , 
+							Debug.Format( "Bits: 0x%x\n", Godb.GetScidBits( owner.scid ) ),
+							MakeColor( 1.0, 1.0, 1.0 ));
+]]
+}
+
+startup state Wait$
+{
+	trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+	{
+		int bits$ = GoDb.GetScidBits( owner.scid );
+		
+		if( bits$ == 0 )	// Nothing has changed, we're in the default state.
+		{
+			Door_Lock_Check$;	//Check the state of the door. Always presume locked.
+			
+			if( Enable_Door$ == false )
+			{
+				//Door should be locked.
+				if( Show_Locked_Message$ == false )
+				{
+					owner.go.aspect.SSetIsSelectable( false );
+					owner.go.aspect.SSetIsUsable( false );
+				}
+				SetState Closed$;
+			}
+			else
+			{
+				//Door should be unlocked.
+				owner.go.aspect.SSetIsSelectable( true );
+				owner.go.aspect.SSetIsUsable( true );
+				SetState Closed$;
+			}
+			
+			//Door assumes starts closed when it entered the world so block the path
+			#only( game )
+			[[
+				owner.Go.Aspect.SetDoesBlockPath( true );
+			]]
+		}
+		else if( GoDb.GetScidBit( owner.scid, 1 ) ) //Door is done.
+		{
+			MCPManager.MakeRequest( owner.goid, PL_PLAYANIM, CHORE_OPEN, 0, 1);
+			SetState Done$;
+			return;
+		}
+		else if( Godb.GetScidBit( owner.scid, 2 ) )//Put the door back in the state it was in when it was unloaded.
+		{
+			if( GoDb.GetScidBit( owner.scid, 3 ) )
+			{
+				SetState Closing$;
+			}
+			else
+			{
+				SetState Closed$;
+			}
+		}
+		else
+		{
+			if( Godb.GetScidBit( owner.scid, 3 ) )
+			{
+				owner.Go.Aspect.SetDoesBlockPath( false );
+				MCPManager.MakeRequest( owner.goid, PL_PLAYANIM, CHORE_OPEN, 0, 1);
+				SetState Open$;
+			}
+			else
+			{
+				owner.Go.Aspect.SetDoesBlockPath( false );
+				SetState Opening$;
+			}
+		}
+	}
+	
+	//Its possible for the door to not enter a usable state when entering the world, so this presumes that it must be locked.
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if( e$ == WE_REQ_USE )
+		{
+			goid user$ = msg$.GetSendFrom();
+			if( user$.IsValid )
+			{
+				if( StringTool.IsEmpty( Locked_Message$ ) == false )
+				{
+					Report.SScreen( Locked_message$ );
+				}
+				owner.Go.RCPlayVoiceSound( user$.Go.Player.MachineId, "door_blocked", true);
+				owner.Go.RCPlayVoiceSound( user$.Go.Player.MachineId, "door_locked", true);
+			}
+		}
+	}
+	
+	event OnExitState$
+	{
+		// Set the used Bits
+		Godb.SetScidBit( owner.scid, 0, true );
+	}
+}
+
+state Closed$
+{
+	transition -> Opening$: OnGoHandleMessage( WE_REQ_ACTIVATE );//Intentional bypass for quest/variable requests
+	
+	event OnEnterState$
+	{
+        // Set the closed Bits
+		Godb.SetScidBit( owner.scid, 2, true );
+		
+        // Set the closed Bits
+		Godb.SetScidBit( owner.scid, 3, false );
+		
+		owner.Go.Aspect.SetDoesBlockPath( true );
+		
+	}
+	
+	event OnExitState$
+	{
+		owner.Go.SPlayMaterialSound( "door_open", "generic", true);
+		
+		if ( msg_scid_opening$.isvalid() )
+		{
+			SSendWorldMessage( msg_type_opening$, owner.Goid, msg_scid_opening$ );
+		}
+		
+		Report.ReportF("jedi","[%8.3f] Transition [Closed$ -> Opening$] for %s\n",WorldTime.time,owner.goid.go.templatename);
+		
+		owner.Go.Aspect.SetDoesBlockPath( false );
+		
+		if ( second_door$.isvalid() )
+	    {
+			SPostWorldMessage( WE_REQ_ACTIVATE, owner.Goid, second_door$, 0);
+	    }
+
+	    Owner.Go.Aspect.SSetIsSelectable( false );
+		Owner.Go.Aspect.SSetIsUsable( false );
+
+	}
+	
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		goid user$ = msg$.GetSendFrom();
+		if( e$ == WE_REQ_USE )
+		{
+			Door_Lock_Check$;
+			if( Enable_Door$ )
+			{
+				SetState Opening$;
+			}
+			else
+			{
+				if( StringTool.IsEmpty( Locked_Message$ ) == false )
+				{
+					Report.SScreen( Locked_message$ );
+				}
+				owner.Go.RCPlayVoiceSound( user$.Go.Player.MachineId, "door_blocked", true);
+				owner.Go.RCPlayVoiceSound( user$.Go.Player.MachineId, "door_locked", true);
+			}
+		}
+	}
+}
+
+state Opening$
+{
+	transition
+	{
+		-> Open$: OnGoHandleMessage( WE_ANIM_DONE );
+	}
+	event OnEnterState$
+	{
+		// Set the closed Bits
+		Godb.SetScidBit( owner.scid, 2, false );
+		
+		// Set the closed Bits
+		Godb.SetScidBit( owner.scid, 3, false );
+		
+		// Request animation
+		MCPManager.MakeRequest( owner.goid, PL_OPEN);
+	}
+	
+	event OnExitState$
+	{
+		Report.ReportF("jedi","[%8.3f] Transition [Opening$ -> Open$] for %s\n",WorldTime.time,owner.goid.go.templatename);
+		
+		if ( open_sfx$ != "")
+		{
+			SiegeFx.SRunScript( open_sfx$, owner.Goid, owner.Goid, "", owner.Goid, WE_ANIM_DONE );
+		}
+		
+		if ( msg_scid_open$.isvalid() )
+		{
+			SSendWorldMessage( msg_type_open$, owner.Goid, msg_scid_open$ );
+		}
+			
+		owner.Go.SPlayMaterialSound( "door_opened", "generic", true);
+		
+        if ( delete_on_open$ )
+    	{
+    		PostWorldMessage( WE_REQ_DELETE, owner.Goid, owner.Goid, 2.0 );
+    		SetState Done$;
+    		return;
+    	}
+        if ( oneshot$ )
+        {
+            SetState Done$;
+            return;
+		}
+		if ( usable_on_open$ )
+		{
+			Owner.Go.Aspect.SSetIsSelectable( true );
+			Owner.Go.Aspect.SSetIsUsable( true );
+		}
+	}
+}
+
+state Open$
+{
+	transition -> Closing$: OnGoHandleMessage( WE_REQ_ACTIVATE );
+
+	event OnEnterState$
+    {
+        // Set the closed Bits
+		Godb.SetScidBit( owner.scid, 2, false );
+		
+		 // Set the closed Bits
+		Godb.SetScidBit( owner.scid, 3, true );
+		
+	    Owner.Go.Aspect.SSetIsSelectable( false );
+		Owner.Go.Aspect.SSetIsUsable( false );
+
+	}
+	event OnExitState$
+	{
+		Report.ReportF("jedi","[%8.3f] Transition [Open$ -> Closing$] for %s\n",WorldTime.time,owner.goid.go.templatename);
+
+		owner.Go.SPlayMaterialSound( "door_close", "generic", true);
+
+	    if ( second_door$.isvalid() )
+	    {
+			//Send World Message
+			SPostWorldMessage( WE_REQ_ACTIVATE, owner.Goid, second_door$, 0 );
+		}
+		
+	    Owner.Go.Aspect.SSetIsSelectable( false );
+		Owner.Go.Aspect.SSetIsUsable( false );
+	}
+	
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		goid user$ = msg$.GetSendFrom();
+		if( e$ == WE_REQ_USE )
+		{
+			Door_Lock_Check$;
+			if( Enable_Door$ )
+			{
+				SetState Opening$;
+			}
+			else
+			{
+				if( StringTool.IsEmpty( Locked_Message$ ) == false )
+				{
+					Report.SScreen( Locked_message$ );
+				}
+				owner.Go.RCPlayVoiceSound( user$.Go.Player.MachineId, "door_blocked", true);
+				owner.Go.RCPlayVoiceSound( user$.Go.Player.MachineId, "door_locked", true);
+			}
+		}
+	}
+}
+
+state Closing$
+{
+	transition
+	{
+		-> Closed$: OnGoHandleMessage( WE_ANIM_DONE );
+	}
+	
+	event OnEnterState$
+	{
+		// Set the closed Bits
+		Godb.SetScidBit( owner.scid, 2, true );
+		
+		// Set the closed Bits
+		Godb.SetScidBit( owner.scid, 3, true );
+		
+		// Request animation
+		MCPManager.MakeRequest( owner.goid, PL_CLOSE);
+	}
+	
+	event OnExitState$
+	{
+		if( msg_scid_close$.IsValid )
+		{
+			SSendWorldMessage( msg_type_close$, owner.Goid, msg_scid_close$ );
+		}
+		
+		Report.ReportF("jedi","[%8.3f] Transition [Closing$ -> Closed$] for %s\n",WorldTime.time,owner.goid.go.templatename);
+		Report.ReportF("jedi","close_sfx_at_sfxpoint = %s\n",close_sfx_at_sfxpoint$?"true":"false");
+		Report.ReportF("jedi","close_sfx_on = %s\n",close_sfx_on$?"true":"false");
+
+		owner.Go.Aspect.SetDoesBlockPath( true );
+
+        if ((close_sfx_at_sfxpoint$) && (close_sfx_on$))
+		{
+   			if ( SfxPoint$.IsValid() && SfxPoint$.goid.isvalid() )
+			{
+				Report.ReportF("jedi","[%8.3f] Starting an sfxpoint [%s][%s] for %s at %s\n",WorldTime.time,close_sfx$,close_sfx_params$,owner.goid.go.templatename,sfxPoint$.Goid.go.templatename);
+				SFxSID ret$ = SiegeFx.SRunScript( close_sfx$, sfxPoint$.Goid, sfxPoint$.Goid, close_sfx_params$, sfxPoint$.Goid, WE_ANIM_DONE );
+				Report.ReportF("jedi","Returned an ID value of %d\n",ret$);
+			}
+		}
+        else if (close_sfx_on$)
+		{
+			Report.ReportF("jedi","[%8.3f] Starting a non-sfxpoint [%s][%s] for %s\n",WorldTime.time,close_sfx$,close_sfx_params$,owner.goid.go.templatename);
+			SFxSID ret$ = SiegeFx.SRunScript( close_sfx$, owner.Goid, owner.Goid, close_sfx_params$, owner.Goid, WE_ANIM_DONE );
+			Report.ReportF("jedi","Returned an ID value of %d\n",ret$);
+		}		
+		owner.Go.SPlayMaterialSound( "door_closed", "generic", true);
+
+		Owner.Go.Aspect.SSetIsSelectable( true );
+		Owner.Go.Aspect.SSetIsUsable( true );
+
+	}
+}
+
+State Done$
+{
+	event OnEnterState$
+	{
+		// Set the done Bits
+		Godb.SetScidBit( owner.scid, 1, true );
+		
+		Owner.Go.Aspect.SSetIsSelectable( false );
+		Owner.Go.Aspect.SSetIsUsable( false );
+	}
+}

@@ -2,7 +2,8 @@
 {
 	[text*]
 	{
-		screen_text = "I've been part of the guard here for well over ten years now and I ain't ever heard of a secret door down here that opens to the plains. You must be mistaken.";
+		screen_text = "I've been part of the guard here for well over ten years now and I ain't ever heard of a secret door down here that opens to the plains. You must be mistaken.
+That being said, I seen Lady Athena have a weird fascination with the beds in the cells. Every so often wanting to check that they're 'working' - whatever that means...";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -22,6 +23,21 @@ I guess... we learn something new every day?";
 	  f scroll_rate = 10.000000;
 	}
 }
+[conversation_guard_g_10]
+{
+	[text*]
+	{
+	  i order = 0;
+		screen_text = "Not sure what your bellyaching is. I'm content to stay down here until things blow over.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Guard a bunch of empty rooms! What could be better?
+And if anyone touches them, well then that'd be bad innit?";
+	  f scroll_rate = 10.000000;
+	}
+}
 [conversation_guard_m_05]
 {
 	[text*]
@@ -35,21 +51,6 @@ I guess... we learn something new every day?";
 		screen_text = "Do you think we accidentally annoyed Lady Athena?
 
 No, that can't be it. Angering her would be a death scentence we'd never dare.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conversation_guard_g_10]
-{
-	[text*]
-	{
-	  i order = 0;
-		screen_text = "Not sure what your bellyaching is. I'm content to stay down here until things blow over.";
-	  f scroll_rate = 10.000000;
-	}
-	[text*]
-	{
-		screen_text = "Guard a bunch of empty rooms! What could be better?
-And if anyone touches them, well then that'd be bad innit?";
 	  f scroll_rate = 10.000000;
 	}
 }

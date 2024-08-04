@@ -1,0 +1,7 @@
+[t:tsd,n:b_gui_nis_ch04-shattered-crossing]
+{
+  b dither = true;
+  b hasalpha = true;
+    layer1texture1 = b_gui_nis_ch04-shattered-crossing;
+  i texturedetail = 0;
+}

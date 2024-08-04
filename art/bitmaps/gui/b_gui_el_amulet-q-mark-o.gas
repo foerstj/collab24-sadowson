@@ -1,0 +1,7 @@
+[t:tsd,n:b_gui_el_amulet-q-mark-o]
+{
+  b dither = true;
+  b hasalpha = true;
+    layer1texture1 = b_gui_el_amulet-q-mark-o;
+  i texturedetail = 0;
+}

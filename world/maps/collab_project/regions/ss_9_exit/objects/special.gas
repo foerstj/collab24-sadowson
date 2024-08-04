@@ -40,3 +40,90 @@
 	  p position = 0.00323582,4.3159,1.63928,0x9de96a95;
 	}
 }
+[t:trigger_generic,n:0x49000005]
+{
+	[common]
+	{
+		dev_instance_text = "FADE VALLEY NODES";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000410,1,2,-1,"out:instant"), doc("Caps");
+				action* = fade_nodes(0x00000410,1,-1,-1,"out:instant"), doc("Floor");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(0.500000,0.500000,5.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.678185,6,11.0334,0xbe0baa16;
+	}
+}
+[t:trigger_generic,n:0x49000011]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000410,1,-1,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.99982,-9.45,16.9168,0xe646c5f3;
+	}
+}
+[t:trigger_generic,n:0x49000024]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000410,1,-1,-1,"in");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.00227,-6.8,10.8951,0xe646c5f3;
+	}
+}

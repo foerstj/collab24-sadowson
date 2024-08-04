@@ -1,0 +1,14 @@
+[t:colab_ss_starting-exp,n:0x40000007]
+{
+	[colab_ss_starting-exp]
+	{
+	  i dexterity_stat = 14;
+	  i intelligence_stat = 11;
+	  i melee_skill = 15;
+	  i strength_stat = 19;
+	}
+	[placement]
+	{
+	  p position = 0.316728,0,-1.32531,0xbac0d0a4;
+	}
+}

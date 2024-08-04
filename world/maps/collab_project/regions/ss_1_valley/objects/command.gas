@@ -1,18 +1,3 @@
-[t:colab_ss_starting-exp,n:0x41000d61]
-{
-	[colab_ss_starting-exp]
-	{
-	  i dexterity_stat = 15;
-	  i intelligence_stat = 11;
-	  i melee_skill = 20;
-	  i strength_stat = 22;
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = -1.31267,0,-1.92346,0xbcf95156;
-	}
-}
 [t:collab_ss_bridge_guards_status,n:0x41000bed]
 {
 	[collab_ss_bridge_guards_status]
@@ -122,5 +107,18 @@
 	[placement]
 	{
 	  p position = 0.959167,0.5,0.276062,0x274b01b6;
+	}
+}
+[t:ee_npc_indicator_command,n:0x41000a23]
+{
+	[ee_npc_indicator_command]
+	{
+	  i indicator = 107;
+	  x target_actor = 0x41000BB0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.0143,0,0.496718,0x4275c55a;
 	}
 }

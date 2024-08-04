@@ -54,6 +54,8 @@ state HoldFire$
 
 state Execute$
 {
+	transition -> fix_stats$: OnTimer( 1 );
+	
 	event OnEnterState$
 	{
 		goid player$ = Server.ScreenHero.goid;
@@ -85,6 +87,16 @@ state Execute$
 				Rules.RSSetNaturalSkillLevel( player$, "combat magic", Combat_skill$ );
 			}
 		}
+		This.CreateTimer( 1, 1 );
+		
+	}
+}
+
+state fix_stats$
+{
+	event OnEnterState$
+	{
+		goid player$ = Server.ScreenHero.goid;
 		
 		//Fix an issue where a player would be left in a weakened state
 		float max_life$ = player$.go.aspect.MaxLife;

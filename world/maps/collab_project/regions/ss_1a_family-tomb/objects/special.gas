@@ -187,35 +187,6 @@
 	  p position = -0.00465775,-2.9,-2.98843,0x9d0d2001;
 	}
 }
-[t:trigger_generic,n:0x41a00010]
-{
-	[common]
-	{
-		dev_instance_text = "CHECK NYMERIA QUEST ACTIVE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x41A00019,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.0254626,-1.5,-1.47693,0x8da543a4;
-	}
-}
 [t:trigger_generic,n:0x41a00040]
 {
 	[common]
@@ -244,47 +215,6 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = 0.00843716,-1.5,1.50633,0x8da543a4;
-	}
-}
-[t:check_quest,n:0x41a00019]
-{
-	[check_quest]
-	{
-		quest_name = "quest_nymeria_sword";
-	  x send_to_scid = 0x41A0001A;
-	}
-	[placement]
-	{
-	  p position = 1.01538,0,1.37611,0x08ff7315;
-	}
-}
-[t:trigger_generic,n:0x41a0001a]
-{
-	[common]
-	{
-		dev_instance_text = "QUEST ENABLE DOOR";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x41A0000B,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.713639,0,1.16941,0x08ff7315;
 	}
 }
 [t:use_point,n:0x41a00046]

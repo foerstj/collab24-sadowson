@@ -1,0 +1,167 @@
+[t:template,n:collab_ss_1a_family-tomb_quest_door]
+{
+	specializes		= base_door;
+	doc				= "collab_ss_1a_family-tomb_quest_door";
+    category_name   = "doors";
+	
+	[aspect]
+    {
+    	model		= m_i_glb_door-gendungeon-02;
+    	textures:0 	= b_i_glb_door-gendungeon-01; 
+    	use_range   = 3.0;
+    	material 	= wood_medium;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-gendungeon-01-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-gendungeon-01-close;
+			}
+		}
+	}
+	[collab_ss_door_use_toggle]
+	{
+		Locked_message = "This door appears to be jammed shut.";
+		open_sfx = "door_shake";
+        oneshot = true;
+        delete_on_open = true; 
+	}
+}
+[t:template,n:collab_ss_1_keep_tall_left]
+{
+	specializes		= base_door;
+	doc				= "collab_ss_1_keep_tall_left";
+    category_name   = "doors";
+
+    aspect:model		=	m_i_glb_door-keep-01;
+    aspect:textures:0	=   b_i_glb_door-keep-01;
+    aspect:material     =   collab_door_large;
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix 		= a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-keep-01-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-keep-01-close;
+			}
+		}
+	}
+	[collab_ss_door_use_toggle]
+	{
+		Locked_message = "This door is locked.";
+	}
+}
+[t:template,n:collab_ss_1_keep_tall_right]
+{
+	specializes		= base_door;
+	doc				= "collab_ss_1_keep_tall_right";
+    category_name   = "doors";
+
+    aspect:model		=	m_i_glb_door-keep-01-R;
+    aspect:textures:0	=   b_i_glb_door-keep-01;
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix 		= a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-keep-01-R-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-keep-01-R-close;
+			}
+		}
+	}
+	[collab_ss_door_use_toggle]
+	{
+		Locked_message = "This door is locked.";
+	}
+}
+[t:template,n:collab_ss_1_keep_short_left]
+{
+	specializes		= base_door;
+	doc				= "collab_ss_1_keep_short_left";
+    category_name   = "doors";
+
+   	aspect:material 	= collab_door_small;
+    aspect:model		=	m_i_glb_door-keep-02;
+    aspect:textures:0	=   b_i_glb_door-keep-02;
+
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix 		= a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-keep-02-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-keep-02-close;
+			}
+		}
+	}
+	[collab_ss_door_use_toggle]
+	{
+		Locked_message = "This door is locked.";
+	}
+}
+[t:template,n:collab_ss_1_keep_short_right]
+{
+	specializes		= base_door;
+	doc				= "collab_ss_1_keep_short_right";
+    category_name   = "doors";
+
+    aspect:model		=	m_i_glb_door-keep-02-R;
+    aspect:textures:0	=   b_i_glb_door-keep-02;
+
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix 		= a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-keep-02-R-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-keep-02-R-close;
+			}
+		}
+	}
+	[collab_ss_door_use_toggle]
+	{
+		Locked_message = "This door is locked.";
+	}
+}

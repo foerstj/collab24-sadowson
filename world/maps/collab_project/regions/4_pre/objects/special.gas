@@ -1,0 +1,29 @@
+[t:trigger_generic,n:0x40000006]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_1a_family-tomb_1");
+				action* = send_world_message("we_req_activate",0x40000007,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(2.500000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 2.05306,0,-2.08218,0xbac0d0a4;
+	}
+}

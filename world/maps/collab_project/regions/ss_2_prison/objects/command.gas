@@ -4,6 +4,7 @@
 	{
 	  i animation = 1936290865;
 	  x client_scid = 0x42000030;
+	  b initially_active = true;
 	}
 	[placement]
 	{

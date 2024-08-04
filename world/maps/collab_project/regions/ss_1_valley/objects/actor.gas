@@ -284,8 +284,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.13739,0,1.96901,0xfaafa64c;
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -0.875015,0,1.84285,0x4275c55a;
 	}
 }
 [t:collab_ss_1_valley_wolf_black,n:0x41000dcf]
@@ -377,30 +377,6 @@
 }
 [t:collab_ss_guard_g_09,n:0x41000bee]
 {
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x41000A1C,0f,"default","every",0), doc("front left door");
-				action* = send_world_message("we_req_activate",0x41000A1B,0f,"default","every",0), doc("front right door");
-				action* = send_world_message("we_req_activate",0x41000A1E,0f,"default","every",0), delay(1), doc("rear left door");
-				action* = send_world_message("we_req_activate",0x41000A1D,0f,"default","every",0), delay(1), doc("rear right door");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_end",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
 	[conversation]
 	{
 		[conversations]

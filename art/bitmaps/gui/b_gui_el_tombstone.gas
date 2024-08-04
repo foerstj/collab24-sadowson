@@ -1,0 +1,7 @@
+[t:tsd,n:b_gui_el_tombstone]
+{
+  b dither = true;
+  b hasalpha = true;
+    layer1texture1 = b_gui_el_tombstone;
+  i texturedetail = 0;
+}

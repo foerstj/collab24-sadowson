@@ -3,7 +3,7 @@
 	created = flupsnpups,flups;
 	description = none;
   x guid = 0x00000400;
-	lastmodified = FLUPSNPUPS,flups;
+	lastmodified = BATTLESTATION,dowde;
   x mesh_range = 0x00000400;
 	notes = none;
   x scid_range = 0x00000400;

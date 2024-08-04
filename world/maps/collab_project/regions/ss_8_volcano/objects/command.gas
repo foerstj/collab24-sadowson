@@ -2,10 +2,10 @@
 {
 	[nodal_tex_anim]
 	{
-	  x siege_node = 0xFFB582B6;
+	  x siege_node = 0xE2BA307F;
 	}
 	[placement]
 	{
-	  p position = 1.28451,0.126729,0.495605,0xaa9c1023;
+	  p position = 1.12664,0.15,-0.0853424,0x0378d6c2;
 	}
 }

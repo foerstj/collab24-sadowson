@@ -1,0 +1,7 @@
+[t:tsd,n:b_gui_el_hand-exclamation]
+{
+  b dither = true;
+  b hasalpha = true;
+    layer1texture1 = b_gui_el_hand-exclamation;
+  i texturedetail = 0;
+}
