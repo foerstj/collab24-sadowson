@@ -1,5 +1,9 @@
 [t:door_glb_gendungeon_01,n:0x41a0001b]
 {
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x41A000B5;
+	}
 	[placement]
 	{
 	  p position = 0.000810415,-1.5,0.00374913,0x1fa35fda;
@@ -24,6 +28,10 @@
 }
 [t:door_glb_gendungeon_01,n:0x41a0001d]
 {
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x41A000CD;
+	}
 	[placement]
 	{
 	  p position = 0.000820979,-1.5,0.00256443,0x3c030693;
@@ -54,7 +62,9 @@
 	  f off_message_delay = 1;
 	  x off_scid = 0x41A00002;
 	  f on_message_delay = 1;
+	  f on_message_delay_2 = 1;
 	  x on_scid = 0x41A00002;
+	  x on_scid_2 = 0x41A000B3;
 	  f reset_time = 6;
 	  f reset_time_2 = 6;
 	}
@@ -67,6 +77,10 @@
 }
 [t:door_glb_gendungeon_03,n:0x41a00031]
 {
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x41A00105;
+	}
 	[placement]
 	{
 	  p position = 0.00185394,-1.5,0.0919707,0xe2667370;
@@ -74,6 +88,10 @@
 }
 [t:door_glb_gendungeon_03,n:0x41a00034]
 {
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x41A00099;
+	}
 	[placement]
 	{
 	  p position = -0.00198221,-1.5,-0.00863647,0x8da543a4;
@@ -81,6 +99,10 @@
 }
 [t:door_glb_gendungeon_03,n:0x41a00033]
 {
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x41A00106;
+	}
 	[placement]
 	{
 	  p position = 0.000999451,-1.5,0.0751915,0x8c3ebb89;
@@ -88,6 +110,10 @@
 }
 [t:door_glb_gendungeon_01,n:0x41a00036]
 {
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x41A00019;
+	}
 	[placement]
 	{
 	  p position = 0.00245667,-1.5,-0.0129509,0xd8fe7f2b;
@@ -99,8 +125,10 @@
 	{
 	  f on_message_delay = 1;
 	  f on_message_delay_2 = 5;
+	  f on_message_delay_3 = 1;
 	  x on_scid = 0x41A00003;
 	  x on_scid_2 = 0x41A00043;
+	  x on_scid_3 = 0x41A0001A;
 	  b one_shot = true;
 	}
 	[placement]
@@ -118,6 +146,7 @@
 	}
 	[collab_ss_door_use_toggle]
 	{
+	  x msg_scid_opening = 0x41A0000B;
 		quest_name = "quest_nymeria_sword";
 	}
 	[placement]
@@ -127,6 +156,10 @@
 }
 [t:door_glb_gendungeon_01,n:0x41a00038]
 {
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x41A0008B;
+	}
 	[placement]
 	{
 	  p position = 0.00063324,-1.5,-0.0227361,0x6680f506;
@@ -160,7 +193,9 @@
 	  f off_message_delay = 1;
 	  x off_scid = 0x41A00001;
 	  f on_message_delay = 1;
+	  f on_message_delay_2 = 1;
 	  x on_scid = 0x41A00001;
+	  x on_scid_2 = 0x41A000B4;
 	  f reset_time = 6;
 	  f reset_time_2 = 6;
 	}

@@ -48,4 +48,12 @@
 	0x41a0061b = t_xxx_dgn_wal_ex-secretwal-thin-a;
 	0x41a0061c = t_xxx_dgn_wal_ex-thick-a;
 	0x41a0061d = t_xxx_dgn_wal_ex-thin-a;
+	0x41a0062f = t_xxx_dgn_cap-02x02-a;
+	0x41a00630 = t_xxx_dgn_cap-02x04-2-a;
+	0x41a00631 = t_xxx_dgn_cap-02x04-a;
+	0x41a00633 = t_xxx_dgn_cap-04x04-a;
+	0x41a00635 = t_xxx_dgn_cap-08x04-a;
+	0x41a00636 = t_xxx_dgn_cap-08x08-a;
+	0x41a0063a = t_xxx_dgn_cap-archway-b;
+	0x41a0063d = t_xxx_dgn_cap-stairway-b;
 }
