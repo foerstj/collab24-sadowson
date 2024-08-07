@@ -22,3 +22,38 @@
 	  p position = 3.10427,-5,26.795,0x800b9b55;
 	}
 }
+[t:sign_glb_01,n:0x4400032b]
+{
+	[common]
+	{
+		screen_name = "Pergamon";
+	}
+	[placement]
+	{
+	  p position = -1.8446,0.127588,0.598572,0xb494f4dc;
+	}
+}
+[t:sign_glb_01,n:0x44000353]
+{
+	[common]
+	{
+		screen_name = "Lake Lianore";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.63412,-0.239012,0.51001,0xb494f4dc;
+	}
+}
+[t:sign_glb_01,n:0x44000354]
+{
+	[common]
+	{
+		screen_name = "Larissa Polis";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.6348,-0.0431576,0.507606,0xb494f4dc;
+	}
+}

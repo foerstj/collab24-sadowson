@@ -1,0 +1,85 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  ee_sphere_kill.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2024 Gas Powered Games, Inc.  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+// Reserved Tags
+property	bool	_server_only$			= true;
+property	string			_doc$				= "Kill everything in a specified radius attached to a certain alignment. Activate with a WE_REQ_ACTIVATE";
+property 	string	_required_component$	= "placement";
+
+//Exported Properties
+property eActorAlignment	Target_Alignment$	= aa_evil		doc = "Alignment type to kill. Valid types are AA_EVIL, AA_NEUTRAL, AA_GOOD";
+property int				Radius$				= 10			doc = "Radius of kill sphere.";
+
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+event OnGoDrawDebugHud$
+{
+	World.DrawDebugSphere( owner.go.Placement.Position,
+							Radius$, MakeColor( 1.0, 0.0, 0.0 ),
+							"Kill Radius" );
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+{
+	if( e$ == WE_REQ_ACTIVATE )
+	{
+		if( Radius$ > 1 )
+		{
+			
+			AIQuery.TempGopColl1.Clear;
+			AIQuery.TempGopColl2.Clear;
+			AIQuery.GetOccupantsInSphere( owner.Go.Placement.Position, Radius$, AiQuery.TempGopColl1 );
+			
+			AIQuery.TempQTColl1.Clear;
+			AIQuery.TempQtColl1.Add( QT_ACTOR );
+			
+			//Add actors to the GOPColl subjective to their alignment.
+			if( Target_Alignment$ == aa_evil )
+			{
+				AIQuery.TempQtColl1.Add( QT_EVIL );
+			}
+			else if( Target_Alignment$ == aa_good )
+			{
+				AIQuery.TempQtColl1.Add( QT_GOOD );
+			}
+			else if( Target_Alignment$ == aa_neutral )
+			{
+				AIQuery.TempQtColl1.Add( QT_NEUTRAL );
+			}
+			
+			AIQuery.Get( owner.go, AIQuery.TempQTColl1, AIQuery.TempGopColl1, AIQuery.TempGopColl2 );
+			
+			int i$ = 0;
+			int iend$ = AIQuery.TempGopColl2.Size();
+			go temp_target$;
+			
+			while( i$ < iend$ )
+			{
+				temp_target$ = AIQuery.TempGopColl2.Get( i$ );
+				
+				if( temp_target$ != NULL )
+				{
+					//Kill the target!
+					Rules.DamageGo( temp_target$.goid, temp_target$.goid, temp_target$.goid, 999999, false, false );
+				}
+				i$ += 1;
+			}
+		}
+		else
+		{
+			Report.Warning( "ee_sphere_kill.skrit: Kill radius is less than 1! Can't fire this small without fanatical errors!" );
+		}
+	}
+}

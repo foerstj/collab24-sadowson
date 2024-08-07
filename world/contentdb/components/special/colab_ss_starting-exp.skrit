@@ -29,6 +29,7 @@ property int		Combat_skill$		= 0			doc = "What level to set Combat Magic to.";
 property int		Strength_stat$		= 0			doc = "What level to set Strength to.";
 property int		Dexterity_stat$		= 0			doc = "What level to set Dexterity to.";
 property int		Intelligence_stat$	= 0			doc = "What level to set Intelligence to.";
+property int		Speed_Modifier$		= 0			doc = "Modify the actors speed by this value. 0 to ignore. Default move speed is 4.5";
 
 owner = GoSkritComponent;
 
@@ -107,5 +108,10 @@ state fix_stats$
 		
 		//Self Destruct
 		GoDb.SMarkForDeletion( owner.goid );
+		
+		if( Speed_Modifier$ != 0 )
+		{
+			player$.go.body.SetAvgMoveVelocity( Speed_Modifier$ );
+		}
 	}
 }

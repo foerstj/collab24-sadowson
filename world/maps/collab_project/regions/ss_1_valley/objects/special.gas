@@ -547,6 +547,8 @@
 	[common]
 	{
 		dev_instance_text = "Activate Indicator";
+	  b is_multi_player = false;
+	  b is_single_player = false;
 		[instance_triggers]
 		{
 			[*]

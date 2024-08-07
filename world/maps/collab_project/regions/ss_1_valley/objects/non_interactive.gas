@@ -12507,6 +12507,13 @@
 	  p position = 1.76099,0,-0.275225,0xf58370d4;
 	}
 }
+[t:post_swp_01,n:0x41000be6]
+{
+	[placement]
+	{
+	  p position = 3.49171,0.0186281,1.47336,0x40faf325;
+	}
+}
 [t:bush_grs_rhod_02,n:0x410001ab]
 {
 	[aspect]
@@ -15599,7 +15606,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.983597,0,0.18038;
+	  q orientation = 0,0.983597,0,-0.18038;
 	  p position = 3.66853,7.62939e-006,1.15965,0xa3c2878d;
 	}
 }

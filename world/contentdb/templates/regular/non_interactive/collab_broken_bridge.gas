@@ -1,0 +1,10 @@
+[t:template,n:collab_ss_broken_bridge]
+{
+	category_name = "outdoor";
+	doc = "collab_ss_broken_bridge";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_broken-bridge;
+	}
+}

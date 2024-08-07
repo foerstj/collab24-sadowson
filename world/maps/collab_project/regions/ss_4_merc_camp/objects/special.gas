@@ -945,40 +945,6 @@
 	  p position = 2.7724,0,1.80717,0x1d801915;
 	}
 }
-[t:trigger_generic,n:0x44000808]
-{
-	[common]
-	{
-		dev_instance_text = "SPAWN MERCENARIES";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x440007F7,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_entered_world",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,0.5,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.763138,0,-0.0941696,0xad03ecbf;
-	}
-}
 [t:trigger_generic,n:0x44000807]
 {
 	[common]
@@ -1045,6 +1011,40 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 0.252823,-0.867913,-1.3541,0x55de6de7;
+	}
+}
+[t:trigger_generic,n:0x44000808]
+{
+	[common]
+	{
+		dev_instance_text = "SPAWN MERCENARIES";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x440007F7,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_entered_world",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.763138,0,-0.0941696,0xad03ecbf;
 	}
 }
 [t:trigger_generic,n:0x44000805]

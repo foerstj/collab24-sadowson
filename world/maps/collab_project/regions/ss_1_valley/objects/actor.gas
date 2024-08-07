@@ -334,6 +334,13 @@
 			* = conversation_bodrus_hello;
 		}
 	}
+	[ee_npc_indicator]
+	{
+	  i quest_indicator_start = 107;
+		quest_name = "quest_athena";
+	  i quest_state_finish = -1;
+	  i quest_state_start = -1;
+	}
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_collab_bodrus.skrit;
@@ -796,6 +803,15 @@
 			* = conversation_athena_short;
 			* = conversation_athena_undead;
 		}
+	}
+	[ee_npc_indicator]
+	{
+	  i quest_indicator_before = 126;
+	  i quest_indicator_finish = 124;
+	  i quest_indicator_start = 107;
+		quest_name = "quest_warding_crystal";
+	  i quest_state_finish = 4;
+	  i quest_state_start = -1;
 	}
 	[mind]
 	{

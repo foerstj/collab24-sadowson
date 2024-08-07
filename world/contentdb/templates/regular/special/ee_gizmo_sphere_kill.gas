@@ -1,0 +1,16 @@
+[t:template,n:ee_sphere_kill]
+{
+	specializes	= command;
+	doc			= "ee_sphere_kill";
+    category_name = "ee_gizmo_generic";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_red;
+		diffuse_color = 1.0, 0.5, 0.0;
+		use_diffuse_color = true;
+	}
+	
+	[ee_sphere_kill]  {  }
+}

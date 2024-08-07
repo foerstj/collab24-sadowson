@@ -27,14 +27,22 @@ This script will only support a single indicator at any given time. The indicato
 If you are wanting to combine a quest with a shop, then you need to use the relevant indicator with the shops indicator, as in the list below.
 
 UNUSED does not mean broken. It means I don't know what its for. You can use it for anything you want.
-
 The Shield and Sword indicators don't support quests purely because GPG never made relevant quests for them. I can make the relevant indicators if someone asks.
+The indicator script is not required to be attached to an actor. It will work on any object that has an aspect component.
+If a quest is specified, then when the actor enters the world and the quest is at that relevant state, then they will already be prepared with the selected indicator.
 
-ind_custom_id$ will override whatever indicator you request, so only use it for static actors whose indicator never changes.
+Indicators are static and won't move if an actor moves, so they should only be shown if an actor is stationary. I might fix that in the future but for now, meh.
 
-The indicator script is not required to be attached to an actor. It will work on any object that has an aspect.
+Indicators are updated using the following method:
+	WE_ENTERED_WORLD	- Updates the indicator every time they enter the world.
+							- If ind_custom_indicator$ has a value, it will ALWAYS override ANY OTHER INDICATOR.
+							- If Quest_Name$ has a value then it will check that quests state before firing a relevant indicator.
+								- If the quest state is valid for starting, updating or finishing the quest, it will show the relevant indicator.
+								- A quest can be "updated" a maximum of four times after starting. This was created entirely arbitrarily. There's no reason why the script couldn't be extended for further updates.
+								- If the Quest_Name_Requirement$ is filled, then that quest will be checked first. If it's COMPLETED then you will get an indicator letting you start this quest. Otherwise, NO quest-based indicator will be shown.
+	WE_REQ_ACTIVATE		- Forces an update based off the int found in the data1.msg$. However this will only persist until unloaded.
+							- If the data1.msg$ value is 198, then it will force a quest update notification based off the above states. This is a super useful thing to use in conversation blocks because it can be linked to when you visually update the quest.
 
-If a quest is specified, then when the actor enters the world and the quest is at that relevant state, then they will already be prepared with a 
 
 indicator_amulet							100 - Sells Reagents.
 indicator_amulet-exclamation_orange			101 - Sells Reagents, has a quest available.
@@ -77,14 +85,23 @@ DISABLE										199 - TURNS OFF THE INDICATOR.
 //Indicators have the 100-199 range reserved for msg ID's.
 
 property 	int 	ind_custom_ID$			 			doc = "ID to use for custom indicator. Leave blank if using commands to control or plan to change it in-game at some point.";
-property	string	Quest_Name$								doc = "Name of quest to check";
-property	int		Quest_State_start$						doc = "If this value, quest can be started or updated.";
-property	int		Quest_State_finish$						doc = "If this value, quest can be finished.";
-property	int		Quest_Indicator_before$					doc = "Quest Indicator can't be started.";
-property	int		Quest_Indicator_start$					doc = "Quest Indicator can be started.";
-property	int		Quest_Indicator_finish$					doc = "Quest Indicator can be finished.";
+property	string	Quest_Name$							doc = "Name of quest to check";
+property	int		Quest_State_start$					doc = "If this value, quest can be started. If -1, we can start the quest at any time.";
+property	int		Quest_State_update_1$		= -1	doc = "If this value, quest can be UPDATED. -1 to ignore this check.";
+property	int		Quest_State_update_2$		= -1	doc = "If this value, quest can be UPDATED. -1 to ignore this check.";
+property	int		Quest_State_update_3$		= -1	doc = "If this value, quest can be UPDATED. -1 to ignore this check.";
+property	int		Quest_State_update_4$		= -1	doc = "If this value, quest can be UPDATED. -1 to ignore this check.";
+property	int		Quest_State_finish$					doc = "If this value, quest can be finished. If -1, we NEVER finish the quest or update it.";
+property	int		Quest_Indicator_before$				doc = "Quest Indicator can't be started.";
+property	int		Quest_Indicator_start$		= 107	doc = "Quest Indicator can be started.";
+property	int		Quest_Indicator_update$		= 124	doc = "Quest Indicator that can be updated.";
+property	int		Quest_Indicator_finish$		= 124	doc = "Quest Indicator can be finished.";
+property	int		Quest_Indicator_no_update$	= 126	doc = "Quest Indicator cannot be updated";
+property	string	Quest_Name_Requirement$				doc = "Name of a DIFFERENT quest that must be completed before starting this one. Leave blank to ignore.";
 
-			bool	debug_reporting$	= false;	//Used for debug checking by enabling the ee_debug bool.
+			bool	debug_reporting$	= true;	//Used for debug checking by enabling the ee_debug bool.
+			
+			string	indicator_table$ = "amulet,amulet-exclamation_orange,amulet-question_grey,amulet-question_orange,chat,exclamation_green,exclamation_grey,exclamation_orange,hand,hand_exclamation_orange,hand_question_grey,hand_question_orange,info,inn,join,mug,packmule,packmule_exclamation_orange,packmule_question_grey,packmule_question_orange,potion,potion_exclamation_orange,potion_question_grey,potion_question_orange,question_orange,question_gold,question_grey,shield,sword,talk2me,tombstone";
 
 			int		int_msg$;
 owner = GoSkritComponent;
@@ -94,10 +111,6 @@ owner = GoSkritComponent;
 void Indicator_Script$()
 {
 		string	actor_goid_ind_check$ = StringTool.Append( "ee_current_indicator_", MakeStringF( "0x%08x", owner.goid ) );
-		bool	use_custom_ID$ = false;
-		
-		string indicator_table$ = ( "amulet,amulet-exclamation_orange,amulet-question_grey,amulet-question_orange,chat,exclamation_green,exclamation_grey,exclamation_orange,hand,hand_exclamation_orange,hand_question_grey,hand_question_orange,info,inn,join,mug,packmule,packmule_exclamation_orange,packmule_question_grey,packmule_question_orange,potion,potion_exclamation_orange,potion_question_grey,potion_question_orange,question_orange,question_gold,question_grey,shield,sword,talk2me,tombstone" );
-			
 		int ind_requestor$ = int_msg$ - 100;
 		string	activate_indicator$ = "Indicator_";
 		string deactivate_indicator$ = "indicator_";
@@ -120,6 +133,7 @@ void Indicator_Script$()
 			if( ( GameAuditor.GetDb.GetInt( actor_goid_ind_check$ ) - 100 ) <= StringTool.GetNumDelimitedValues( indicator_table$ ) )
 			{
 				StringTool.Append( deactivate_indicator$, StringTool.GetDelimitedString( indicator_table$, GameAuditor.GetDb.GetInt( actor_goid_ind_check$) - 100 ) );
+				
 				if( debug_reporting$ )
 				{
 					Report.ScreenF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
@@ -202,35 +216,129 @@ void Indicator_Script$()
 		else
 		{
 			//Indicator is already active. So do nothing.
+			if( debug_reporting$ )
+			{
+				Report.ScreenF( "Recieved an update code of %i but it's already active so we're doing nothing.", int_msg$ );
+			}
 		}
 }
+
 void check_quest$()
 {
 	int local_quest_state$ = Victory.GetQuestOrder( Quest_Name$ );
+	bool Quest_Start_Requirements$ = true;	//Presume the pre-quest requirement is either complete or doesn't exist.
+	bool Update_Indicator$ = false;
+	bool Can_Finish_Quest$ = false;
+	bool Can_Start_Quest$ = false;
+	bool Can_Update_Quest$ = false;
 	
-	//Check if before quest starting
-	if( Victory.IsQuestActive( quest_name$ ) )
+	if( StringTool.IsEmpty( Quest_Name_Requirement$ ) == false )
 	{
-		if( local_quest_state$ < Quest_State_start$ )
+		if( Victory.IsQuestCompleted( Quest_Name_Requirement$ ) )
 		{
-			//Have not yet reached the stage at which point we can start or update the quest.
-			int_msg$ = Quest_Indicator_before$;
-			Indicator_Script$;
+			Quest_Start_Requirements$ = true;	//The pre-quest is complete so this one can start.
 		}
-		else if( local_quest_state$ == Quest_State_start$ )
+		else
 		{
-			//Quest is ready to be started.
-			int_msg$ = Quest_Indicator_start$;
-			Indicator_Script$;
+			Quest_Start_Requirements$ = false;	//The pre-quest is not complete, so don't allow this quest to start.
 		}
-		else if( Local_Quest_State$ == Quest_State_finish$ )
+		
+		if( Quest_Name_Requirement$ == Quest_Name$ )
 		{
-			//Quest is ready to be completed.
-			int_msg$ = Quest_Indicator_finish$;
-			Indicator_Script$;
+			Report.ErrorF( "ee_npc_indicator.skrit: Quest_Name_Requirement$: %s , is IDENTICAL to Quest_Name$! \nYou can't do that! It should be a different quest! \n", Quest_Name_Requirement$ );
+			Quest_Start_Requirements$ = false;
 		}
 	}
-}	
+	
+	//Error check for quest requirements
+	
+	if( Quest_Start_Requirements$ == true )
+	{
+		if( Quest_State_Start$ == -1 )
+		{
+			//Shouldn't activate the indicator if the quest is already active...
+			//Prevents relapses if they leave the region and re-enter.
+			if( Victory.IsQuestActive( quest_name$ ) == false )
+			{
+				int_msg$ = Quest_Indicator_Start$;
+				Update_Indicator$ = true;
+			}
+		}
+		
+		//Check if before quest starting
+		if( Victory.IsQuestActive( quest_name$ ) )
+		{
+			if( local_quest_state$ < Quest_State_start$ )
+			{
+				//Have not yet reached the stage at which point we can start or update the quest.
+				int_msg$ = Quest_Indicator_before$;
+				Update_Indicator$ = true;
+			}
+			else if( local_quest_state$ == Quest_State_start$ )
+			{
+				//Quest is ready to be started.
+				int_msg$ = Quest_Indicator_start$;
+				Update_Indicator$ = true;
+				can_start_quest$ = true;
+			}
+			else if( Local_Quest_State$ == Quest_State_finish$ )
+			{
+				//Quest is ready to be completed.
+				int_msg$ = Quest_Indicator_finish$;
+				Update_Indicator$ = true;
+				can_finish_quest$ = true;
+			}
+			else if( Quest_State_update_1$ != -1 )
+			{
+				if( Local_Quest_State$ == Quest_state_update_1$ )
+				{
+					int_msg$ = Quest_Indicator_update$;
+					Update_Indicator$ = true;
+					Can_Update_Quest$ = true;
+				}
+				else if( Local_Quest_State$ == Quest_State_update_2$ )
+				{
+					int_msg$ = Quest_Indicator_update$;
+					Update_Indicator$ = true;
+					Can_Update_Quest$ = true;
+				}
+				else if( Local_Quest_State$ == Quest_State_update_3$ )
+				{
+					int_msg$ = Quest_Indicator_update$;
+					Update_Indicator$ = true;
+					Can_Update_Quest$ = true;
+				}
+				else if( Local_Quest_State$ == Quest_State_update_4$ )
+				{
+					int_msg$ = Quest_Indicator_update$;
+					Update_Indicator$ = true;
+					Can_Update_Quest$ = true;
+				}
+				else
+				{
+					//The quest state is not valid for updating or finishing, so do a big funky check to see if we can update the quest.
+					if( can_finish_quest$ == false ) && ( can_start_quest$ == false ) && ( can_update_quest$ == false )
+					{
+						//You can't START the quest, you can't FINISH the quest and you cant UPDATE the quest, so show the 'cant do anything' indicator.
+						int_msg$ = Quest_Indicator_no_update$;
+						Update_indicator$ = true;
+					}
+				}
+			}
+		}
+	}
+	
+	if( Update_Indicator$ == true )
+	{
+		Indicator_Script$;
+		Update_Indicator$ = false;
+		
+		Can_Finish_Quest$ = false;
+		Can_Start_Quest$ = false;
+		Can_Update_Quest$ = false;
+	}
+}
+
 event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
 {
 	if( e$ == WE_REQ_ACTIVATE )
@@ -267,8 +375,12 @@ event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
 		
 		if( ind_custom_id$ != 0 )
 		{
-			int_msg$ = ind_custom_id$;
-			Indicator_Script$();
+			// Prevent fatals in SE
+			#only( game )
+			[[
+				int_msg$ = ind_custom_id$;
+				Indicator_Script$();
+			]]
 		}
 		else
 		{
@@ -278,7 +390,11 @@ event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
 		//Check some fancy quest bits
 		if( StringTool.IsEmpty( Quest_Name$ ) == false )
 		{
-			check_quest$();
+			//Trying to run a check for quests in SE causes fatals
+			#only( game )
+			[[
+				check_quest$();
+			]]
 		}
 	}
 }

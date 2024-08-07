@@ -33,6 +33,11 @@
 	0x4200062c = t_xxx_dgn_wal_tx-rock-hal-l-b;
 	0x4200062d = t_xxx_dgn_wal_tx-rock-hal-r-a;
 	0x4200062e = t_xxx_dgn_wal_tx-rock-hal-r-b;
+	0x42000631 = t_xxx_dgn_cap-02x04-a;
+	0x42000633 = t_xxx_dgn_cap-04x04-a;
+	0x42000636 = t_xxx_dgn_cap-08x08-a;
+	0x4200063a = t_xxx_dgn_cap-archway-b;
+	0x4200063f = t_xxx_dgn_cap-vertical-04x04-b;
 	0x420006a5 = t_xxx_flr_04x04-v0;
 	0x420006a7 = t_xxx_flr_04x04-v2;
 	0x420006a9 = t_xxx_flr_04x08-v0;

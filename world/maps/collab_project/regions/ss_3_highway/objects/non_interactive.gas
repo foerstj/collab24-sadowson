@@ -18977,6 +18977,13 @@
 	  p position = -1.69704,0,-1.41962,0x4c3e9801;
 	}
 }
+[t:post_glb_01,n:0x430002e4]
+{
+	[placement]
+	{
+	  p position = 2.90224,0,3.23426,0x4c3e9801;
+	}
+}
 [t:bush_des_04,n:0x43000677]
 {
 	[aspect]

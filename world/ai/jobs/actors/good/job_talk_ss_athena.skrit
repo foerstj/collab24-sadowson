@@ -136,7 +136,8 @@ state Talk$
 			GameAuditor.GetDb.SetBool( "collab_ss_dialog_short", true );
 			GameAuditor.GetDb.SetBool( "collab_ss_dialog_long", false );
 			
-			PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 126, 1.0 );
+			//PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 126, 1.0 );
+			PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 198, 1.0 );
 			
 			//Kill old variables as a safety net
 			GameAuditor.GetDb.SetBool( "athena_undead", false );
@@ -149,7 +150,8 @@ state Talk$
 			GameAuditor.GetDb.SetBool( "collab_ss_dialog_long", true );
 			GameAuditor.GetDb.SetBool( "secret_quest_active", true );
 			
-			PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 126, 1.0 );
+			//PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 126, 1.0 );
+			PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 198, 1.0 );
 			
 			//Kill old variables as a safety net
 			GameAuditor.GetDb.SetBool( "athena_undead", false );

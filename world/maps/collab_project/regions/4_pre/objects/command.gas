@@ -5,6 +5,7 @@
 	  i dexterity_stat = 14;
 	  i intelligence_stat = 11;
 	  i melee_skill = 15;
+	  i speed_modifier = 8;
 	  i strength_stat = 19;
 	}
 	[placement]

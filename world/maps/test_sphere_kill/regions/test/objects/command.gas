@@ -1,0 +1,7 @@
+[t:ee_sphere_kill,n:0x00100002]
+{
+	[placement]
+	{
+	  p position = -3.7275,0,-0.103989,0x2df51b5e;
+	}
+}

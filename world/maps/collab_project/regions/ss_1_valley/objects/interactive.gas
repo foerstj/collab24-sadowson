@@ -48,6 +48,41 @@
 		use_point_scids = 0x41000a2a,0x41000a2b;
 	}
 }
+[t:sign_swp_01,n:0x41000d17]
+{
+	[common]
+	{
+		screen_name = "Underland";
+	}
+	[placement]
+	{
+	  p position = 3.47746,-0.0327826,1.81229,0x40faf325;
+	}
+}
+[t:sign_swp_01,n:0x41000d56]
+{
+	[common]
+	{
+		screen_name = "Larissa Polis";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.70463,-0.205578,1.65623,0x40faf325;
+	}
+}
+[t:sign_swp_01,n:0x41000d58]
+{
+	[common]
+	{
+		screen_name = "Sunset Slopes";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.989016,0,0.147809;
+	  p position = 3.58194,0.150189,1.20505,0x40faf325;
+	}
+}
 [t:statue_cav_spin_01,n:0x41000d41]
 {
 	[on_off_lever]
