@@ -99,33 +99,33 @@ state Talk$
 			m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_join" );
 			GameAuditor.GetDb.SetBool( "nymeria_quest_complete", true );
 
-			if( GameAuditor.GetDb.GetBool( "party_accept_0x100C93" ) )
+			if( GameAuditor.GetDb.GetBool( "party_accept_0x41000C93" ) )
 			{
 				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_accept" );
-				GameAuditor.GetDb.SetBool( "party_accept_0x100C93", false );
+				GameAuditor.GetDb.SetBool( "party_accept_0x41000C93", false );
 				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 199, 1.0 );	// Turn off the indicator.
 			} 
-			else if( GameAuditor.GetDb.GetBool( "party_decline_0x100C93" ) )
+			else if( GameAuditor.GetDb.GetBool( "party_decline_0x41000C93" ) )
 			{
 				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_reject" );
-				GameAuditor.GetDb.SetBool( "party_decline_0x100C93", false );
-				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x100C93", true );
+				GameAuditor.GetDb.SetBool( "party_decline_0x41000C93", false );
+				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x41000C93", true );
 			}
-			else if( GameAuditor.GetDb.GetBool( "party_disband_0x100C93" ) )
+			else if( GameAuditor.GetDb.GetBool( "party_disband_0x41000C93" ) )
 			{
 				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_disband" );
-				GameAuditor.GetDb.SetBool( "party_disband_0x100C93", false );
-				GameAuditor.GetDb.SetBool( "party_disbanded_0x100C93", true );
+				GameAuditor.GetDb.SetBool( "party_disband_0x41000C93", false );
+				GameAuditor.GetDb.SetBool( "party_disbanded_0x41000C93", true );
 				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 114, 1.0 );	// Change indicator to join
 			}
-			else if( GameAuditor.GetDb.GetBool( "party_disbanded_0x100C93" ) )
+			else if( GameAuditor.GetDb.GetBool( "party_disbanded_0x41000C93" ) )
 			{
 				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_disband_rejoin" );			
 			}
-			else if( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x100C93" ) )
+			else if( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x41000C93" ) )
 			{
 				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_rejoin" );
-				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x100C93", false );
+				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x41000C93", false );
 				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 199, 1.0 );	// Turn off the indicator.
 			}		 
 		}
@@ -136,7 +136,7 @@ state Talk$
 			if( GameAuditor.GetDb.GetBool( "nymeria_accept_quest" ) )
 			{
 				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_accept" );
-				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 126, 1.0 );	// Change indicator to Grey
+				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 198, 1.0 );
 			}
 			else if( GameAuditor.GetDb.GetBool( "nymeria_decline_quest" ) )
 			{

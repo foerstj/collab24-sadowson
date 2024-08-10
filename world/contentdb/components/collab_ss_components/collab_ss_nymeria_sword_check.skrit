@@ -45,14 +45,14 @@ event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$)
 				Replace_Weapon$ = true;
 				Weapon_To_Add$ = "collab_ss_nymeria_sword_strong";
 				
-				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Replace the weapon" );
+				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Replace the weapon. \n" );
 			}
 			else
 			{
 				//Do nothing, Nymeria has her special sword.
 				Replace_Weapon$ = false;
 				
-				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Do nothing. Nymeria has her special sword." );
+				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Do nothing. Nymeria has her special sword. \n" );
 			}
 		}
 		else
@@ -64,7 +64,7 @@ event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$)
 				//Weapon is NOT Nymeria's special weapon and NOT in her inventory.
 				Replace_Weapon$ = false;
 				
-				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Weapon is NOT Nymeria's special weapon and NOT in her inventory." );
+				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Weapon is NOT Nymeria's special weapon and NOT in her inventory. \n" );
 			}
 			else
 			{
@@ -72,14 +72,14 @@ event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$)
 				Replace_Weapon$ = true;
 				Weapon_To_Add$ = "collab_ss_nymeria_sword_weak";
 				
-				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Weapon IS Nymeria's special weapon and NOT in her inventory." );
+				Report.Generic( "collab_ss_nymeria_sword_check.skrit: Weapon IS Nymeria's special weapon and NOT in her inventory. \n" );
 			}
 		}
 		
 		}
 		else
 		{
-			Report.Error( "collab_ss_nymeria_sword_check.skrit: Actor$ Goid is invalid!!!" );
+			Report.Error( "collab_ss_nymeria_sword_check.skrit: Actor$ Goid is invalid!!! \n" );
 		}
 		
 		//Replace the blade if required.

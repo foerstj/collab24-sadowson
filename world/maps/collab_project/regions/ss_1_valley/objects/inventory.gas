@@ -1,3 +1,32 @@
+[t:collab_ss_nymeria_sword_weak,n:0x41000d62]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("quest_nymeria_sword","active",1);
+				action* = change_quest_state("quest_nymeria_sword","active",2);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 2.30713,9.53674e-007,0.622852,0x55b6944c;
+	}
+}
 [t:bd_pl_r_g_c_fin,n:0x41000c80]
 {
 	[aspect]
@@ -857,6 +886,18 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -1.71548,-1.50107,0.24469,0x17fe0f44;
+	}
+}
+[t:he_fu_pl_smallwings,n:0x41000de7]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.285763,0.266478,-0.673215,0.627783;
+	  p position = 0.861618,0.857634,0.29364,0x82a8e5a4;
 	}
 }
 [t:he_ra_fu_pl_spike,n:0x41000c6a]

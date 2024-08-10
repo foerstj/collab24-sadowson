@@ -75,38 +75,6 @@
 	  p position = 2.08862,-3.5,-1.98668,0x41cc8656;
 	}
 }
-[t:ee_npc_indicator_command,n:0x41000d63]
-{
-	[common]
-	{
-		dev_instance_text = "QUEST IS AVAILABLE";
-	}
-	[ee_npc_indicator_command]
-	{
-	  i indicator = 107;
-	  x target_actor = 0x41000C93;
-	}
-	[placement]
-	{
-	  p position = 0.0815277,0,-0.0204697,0x111422a1;
-	}
-}
-[t:ee_npc_indicator_command,n:0x41000d65]
-{
-	[common]
-	{
-		dev_instance_text = "QUEST CAN BE FINISHED";
-	}
-	[ee_npc_indicator_command]
-	{
-	  i indicator = 124;
-	  x target_actor = 0x41000C93;
-	}
-	[placement]
-	{
-	  p position = 0.032074,0,0.0617294,0x18cbc07e;
-	}
-}
 [t:ee_npc_indicator_command,n:0x41000d5f]
 {
 	[common]

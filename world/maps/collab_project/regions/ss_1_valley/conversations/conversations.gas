@@ -901,3 +901,32 @@ The wounded here need their rest, so I would ask that you keep your voices down,
 	  f scroll_rate = 10.000000;
 	}
 }
+[conversation_persephone_hello]
+{
+	[text*]
+	{
+		screen_text = "Traveller, have you any news from Underland? I was hoping to know if my sister was okay - it has been many moons since I last saw her.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_persephone_idle]
+{
+	[text*]
+	{
+		screen_text = "It gives me hope to know that my twin sister is safe. Thank you again for delivering her letter to me. I will wait here until she arrives and we can be reunited in happiness.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_persephone_quest]
+{
+	[text*]
+	{
+		activate_quest* = quest_twin_sisters,1;
+		complete_quest* = quest_twin_sisters;
+		screen_text = "A letter? For me?
+
+This... this is from my sister! And she is okay! Traveller, thank you for this! Oh I shall treasure it so!
+I must reward you for your efforts. This is all I can spare, thank you again traveller!";
+	  f scroll_rate = 10.000000;
+	}
+}

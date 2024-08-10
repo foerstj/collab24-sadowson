@@ -86,12 +86,12 @@ DISABLE										199 - TURNS OFF THE INDICATOR.
 
 property 	int 	ind_custom_ID$			 			doc = "ID to use for custom indicator. Leave blank if using commands to control or plan to change it in-game at some point.";
 property	string	Quest_Name$							doc = "Name of quest to check";
-property	int		Quest_State_start$					doc = "If this value, quest can be started. If -1, we can start the quest at any time.";
+property	int		Quest_State_start$			= -1	doc = "If this value, quest can be started. -1 if we dont start the quest. Default is normally 0 to start a quest.";
 property	int		Quest_State_update_1$		= -1	doc = "If this value, quest can be UPDATED. -1 to ignore this check.";
 property	int		Quest_State_update_2$		= -1	doc = "If this value, quest can be UPDATED. -1 to ignore this check.";
 property	int		Quest_State_update_3$		= -1	doc = "If this value, quest can be UPDATED. -1 to ignore this check.";
 property	int		Quest_State_update_4$		= -1	doc = "If this value, quest can be UPDATED. -1 to ignore this check.";
-property	int		Quest_State_finish$					doc = "If this value, quest can be finished. If -1, we NEVER finish the quest or update it.";
+property	int		Quest_State_finish$			= -1	doc = "If this value, quest can be finished. If -1, we NEVER finish the quest or update it.";
 property	int		Quest_Indicator_before$				doc = "Quest Indicator can't be started.";
 property	int		Quest_Indicator_start$		= 107	doc = "Quest Indicator can be started.";
 property	int		Quest_Indicator_update$		= 124	doc = "Quest Indicator that can be updated.";
@@ -99,7 +99,8 @@ property	int		Quest_Indicator_finish$		= 124	doc = "Quest Indicator can be finis
 property	int		Quest_Indicator_no_update$	= 126	doc = "Quest Indicator cannot be updated";
 property	string	Quest_Name_Requirement$				doc = "Name of a DIFFERENT quest that must be completed before starting this one. Leave blank to ignore.";
 
-			bool	debug_reporting$	= true;	//Used for debug checking by enabling the ee_debug bool.
+			bool	debug_reporting$	= false;	//Used for debug checking by enabling the ee_debug bool.
+			string 	screen_name$;
 			
 			string	indicator_table$ = "amulet,amulet-exclamation_orange,amulet-question_grey,amulet-question_orange,chat,exclamation_green,exclamation_grey,exclamation_orange,hand,hand_exclamation_orange,hand_question_grey,hand_question_orange,info,inn,join,mug,packmule,packmule_exclamation_orange,packmule_question_grey,packmule_question_orange,potion,potion_exclamation_orange,potion_question_grey,potion_question_orange,question_orange,question_gold,question_grey,shield,sword,talk2me,tombstone";
 
@@ -111,9 +112,11 @@ owner = GoSkritComponent;
 void Indicator_Script$()
 {
 		string	actor_goid_ind_check$ = StringTool.Append( "ee_current_indicator_", MakeStringF( "0x%08x", owner.goid ) );
-		int ind_requestor$ = int_msg$ - 100;
+		int 	ind_requestor$ = int_msg$ - 100;
 		string	activate_indicator$ = "Indicator_";
-		string deactivate_indicator$ = "indicator_";
+		string 	deactivate_indicator$ = "indicator_";
+		
+		
 		
 		//Check for debug reporting. Throws lots of information at the screen.
 		if( GameAuditor.GetDb.GetBool( "ee_debug" ) )
@@ -134,11 +137,9 @@ void Indicator_Script$()
 			{
 				StringTool.Append( deactivate_indicator$, StringTool.GetDelimitedString( indicator_table$, GameAuditor.GetDb.GetInt( actor_goid_ind_check$) - 100 ) );
 				
-				if( debug_reporting$ )
-				{
-					Report.ScreenF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
-					Report.ScreenF( "actor_goid_ind_check$ = %i \n" , actor_goid_ind_check$ );
-				}
+				//Report.GenericF( "ee_npc_indicator.skrit: Number of values in Indicator Table is %i for actor: %s \n", StringTool.GetNumDelimitedValues( indicator_table$ ), screen_name$ );
+				//Report.GenericF( "ee_npc_indicator.skrit: actor_goid_ind_check$: %i, Actor: %s \n", actor_goid_ind_check$, screen_name$ );
+
 			}
 			else
 			{
@@ -148,24 +149,22 @@ void Indicator_Script$()
 		else if( int_msg$ == 198 )	/// Do nothing as we've been told to update based off a quest request.
 		{
 			//Do nothing. No indicator is active.
-			Report.Generic( "ee_npc_indicator.skrit recieved a request to update based off quest." );
+			Report.GenericF( "ee_npc_indicator.skrit: %s Recieved a request to update based off quest.", screen_name$ );
 		}
 		else
 		{
 			StringTool.Append( activate_indicator$, StringTool.GetDelimitedString( indicator_table$, ind_requestor$ ) );
-			if( debug_reporting$ )
-			{
-				Report.ScreenF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
-			}
+
+			//Report.GenericF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
+
 			///Without this check, the delimiter fails to a blank indicator and reports an error. If the end value doesn't fall within reason, just force a fail to blank instead of erroring on it.
 			if( ( GameAuditor.GetDb.GetInt( actor_goid_ind_check$ ) - 100 ) <= StringTool.GetNumDelimitedValues( indicator_table$ ) )
 			{
 				StringTool.Append( deactivate_indicator$, StringTool.GetDelimitedString( indicator_table$, GameAuditor.GetDb.GetInt( actor_goid_ind_check$) - 100 ) );
-				if( debug_reporting$ )
-				{
-					Report.ScreenF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
-					Report.ScreenF( "actor_goid_ind_check$ = %i \n" , actor_goid_ind_check$ );
-				}
+
+				//Report.GenericF( "Number of values in Indicator Table = %i \n", StringTool.GetNumDelimitedValues( indicator_table$ ) );
+				//Report.GenericF( "ee_npc_indicator.skrit: actor_goid_ind_check$: %i, Actor: %s \n", actor_goid_ind_check$, screen_name$ );
+
 			}
 			else
 			{
@@ -173,53 +172,70 @@ void Indicator_Script$()
 			}
 			if( debug_reporting$ )
 			{
-				Report.ScreenF( "INT_MSG$ = %i \n", int_msg$ );
-				Report.ScreenF( StringTool.Append( "Activate_Indicator$ = ", activate_indicator$ ) );
-				Report.ScreenF( StringTool.Append( "deactivate_indicator$ = ", deactivate_indicator$ ) );
-				Report.ScreenF( "DEBUG CHECK actor_goid_ind_check$ = %i \n ", GameAuditor.GetDb.GetInt( actor_goid_ind_check$) );
+				Report.GenericF( "INT_MSG$ = %i \n", int_msg$ );
+				Report.GenericF( StringTool.Append( "Activate_Indicator$ = ", activate_indicator$ ) );
+				Report.GenericF( StringTool.Append( "deactivate_indicator$ = ", deactivate_indicator$ ) );
+				Report.GenericF( "DEBUG CHECK actor_goid_ind_check$ = %i \n ", GameAuditor.GetDb.GetInt( actor_goid_ind_check$) );
 			}
 		}
 			
 		///Check that this indicator isn't currently active.
 		if( GameAuditor.GetDb.GetInt( actor_goid_ind_check$ ) != int_msg$ )
 		{
-			if( debug_reporting$ )
-			{
-				Report.ScreenF( "Reporting Code = %i \n", int_msg$ );
-			}
+
+			Report.GenericF( "ee_npc_indicator.skrit: %s reporting Code = %i \n", screen_name$, int_msg$ );
 			
 			if( int_msg$ == 199 )
 			{
 				//A 199 code means to deactivate the existing script and activate nothing else.
-				if( debug_reporting$ )
+				Report.GenericF( "ee_npc_indicator.skrit: %s has confirmed recieved a 199 code for shutdown. \n", screen_name$ );
+				
+				if( deactivate_indicator$ != "indicator_" )
 				{
-					Report.ScreenF( "Confirmed 199 code recieved" );
+					SiegeFX.StopScript( owner.goid, deactivate_indicator$ );
+					GameAuditor.GetDb.SetInt( actor_goid_ind_check$, 199 );
 				}
-				SiegeFX.StopScript( owner.goid, deactivate_indicator$ );
-				GameAuditor.GetDb.SetInt( actor_goid_ind_check$, 198 );
+				else
+				{
+					Report.ErrorF( "ee_npc_indicator.skrit: EPIC FAIL! We somehow returned an empty indicator field on a 199 code! \n deactivate_indicator$ = %s \n int_msg$ = %i \n	", deactivate_indicator$, int_msg$ );
+				}
 			}
 			else
 			{
 				if( !StringTool.IsEmpty( deactivate_indicator$ ) )
 				{
-					SiegeFX.StopScript( owner.goid, deactivate_indicator$ );
+					if( deactivate_indicator$ != "indicator_" )
+					{
+						SiegeFX.StopScript( owner.goid, deactivate_indicator$ );
+						GameAuditor.GetDb.SetInt( actor_goid_ind_check$, 199 );
+					}
+					else
+					{
+						Report.ErrorF( "ee_npc_indicator.skrit: EPIC FAIL! We somehow returned an empty indicator when told to deactivate!!! \n deactivate_indicator$ = %s \n int_msg$ = %i \n	", deactivate_indicator$, int_msg$ );
+					}
 				}
 				else
 				{
 					//Is null, so do not deactivate anything.
 				}
 				//Activate Indicator
-				SiegeFx.RunScript( activate_indicator$, owner.goid, owner.goid, "", owner.goid, WE_UNKNOWN );
-				GameAuditor.GetDb.SetInt( actor_goid_ind_check$, int_msg$ );
+				
+				if( activate_indicator$ != "indicator_" )
+				{
+					SiegeFx.RunScript( activate_indicator$, owner.goid, owner.goid, "", owner.goid, WE_UNKNOWN );
+					GameAuditor.GetDb.SetInt( actor_goid_ind_check$, int_msg$ );
+				}
+				else
+				{
+					Report.ErrorF( "ee_npc_indicator.skrit: EPIC FAIL! We somehow returned an empty indicator field when told to activate! \n activate_indicator$ = %s \n int_msg$ = %i \n	", activate_indicator$, int_msg$ );
+									
+				}
 			}
 		}
 		else
 		{
 			//Indicator is already active. So do nothing.
-			if( debug_reporting$ )
-			{
-				Report.ScreenF( "Recieved an update code of %i but it's already active so we're doing nothing.", int_msg$ );
-			}
+			Report.GenericF( "ee_npc_indicator.skrit: %s Recieved an update code of %i but it's already active so we're doing nothing. \n", screen_name$, int_msg$ );
 		}
 }
 
@@ -251,42 +267,41 @@ void check_quest$()
 	}
 	
 	//Error check for quest requirements
-	
 	if( Quest_Start_Requirements$ == true )
 	{
-		if( Quest_State_Start$ == -1 )
+		if( Quest_State_Start$ != -1 ) && ( Victory.IsQuestActive( quest_name$ ) == false ) && ( Victory.IsQuestCompleted( quest_name$ ) == false )
 		{
-			//Shouldn't activate the indicator if the quest is already active...
-			//Prevents relapses if they leave the region and re-enter.
-			if( Victory.IsQuestActive( quest_name$ ) == false )
+			if( Quest_State_Start$ == local_quest_state$ )
 			{
+				//Shouldn't activate the indicator if the quest is already active OR completed.
+				//Prevents relapses if they leave the region and re-enter.
 				int_msg$ = Quest_Indicator_Start$;
 				Update_Indicator$ = true;
+				can_start_quest$ = true;
+				Report.GenericF( "ee_npc_indicator.skrit: Quest: %s is ready to be started by actor: %s \n", quest_name$, screen_name$ );
 			}
 		}
 		
 		//Check if before quest starting
+		//-1 on a value means we ignore the check.
 		if( Victory.IsQuestActive( quest_name$ ) )
 		{
-			if( local_quest_state$ < Quest_State_start$ )
+			if( local_quest_state$ < Quest_State_start$ ) && ( Quest_State_start$ != -1 )
 			{
 				//Have not yet reached the stage at which point we can start or update the quest.
 				int_msg$ = Quest_Indicator_before$;
 				Update_Indicator$ = true;
+				
+				Report.GenericF( "ee_npc_indicator.skrit: Quest: %s for actor %s has not yet reached the stage at which point we can start or update the quest.\n", quest_name$, screen_name$ );
 			}
-			else if( local_quest_state$ == Quest_State_start$ )
-			{
-				//Quest is ready to be started.
-				int_msg$ = Quest_Indicator_start$;
-				Update_Indicator$ = true;
-				can_start_quest$ = true;
-			}
-			else if( Local_Quest_State$ == Quest_State_finish$ )
+			else if( Local_Quest_State$ == Quest_State_finish$ ) && ( Quest_State_finish$ != -1 )
 			{
 				//Quest is ready to be completed.
 				int_msg$ = Quest_Indicator_finish$;
 				Update_Indicator$ = true;
 				can_finish_quest$ = true;
+				
+				Report.GenericF( "ee_npc_indicator.skrit: Quest %s for actor %s is ready to be completed.\n", quest_name$, screen_name$ );
 			}
 			else if( Quest_State_update_1$ != -1 )
 			{
@@ -295,34 +310,44 @@ void check_quest$()
 					int_msg$ = Quest_Indicator_update$;
 					Update_Indicator$ = true;
 					Can_Update_Quest$ = true;
+					
+					Report.GenericF( "ee_npc_indicator.skrit: Quest %s at actor %s can be updated at position 1.\n", quest_name$, screen_name$ );
 				}
 				else if( Local_Quest_State$ == Quest_State_update_2$ )
 				{
 					int_msg$ = Quest_Indicator_update$;
 					Update_Indicator$ = true;
 					Can_Update_Quest$ = true;
+					
+					Report.GenericF( "ee_npc_indicator.skrit: Quest %s at actor %s can be updated at position 2.\n", quest_name$, screen_name$ );
 				}
 				else if( Local_Quest_State$ == Quest_State_update_3$ )
 				{
 					int_msg$ = Quest_Indicator_update$;
 					Update_Indicator$ = true;
 					Can_Update_Quest$ = true;
+					
+					Report.GenericF( "ee_npc_indicator.skrit: Quest %s at actor %s can be updated at position 3.\n", quest_name$, screen_name$ );
 				}
 				else if( Local_Quest_State$ == Quest_State_update_4$ )
 				{
 					int_msg$ = Quest_Indicator_update$;
 					Update_Indicator$ = true;
 					Can_Update_Quest$ = true;
+					
+					Report.GenericF( "ee_npc_indicator.skrit: Quest %s at actor %s can be updated at position 4.\n", quest_name$, screen_name$ );
 				}
-				else
+			}
+			
+			if( Quest_State_finish$ != -1 )
+			{
+				//The quest state is not valid for updating or finishing, so do a big funky check to see if we can update the quest.
+				if( can_finish_quest$ == false ) && ( can_start_quest$ == false ) && ( can_update_quest$ == false )
 				{
-					//The quest state is not valid for updating or finishing, so do a big funky check to see if we can update the quest.
-					if( can_finish_quest$ == false ) && ( can_start_quest$ == false ) && ( can_update_quest$ == false )
-					{
-						//You can't START the quest, you can't FINISH the quest and you cant UPDATE the quest, so show the 'cant do anything' indicator.
-						int_msg$ = Quest_Indicator_no_update$;
-						Update_indicator$ = true;
-					}
+					//You can't START the quest, you can't FINISH the quest and you cant UPDATE the quest, so show the 'cant do anything' indicator.
+					int_msg$ = Quest_Indicator_no_update$;
+					Update_indicator$ = true;		
+					Report.GenericF( "ee_npc_indicator.skrit: %s Can't start, update or finish the quest: %s, so show the 'cant do anything' indicator...\n", screen_name$, quest_name$ );
 				}
 			}
 		}
@@ -345,33 +370,32 @@ event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
 	{
 		int_msg$ = msg$.GetData1();
 		
-		if( int_msg$ == 198 )
+		Report.GenericF( "ee_npc_indicator.skrit: %s Recieved a WE_REQ_ACTIVATE command. int_msg$ = %i \n", screen_name$, int_msg$ );
+		
+		if( int_msg$ == 198 )//Recieved a request to update based on quest status.
 		{
-			//Recieved a request to update based on quest status.
 			if( StringTool.IsEmpty( Quest_Name$ ) == false )
 			{
 				check_quest$();
 			}
 		}
-		
-		if( debug_reporting$ )
+		else
 		{
-			Report.ScreenF( "ee_npc_indicator.skrit: Recieved a WE_REQ_ACTIVATE command." );
+			Indicator_Script$();	//The 198 quest check sends it's own valid indicator update notification.
 		}
-		
-		Indicator_Script$();
 	}
 	if( e$ == WE_ENTERED_WORLD ) //This will override an ID that was setup by a WE_REQ_ACTIVATE command.
 	{
-		if( GameAuditor.GetDb.GetBool( "ee_debug" ) )
+		if( owner.go.HasCommon )
 		{
-			debug_reporting$ = true;
+			owner.go.common.GetScreenName( screen_name$ );
 		}
-		
-		if( debug_reporting$ )
+		else
 		{
-			Report.ScreenF( "ee_npc_indicator.skrit: Recieved a WE_ENTERED_WORLD command." );
+			screen_name$ = "generic_object";
 		}
+
+		Report.GenericF( "ee_npc_indicator.skrit: %s Recieved a WE_ENTERED_WORLD command. \n", screen_name$ );
 		
 		if( ind_custom_id$ != 0 )
 		{
@@ -395,6 +419,15 @@ event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
 			[[
 				check_quest$();
 			]]
+		}
+	}
+	if( e$ == WE_LEFT_WORLD )	//If the actor leaves the world, we need to deactivate the indicator to prevent it from coming back.
+	{
+		string	actor_goid_ind_check$ = StringTool.Append( "ee_current_indicator_", MakeStringF( "0x%08x", owner.goid ) );
+		if( GameAuditor.GetDb.GetInt( actor_goid_ind_check$ ) != 199 )//If it was set to 199, then it's already been killed.
+		{
+			int_msg$ = 199;
+			Indicator_Script$;
 		}
 	}
 }

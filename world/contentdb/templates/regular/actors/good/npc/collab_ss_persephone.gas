@@ -1,0 +1,26 @@
+[t:template,n:collab_ss_persephone]
+{
+	category_name = "1W_townsperson";
+	doc = "collab_ss_persephone";
+	specializes = base_npc_fg_multiplayer;
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_b1;
+		draw_selection_indicator = FALSE;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_02;
+			1 = b_c_pos_b1_002;
+		}
+	}
+	[common]
+	{
+		screen_name = "Persephone";
+	}
+	[conversation]
+	{
+	}
+	[ee_npc_indicator]
+	{
+	}
+}

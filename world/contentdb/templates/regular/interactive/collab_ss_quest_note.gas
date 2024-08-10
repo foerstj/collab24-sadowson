@@ -1,0 +1,24 @@
+[t:template,n:collab_ss_quest_note]
+{
+	category_name = "lorebook";
+	doc = "collab_ss_quest_note";
+	specializes = base_book_lore;
+	[aspect]
+	{
+		model = m_i_glb_scroll;
+		[textures]
+		{
+			0 = b_i_glb_scroll;
+		}
+	}
+	[common]
+	{
+		screen_name = "Ria's Letter";
+	}
+	[gui]
+	{
+		inventory_icon = b_gui_ig_i_it_sealed_letter;
+		can_sell = false;
+		lore_key = lore_ria;
+	}
+}

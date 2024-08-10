@@ -114,6 +114,29 @@
 			speaker = nymeria.;
 		}
 	}
+	[quest_twin_sisters]
+	{
+		chapter = chapter_04;
+		quest_image = b_gui_ig_mnu_jnl_quest_letter;
+		screen_name = a sisters message;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = find ria's sister in larissa;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = ria;
+		}
+		[*]
+		{
+			description = you delivered ria's letter to persephone in larissa;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = persephone;
+		}
+	}
 	[quest_warding_crystal]
 	{
 		chapter = chapter_04;

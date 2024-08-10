@@ -336,10 +336,7 @@
 	}
 	[ee_npc_indicator]
 	{
-	  i quest_indicator_start = 107;
 		quest_name = "quest_athena";
-	  i quest_state_finish = -1;
-	  i quest_state_start = -1;
 	}
 	[mind]
 	{
@@ -440,6 +437,32 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 1.96791,0.3,0.252487,0x96a7e3c3;
+	}
+}
+[t:collab_ss_persephone,n:0x41000d65]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_persephone_hello;
+			* = conversation_persephone_idle;
+			* = conversation_persephone_quest;
+		}
+	}
+	[ee_npc_indicator]
+	{
+		quest_name = "quest_twin_sisters";
+	  i quest_state_finish = 0;
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_persephone.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -4.46484,-0.0500002,4.93164,0xf48b10c1;
 	}
 }
 [t:mp_gypsy_female_01,n:0x41000da2]
@@ -807,11 +830,9 @@
 	[ee_npc_indicator]
 	{
 	  i quest_indicator_before = 126;
-	  i quest_indicator_finish = 124;
-	  i quest_indicator_start = 107;
 		quest_name = "quest_warding_crystal";
 	  i quest_state_finish = 4;
-	  i quest_state_start = -1;
+	  i quest_state_start = 0;
 	}
 	[mind]
 	{
@@ -830,6 +851,10 @@
 	  f max_life = 49;
 	  f max_mana = 30;
 	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
 	[conversation]
 	{
 		[conversations]
@@ -845,6 +870,12 @@
 			* = conversation_nymeria_reject;
 			* = conversation_nymeria_rejoin;
 		}
+	}
+	[ee_npc_indicator]
+	{
+		quest_name = "quest_nymeria_sword";
+	  i quest_state_finish = 2;
+	  i quest_state_start = 0;
 	}
 	[mind]
 	{

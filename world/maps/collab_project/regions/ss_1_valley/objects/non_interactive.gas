@@ -23518,6 +23518,13 @@
 	  p position = 1.12552,0.5,0.333282,0xd421784b;
 	}
 }
+[t:stand_csl_02,n:0x41000444]
+{
+	[placement]
+	{
+	  p position = 1.13646,0,-0.0318146,0x82a8e5a4;
+	}
+}
 [t:throne_csl,n:0x41000a39]
 {
 	[aspect]
@@ -23527,6 +23534,13 @@
 	[placement]
 	{
 	  p position = 0.00114441,0,0.299042,0x82a8e5a4;
+	}
+}
+[t:stand_csl_02,n:0x41000d63]
+{
+	[placement]
+	{
+	  p position = -1.13451,0,-0.0112305,0x82a8e5a4;
 	}
 }
 [t:candlestand_csl_02,n:0x41000a3b]

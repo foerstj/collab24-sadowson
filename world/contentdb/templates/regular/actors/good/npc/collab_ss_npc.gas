@@ -24,7 +24,7 @@
 	}
 }
 
-[t:template,n:collab_ss_blacksmith] //maybe there should be a dsx_base_blacksmith?
+[t:template,n:collab_ss_blacksmith]
 {
 	specializes = base_npc_bs;
 	category_name = "1W_townsperson";
