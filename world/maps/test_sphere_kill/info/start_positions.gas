@@ -1,11 +1,11 @@
 [start_positions]
 {
-	[t:start_group,n:default]
+	[t:start_group,n:test_sphere_kill]
 	{
 	  b default = true;
 		description = "This is the default group.";
 	  b dev_only = false;
-	  i id = 0;
+	  i id = 4000;
 		screen_name = "";
 		[start_position]
 		{
