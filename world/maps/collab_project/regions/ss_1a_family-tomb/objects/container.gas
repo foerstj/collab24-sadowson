@@ -126,6 +126,35 @@
 	  p position = -0.078656,-1.5,-0.90882,0x84c4ae70;
 	}
 }
+[t:urn_collab_ss_1a_family-tomb_02,n:0x41a00092]
+{
+	[placement]
+	{
+	  p position = 1.5899,0.55,1.55655,0xa9215723;
+	}
+}
+[t:sarcophagus_collab_ss_1a_family-tomb,n:0x41a0008c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.124689,0,-0.0124092,0x06f7f6c3;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_01,n:0x41a00093]
+{
+	[placement]
+	{
+	  p position = 3.40753,0,-1.81773,0x06f7f6c3;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_01,n:0x41a00094]
+{
+	[placement]
+	{
+	  p position = 3.94854,0,-1.87816,0x06f7f6c3;
+	}
+}
 [t:sarcophagus_collab_ss_1a_family-tomb,n:0x41a0008d]
 {
 	[placement]
@@ -160,35 +189,6 @@
 	[placement]
 	{
 	  p position = 1.92103,-4.76837e-007,0.432133,0xb2f729d1;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_02,n:0x41a00092]
-{
-	[placement]
-	{
-	  p position = 1.5899,0.55,1.55655,0xa9215723;
-	}
-}
-[t:sarcophagus_collab_ss_1a_family-tomb,n:0x41a0008c]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.124689,0,-0.0124092,0x06f7f6c3;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_01,n:0x41a00093]
-{
-	[placement]
-	{
-	  p position = 3.40753,0,-1.81773,0x06f7f6c3;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_01,n:0x41a00094]
-{
-	[placement]
-	{
-	  p position = 3.94854,0,-1.87816,0x06f7f6c3;
 	}
 }
 [t:urn_collab_ss_1a_family-tomb_02,n:0x41a0009d]

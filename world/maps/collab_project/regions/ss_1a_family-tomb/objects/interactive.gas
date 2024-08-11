@@ -75,6 +75,17 @@
 		use_point_scids = 0x41a00009;
 	}
 }
+[t:door_glb_gendungeon_03,n:0x41a00033]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x41A00106;
+	}
+	[placement]
+	{
+	  p position = 0.000999451,-1.5,0.0751915,0x8c3ebb89;
+	}
+}
 [t:door_glb_gendungeon_03,n:0x41a00031]
 {
 	[door_basic]
@@ -95,17 +106,6 @@
 	[placement]
 	{
 	  p position = -0.00198221,-1.5,-0.00863647,0x8da543a4;
-	}
-}
-[t:door_glb_gendungeon_03,n:0x41a00033]
-{
-	[door_basic]
-	{
-	  x msg_scid_opening = 0x41A00106;
-	}
-	[placement]
-	{
-	  p position = 0.000999451,-1.5,0.0751915,0x8c3ebb89;
 	}
 }
 [t:door_glb_gendungeon_01,n:0x41a00036]

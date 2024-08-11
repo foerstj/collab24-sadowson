@@ -46,6 +46,14 @@
 	  p position = 1.01001,-2.08999,0.000915527,0x717b6d82;
 	}
 }
+[t:collab_ss_grate_wall-spider,n:0x450001a6]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = -0.077652,-0.6,-0.191483,0xf0669939;
+	}
+}
 [t:collab_ss_grate_wall-spider,n:0x450001a7]
 {
 	[placement]
@@ -107,14 +115,6 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -1.0035,-2.0965,-0.00161743,0x05e51b52;
-	}
-}
-[t:collab_ss_grate_wall-spider,n:0x450001a6]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.66939e-007;
-	  p position = -0.077652,-0.6,-0.191483,0xf0669939;
 	}
 }
 [t:collab_ss_grate_wall-spider,n:0x450001a5]

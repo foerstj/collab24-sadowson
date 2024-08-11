@@ -62,38 +62,6 @@
 	  p position = 3.33933,-2,-0.074846,0x5711b4cb;
 	}
 }
-[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000e7]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.786303,0,0.61784;
-	  p position = -3.32696,0,-1.43422,0xb2f729d1;
-	}
-}
-[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000e8]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.479449,0,0.87757;
-	  p position = -3.30801,0,1.35303,0xb2f729d1;
-	}
-}
-[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000e9]
-{
-	[placement]
-	{
-	  q orientation = 0,0.937761,0,0.34728;
-	  p position = 3.50481,0,-1.42897,0xb2f729d1;
-	}
-}
-[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000ea]
-{
-	[placement]
-	{
-	  q orientation = 0,0.499047,0,0.866575;
-	  p position = 3.39745,0,1.44744,0xb2f729d1;
-	}
-}
 [t:collab_ss_1a_family-tomb_skeleton_archer,n:0x41a000eb]
 {
 	[placement]
@@ -142,12 +110,36 @@
 	  p position = -0.0285645,0,1.29834,0x06f7f6c3;
 	}
 }
-[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000e6]
+[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000e7]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.992337,0,0.123565;
-	  p position = -1.40699,0,-0.0627275,0x3b3b5677;
+	  q orientation = 0,-0.786303,0,0.61784;
+	  p position = -3.32696,0,-1.43422,0xb2f729d1;
+	}
+}
+[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000e8]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.479449,0,0.87757;
+	  p position = -3.30801,0,1.35303,0xb2f729d1;
+	}
+}
+[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000e9]
+{
+	[placement]
+	{
+	  q orientation = 0,0.937761,0,0.34728;
+	  p position = 3.50481,0,-1.42897,0xb2f729d1;
+	}
+}
+[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000ea]
+{
+	[placement]
+	{
+	  q orientation = 0,0.499047,0,0.866575;
+	  p position = 3.39745,0,1.44744,0xb2f729d1;
 	}
 }
 [t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000d2]
@@ -423,6 +415,14 @@
 	{
 	  q orientation = 0,-0.860162,0,0.510022;
 	  p position = -0.331851,-0.450001,1.36023,0xc5126266;
+	}
+}
+[t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000e6]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.992337,0,0.123565;
+	  p position = -1.40699,0,-0.0627275,0x3b3b5677;
 	}
 }
 [t:collab_ss_1a_family-tomb_skeleton_guard,n:0x41a000c8]

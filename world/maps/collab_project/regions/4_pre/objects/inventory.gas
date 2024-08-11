@@ -1,3 +1,31 @@
+[t:collab_ss_quest_note,n:0x40000001]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("quest_twin_sisters","active",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.874725,0,0.585327,0xbac0d0a4;
+	}
+}
 [t:sd_g_c_bl_1h_avg,n:0x40000008]
 {
 	[placement]
@@ -38,33 +66,5 @@
 	[placement]
 	{
 	  p position = 1.53683,0,2.54682,0xbac0d0a4;
-	}
-}
-[t:collab_ss_quest_note,n:0x40000001]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_twin_sisters","active",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_picked_up",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.874725,0,0.585327,0xbac0d0a4;
 	}
 }

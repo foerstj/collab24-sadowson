@@ -96,7 +96,6 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0,0,1;
 	  p position = -1.91113,-8.55,14.6634,0xeb63c46d;
 	}
 }

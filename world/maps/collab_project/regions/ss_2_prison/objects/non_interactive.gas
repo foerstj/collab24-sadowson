@@ -263,42 +263,6 @@
 	  p position = 0.0338898,-0.598504,0.0140984,0x8da5cd11;
 	}
 }
-[t:bed_glb_fort_01,n:0x42000047]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = 1.77701,0,1.70549,0x60901d32;
-	}
-}
-[t:torch_glb_holder_01,n:0x4200000f]
-{
-	[light_flicker_lightweight]
-	{
-	  x siege_light = 0x6B8A906F;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.49012e-007;
-	  p position = 0.0824699,-0.615582,-0.000139952,0x6f1328c0;
-	}
-}
-[t:bed_glb_fort_01,n:0x42000048]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.73513,-1.5,-0.518501,0x46a43be5;
-	}
-}
-[t:bed_glb_fort_01,n:0x42000046]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.459557,-1.5,-0.491394,0x7e158021;
-	}
-}
 [t:statue_glb_roman_01,n:0x42000039]
 {
 	[placement]
@@ -1131,12 +1095,32 @@
 	  p position = -1.55201,0,-1.37222,0xbe34f6f0;
 	}
 }
-[t:bed_glb_fort_01,n:0x4200004b]
+[t:bed_glb_fort_01,n:0x42000046]
 {
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.76734,-1.5,-0.528399,0x97c3674b;
+	  p position = 0.459557,-1.5,-0.491394,0x7e158021;
+	}
+}
+[t:torch_glb_holder_01,n:0x4200000f]
+{
+	[light_flicker_lightweight]
+	{
+	  x siege_light = 0x6B8A906F;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = 0.0824699,-0.615582,-0.000139952,0x6f1328c0;
+	}
+}
+[t:bed_glb_fort_01,n:0x42000047]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = 1.77701,0,1.70549,0x60901d32;
 	}
 }
 [t:bed_glb_fort_01,n:0x4200004a]
@@ -1145,6 +1129,22 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -1.79731,-1.5,-0.575205,0xe6526049;
+	}
+}
+[t:bed_glb_fort_01,n:0x42000048]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.73513,-1.5,-0.518501,0x46a43be5;
+	}
+}
+[t:bed_glb_fort_01,n:0x4200004b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.76734,-1.5,-0.528399,0x97c3674b;
 	}
 }
 [t:bed_glb_fort_01,n:0x42000049]
