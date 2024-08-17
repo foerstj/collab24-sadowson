@@ -7,24 +7,24 @@
 	{
 		[skills]
 		{
-			strength 		=  13, 0;
-			intelligence 	=  11, 0;
-			dexterity 		=  19, 0;
-			ranged 			=  15, 0;
+			strength 		= 13, 0;
+			intelligence 	= 5, 0;
+			dexterity 		= 16, 0;
+            ranged 			= 6, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value	= 33;
-		life 				= 270;
-		max_life 			= 270;
-		mana 				= 120;
-		max_mana			= 120;
+		experience_value	= 120;
+		life 				= 240;
+		max_life 			= 240;
+		mana 				= 100;
+		max_mana			= 100;
 	}
 	[attack]
 	{
-		damage_max = 22;
-		damage_min = 16;
+		damage_max = 51;
+		damage_min = 48;
 	}
 	[common]
 	{
@@ -32,7 +32,7 @@
 	}
 	[defend]
 	{
-		defense = 19;
+		defense = 75;
 	}
 	[inventory]
 	{
@@ -97,25 +97,25 @@
 	{
 		[skills]
 		{
-			strength 		=  19, 0;
-			intelligence 	=  11, 0;
-			dexterity 		=  14, 0;
-			melee 			=  15, 0;
+			strength	 = 18, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 10, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value	= 33;
-		life				= 384;
-		max_life			= 384;
+		experience_value	= 100;
+		life				= 270;
+		max_life			= 270;
 		mana				= 90;
 		max_mana			= 90;
 		model = m_c_ecm_sk_pos_2;
 	}
 	[attack]
 	{
-		damage_max = 19;
-		damage_min = 14;
+		damage_max = 33;
+		damage_min = 29;
 	}
 	[common]
 	{
@@ -124,7 +124,7 @@
 	}
 	[defend]
 	{
-		defense=37;
+		defense = 100;
 	}
 	[inventory]
 	{

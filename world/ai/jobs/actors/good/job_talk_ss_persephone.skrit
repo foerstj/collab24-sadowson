@@ -94,15 +94,15 @@ state Talk$
 	{
 
 		string	conversation_block$;
-		int		Quest_Reward_Cash$ = 250;
+		int		Quest_Reward_Cash$ = 200;
 		
 		conversation_block$ = "conversation_persephone_hello";
 		
-		if( Victory.IsQuestActive( "quest_twin_sisters" ) )
+		if( Victory.IsQuestActive( "c24_3_3_amulet" ) )
 		{
 			#only( game )
 			[[
-				if( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_quest_note", m_target$ ) )
+				if( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "amulet_keeper", m_target$ ) )
 				{
 					conversation_block$ = "conversation_persephone_quest";
 					PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 199, 1.0 );	// Turn off the indicator.
@@ -127,7 +127,7 @@ state Talk$
 				}
 			]]
 		}
-		if( Victory.IsQuestCompleted( "quest_twin_sisters" ) )
+		if( Victory.IsQuestCompleted( "c24_3_3_amulet" ) )
 		{
 			conversation_block$ = "conversation_persephone_idle";
 		}

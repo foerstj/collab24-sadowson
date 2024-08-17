@@ -1,3 +1,15 @@
+[t:dsx_utraean_obj_01,n:0x46000d13]
+{
+	[common]
+	{
+		screen_name = "PERGAMON";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -1.98251,0,0.261627,0x075095f0;
+	}
+}
 [t:door_glb_gendungeon_03,n:0x46000dc1]
 {
 	[aspect]
@@ -20,17 +32,5 @@
 	{
 	  p position = 1.26168,-0.282841,0.740952,0x622f6b91;
 		use_point_scids = 0x46000dce;
-	}
-}
-[t:lever_des_01,n:0x46000d92]
-{
-	[on_off_lever]
-	{
-	  x on_scid = 0x46000D91;
-	  b one_shot = true;
-	}
-	[placement]
-	{
-	  p position = 4.88458,-9.7,-2.20634,0x3c89c4ab;
 	}
 }

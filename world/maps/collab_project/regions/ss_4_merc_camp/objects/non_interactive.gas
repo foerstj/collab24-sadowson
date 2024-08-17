@@ -9639,6 +9639,14 @@
 	  p position = -30.0328,-4.94434,-17.553,0x3e81642c;
 	}
 }
+[t:table_glb_01,n:0x44000356]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -13.1278,-4.95,-13.688,0x031ea83f;
+	}
+}
 [t:bed_glb_fort_01,n:0x440007d7]
 {
 	[placement]

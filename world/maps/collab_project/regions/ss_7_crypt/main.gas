@@ -1,9 +1,9 @@
 [t:region,n:region]
 {
 	created = battlestation,dowde;
-	description = none;
+	description = "none";
   x guid = 0x00000470;
-	lastmodified = FLUPSNPUPS,flups;
+	lastmodified = BATTLESTATION,dowde;
   x mesh_range = 0x00000470;
 	notes = none;
   x scid_range = 0x00000470;

@@ -119,6 +119,11 @@
 	0x470003b5 = t_dgn02_wal_backface-04x08;
 	0x470003ba = t_dgn02_wal_cap-4-8b-v0-l;
 	0x470003bb = t_dgn02_wal_cap-4-8b-v0-r;
+	0x470003c0 = t_dgn02_cap-04x04;
+	0x470003c1 = t_dgn02_cap-04x08;
+	0x470003c2 = t_dgn02_cap-08x08;
+	0x470003ca = t_dgn02_cap_stairs-a;
+	0x470003cc = t_dgn02_cap_wall-a;
 	0x470003d0 = t_dgn02_lavacavern-entry-sides;
 	0x470003d1 = t_dgn02_lavacavern-entry-top;
 	0x470003d2 = t_dgn02_lavacavern-entry;

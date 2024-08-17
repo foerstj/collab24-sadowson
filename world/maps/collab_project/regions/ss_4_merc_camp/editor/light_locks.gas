@@ -425,7 +425,7 @@
   b 0x4d4bfe92 = false;
   b 0x4d944904 = false;
   b 0x4d9d179a = false;
-  b 0x4da0f321 = false;
+  b 0x4da0f321 = true;
   b 0x4df26113 = false;
   b 0x4e3a8e9b = false;
   b 0x4e898730 = false;
@@ -489,7 +489,7 @@
   b 0x58327ecd = false;
   b 0x58702d94 = false;
   b 0x58734fbe = false;
-  b 0x58972cfe = false;
+  b 0x58972cfe = true;
   b 0x58b53537 = false;
   b 0x58d0f18c = false;
   b 0x596208f6 = false;
@@ -789,7 +789,7 @@
   b 0x906def68 = false;
   b 0x90702bdc = false;
   b 0x907052c3 = false;
-  b 0x90820a28 = false;
+  b 0x90820a28 = true;
   b 0x90bc8538 = false;
   b 0x90c4c95e = false;
   b 0x90ce10ad = false;
@@ -1197,7 +1197,7 @@
   b 0xdf4d5b6f = false;
   b 0xdf8534f4 = false;
   b 0xdf9f5a8b = false;
-  b 0xdfe5f24d = false;
+  b 0xdfe5f24d = true;
   b 0xdfe77102 = false;
   b 0xe00a5a7c = false;
   b 0xe02c2a8a = false;

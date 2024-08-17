@@ -1,0 +1,51 @@
+[world_locations]
+{
+//Larissa
+	[t:location,n:valley]
+	{
+		id = 1000;
+		screen_name = "The Valley";
+	}
+	[t:location,n:larissa]
+	{
+		id = 1001;
+		screen_name = "Larissa";
+	}
+	[t:location,n:prison]
+	{
+		id = 1002;
+		screen_name = "Larissa Prison";
+	}
+	[t:location,n:tomb]
+	{
+		id = 1003;
+		screen_name = "An old tomb";
+	}
+//Plains
+	[t:location,n:plains]
+	{
+		id = 1100;
+		screen_name = "The Southern Plains";
+	}
+	[t:location,n:merc_camp]
+	{
+		id = 1101;
+		screen_name = "The Mercenary Camp";
+	}
+	[t:location,n:forgotten_crypt]
+	{
+		id = 1102;
+		screen_name = "The Forgotten Crypt";
+	}
+//Death Valley
+	[t:location,n:death_valley]
+	{
+		id = 1200;
+		screen_name = "Death Valley";
+	}
+	[t:location,n:sleeping_catacombs]
+	{
+		id = 1201;
+		screen_name = "The Sleeping Catacombs";
+	}
+}

@@ -9,6 +9,19 @@
 	  p position = -2.03868,0,-1.01853,0x06f7f6c3;
 	}
 }
+[t:emt_sound,n:0x41a00010]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 1.84973,1.31912,0.120341,0x3252ea6e;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	}
+}
 [t:emt_sound_act,n:0x41a00043]
 {
 	[placement]

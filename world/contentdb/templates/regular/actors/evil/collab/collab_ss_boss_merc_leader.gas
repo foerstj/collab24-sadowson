@@ -11,11 +11,10 @@
 
 		[skills]
 		{
-			strength		= 22, 0;
-			intelligence	= 11, 0;
-			dexterity		= 15, 0;
-			melee 			= 25, 0;
-			combat_magic	= 25, 0;
+			strength 	 = 21, 0;
+			intelligence = 13, 0;
+			dexterity 	 = 12, 0;
+            melee 		 = 20, 0;
 		}
 	}
 	[aspect]
@@ -26,11 +25,11 @@
 		life_recovery_unit		= 1;
 		mana_recovery_period	= 3;
 		mana_recovery_unit		= 1;
-		experience_value = 3100;
-		life = 1000;
-		max_life = 1000;
-		mana = 109;
-		max_mana = 109;
+		experience_value 	= 700;
+		life 				= 1000;
+		max_life 			= 1000;
+		mana 				= 109;
+		max_mana 			= 109;
 		scale_base 		= 1.1;
 		[voice]
 		{
@@ -48,8 +47,8 @@
 	{
 		attack_range	= 0.5;
 		reload_delay	= 0;
-		damage_max		= 20;
-		damage_min		= 10;
+		damage_max		= 100;	//QA to check - seems WAY overscaled!
+		damage_min		= 80;
 	}
 	[body]
 	{
@@ -173,6 +172,10 @@
 	}
 	[conversation]
 	{
+	}
+	[defend]
+	{
+		defense=102;
 	}
 	[guts_manager]
 	{

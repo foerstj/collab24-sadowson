@@ -194,6 +194,13 @@
 	  p position = -14.389,-4.95,-6.36552,0x031ea83f;
 	}
 }
+[t:use_point,n:0x44000357]
+{
+	[placement]
+	{
+	  p position = -11.8492,-4.95,-12.6461,0x031ea83f;
+	}
+}
 [t:ee_gizmo_wall_blocker,n:0x4400086b]
 {
 	[placement]
@@ -444,35 +451,6 @@
 	  p position = 2.85898,-5.01708,21.4615,0x5564e21f;
 	}
 }
-[t:trigger_generic,n:0x440007a3]
-{
-	[common]
-	{
-		dev_instance_text = "DEBUG QUEST PROGRESS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_mercenaries","active",1);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.52338,-5.05,15.1933,0x5564e21f;
-	}
-}
 [t:use_point,n:0x440007aa]
 {
 	[placement]
@@ -648,6 +626,39 @@
 	  p position = 0.559563,4.35,-10.0348,0xc50cf8af;
 	}
 }
+[t:trigger_generic,n:0x44000363]
+{
+	[common]
+	{
+		dev_instance_text = "LOCATION MERC CAMP";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("merc_camp");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  p position = 0.608055,5.15,-11.156,0xc50cf8af;
+	}
+}
 [t:trigger_generic,n:0x44000792]
 {
 	[common]
@@ -789,6 +800,105 @@
 	[placement]
 	{
 	  p position = 13.0972,-4.95,-19.877,0x34ebe3e5;
+	}
+}
+[t:trigger_generic,n:0x44000321]
+{
+	[common]
+	{
+		dev_instance_text = "PREVENT BOSS LEAVING";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x44000355,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = go_within_bounding_box(4.000000,0.500000,2.000000,0x44000835,"","on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,0;
+	}
+	[placement]
+	{
+	  p position = 2.90962,-4.95,-27.5471,0x61deba4f;
+	}
+}
+[t:trigger_generic,n:0x44000361]
+{
+	[common]
+	{
+		dev_instance_text = "LOCATION PLAINS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("plains");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  p position = 2.75396,-5.05,-45.4355,0x61deba4f;
+	}
+}
+[t:trigger_generic,n:0x44000362]
+{
+	[common]
+	{
+		dev_instance_text = "LOCATION MERC CAMP";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("merc_camp");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  p position = 2.62376,-4.85,-34.9195,0x61deba4f;
 	}
 }
 [t:trigger_generic,n:0x4400078f]

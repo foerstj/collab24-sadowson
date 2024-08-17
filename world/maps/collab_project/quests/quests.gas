@@ -1,5 +1,15 @@
 [chapters]
 {
+	[chapter_03_underland]
+	{
+		chapter_image = b_gui_ig_mnu_jnl_chapter_03;
+		screen_name = "Chapter III: Underland";
+		[*]
+		{
+			description = "Deep below the surface of the world, there lie wondrous lands where crystals and mushrooms grow...";
+		  i order = 0;
+		}
+	}
 	[chapter_04]
 	{
 		chapter_image = b_gui_ig_mnu_jnl_chapter_04;
@@ -192,4 +202,43 @@
 			speaker = lady athena;
 		}
 	}
+	
+	[c24_3_2_gypsy_greetings]
+    {
+		chapter = chapter_03_underland;
+		screen_name = "Gypsy Greetings";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "Inform Pesha in Larissa about the holdup of the Gypsies in Shroomington";
+		  	i order = 0;
+		  	b required = false;
+		}
+    }
+    [c24_3_3_amulet]
+    {
+		chapter = chapter_03_underland;
+		screen_name = "Lost Amulet";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+            // if you find the amulet first
+			description = "Ask the Gypsies in Shroomington about their lost amulet";
+		  	i order = 0;
+		  	b required = false;
+		}
+		[*]
+		{
+            // if you speak to the gypsy first
+			description = "Find Persephone's amulet lost in the Crystlayer on the way to Larissa";
+		  	i order = 1;
+		  	b required = false;
+		}
+		[*]
+		{
+			description = "Deliver the Elder Wood Amulet to Persephone in Larissa";
+		  	i order = 2;
+		  	b required = false;
+		}
+    }
 }

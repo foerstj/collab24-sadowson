@@ -102,6 +102,8 @@
 {
 	[common]
 	{
+	  b is_multi_player = false;
+	  b is_single_player = false;
 		screen_name = "DEBUG DO NOT TOUCH";
 	}
 	[on_off_lever]

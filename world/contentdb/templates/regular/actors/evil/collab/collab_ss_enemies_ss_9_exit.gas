@@ -7,25 +7,25 @@
 	{
 		[skills]
 		{
-			strength =  15, 0;
-			intelligence =  8, 0;
-			dexterity =  13, 0;
-			combat_magic =  10,  0;
+			strength	 =  8,  0;
+			intelligence =  13, 0;
+			dexterity	 =  9,  0;
+			combat_magic =  8,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 39;
-		life = 46;
-		max_life = 46;
-		mana = 16;
-		max_mana = 16;
+		life 		= 100;
+		max_life 	= 100;
+		mana 		= 56;
+		max_mana 	= 56;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 35;
-		damage_min = 30;
+		damage_max = 60;
+		damage_min = 55;
 	}
 	[common]
 	{
@@ -33,7 +33,7 @@
 	}
 	[defend]
 	{
-		defense=38;
+		defense = 74;
 	}
 	[inventory]
 	{
@@ -41,17 +41,26 @@
 		[other] { il_active_primary_spell=spell_darkling_spark; }
     	[pcontent]
 		{
-			[all*]
-			{
-   				chance = 0.03;
-                il_main = #nmagic/5-11;
-                il_main = #cmagic/3-8;
-			}
 			[oneof*]
 			{
-				chance = 0.3;
-				il_main = #*/25-31;
-				il_main = #armor/12-66;
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.1;
+                    il_main = #cmagic/3-15;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+                    il_main = #*/36-44;
+                    il_main = #body,ro/70-88;
+				}
+
 			}
 		}
 	}
@@ -69,19 +78,18 @@
 	{
 		[skills]
 		{
-			strength =  	25, 0;
-			intelligence =  16, 0;
-			dexterity =  	21, 0;
-       		melee =  		60, 0;
-            combat_magic =  60, 0;
+			strength	 =  8,  0;
+			intelligence =  13, 0;
+			dexterity	 =  9,  0;
+			combat_magic =  8,  0;
 		}
 	}
 	[aspect]
 	{
 		draw_shadow = false;
 		experience_value = 39;
-		life = 1680;
-		max_life = 1680;
+		life = 400;
+		max_life = 400;
 		mana = 30;
         max_mana = 30;
 		model=m_c_edm_dk_pos_1;
@@ -90,8 +98,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 190;
-		damage_min = 175;
+		damage_max = 50;
+		damage_min = 45;
 	}
 	[common]
 	{
@@ -114,7 +122,7 @@
 	}
    	[defend]
 	{
-		defense = 460;
+		defense = 100;
 	}
    	[inventory]
 	{
@@ -127,27 +135,23 @@
 			{
 				[oneof*]
 				{
-					chance = 0.7;
-					il_main = #*/97-105;
-					il_main = #armor/50-253;
-                	il_main = #nmagic/25-43;
-                	il_main = #cmagic/25-43;
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.1;
+                    il_main = #cmagic/3-15;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/99-112;
-	                il_main = #armor/-rare(1)/300-350;
-                    il_main = #*/-rare(1)/99-112;
-                }
-				[oneof*]
-				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/99-112;
-	                il_main = #armor/-unique(2)/300-350;
-                    il_main = #*/-unique(2)/99-112;
-	            }
+					chance = 0.15;
+                    il_main = #*/36-44;
+                    il_main = #body,ro/70-88;
+				}
+
 			}
-        }
+		}
 	}
 }

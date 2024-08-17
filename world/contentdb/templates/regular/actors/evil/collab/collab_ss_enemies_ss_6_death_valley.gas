@@ -1,108 +1,3 @@
-[t:template,n:collab_ss_6_death_valley_barkrunner]
-{
-	category_name = "ss_6_death_valley_enemies";
-	doc = "Barkrunner";
-	specializes = dsx_base_barkrunner;
-	[actor]
-	{
-		[skills]
-		{
-			strength =		12, 0;
-			intelligence =	7, 0;
-			dexterity =		8, 0;
-			melee =		8,	0;
-		}
-	}
-	[aspect]
-	{
-		[textures]
-		{
-			0 = b_c_edm_barkrunner;
-		}
-		experience_value = 39;
-		life = 247;
-		max_life = 247;
-		mana = 10;
-		max_mana = 10;
-		[voice]
-		{
-			[die]			{ priority = high; * = s_e_die_larch; }
-			[hit_critical]	{ priority = low; * = s_e_hit_larch_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_larch_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_larch_SED; }
-		}
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 57;
-		damage_min = 45;
-		reload_delay = 0;
-	}
-	[common]
-	{
-		screen_name = "Barkrunner";
-	}
-	[defend]
-	{
-		defense = 102;
-	}
-	[inventory]
-	{
-		[pcontent]
-		{
-			[oneof*]
-			{
-				[gold*]
-				{
-					chance = 0.2;
-					min = 150;
-					max = 299;
-				}
-				[oneof*]
-				{
-					chance = 0.2;
-					il_main = potion_mana_small;
-					il_main = potion_health_small;
-				}
-				[oneof*]
-				{
-					chance = 0.2;
-					il_main = #weapon/28-36;
-					il_main = #armor/13-81;
-					il_main = #*/28-36;
-				}
-				[oneof*]
-				{
-					chance = 0.01;
-					il_main = #weapon/-rare(1)/36-44;
-					il_main = #armor/-rare(1)/53-118;
-					il_main = #*/-rare(1)/36-44;
-				}
-				[oneof*]
-				{
-					chance = 0.005;
-					il_main = #weapon/-unique(2)/36-44;
-					il_main = #armor/-unique(2)/53-118;
-					il_main = #*/-unique(2)/36-44;
-				}	
-			}
-		}
-	}
-	[mind]
-	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party		= true;
-		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
-			?meander						= false
-			&still							= false;
-
-		melee_engage_range = 14;
-		personal_space_range = 1.0;
-		ranged_engage_range = 14.0;
-		sight_range = 14.0;
-	}
-}
 [t:template,n:collab_ss_6_death_valley_wolf_black]
 {
 	category_name = "ss_6_death_valley_enemies";
@@ -112,30 +7,30 @@
 	{
 		[skills]
 		{
-			strength		= 21, 0;
-			intelligence	= 11, 0;
-			dexterity		= 14, 0;
-            melee			= 18,  0;
+			strength 	 = 11, 0;
+			intelligence = 6, 0;
+			dexterity 	 = 12, 0;
+            melee		 = 11,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 39;
-		life			= 451;
-        max_life		= 451;
-        mana			= 101;
-        max_mana 		= 101;
+		experience_value = 320;
+		life			 = 153;
+        max_life		 = 153;
+        mana			 = 12;
+        max_mana 		 = 12;
 		textures:0 = b_c_edm_wf-05;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 21;
-		damage_min = 15;
+		damage_max = 40;
+		damage_min = 35;
 	}
 	[defend]
 	{
-		defense = 18;
+		defense = 55;
 	}
 	[body]
 	{
@@ -164,19 +59,19 @@
 	{
 		[skills]
 		{
-			strength		= 21, 0;
-			intelligence	= 11, 0;
-			dexterity		= 14, 0;
-            melee			= 18,  0;
+			strength 	 = 18, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 10, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 39;
-		life			= 451;
-        max_life		= 451;
-        mana			= 101;
-        max_mana 		= 101;
+		experience_value = 340;
+		life			= 270;
+        max_life		= 270;
+        mana			= 30;
+        max_mana 		= 30;
 		model = m_c_ecm_wr_pos_2;
 		[textures]
 		{
@@ -186,8 +81,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 21;
-		damage_min = 15;
+		damage_max = 33;
+		damage_min = 29;
 	}
 	[common]
 	{
@@ -196,7 +91,7 @@
 	}
    	[defend]
 	{
-		defense = 18;
+		defense = 98;
 	}
 	[inventory]
 	{
@@ -266,27 +161,27 @@
 	{
 		[skills]
 		{
-			strength		= 21, 0;
-			intelligence	= 11, 0;
-			dexterity		= 14, 0;
-            melee			= 18,  0;
+			strength 	 = 16, 0;
+			intelligence = 8, 0;
+			dexterity 	 = 10, 0;
+            melee		 = 9,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 39;
-		life			= 451;
-        max_life		= 451;
-        mana			= 101;
-        max_mana 		= 101;
+		experience_value = 280;
+		life			= 225;
+        max_life		= 225;
+        mana			= 20;
+        max_mana 		= 20;
 		model = m_c_edm_chs_pos_1;
 		textures:0 = b_c_edm_chs;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max 	= 21; 
-		damage_min 	= 15;
+		damage_max 	= 68; 
+		damage_min 	= 60;
 	}
 	[common]
 	{
@@ -295,41 +190,52 @@
 	}
 	[defend]
 	{
-		defense = 18;
+		defense = 84;
 	}
 	[inventory]
 	{
-		[pcontent]
+   		[pcontent]
 		{
 			[oneof*]
 			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/7-11;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/30-36;
+					il_main = #armor/13-73;
+	                il_main = #weapon/30-36;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	            	il_main = #weapon/-rare(1)/34-44;
+	                il_main = #armor/-rare(1)/34-117;
+                    il_main = #*/-rare(1)/34-44;
+                }
+				[oneof*]
+                {
+					chance = 0.002;
+	                il_main = #weapon/-unique(2)/34-44;
+	                il_main = #armor/-unique(2)/34-117;
+                    il_main = #*/-unique(2)/34-44;
+	            }
 				[gold*]
 				{
-					chance = 0.2;
-					min = 331;
-					max = 658;
-				}
-				[oneof*]
-				{
-					chance = 0.2;
-					il_main = potion_mana_small;
-					il_main = potion_health_small;
-				}
-				[oneof*]
-				{
 					chance = 0.15;
-					il_main = #weapon/33-44;
-					il_main = #armor/13-100;
-					il_main = #*/33-44;
+					max = 149;
+					min = 91;
 				}
-				[oneof*]
-				{
-					chance = 0.0075;
-					il_main = #weapon/-rare(1)/36-49;
-					il_main = #armor/-rare(1)/62-146;
-					il_main = #*/-rare(1)/36-49;
-				}
-				
 			}
 		}
 	}
@@ -343,19 +249,19 @@
 	{
 		[skills]
 		{
-			strength		= 21, 0;
-			intelligence	= 11, 0;
-			dexterity		= 14, 0;
-            melee			= 18,  0;
+			strength 	 = 16, 0;
+			intelligence = 8, 0;
+			dexterity 	 = 10, 0;
+            melee		 = 9,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 39;
-		life			= 451;
-        max_life		= 451;
-        mana			= 101;
-        max_mana 		= 101;
+		experience_value = 140;
+		life			= 100;
+        max_life		= 100;
+        mana			= 20;
+        max_mana 		= 20;
 		model = m_c_edm_chs_pos_1;
 		scale_base = 0.35;
 		[voice]
@@ -378,7 +284,7 @@
 	}
 	[defend]
 	{
-		defense = 18;
+		defense = 42;
 	}
 	[body]
 	{
@@ -386,38 +292,48 @@
 	}
 	[inventory]
 	{
-		drop_at_use_point = true;
-		[pcontent]
+   		[pcontent]
 		{
 			[oneof*]
 			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/7-11;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/30-36;
+					il_main = #armor/13-73;
+	                il_main = #weapon/30-36;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	            	il_main = #weapon/-rare(1)/34-44;
+	                il_main = #armor/-rare(1)/34-117;
+                    il_main = #*/-rare(1)/34-44;
+                }
+				[oneof*]
+                {
+					chance = 0.002;
+	                il_main = #weapon/-unique(2)/34-44;
+	                il_main = #armor/-unique(2)/34-117;
+                    il_main = #*/-unique(2)/34-44;
+	            }
 				[gold*]
 				{
-					chance = 0.2;
-					min = 268;
-					max = 533;
+					chance = 0.15;
+					max = 149;
+					min = 91;
 				}
-				[oneof*]
-				{
-					chance = 0.2;
-					il_main = potion_mana_small;
-					il_main = potion_health_small;
-				}
-				[oneof*]
-				{
-					chance = 0.1;
-					il_main = #weapon/28-41;
-					il_main = #armor/11-90;
-					il_main = #*/28-41;
-				}
-				[oneof*]
-				{
-					chance = 0.005;
-					il_main = #weapon/-rare(1)/25-44;
-					il_main = #armor/-rare(1)/53-90;
-					il_main = #*/-rare(1)/25-44;
-				}
-				
 			}
 		}
 	}
@@ -431,19 +347,19 @@
 		{
 		[skills]
 		{
-			strength 		= 12, 0;
-			intelligence 	= 22, 0;
-			dexterity 		= 13, 0;
-			combat_magic	= 18, 0;
+			strength	 = 10, 0;
+			intelligence = 5, 0;
+			dexterity	 = 16, 0;
+			combat_magic = 10, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value 	= 39;
-		life             	= 271;
-		max_life         	= 271;
-		mana             	= 360;
-		max_mana         	= 360;
+		experience_value 	= 300;
+		life             	= 108;
+		max_life         	= 108;
+		mana             	= 20;
+		max_mana         	= 20;
 		model 				= m_c_edm_chs_pos_2;
 		scale_base = 1.0;
 		textures:0 = b_c_edm_chs-03;
@@ -451,8 +367,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 21; 
-		damage_min = 16;
+		damage_max = 40; 
+		damage_min = 38;
 	}
 	[common]
 	{
@@ -461,7 +377,7 @@
 	}
 	[defend]
 	{
-		defense = 19;
+		defense = 58;
 	}
 	[body]
 	{
@@ -530,38 +446,6 @@
 	{
 		selected_active_location = il_active_primary_spell;
 		[other] { il_active_primary_spell=spell_chitterskrag_poison; }
-		[pcontent]
-		{
-			[oneof*]
-			{
-				[gold*]
-				{
-					chance = 0.2;
-					min = 331;
-					max = 658;
-				}
-				[oneof*]
-				{
-					chance = 0.2;
-					il_main = potion_mana_small;
-					il_main = potion_health_small;
-				}
-				[oneof*]
-				{
-					chance = 0.15;
-					il_main = #weapon/33-44;
-					il_main = #armor/13-100;
-					il_main = #*/33-44;
-				}
-				[oneof*]
-				{
-					chance = 0.0075;
-					il_main = #weapon/-rare(1)/36-49;
-					il_main = #armor/-rare(1)/62-146;
-					il_main = #*/-rare(1)/36-49;
-				}
-				
-			}
-		}
+		
 	}
 }

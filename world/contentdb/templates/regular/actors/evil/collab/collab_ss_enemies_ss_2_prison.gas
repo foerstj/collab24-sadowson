@@ -7,20 +7,20 @@
 	{
 		[skills]
 		{
-			strength 		= 19, 0;
-			intelligence 	= 11, 0;
-			dexterity 		= 14, 0;
-			melee 			= 15, 0;
+			strength	 = 10, 0;
+			intelligence = 4, 0;
+			dexterity	 = 15, 0;
+            melee		 = 8, 0;
 
 		}
 	}
 	[aspect]
 	{
-		experience_value = 33;
-		life			= 407;
-		max_life		= 407;
-		mana			= 94;
-		max_mana		= 94;
+		experience_value = 140;
+		life			= 177;
+		max_life		= 177;
+		mana			= 50;
+		max_mana		= 50;
 		model = m_c_edm_sc_pos_1;
 		[voice]
 		{
@@ -34,8 +34,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 19;
-		damage_min = 14;
+		damage_max = 40;
+		damage_min = 35;
 	}
 	[body]
 	{
@@ -108,7 +108,7 @@
 	}
 	[defend]
 	{
-		defense=62;
+		defense = 60;
 	}
 	[inventory]
 	{

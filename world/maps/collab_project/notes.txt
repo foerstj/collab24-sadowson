@@ -12,44 +12,74 @@ ss_7_crypt			>	ss_8_volcano	-	0x01985071 > 0x01985076
 ss_8_volcano		>	ss_9_exit		-	NULL ( USE DISPLACER )
 ss_9_exit			>	ss_1_valley		-	0x01985004
 
-VA's
+//Enemy Counts
 
-*** Main Characters ***
-Lady Athena:
-Numeria:
-Archivist:				Antony J ( Lewylln )
-Mercenary Leader:		Philip D ( Sadowson )
-Lord Commander:			Philip D ( Sadowson )
+ss_1_valley
 
-*** Shops ***
-Aurelia:
-Tiberius:
-Seraphine:				Sam ( Sami )
+Black Skrubb:		10
+Klaw:				13
+Black Wolf:			46
+Black Wolf Boss:	1
 
-*** Minor ***
-Bodrus:					Antony J ( Lewylln )
-Captain:				Antony J ( Lewylln )
-Guard_F_04:
-Guard_F_07:
-Guard_F_08:
-Guard_F_09:
-Guard_M_01:
-Guard_M_02:
-Guard_M_03:
-Guard_M_04:
-Guard_M_05:
-Melinda:
-Miralanna:
-Synod (M):
-Tent_F:
-Tent_M:
-Trianni:
-Lieutenant Piratus:
-Merc M 1:
-Merc M 2:
-Merc M 3:
-Merc M 4:
-Merc F 1:
-Merc F 2:
-Merc F 3:
-Merc F 4:
+ss_1a_family-tomb
+
+Skeleton Guard:		39
+Skeleton Archer:	28
+
+ss_2_prison
+
+Scorpion:			19
+
+ss_3_highway
+
+Kikclaw:			38
+Baby Kikclaw:		22
+Mhulliq:			41
+Mhulliq Boss:		1
+Plains Braak:		61
+Plains Braak Boss:	1
+
+ss_4_merc_camp
+
+Merc Leader Boss:	1
+Mercenaries:		196
+
+ss_5_dungeon
+
+Stalagnid:				31
+Skeleton Archer:		113
+Skeleton Guard:			95
+Skeleton Guard Boss:	1
+Walking Corpse:			48
+
+ss_6_death_valley
+
+Chitterskrag:			30
+Immature Chitterskrag:	62
+Spewing Chitterskrag:	9
+Black Wolf:				55
+Lesser Wraith:			58
+
+ss_6a_basement
+
+
+ss_7_crypt:
+Battle Wraith:			21
+Battle Wraith Boss:		1
+Lord Commander Boss:	1
+Death Knight:			46
+Death Knight Boss:		1
+Mounted Knight:			17
+Warlock:				33
+Wraith Piercer:			47
+
+ss_8_volcano
+Fire elemental:		5
+Incumbent Wraith:	24
+Lava Beast:			3
+Lava Beast Boss:	1
+Quadscale:			12
+
+ss_9_exit
+Darkling:	15
+Drake Blue:	3

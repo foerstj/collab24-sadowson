@@ -3,7 +3,7 @@
 	created = battlestation,dowde;
 	description = none;
   x guid = 0x0000041A;
-	lastmodified = FLUPSNPUPS,flups;
+	lastmodified = BATTLESTATION,dowde;
   x mesh_range = 0x0000041A;
 	notes = none;
   x scid_range = 0x0000041A;

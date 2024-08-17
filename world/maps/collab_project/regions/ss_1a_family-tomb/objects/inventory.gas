@@ -58,3 +58,24 @@
 		use_point_scids = 0x41a00039;
 	}
 }
+[t:potion_health_large,n:0x41a00111]
+{
+	[placement]
+	{
+	  p position = -0.515121,-0.5,-0.299217,0x8cee2d00;
+	}
+}
+[t:potion_mana_large,n:0x41a00112]
+{
+	[placement]
+	{
+	  p position = 0.455401,-0.5,-0.289192,0x8cee2d00;
+	}
+}
+[t:potion_rejuvenation_large,n:0x41a00113]
+{
+	[placement]
+	{
+	  p position = -0.0285414,-0.5,-0.284126,0x8cee2d00;
+	}
+}

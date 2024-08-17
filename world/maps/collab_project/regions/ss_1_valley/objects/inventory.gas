@@ -888,6 +888,15 @@
 	  p position = -1.71548,-1.50107,0.24469,0x17fe0f44;
 	}
 }
+[t:collab_ss_book_the_four,n:0x41000de6]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -1.2946,-1.99665,0.254402,0x17fe0f44;
+		use_point_scids = 0x41000e17;
+	}
+}
 [t:he_fu_pl_smallwings,n:0x41000de7]
 {
 	[aspect]

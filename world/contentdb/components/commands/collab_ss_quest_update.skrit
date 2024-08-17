@@ -1,0 +1,78 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_quest_update.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2024
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//Why did I have to make this. Quest stuff in DS is stupid and never works the way you want it to.
+
+//reserved tags
+property	bool		_server_only$	= true;
+property	string		_doc$			= "Update Quest state upon recieving a we_req_activate";
+
+//Exported Properties
+property	string		quest_name$					doc = "Name of the quest to check";
+property	int			quest_min_state$	= -1	doc = "Quest state must here before updating. -1 to ignore state.";
+property	int			quest_set_state$	= -1	doc = "Set quest to this state. -1 to not change state";
+property	SCID		Target$						doc = "If true to update, send message to SCID";
+property	eWorldEvent	Target_Message$				doc = "Message to send to Target";
+property	float		Delay$				= 0		doc = "Delay to send message";
+
+			bool		Send_Message$ = false;
+
+owner = GoSkritComponent;
+
+trigger OnGoDrawDebugHud$
+{
+	Goid goid$ = Target$.Goid;
+	if( goid$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid$.go.Placement.Position,
+									 MakeColor( 0.5, 1.0, 0, 0.5 ),
+									 ToString( Target_Message$ ) );
+	}
+}
+
+event OnGoHandleMessage$(  eWorldEvent e$, WorldMessage )
+{
+	if( e$ == WE_REQ_ACTIVATE )
+	{
+		if( StringTool.IsEmpty( quest_name$ ) == false )
+		{
+			if( Victory.IsQuestActive( quest_name$ ) )
+			{
+				if( quest_min_state$ != -1 )
+				{
+					Report.Generic( "collab_ss_quest_update.skrit: Sent a quest update request" );
+					if( Victory.GetQuestOrder( quest_name$ ) == quest_min_state$ )
+					{
+						Victory.RSActivateQuest( quest_name$, quest_set_state$ );
+						Send_Message$ = true;
+					}
+				}
+				else
+				{
+					Victory.RSActivateQuest( quest_name$, quest_set_state$ );
+					Send_message$ = true;
+					
+				}
+			}
+		}
+		else
+		{
+			Report.Error( "collab_ss_quest_update.skrit: Has no quest_name$ set! \n" );
+		}
+		
+		if( Send_Message$ == true ) && ( Target$.IsValid )
+		{
+			PostWorldMessage( Target_Message$, owner.goid, Target$.goid, Delay$ );
+			Send_Message$ = false;
+		}
+	}
+}

@@ -68,3 +68,10 @@
 	  p position = 1.53683,0,2.54682,0xbac0d0a4;
 	}
 }
+[t:collab_ss_test_crossbow,n:0x40000002]
+{
+	[placement]
+	{
+	  p position = -0.118231,0,1.46064,0x76de0a99;
+	}
+}

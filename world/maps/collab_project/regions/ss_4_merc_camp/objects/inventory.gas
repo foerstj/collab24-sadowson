@@ -1,0 +1,8 @@
+[t:collab_ss_book_larissa,n:0x44000360]
+{
+	[placement]
+	{
+	  p position = -13.4649,-4.07818,-12.5232,0x031ea83f;
+		use_point_scids = 0x44000357;
+	}
+}

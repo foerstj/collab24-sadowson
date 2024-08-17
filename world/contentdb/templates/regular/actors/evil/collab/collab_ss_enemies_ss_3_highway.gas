@@ -8,29 +8,29 @@
 	{
 		[skills]
 		{
-			strength 	 	= 20, 0;
-			intelligence	= 11, 0;
-			dexterity		= 14, 0;
-			melee			= 16, 0;
+			strength 	 = 10, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 15, 0;
+            melee 		 = 8,  0;
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 19;
-		damage_min = 14;
+		damage_max = 36;
+		damage_min = 30;
 	}
 	[defend]
 	{
-		defense = 17;
+		defense = 60;
 	}
 	[aspect] 
 	{
-		experience_value = 36;
-		life = 337;
-		max_life = 337;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 160;
+		life		= 180;
+		max_life	= 180;
+		mana 		= 10;
+		max_mana	= 10;
 		model = m_c_edm_kc_pos_1; 
 		[voice]
 		{
@@ -51,7 +51,6 @@
 		effect_name = melee_hit_2;
 	}
 }
-
 [t:template,n:collab_ss_3_highway_kikclaw_baby]
 {
 	category_name = "ss_3_highway_enemies";
@@ -62,10 +61,10 @@
 	{
 		[skills]
 		{
-			strength 	 	=  19, 0;
-			intelligence   	=  11, 0;
-			dexterity 	 	=  14, 0;
-			melee 	 		=  15, 0;
+			strength 	 = 10, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 15, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect] 
@@ -73,11 +72,11 @@
 		textures: 0 = b_c_edm_klik-2;
 		scale_base	= 0.4;
 		
-		experience_value = 36;
-		life 			= 384;
-		max_life 		= 384;
-		mana 			= 90;
-		max_mana 		= 90;
+		experience_value = 80;
+		life 			= 100;
+		max_life 		= 100;
+		mana 			= 5;
+		max_mana 		= 5;
 		
 		[voice]
 		{
@@ -91,8 +90,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 73;
-		damage_min = 67;
+		damage_max = 30;
+		damage_min = 25;
 	}
 	[body]
 	{
@@ -104,7 +103,7 @@
 	}
 	[defend]
 	{
-		defense = 101;
+		defense = 50;
 	}
 	[mind]  
 	{  
@@ -115,7 +114,6 @@
 		&still                                   = false;  
 	}
 }
-
 [t:template,n:collab_ss_3_highway_mhulliq_one]
 {
 	category_name = "ss_3_highway_enemies";
@@ -125,29 +123,29 @@
 	{
 		[skills]
 		{
-			strength 	 	= 20, 0;
-			intelligence	= 11, 0;
-			dexterity		= 14, 0;
-			melee			= 16, 0;
+			strength 	 = 11, 0;
+			intelligence = 6,  0;
+			dexterity 	 = 12, 0;
+            melee		 = 11, 0;
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 19;
-		damage_min = 14;
+		damage_max = 37;
+		damage_min = 33;
 	}
 	[defend]
 	{
-		defense = 17;
+		defense = 55;
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life             = 407;
-		max_life         = 407;
-		mana             = 94;
-		max_mana         = 94;
+		experience_value = 180;
+		life             = 150;
+		max_life         = 150;
+		mana             = 20;
+		max_mana         = 20;
 		textures:0 = b_c_edm_hb-03;
 		material = flesh;
 		[voice]
@@ -170,7 +168,7 @@
 	}
 	[defend]
 	{
-		defense = 29;
+		defense = 55;
 	}
 	[mind]
 	{
@@ -184,7 +182,6 @@
 		sight_range = 14.0;
 	}
 }
-
 [t:template,n:collab_ss_3_highway_mhulliq_boss]
 {
 	category_name = "ss_3_highway_enemies";
@@ -194,17 +191,17 @@
 	{
 		[skills]
 		{
-			strength 		= 15, 0;
-			intelligence	= 12, 0;
-			dexterity		= 22, 0;
-            ranged			= 20, 0;
+			strength 	 = 11, 0;
+			intelligence = 6,  0;
+			dexterity 	 = 12, 0;
+            melee		 = 11, 0;
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 27;
-		damage_min = 20;
+		damage_max = 45;
+		damage_min = 35;
 	}
 	[defend]
 	{
@@ -212,11 +209,11 @@
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life             = 451;
-		max_life         = 451;
-		mana             = 101;
-		max_mana         = 101;
+		experience_value = 360;
+		life             = 180;
+		max_life         = 180;
+		mana             = 20;
+		max_mana         = 20;
 		textures:0 = b_c_edm_hb-04;
 		material = flesh;
 		[voice]
@@ -249,7 +246,6 @@
 		sight_range = 14.0;
 	}
 }
-
 [t:template,n:collab_ss_3_highway_braak]
 {
 	category_name = "ss_3_highway_enemies";
@@ -259,19 +255,19 @@
 	{
 		[skills]
 		{
-			strength		= 13, 0;
-			dexterity 		= 19, 0;
-			intelligence	= 11, 0;
-            ranged			= 15, 0;
+			strength	 = 9,  0;
+			intelligence = 10, 0;
+			dexterity	 = 10, 0;
+            nature_magic = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 270;
-        max_life 		= 270;
-		mana 			= 120;
-		max_mana 		= 120;
+		experience_value = 200;
+		life 			= 130;
+        max_life 		= 130;
+		mana 			= 40;
+		max_mana 		= 40;
 		[textures]
 		{
 			0 = b_c_ecm_bk-02;
@@ -280,8 +276,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 42;
-		damage_min = 38;
+		damage_max = 30;
+		damage_min = 25;
 	}
 	[body]
 	{
@@ -294,7 +290,7 @@
 	}
 	[defend]
 	{
-		defense = 52;
+		defense = 36;
 	}
 	[inventory]
 	{
@@ -353,7 +349,6 @@
 		actor_auto_switches_to_melee	= false;
 	}
 }
-
 [t:template,n:collab_ss_3_highway_braak_boss]
 {
 	category_name = "ss_3_highway_enemies";
@@ -363,19 +358,19 @@
 	{
 		[skills]
 		{
-			strength 		= 15, 0;
-			intelligence	= 12, 0;
-			dexterity		= 22, 0;
-            ranged			= 20, 0;
+			strength	 = 9,  0;
+			intelligence = 10, 0;
+			dexterity	 = 10, 0;
+            nature_magic = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 343;
-        max_life 		= 343;
-		mana 			= 150;
-		max_mana 		= 150;
+		experience_value = 400;
+		life 			= 130;
+        max_life 		= 130;
+		mana 			= 40;
+		max_mana 		= 40;
 		[textures]
 		{
 			0 = b_c_ecm_bk-04;
@@ -384,12 +379,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 27;
-		damage_min = 20;
+		damage_max = 40;
+		damage_min = 35;
 	}
 	[defend]
 	{
-		defense = 23;
+		defense = 46;
 	}
 	[body]
 	{
@@ -397,7 +392,7 @@
 	}
 	[common]
 	{
-		screen_name="Ferocious Braak";
+		screen_name = "Ferocious Braak";
 		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{

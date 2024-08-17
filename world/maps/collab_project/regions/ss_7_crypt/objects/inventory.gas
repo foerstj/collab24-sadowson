@@ -35,3 +35,22 @@
 	  p position = 1.24824,-0.888819,1.85559,0x47cbd5c3;
 	}
 }
+[t:ss_ra_g_o_sd_1h_avg,n:0x4700030a]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = -4.03223e-008,0.923879,0.382684,9.67734e-008;
+	  p position = 0.993792,-1.39964,-1.33132,0xbb3a4f95;
+	}
+}
+[t:collab_ss_book_archeologist,n:0x4700030b]
+{
+	[placement]
+	{
+	  p position = 0.781268,-2,-1.43017,0xbb3a4f95;
+	}
+}

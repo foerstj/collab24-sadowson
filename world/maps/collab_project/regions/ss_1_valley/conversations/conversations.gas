@@ -322,7 +322,7 @@ Though I suppose you're actually searching for healing potions so you can keep t
 	[text*]
 	{
 		activate_quest* = quest_athena,0;
-		screen_text = "This bridge won't be fixed anytime soon. If you're desperate to get to the Sunset Slopes, go find Lady Athena to the east. She can help raise up the boys to get this 'un bridge here fixed up.";
+		screen_text = "This bridge won't be fixed anytime soon. If you're desperate to get to the Sunset Slopes, go find Lady Athena to the south. She can help raise up the boys to get this 'un bridge here fixed up.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -660,6 +660,60 @@ My rather crude blade was destroyed as I fought my way into the safety of this c
 	  f scroll_rate = 10.000000;
 	}
 }
+[conversation_persephone_hello]
+{
+	[text*]
+	{
+		screen_text = "This strange emergence of the undead has us all on edge. I only hope that it settles down as quickly as it emerged!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_persephone_idle]
+{
+	[text*]
+	{
+		screen_text = "The undead menance may continue to threaten us, but knowing that I have my amulet makes it a bit easier to sleep at night. Thank you again traveller.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_persephone_quest]
+{
+	[text*]
+	{
+		activate_quest* = quest_twin_sisters,1;
+		complete_quest* = quest_twin_sisters;
+		complete_quest* = c24_3_3_amulet;
+		screen_text = "That amulet... where did you find it?
+Why yes, I am Persephone - and that's my amulet! You were sent here by my compatriots in Shroomington no doubt. Well, how it ended up there I'll never know! You have my thanks for returning this to me traveller. I must reward you for this, for this amulet is truly invaluable to me!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_pesha_hello]
+{
+	[text*]
+	{
+		screen_text = "We had hoped to meet up with friends and family here at Larissa, but they are late. Have you heard or seen anything in your travels fellow wanderer?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_pesha_idle]
+{
+	[text*]
+	{
+		screen_text = "Thank you again for your assistance traveller.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_pesha_quest]
+{
+	[text*]
+	{
+		complete_quest* = c24_3_2_gypsy_greetings;
+		screen_text = "It warms this old mans heart to hear that our friends and family are well and safe from you traveller. That they are only held up in Shroomington is certainly better news than hearing that they've been eaten by the wilds.
+I hope that this small payment of gold suffices as payment for your services.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [conversation_seraphine_complete_combat]
 {
 	[text*]
@@ -898,35 +952,6 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	{
 		screen_text = "If you are in need of potions, speak to my superior, Healer Aurelia.
 The wounded here need their rest, so I would ask that you keep your voices down, lest they be woken and the pain inflamed.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conversation_persephone_hello]
-{
-	[text*]
-	{
-		screen_text = "Traveller, have you any news from Underland? I was hoping to know if my sister was okay - it has been many moons since I last saw her.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conversation_persephone_idle]
-{
-	[text*]
-	{
-		screen_text = "It gives me hope to know that my twin sister is safe. Thank you again for delivering her letter to me. I will wait here until she arrives and we can be reunited in happiness.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conversation_persephone_quest]
-{
-	[text*]
-	{
-		activate_quest* = quest_twin_sisters,1;
-		complete_quest* = quest_twin_sisters;
-		screen_text = "A letter? For me?
-
-This... this is from my sister! And she is okay! Traveller, thank you for this! Oh I shall treasure it so!
-I must reward you for your efforts. This is all I can spare, thank you again traveller!";
 	  f scroll_rate = 10.000000;
 	}
 }

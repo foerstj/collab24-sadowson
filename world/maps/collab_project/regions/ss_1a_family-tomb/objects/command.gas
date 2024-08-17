@@ -1,0 +1,13 @@
+[t:collab_ss_quest_update,n:0x41a00107]
+{
+	[collab_ss_quest_update]
+	{
+	  i quest_min_state = 0;
+		quest_name = "quest_nymeria_sword";
+	  i quest_set_state = 1;
+	}
+	[placement]
+	{
+	  p position = 0.0839853,-0.300001,2.78974,0xe4363a1b;
+	}
+}

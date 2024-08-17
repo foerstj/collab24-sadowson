@@ -20,20 +20,6 @@
 	  p position = -6.46365,-5,-10.4551,0xcc7ae009;
 	}
 }
-[t:light_flicker,n:0x47000082]
-{
-	[light_flicker]
-	{
-	  f flicker_frequency_max = 12;
-	  f flicker_frequency_min = 10;
-	  f magnitude = 0.15;
-	  x siege_light = 0x24BFCE74;
-	}
-	[placement]
-	{
-	  p position = -0.210345,-1.1,-1.45816,0x0d90392f;
-	}
-}
 [t:light_flicker,n:0x47000081]
 {
 	[light_flicker]
@@ -46,5 +32,19 @@
 	[placement]
 	{
 	  p position = -0.446627,-1.1,-1.38147,0x64fefc63;
+	}
+}
+[t:light_flicker,n:0x47000082]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x24BFCE74;
+	}
+	[placement]
+	{
+	  p position = -0.210345,-1.1,-1.45816,0x0d90392f;
 	}
 }

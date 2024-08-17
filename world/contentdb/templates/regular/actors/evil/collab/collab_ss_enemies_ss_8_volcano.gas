@@ -7,27 +7,27 @@
 	{
 		[skills]
 		{
-			strength =		17, 0;
-			intelligence = 	9, 0;
-			dexterity = 	9, 0;
-            melee =  		33,  0;
+			strength 	 = 18, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 10, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 39;
-		life = 740;
-		max_life = 740;
-		mana = 16;
-		max_mana = 16;
+		experience_value = 480;
+		life 			= 300;
+		max_life 		= 300;
+		mana 			= 50;
+		max_mana 		= 50;
 		model = m_c_ecm_wr_pos_2;
 		[textures]{ 0=b_c_ecm_wr; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 76;
-		damage_min = 72;
+		damage_max = 33;
+		damage_min = 29;
 	}
 	[common]
 	{
@@ -36,7 +36,7 @@
 	}
    	[defend]
 	{
-		defense=350;
+		defense=100;
 	}
 	[inventory]
 	{
@@ -46,35 +46,45 @@
 			{
 				es_weapon_hand = ax_g_c_2h1b_avg;
 			}
-
 			[oneof*]
 			{
 				[oneof*]
 				{
-					chance = 0.35;
-					il_main = #*/49-104;
-					il_main = #armor/50-247;
-	                il_main = #spell/30-40;
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/10-14;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/6-11;
+					il_main = #armor/18-98;
+	                il_main = #weapon/36-44;
 				}
 				[oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/95-115;
-	                il_main = #armor/-rare(1)/324-366;
-                    il_main = #*/-rare(1)/95-115;
+	                il_main = #weapon/-rare(1)/42-59;
+	                il_main = #armor/-rare(1)/126-144;
+                    il_main = #*/-rare(1)/42-59;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/95-115;
-	                il_main = #armor/-unique(2)/324-366;
-                    il_main = #*/-unique(2)/95-115;
+	                il_main = #weapon/-unique(2)/42-59;
+	                il_main = #armor/-unique(2)/126-144;
+                    il_main = #*/-unique(2)/42-59;
 	            }
 				[gold*]
 				{
-					chance = 0.125;
-					max = 8288;
-					min = 6999;
+					chance = 0.15;
+					max = 328;
+					min = 239;
 				}
 			}
 		}
@@ -106,27 +116,30 @@
 	{
 		[skills]
 		{
-			strength 		= 18, 0;
-			intelligence 	= 8, 0;
-			dexterity 		= 11, 0;
-			nature_magic 	= 18, 0;
+			strength 	 = 8,  0;
+			intelligence = 13, 0;
+			dexterity	 = 9,  0;
+			combat_magic = 8,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 39;
-		life 			 = 640;
-		max_life 		 = 640;
-		mana 			 = 800;
-		max_mana 		 = 800;
+		experience_value = 460;
+		life 			 = 100;
+		max_life 		 = 100;
+		mana 			 = 56;
+		max_mana 		 = 56;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 80;
-		damage_min = 71;
+		damage_max = 60;
+		damage_min = 55;
 	}
-	[defend] { defense=156; }
+	[defend]
+	{
+		defense = 74;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
@@ -158,35 +171,35 @@
 	{
 		[skills]
 		{
-			strength =  	52, 0;
-			intelligence =  16, 0;
-			dexterity =  	23, 0;
-            melee =  		28,  0;
+			strength 	 = 18, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 10, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 39;
-		life = 1325;
+		experience_value = 500;
+		life = 350;
 		material = stone;
-		max_life = 1325;
-		mana = 10;
-		max_mana = 10;
+		max_life = 350;
+		mana = 50;
+		max_mana = 50;
 		textures:0 = b_c_edm_rb-02;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 220;
-		damage_min = 190;
+		damage_max = 35;
+		damage_min = 30;
 	}
 	[common]
 	{
-		screen_name="Lava Beast";
+		screen_name = "Lava Beast";
 	}
 	[defend]
 	{
-		defense = 800;
+		defense = 200;
 	}
 
 	[physics]
@@ -215,33 +228,41 @@
 			{
 				[oneof*]
 				{
-					chance = 0.45;
-					il_main = #*/88-148;
-					il_main = #armor/66-328;
-	                il_main = #nmagic/55-60;
-	                il_main = #cmagic/55-60;
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/10-14;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/6-11;
+					il_main = #armor/18-98;
+	                il_main = #weapon/36-44;
 				}
 				[oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/144-163;
-	                il_main = #armor/-rare(1)/493-510;
-                    il_main = #*/-rare(1)/144-163;
+	                il_main = #weapon/-rare(1)/42-59;
+	                il_main = #armor/-rare(1)/126-144;
+                    il_main = #*/-rare(1)/42-59;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/144-163;
-	                il_main = #armor/-unique(2)/493-510;
-                    il_main = #*/-unique(2)/144-163;
+	                il_main = #weapon/-unique(2)/42-59;
+	                il_main = #armor/-unique(2)/126-144;
+                    il_main = #*/-unique(2)/42-59;
 	            }
 				[gold*]
 				{
-					chance = 0.125;
-					max = 31657;
-					min = 24325;
-					min_pile = 4019;
-					piles = 2 - 4;
+					chance = 0.15;
+					max = 328;
+					min = 239;
 				}
 			}
 		}
@@ -256,27 +277,27 @@
 	{
 		[skills]
 		{
-			strength =  	55, 0;
-			intelligence =  13, 0;
-			dexterity =  	23, 0;
-            melee =  		33,  0;
+			strength =  	18, 0;
+			intelligence =  5,  0;
+			dexterity =  	11, 0;
+            melee =  		13, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 39;
-		life = 1353;
-		material = stone;
-		max_life = 1353;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 1000;
+		life 			= 400;
+		material 		= stone;
+		max_life		= 400;
+		mana 	 		= 100;
+		max_mana 		= 100;
 		textures:0 = b_c_edm_rb-03;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 226;
-		damage_min = 196;
+		damage_max = 50;
+		damage_min = 45;
 	}
 	[common]
 	{
@@ -388,19 +409,19 @@
 	{
 		[skills]
 		{
-			strength =  	30, 0;
-			intelligence =  18, 0;
-			dexterity =  	27, 0;
-            melee  =        45, 0;
+			strength 	 = 6, 0;
+			intelligence = 1, 0;
+			dexterity 	 = 15,0;
+            melee		 = 3, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 39;
-		life = 1040;
-		max_life = 1040;
-		mana = 10;
-		max_mana = 10;
+		life 		= 97;
+		max_life 	= 97;
+		mana 		= 10;
+		max_mana 	= 10;
 		model = m_c_edm_qs_pos_1;
 		[voice]
 		{
@@ -413,8 +434,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 180;
-		damage_min = 160;
+		damage_max = 22;
+		damage_min = 14;
 		reload_delay = 0;
 	}
 	[body]
@@ -474,7 +495,7 @@
 	}
     [defend]
 	{
-		defense = 420;
+		defense = 78;
 	}
 	[mind]
 	{

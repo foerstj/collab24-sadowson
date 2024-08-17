@@ -55,7 +55,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x41A000B1,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x41A00107,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -73,48 +73,6 @@
 	[placement]
 	{
 	  p position = 0.0314531,0.5,4.51066,0xe4363a1b;
-	}
-}
-[t:check_quest,n:0x41a000b1]
-{
-	[check_quest]
-	{
-		quest_name = "quest_nymeria_sword";
-	  i quest_state = 0;
-	  x send_to_scid = 0x41A000B2;
-	}
-	[placement]
-	{
-	  p position = 0.818956,-0.0999994,3.04759,0xe4363a1b;
-	}
-}
-[t:trigger_generic,n:0x41a000b2]
-{
-	[common]
-	{
-		dev_instance_text = "UPDATE QUEST";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_nymeria_sword","active",1);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.817641,-0.0999999,3.01414,0xe4363a1b;
 	}
 }
 [t:trigger_generic,n:0x41a000cd]

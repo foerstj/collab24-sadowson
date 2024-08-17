@@ -7,25 +7,25 @@
 	{
 		[skills]
 		{
-			strength 		= 20, 0;
-			dexterity 		= 14, 0;
-			intelligence 	= 11,  0;
-			melee 			= 17,  0;
+			strength 	 = 18, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 10, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 429;
-		max_life 		= 429;
+		experience_value = 240;
+		life 			= 280;
+		max_life 		= 280;
 		mana 			= 97;
 		max_mana 		= 97;
 		model = m_c_ecm_sk_pos_2;
 	}
 	[attack]
 	{
-		damage_max = 20;
-		damage_min = 15;
+		damage_max = 35;
+		damage_min = 30;
 	}
 	[common]
 	{
@@ -34,7 +34,7 @@
 	}
 	[defend]
 	{
-		defense = 17;
+		defense = 100;
 	}
 	[inventory]
 	{
@@ -86,31 +86,31 @@
 	{
 		[skills]
 		{
-			strength 		= 20, 0;
-			dexterity 		= 14, 0;
-			intelligence 	= 11,  0;
-			melee 			= 17,  0;
+			strength 	 = 18, 0;
+			intelligence = 5,  0;
+			dexterity 	 = 11, 0;
+            melee 		 = 13, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 429;
-		max_life 		= 429;
-		mana 			= 97;
-		max_mana 		= 97;
+		experience_value = 480;
+		life 			= 330;
+		max_life 		= 330;
+		mana 			= 100;
+		max_mana 		= 100;
 		model = m_c_ecm_sk_pos_2;
 		textures:0 = b_c_ecm_skg-02;
         scale_base = 1.2;
 	}
 	[attack]
 	{
-		damage_max = 20;
-		damage_min = 15;
+		damage_max = 40;
+		damage_min = 35;
 	}
 	[defend]
 	{
-		defense = 39;
+		defense = 202;
 	}
 	[common]
 	{
@@ -178,24 +178,24 @@
 	{
 		[skills]
 		{
-			strength 		= 14, 0;
-			dexterity 		= 20, 0;
-			intelligence 	= 12,  0;
-			ranged 			= 17,  0;
+			strength 	 = 13, 0;
+			intelligence = 5,  0;
+			dexterity 	 = 16, 0;
+            ranged		 = 6,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 299;
-		max_life 		= 299;
-		mana 			= 132;
-		max_mana 		= 132;
+		experience_value = 220;
+		life 			= 243;
+		max_life 		= 243;
+		mana 			= 100;
+		max_mana 		= 100;
 	}
 	[attack]
 	{
-		damage_max = 24;
-		damage_min = 18;
+		damage_max = 51;
+		damage_min = 48;
 	}
 	[common]
 	{
@@ -203,7 +203,7 @@
 	}
 	[defend]
 	{
-		defense = 21;
+		defense = 75;
 	}
 	[inventory]
 	{
@@ -268,17 +268,17 @@
 	{
 		[skills]
 		{
-			strength 		= 20, 0;
-			dexterity 		= 14, 0;
-			intelligence 	= 11, 0;
-			melee 			= 17, 0;
+			strength 	 = 18, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 10, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 429;
-		max_life 		= 429;
+		experience_value = 260;
+		life 			= 250;
+		max_life 		= 250;
 		mana 			= 97;
 		max_mana 		= 97;
 		[textures]{ 0=b_c_edm_zo-02; }
@@ -286,12 +286,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 13;
-		damage_min = 9;
+		damage_max = 35;
+		damage_min = 25;
 	}
 	[defend]
 	{
-		defense = 17;
+		defense = 50;
 	}
 	[body]
 	{
@@ -408,19 +408,19 @@
 	{
 		[skills]
 		{
-			strength 		= 20, 0;
-			dexterity 		= 14, 0;
-			intelligence 	= 11,  0;
-			melee 			= 17,  0;
+			strength 	 = 10, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 15, 0;
+            melee		 = 8,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 429;
-		max_life 		= 429;
-		mana 			= 97;
-		max_mana 		= 97;
+		experience_value = 200;
+		life 			= 160;
+		max_life 		= 160;
+		mana 			= 50;
+		max_mana 		= 50;
 		model = m_c_edm_sn_pos_1;
 		[voice]
 		{
@@ -430,12 +430,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 20;
-		damage_min = 15;
+		damage_max = 36;
+		damage_min = 30;
 	}
 	[defend]
 	{
-		defense = 17;
+		defense = 60;
 	}
 	[body]
 	{
@@ -496,7 +496,7 @@
 	}
 	[common]
 	{
-		screen_name="Stalagnid";
+		screen_name = "Stalagnid";
 	}
 	
 	[mind]

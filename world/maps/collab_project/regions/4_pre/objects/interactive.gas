@@ -1,0 +1,33 @@
+[t:lever_gob_01,n:0x40000003]
+{
+	[common]
+	{
+		screen_name = "MERC BOSS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("quest_mercenaries","active",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[on_off_lever]
+	{
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  p position = -2.93601,0,-0.847999,0x76de0a99;
+	}
+}

@@ -13,18 +13,18 @@
 			strength		= 26, 0;
 			intelligence	= 12, 0;
 			dexterity		= 16, 0;
-			melee 			= 50, 0;
+			melee 			= 20, 0;
 			combat_magic	= 25, 0;
 		}
 	}
 	[aspect]
 	{
 		
-		experience_value = 6200;
-		life = 1216;
-		max_life = 1216;
-		mana = 258;
-		max_mana = 258;
+		experience_value = 1000;
+		life 			 = 1216;
+		max_life 		 = 1216;
+		mana 			 = 258;
+		max_mana 		 = 258;
 		[voice]
 		{
 			[die]			{ priority = high; * = s_e_die_skeleton; }
@@ -44,7 +44,7 @@
 	{
 		attack_range = 0.5;
 		damage_max = 120;
-		damage_min = 90;
+		damage_min = 100;
 	}
 	[body]
 	{
@@ -139,7 +139,7 @@
 	}
 	[common]
 	{
-		screen_name ="Lord Commander";
+		screen_name = "Lord Commander";
 		forced_expiration_class = decay_fresh;
 		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
@@ -182,7 +182,7 @@
 	}
 	[defend]
 	{
-		defense = 500;
+		defense = 120;
 	}
 	[guts_manager]
 	{

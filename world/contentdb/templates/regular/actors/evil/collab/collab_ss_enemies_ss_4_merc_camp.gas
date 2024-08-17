@@ -9,6 +9,7 @@ That way you only need to balance four templates, not SIXTEEN.
 DO NOT MODIFY ANYTHING AFTER THE BASE BALANCING TEMPLATES.
 
 v1 - 13/07/24: Initial Implementation
+v2 - 16/08/24: Rebalanced stats
 
 */
 
@@ -20,29 +21,29 @@ v1 - 13/07/24: Initial Implementation
 	{
 		[skills]
 		{
-			strength 		= 20, 0;
-			dexterity 		= 14, 0;
-			intelligence 	= 11,  0;
-			melee 			= 17,  0;
+			strength 	 = 18, 0;
+			intelligence = 4, 0;
+			dexterity 	 = 10, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 429;
-		max_life 		= 429;
-		mana 			= 97;
-		max_mana 		= 97;
+		experience_value = 100;
+		life 			= 290;
+		max_life 		= 290;
+		mana 			= 10;
+		max_mana 		= 10;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 20;
-		damage_min = 15;
+		damage_max = 33;
+		damage_min = 25;
 	}
 	[defend]
 	{
-		defense = 17;
+		defense = 98;
 	}
 	[inventory]
 	{
@@ -141,19 +142,19 @@ v1 - 13/07/24: Initial Implementation
 	{
 		[skills]
 		{
-			strength 		= 14, 0;
-			dexterity 		= 20, 0;
-			intelligence 	= 12,  0;
-			ranged 			= 17,  0;
+			strength	 = 13, 0;
+			intelligence = 5, 0;
+			dexterity	 = 16, 0;
+            ranged		 = 6,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life 			= 299;
-		max_life 		= 299;
-		mana 			= 132;
-		max_mana 		= 132;
+		experience_value = 100;
+		life 			= 240;
+		max_life 		= 240;
+		mana 			= 10;
+		max_mana 		= 10;
 	}
 	[attack]
 	{
@@ -163,7 +164,7 @@ v1 - 13/07/24: Initial Implementation
 	}
 	[defend]
 	{
-		defense = 21;
+		defense = 75;
 	}
 	[inventory]
 	{
@@ -254,29 +255,29 @@ v1 - 13/07/24: Initial Implementation
 	{
 		[skills]
 		{
-			strength 		= 12,  0;
-			dexterity 		= 12,  0;
-			intelligence 	= 21, 0;
-			combat_magic 	= 17,  0;
+			strength	 = 5, 0;
+			intelligence = 16, 0;
+			dexterity	 = 13, 0;
+            combat_magic = 6,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
-		life = 259;
-		mana = 341;
-		max_life = 259;
-		max_mana = 341;
+		experience_value = 100;
+		life 		= 150;
+		mana 		= 200;
+		max_life 	= 150;
+		max_mana	= 200;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 21;
-		damage_min = 15;
+		damage_max = 60;
+		damage_min = 50;
 	}
 	[defend]
 	{
-		defense = 18;
+		defense = 50;
 	}
 	[inventory]
 	{
@@ -362,23 +363,29 @@ v1 - 13/07/24: Initial Implementation
 	{
 		[skills]
 		{
-			strength 		= 11, 0;
-			dexterity 		= 13, 0;
-			intelligence 	= 22, 0;
-			nature_magic 	= 17, 0;
+			strength	 = 5, 0;
+			intelligence = 16, 0;
+			dexterity	 = 13, 0;
+			nature_magic = 6, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value	= 36;
-		life				= 246;
-		max_life			= 246;
-		mana				= 354;
-		max_mana			= 354;
+		experience_value = 100;
+		life			 = 120;
+		max_life		 = 120;
+		mana			 = 200;
+		max_mana		 = 200;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 45;
+		damage_min = 40;
 	}
 	[defend]
 	{
-		defense = 18;
+		defense = 45;
 	}
 	[inventory]
 	{

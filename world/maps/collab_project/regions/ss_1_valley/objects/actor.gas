@@ -337,6 +337,7 @@
 	[ee_npc_indicator]
 	{
 		quest_name = "quest_athena";
+	  i quest_state_start = 0;
 	}
 	[mind]
 	{
@@ -452,8 +453,8 @@
 	}
 	[ee_npc_indicator]
 	{
-		quest_name = "quest_twin_sisters";
-	  i quest_state_finish = 0;
+		quest_name = "c24_3_3_amulet";
+	  i quest_state_finish = 2;
 	}
 	[mind]
 	{
@@ -533,6 +534,33 @@
 	{
 	  q orientation = 0,0.92388,0,-0.382684;
 	  p position = 3.85263,-0.0500002,-1.69832,0xf48b10c1;
+		use_point_scids = 0x41000e24;
+	}
+}
+[t:collab_ss_pesha,n:0x41000e21]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_pesha_hello;
+			* = conversation_pesha_idle;
+			* = conversation_pesha_quest;
+		}
+	}
+	[ee_npc_indicator]
+	{
+		quest_name = "c24_3_2_gypsy_greetings";
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_pesha.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 2.2312,-0.0500002,-1.34654,0xf48b10c1;
+		use_point_scids = 0x41000e23,0x41000e24;
 	}
 }
 [t:collab_ss_guard_m_04,n:0x41000bc3]

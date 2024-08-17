@@ -176,6 +176,17 @@
 	  p position = 0.80056,-5.05,7.39496,0x5564e21f;
 	}
 }
+[t:cmd_ai_t_move,n:0x44000355]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x44000835;
+	}
+	[placement]
+	{
+	  p position = 2.47191,-4.95,3.47644,0xcb06e010;
+	}
+}
 [t:ee_mass_delete,n:0x4400087a]
 {
 	[ee_mass_delete]

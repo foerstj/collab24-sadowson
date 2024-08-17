@@ -93,3 +93,19 @@
 	{
 	}
 }
+
+[t:template,n:collab_ss_quest_update]
+{
+	specializes	= command;
+	doc			= "collab_ss_quest_update";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_blue;
+	}
+	[collab_ss_quest_update]
+	{
+	}
+}
