@@ -39,7 +39,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x40FAF325;
+				position = -1.910137,0.146832,2.994705,0x40FAF325;
 			}
 		}
 		[start_position]
@@ -51,7 +51,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x40FAF325;
+				position = -3.845926,0.010038,1.560138,0x40FAF325;
 			}
 		}
 		[start_position]
@@ -63,7 +63,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x40FAF325;
+				position = -3.555178,0.064976,-2.040407,0x40FAF325;
 			}
 		}
 		[start_position]
@@ -75,7 +75,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x40FAF325;
+				position = -1.757434,0.002523,-3.356473,0x40FAF325;
 			}
 		}
 		[start_position]
@@ -87,7 +87,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x40FAF325;
+				position = 2.985972,0.066008,-2.651295,0x40FAF325;
 			}
 		}
 		[start_position]
@@ -99,7 +99,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x91AD9D41;
+				position = -2.825361,0.000000,-1.996933,0x91AD9D41;
 			}
 		}
 		[start_position]
@@ -111,7 +111,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x6F7BEDC9;
+				position = -0.908929,0.000000,1.442785,0x6F7BEDC9;
 			}
 		}
 		[start_position]
@@ -123,7 +123,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0x6F7BEDC9;
+				position = 2.664393,0.000000,0.723696,0x6F7BEDC9;
 			}
 		}
 		[world_levels]

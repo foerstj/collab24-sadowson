@@ -568,6 +568,39 @@
 	  p position = -3.43923,0,0.496872,0xc5c25b60;
 	}
 }
+[t:trigger_generic,n:0x41000e37]
+{
+	[common]
+	{
+		dev_instance_text = "STARTING AREA MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_1_valley_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,4.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,0,1;
+	}
+	[placement]
+	{
+	  p position = 0.506601,3.39679,0.426373,0x40faf325;
+	}
+}
 [t:trigger_generic,n:0x41000d48]
 {
 	[common]
@@ -1734,38 +1767,5 @@
 	[placement]
 	{
 	  p position = 2.67555,-1,-0.0288277,0x36ee6c19;
-	}
-}
-[t:trigger_generic,n:0x41000e37]
-{
-	[common]
-	{
-		dev_instance_text = "STARTING AREA MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("collab_ss_1_valley_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,4.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0,0,1;
-	}
-	[placement]
-	{
-	  p position = 0.506601,3.39679,0.426373,0x40faf325;
 	}
 }

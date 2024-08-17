@@ -3728,7 +3728,7 @@
 	}
 	[t:snode,n:0x0ee2ed97]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x0EE2ED97;
 	  x mesh_guid = 0x44000A2C;
@@ -6684,7 +6684,7 @@
 	}
 	[t:snode,n:0x1c780102]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x1C780102;
 	  x mesh_guid = 0x44000545;
@@ -7432,7 +7432,7 @@
 	}
 	[t:snode,n:0x1fa8738a]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x1FA8738A;
 	  x mesh_guid = 0x44000A32;
@@ -9007,7 +9007,7 @@
 	}
 	[t:snode,n:0x263cf8a3]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x263CF8A3;
 	  x mesh_guid = 0x44000A36;
@@ -13432,7 +13432,7 @@
 	}
 	[t:snode,n:0x3383073e]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x3383073E;
 	  x mesh_guid = 0x44000A2D;
@@ -14848,7 +14848,7 @@
 	}
 	[t:snode,n:0x39b065e8]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x39B065E8;
 	  x mesh_guid = 0x44000A3A;
@@ -16637,7 +16637,7 @@
 	}
 	[t:snode,n:0x3f6a8def]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x3F6A8DEF;
 	  x mesh_guid = 0x44000A34;
@@ -16809,7 +16809,7 @@
 	}
 	[t:snode,n:0x4009eb2b]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x4009EB2B;
 	  x mesh_guid = 0x44000505;
@@ -18666,7 +18666,7 @@
 	}
 	[t:snode,n:0x499c0e69]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x499C0E69;
 	  x mesh_guid = 0x44000A33;
@@ -20328,7 +20328,7 @@
 	}
 	[t:snode,n:0x4ea84ab3]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x4EA84AB3;
 	  x mesh_guid = 0x44000A34;
@@ -21137,7 +21137,7 @@
 	}
 	[t:snode,n:0x514e66de]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x514E66DE;
 	  x mesh_guid = 0x44000A27;
@@ -25777,7 +25777,7 @@
 	}
 	[t:snode,n:0x62d197ff]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x62D197FF;
 	  x mesh_guid = 0x44000A2D;
@@ -29413,7 +29413,7 @@
 	}
 	[t:snode,n:0x6d526c04]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x6D526C04;
 	  x mesh_guid = 0x44000A32;
@@ -37777,7 +37777,7 @@
 	}
 	[t:snode,n:0x90bc8538]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x90BC8538;
 	  x mesh_guid = 0x44000505;
@@ -41300,7 +41300,7 @@
 	}
 	[t:snode,n:0x9b9a15db]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0x9B9A15DB;
 	  x mesh_guid = 0x44000546;
@@ -47005,7 +47005,7 @@
 	}
 	[t:snode,n:0xb5c907b6]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0xB5C907B6;
 	  x mesh_guid = 0x44000A1E;
@@ -51175,7 +51175,7 @@
 	}
 	[t:snode,n:0xc61adac3]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0xC61ADAC3;
 	  x mesh_guid = 0x44000A3B;
@@ -53175,7 +53175,7 @@
 	}
 	[t:snode,n:0xcff0ea31]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0xCFF0EA31;
 	  x mesh_guid = 0x44000A27;
@@ -60207,7 +60207,7 @@
 	}
 	[t:snode,n:0xeb2d03d6]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0xEB2D03D6;
 	  x mesh_guid = 0x44000546;
@@ -63345,7 +63345,7 @@
 	}
 	[t:snode,n:0xf65a4356]
 	{
-	  b bounds_camera = false;
+	  b bounds_camera = true;
 	  b camera_fade = false;
 	  x guid = 0xF65A4356;
 	  x mesh_guid = 0x44000A2C;

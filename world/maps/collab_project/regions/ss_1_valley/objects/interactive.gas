@@ -458,7 +458,7 @@
 	{
 		quest_name = "quest_athena";
 	  i quest_state = 1;
-	  x second_door = 0x41000E1C;
+	  x second_door = 0x41000E1E;
 	}
 	[placement]
 	{
@@ -476,7 +476,7 @@
 	{
 		quest_name = "quest_athena";
 	  i quest_state = 1;
-	  x second_door = 0x41000E1B;
+	  x second_door = 0x41000E1D;
 	}
 	[placement]
 	{

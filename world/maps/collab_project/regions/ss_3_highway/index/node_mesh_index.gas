@@ -183,6 +183,7 @@
 	0x430009fa = t_xxx_wal_04-pth-r;
 	0x430009fb = t_xxx_wal_04-thck;
 	0x430009fc = t_xxx_wal_04-thin;
+	0x430009fd = t_xxx_wal_04-tx-02b-l;
 	0x430009fe = t_xxx_wal_04-tx-02b-r;
 	0x430009ff = t_xxx_wal_04-tx-08-l;
 	0x43000a00 = t_xxx_wal_04-tx-08-r;
