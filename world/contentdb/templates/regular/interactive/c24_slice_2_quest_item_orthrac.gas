@@ -1,0 +1,31 @@
+[t:template,n:c24_2_r1_dead_orthrac_youngling_quest]
+{
+	category_name = "treasure";
+	doc = "c24 slice 2 r1 dead orthrac youngling quest";
+	specializes = treasure;
+	[aspect]
+	{
+		model = m_c_edm_or_pos_1;
+		scale_base = 0.40;
+		[textures]
+		{
+			0 = b_c_edm_or-02;
+		}
+		[voice]
+		{
+			[put_down]
+			{
+				* = s_e_gui_put_down_swish;
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Preserved Dead Orthrac Hatchling";
+	}
+	[gui]
+	{
+		can_sell = false;
+		inventory_icon = b_gui_ig_i_ic_dead_orthrac;
+	}
+}

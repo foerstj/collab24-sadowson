@@ -29,7 +29,7 @@ robocopy "%bits%\sound" "%tmp%\Bits\sound" /S
 robocopy "%bits%\ui" "%tmp%\Bits\ui" /S
 robocopy "%bits%\world\ai" "%tmp%\Bits\world\ai" /S
 robocopy "%bits%\world\contentdb\components" "%tmp%\Bits\world\contentdb\components" /S
-robocopy "%bits%\world\contentdb\templates" "%tmp%\Bits\world\contentdb\templates" /S
+robocopy "%bits%\world\contentdb\templates\regular" "%tmp%\Bits\world\contentdb\templates\regular" /S
 robocopy "%bits%\world\global" "%tmp%\Bits\world\global" /S
 robocopy "%bits%\world\ui" "%tmp%\Bits\world\ui" /S
 "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
