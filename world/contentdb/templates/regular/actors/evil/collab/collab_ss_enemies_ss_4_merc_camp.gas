@@ -29,7 +29,7 @@ v2 - 16/08/24: Rebalanced stats
 	}
 	[aspect]
 	{
-		experience_value = 100;
+		experience_value = 22;
 		life 			= 290;
 		max_life 		= 290;
 		mana 			= 10;
@@ -150,7 +150,7 @@ v2 - 16/08/24: Rebalanced stats
 	}
 	[aspect]
 	{
-		experience_value = 100;
+		experience_value = 22;
 		life 			= 240;
 		max_life 		= 240;
 		mana 			= 10;
@@ -263,7 +263,7 @@ v2 - 16/08/24: Rebalanced stats
 	}
 	[aspect]
 	{
-		experience_value = 100;
+		experience_value = 22;
 		life 		= 150;
 		mana 		= 200;
 		max_life 	= 150;
@@ -371,7 +371,7 @@ v2 - 16/08/24: Rebalanced stats
 	}
 	[aspect]
 	{
-		experience_value = 100;
+		experience_value = 22;
 		life			 = 120;
 		max_life		 = 120;
 		mana			 = 200;

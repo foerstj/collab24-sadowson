@@ -32,6 +32,7 @@
 	0x480006a5 = t_xxx_flr_04x04-v0;
 	0x480006a9 = t_xxx_flr_04x08-v0;
 	0x480006aa = t_xxx_flr_08x08-v0;
+	0x480006ad = t_xxx_flr_08x08-v3;
 	0x48000717 = t_xxx_hal_h2o_thck;
 	0x48000728 = t_xxx_hal_diag-thin-r;
 	0x4800072c = t_xxx_hal_thin;

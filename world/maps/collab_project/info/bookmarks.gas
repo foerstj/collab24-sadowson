@@ -1,9 +1,20 @@
 [bookmarks]
 {
+	[t:bookmark,n:test_lord]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0xA9A666C6;
+		[camera]
+		{
+		  f azimuth = 1.150796;
+		  f distance = 18.000000;
+		  f orbit = -1.460000;
+		}
+	}
 	[t:bookmark,n:test_catacomb]
 	{
 		description = "";
-		position = 0.000000,0.000000,0.000000,0xFB448EC1;
+		position = 0.000000,0.000000,0.000000,0xfb448ec1;
 		[camera]
 		{
 		  f azimuth = 70.000000;
@@ -47,7 +58,7 @@
 	[t:bookmark,n:test_lava]
 	{
 		description = "";
-		position = 0.000000,0.000000,0.000000,0x936532ab;
+		position = 0.000000,0.000000,0.000000,0x47f1283c;
 		[camera]
 		{
 		  f azimuth = 0.980797;

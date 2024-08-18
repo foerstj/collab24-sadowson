@@ -26,7 +26,7 @@
 	}
 	[aspect] 
 	{
-		experience_value = 160;
+		experience_value = 35;
 		life		= 180;
 		max_life	= 180;
 		mana 		= 10;
@@ -72,7 +72,7 @@
 		textures: 0 = b_c_edm_klik-2;
 		scale_base	= 0.4;
 		
-		experience_value = 80;
+		experience_value = 18;
 		life 			= 100;
 		max_life 		= 100;
 		mana 			= 5;
@@ -141,7 +141,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 180;
+		experience_value = 39;
 		life             = 150;
 		max_life         = 150;
 		mana             = 20;
@@ -209,7 +209,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 360;
+		experience_value = 78;
 		life             = 180;
 		max_life         = 180;
 		mana             = 20;
@@ -263,7 +263,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 200;
+		experience_value = 44;
 		life 			= 130;
         max_life 		= 130;
 		mana 			= 40;
@@ -366,7 +366,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 400;
+		experience_value = 88;
 		life 			= 130;
         max_life 		= 130;
 		mana 			= 40;

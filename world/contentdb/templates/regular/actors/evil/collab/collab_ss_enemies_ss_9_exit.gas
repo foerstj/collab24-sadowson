@@ -15,7 +15,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 39;
+		experience_value = 113;
 		life 		= 100;
 		max_life 	= 100;
 		mana 		= 56;
@@ -87,7 +87,7 @@
 	[aspect]
 	{
 		draw_shadow = false;
-		experience_value = 39;
+		experience_value = 117;
 		life = 400;
 		max_life = 400;
 		mana = 30;

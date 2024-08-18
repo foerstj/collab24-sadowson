@@ -92,6 +92,6 @@ ss_3_highway
 ss_4_merc_camp
 ss_5_dungeon
 ss_6_death_valley	= 0x00000460
-ss_7_crypt
+ss_7_crypt			= 0x00000470
 ss_8_volcano
 ss_9_exit

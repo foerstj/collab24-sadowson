@@ -15,11 +15,11 @@
 	}
 	[aspect]
 	{
-		experience_value = 120;
-		life = 225;
-        max_life = 225;
-        mana = 90;
-		max_mana = 90;
+		experience_value = 26;
+		life 			= 225;
+        max_life 		= 225;
+        mana 			= 90;
+		max_mana 		= 90;
 		textures:0 = b_c_edm_kw-02;
 	}
 	[attack]
@@ -107,11 +107,11 @@
 	}
 	[aspect]
 	{
-		experience_value = 140;
-		life = 153;
-        max_life = 153;
-        mana = 12;
-        max_mana = 12;
+		experience_value = 30;
+		life 			= 153;
+        max_life 		= 153;
+        mana 			= 12;
+        max_mana 		= 12;
 		textures:0 = b_c_edm_wf-02;
 	}
 	[attack]
@@ -162,11 +162,11 @@
 	}
 	[aspect]
 	{
-		experience_value = 280;
-		life = 200;
-        max_life = 200;
-        mana = 101;
-        max_mana = 101;
+		experience_value = 60;
+		life 			= 200;
+        max_life 		= 200;
+        mana 			= 101;
+        max_mana 		= 101;
 		textures:0 = b_c_edm_wf-05;
 	}
 	[attack]
@@ -268,11 +268,11 @@
 	[aspect]
 	{
 		draw_shadow = false;
-		experience_value = 100;
-		life = 100;
-		max_life = 100;
-		mana = 50;
-		max_mana = 50;
+		experience_value = 22;
+		life 			= 100;
+		max_life 		= 100;
+		mana 			= 50;
+		max_mana 		= 50;
 		model = m_c_edm_sb_pos_1;
 		[textures]
 		{

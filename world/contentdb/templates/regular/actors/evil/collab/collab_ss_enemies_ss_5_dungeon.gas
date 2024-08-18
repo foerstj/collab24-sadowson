@@ -15,7 +15,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 240;
+		experience_value = 52;
 		life 			= 280;
 		max_life 		= 280;
 		mana 			= 97;
@@ -94,7 +94,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 480;
+		experience_value = 104;
 		life 			= 330;
 		max_life 		= 330;
 		mana 			= 100;
@@ -186,7 +186,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 220;
+		experience_value = 48;
 		life 			= 243;
 		max_life 		= 243;
 		mana 			= 100;
@@ -276,7 +276,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 260;
+		experience_value = 56;
 		life 			= 250;
 		max_life 		= 250;
 		mana 			= 97;
@@ -416,7 +416,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 200;
+		experience_value = 44;
 		life 			= 160;
 		max_life 		= 160;
 		mana 			= 50;

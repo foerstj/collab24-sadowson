@@ -1,3 +1,35 @@
+[t:collab_ss_8_lava_caverns_quadscale,n:0x48000031]
+{
+	[placement]
+	{
+	  q orientation = 0,0.766269,0,0.64252;
+	  p position = -1.00161,1.90735e-006,-1.0295,0xd5ba24f9;
+	}
+}
+[t:collab_ss_8_lava_caverns_quadscale,n:0x48000032]
+{
+	[placement]
+	{
+	  q orientation = 0,0.955546,0,0.29484;
+	  p position = -3.80878,-1.90735e-006,-2.80438,0xd5ba24f9;
+	}
+}
+[t:collab_ss_8_lava_caverns_quadscale,n:0x48000033]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.553983,0,0.832528;
+	  p position = 0.310507,0,1.1532,0xd5ba24f9;
+	}
+}
+[t:collab_ss_8_lava_caverns_quadscale,n:0x48000034]
+{
+	[placement]
+	{
+	  q orientation = 0,0.805986,0,0.591934;
+	  p position = 2.19316,-1.90735e-006,-1.33757,0xd5ba24f9;
+	}
+}
 [t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800001e]
 {
 	[placement]
@@ -34,70 +66,6 @@
 	{
 	  q orientation = 0,-0.359595,0,0.933109;
 	  p position = -3.26728,0,0.323132,0xe17ca9b5;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000af]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.45411,0,0.890945;
-	  p position = 0.282654,0,-0.729513,0x21c90e4e;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000ae]
-{
-	[placement]
-	{
-	  q orientation = 0,0.958846,0,0.283928;
-	  p position = 0.00830412,3.8147e-006,0.348787,0xe6fac6fe;
-	}
-}
-[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b2]
-{
-	[placement]
-	{
-	  q orientation = 0,0.163252,0,0.986584;
-	  p position = -0.520559,0,3.52858,0xb5639fc1;
-	}
-}
-[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b3]
-{
-	[placement]
-	{
-	  q orientation = 0,0.871925,0,0.48964;
-	  p position = 3.06218,0,1.22992,0xb5639fc1;
-	}
-}
-[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b6]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.736387,0,0.67656;
-	  p position = -0.635996,0,-2.91437,0xb5639fc1;
-	}
-}
-[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b4]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.550314,0,0.834958;
-	  p position = -2.74674,0,-3.00569,0xd6c5c1e5;
-	}
-}
-[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b5]
-{
-	[placement]
-	{
-	  q orientation = 0,0.0469824,0,0.998896;
-	  p position = 2.50885,0,-2.38824,0xd6c5c1e5;
-	}
-}
-[t:collab_ss_8_lava_caverns_quadscale,n:0x4800003c]
-{
-	[placement]
-	{
-	  q orientation = 0,0.194069,0,0.980988;
-	  p position = 0.297604,0,1.36228,0x581228f6;
 	}
 }
 [t:collab_ss_8_lava_caverns_lava_beast,n:0x48000004]
@@ -148,12 +116,187 @@
 	  p position = 10.5401,-4.6,-6.45966,0x45c89383;
 	}
 }
+[t:collab_ss_8_lava_caverns_quadscale,n:0x4800003c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.194069,0,0.980988;
+	  p position = 0.297604,0,1.36228,0x581228f6;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000ae]
+{
+	[placement]
+	{
+	  q orientation = 0,0.958846,0,0.283928;
+	  p position = 0.00830412,3.8147e-006,0.348787,0xe6fac6fe;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000af]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.45411,0,0.890945;
+	  p position = 0.282654,0,-0.729513,0x21c90e4e;
+	}
+}
+[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b2]
+{
+	[placement]
+	{
+	  q orientation = 0,0.163252,0,0.986584;
+	  p position = -0.520559,0,3.52858,0xb5639fc1;
+	}
+}
+[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b3]
+{
+	[placement]
+	{
+	  q orientation = 0,0.871925,0,0.48964;
+	  p position = 3.06218,0,1.22992,0xb5639fc1;
+	}
+}
+[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b6]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.736387,0,0.67656;
+	  p position = -0.635996,0,-2.91437,0xb5639fc1;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000ac]
+{
+	[placement]
+	{
+	  q orientation = 0,0.139182,0,0.990267;
+	  p position = 0.0982955,0,0.403839,0x75949369;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000ad]
+{
+	[placement]
+	{
+	  q orientation = 0,0.629298,0,0.777164;
+	  p position = 2.28014,0,3.29882,0x75949369;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000020]
+{
+	[placement]
+	{
+	  p position = -0.301381,1.90735e-006,3.22779,0x467a35e7;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000021]
+{
+	[placement]
+	{
+	  p position = 0.619595,0,-0.0168419,0x467a35e7;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000022]
+{
+	[placement]
+	{
+	  p position = 1.84595,0,4.00203,0x467a35e7;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000028]
+{
+	[placement]
+	{
+	  p position = -0.957999,0,-0.292016,0x36d23ed8;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000027]
+{
+	[placement]
+	{
+	  p position = 0.265512,0,-0.680496,0x515e3285;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000026]
+{
+	[placement]
+	{
+	  p position = 0.883059,0,-0.637208,0xd9f9845b;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000b0]
+{
+	[placement]
+	{
+	  q orientation = 0,0.727292,0,0.686329;
+	  p position = -2.57517,0,0.68676,0x17013d2e;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000b1]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.991687,0,0.128674;
+	  p position = 1.20849,0,0.0484619,0x17013d2e;
+	}
+}
+[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b4]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.550314,0,0.834958;
+	  p position = -2.74674,0,-3.00569,0xd6c5c1e5;
+	}
+}
+[t:collab_ss_8_lava_caverns_fire_elemental,n:0x480000b5]
+{
+	[placement]
+	{
+	  q orientation = 0,0.0469824,0,0.998896;
+	  p position = 2.50885,0,-2.38824,0xd6c5c1e5;
+	}
+}
 [t:collab_ss_8_lava_caverns_quadscale,n:0x48000037]
 {
 	[placement]
 	{
 	  q orientation = 0,-0.744195,0,0.667962;
 	  p position = -3.67267,0,1.93577,0xe4547eaa;
+	}
+}
+[t:collab_ss_8_lava_caverns_lava_beast,n:0x48000003]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = 0.452179,0,-1.83363,0x3ff9f2ca;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800004e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.879467,0,0.475959;
+	  p position = -3.86359,-3.8147e-006,0.329601,0x3ff9f2ca;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000029]
+{
+	[placement]
+	{
+	  p position = -0.616406,0,-1.62633,0x8fc4f4d4;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800000a]
+{
+	[placement]
+	{
+	  p position = 0.786573,0,-0.0865355,0xf3ae9aed;
+	}
+}
+[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800000c]
+{
+	[placement]
+	{
+	  p position = -0.346289,0,-2.28002,0xf3ae9aed;
 	}
 }
 [t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800000d]
@@ -185,153 +328,10 @@
 	  p position = -2.02437,-1.90735e-006,-0.0777807,0xc4465cba;
 	}
 }
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000020]
-{
-	[placement]
-	{
-	  p position = -0.301381,1.90735e-006,3.22779,0x467a35e7;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000021]
-{
-	[placement]
-	{
-	  p position = 0.619595,0,-0.0168419,0x467a35e7;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000022]
-{
-	[placement]
-	{
-	  p position = 1.84595,0,4.00203,0x467a35e7;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000027]
-{
-	[placement]
-	{
-	  p position = 0.265512,0,-0.680496,0x515e3285;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000028]
-{
-	[placement]
-	{
-	  p position = -0.957999,0,-0.292016,0x36d23ed8;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800000a]
-{
-	[placement]
-	{
-	  p position = 0.786573,0,-0.0865355,0xf3ae9aed;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800000c]
-{
-	[placement]
-	{
-	  p position = -0.346289,0,-2.28002,0xf3ae9aed;
-	}
-}
 [t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800001f]
 {
 	[placement]
 	{
 	  p position = 0.680133,1.90735e-006,3.6952,0x65ad3d51;
-	}
-}
-[t:collab_ss_8_lava_caverns_lava_beast,n:0x48000003]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.49012e-007;
-	  p position = 0.452179,0,-1.83363,0x3ff9f2ca;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x4800004e]
-{
-	[placement]
-	{
-	  q orientation = 0,0.879467,0,0.475959;
-	  p position = -3.86359,-3.8147e-006,0.329601,0x3ff9f2ca;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000029]
-{
-	[placement]
-	{
-	  p position = -0.616406,0,-1.62633,0x8fc4f4d4;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x48000026]
-{
-	[placement]
-	{
-	  p position = 0.883059,0,-0.637208,0xd9f9845b;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000b0]
-{
-	[placement]
-	{
-	  q orientation = 0,0.727292,0,0.686329;
-	  p position = -2.57517,0,0.68676,0x17013d2e;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000b1]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.991687,0,0.128674;
-	  p position = 1.20849,0,0.0484619,0x17013d2e;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000ac]
-{
-	[placement]
-	{
-	  q orientation = 0,0.139182,0,0.990267;
-	  p position = 0.0982955,0,0.403839,0x75949369;
-	}
-}
-[t:collab_ss_8_lava_caverns_incumbent_wraith,n:0x480000ad]
-{
-	[placement]
-	{
-	  q orientation = 0,0.629298,0,0.777164;
-	  p position = 2.28014,0,3.29882,0x75949369;
-	}
-}
-[t:collab_ss_8_lava_caverns_quadscale,n:0x48000031]
-{
-	[placement]
-	{
-	  q orientation = 0,0.766269,0,0.64252;
-	  p position = -1.00161,1.90735e-006,-1.0295,0xd5ba24f9;
-	}
-}
-[t:collab_ss_8_lava_caverns_quadscale,n:0x48000032]
-{
-	[placement]
-	{
-	  q orientation = 0,0.955546,0,0.29484;
-	  p position = -3.80878,-1.90735e-006,-2.80438,0xd5ba24f9;
-	}
-}
-[t:collab_ss_8_lava_caverns_quadscale,n:0x48000033]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.553983,0,0.832528;
-	  p position = 0.310507,0,1.1532,0xd5ba24f9;
-	}
-}
-[t:collab_ss_8_lava_caverns_quadscale,n:0x48000034]
-{
-	[placement]
-	{
-	  q orientation = 0,0.805986,0,0.591934;
-	  p position = 2.19316,-1.90735e-006,-1.33757,0xd5ba24f9;
 	}
 }

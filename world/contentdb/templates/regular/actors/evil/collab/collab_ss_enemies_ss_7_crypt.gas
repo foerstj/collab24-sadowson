@@ -15,7 +15,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 360;
+		experience_value = 78;
 		life 			= 290;
 		max_life 		= 290;
 		mana 			= 20;
@@ -193,7 +193,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 720;
+		experience_value = 156;
 		life 			= 327;
 		max_life 		= 327;
 		mana 			= 50;
@@ -369,7 +369,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 440;
+		experience_value = 95;
 		life 			= 243;
 		max_life 		= 243;
 		mana 			= 20;
@@ -527,7 +527,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 420;
+		experience_value = 91;
 		life 			= 100;
 		max_life 		= 100;
 		mana 			= 56;
@@ -703,7 +703,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 380;
+		experience_value = 82;
 		life 			= 327;
 		max_life 		= 327;
 		mana 			= 50;
@@ -804,7 +804,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 760;
+		experience_value = 165;
 		life 			= 350;
 		max_life 		= 350;
 		mana 			= 50;
@@ -907,7 +907,7 @@
 	}
 	[aspect]
 	{
-		experience_value 	= 400;
+		experience_value 	= 87;
 		life			= 327;
 		max_life		= 327;
 		mana			= 100;

@@ -25,7 +25,7 @@
 		life_recovery_unit		= 1;
 		mana_recovery_period	= 3;
 		mana_recovery_unit		= 1;
-		experience_value 	= 700;
+		experience_value 	= 152;
 		life 				= 1000;
 		max_life 			= 1000;
 		mana 				= 109;
@@ -175,7 +175,7 @@
 	}
 	[defend]
 	{
-		defense=102;
+		defense = 102;
 	}
 	[guts_manager]
 	{
