@@ -3,12 +3,12 @@
 	[common]
 	{
 		dev_instance_text = "LOCATION TOMB";
-	  b is_single_player = false;
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = set_player_world_location("sleeping_catacombs");
+				action* = fade_nodes(0x00000460,1,-1,-1,"out:instant"), doc("fade out death valley");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(8.000000,5.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -21,6 +21,21 @@
 			  b single_shot = false;
 			  b start_active = true;
 			}
+			[*]
+			{
+				action* = fade_nodes(0x00000460,1,-1,-1,"out:instant");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,5.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
 		}
 	}
 	[gizmo]
@@ -30,6 +45,35 @@
 	[placement]
 	{
 	  p position = 6.44784,-2,1.97469,0xfb448ec1;
+	}
+}
+[t:trigger_generic,n:0x47000312]
+{
+	[common]
+	{
+		dev_instance_text = "DEV FIX MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_7_crypt_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 3.32946,-2,1.78097,0xfb448ec1;
 	}
 }
 [t:trigger_generic,n:0x47000304]
@@ -714,7 +758,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes_global(0x00000470,30,-1,-1,"out:black");
+				action* = fade_nodes_global(0x00000470,42,-1,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -748,7 +792,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes_global(0x00000470,30,-1,-1,"out:black");
+				action* = fade_nodes_global(0x00000470,43,-1,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -816,7 +860,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes_global(0x00000470,15,-1,-1,"out:black");
+				action* = fade_nodes_global(0x00000470,17,-1,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;

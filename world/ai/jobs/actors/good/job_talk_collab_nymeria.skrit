@@ -93,74 +93,67 @@ state Talk$
 
 	event OnEnterState$
 	{
-		// $$$ read/write variables from the Game Auditor here, and bring up the appropriate dialogs...
+		string conversation_block$;
+		
 		if( Victory.IsQuestCompleted( "quest_nymeria_sword" ) )
 		{
-			m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_join" );
-			GameAuditor.GetDb.SetBool( "nymeria_quest_complete", true );
+			conversation_block$ = "conversation_nymeria_join";
 
 			if( GameAuditor.GetDb.GetBool( "party_accept_0x41000C93" ) )
 			{
-				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_accept" );
+				conversation_block$ = "conversation_nymeria_accept";
 				GameAuditor.GetDb.SetBool( "party_accept_0x41000C93", false );
 				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 199, 1.0 );	// Turn off the indicator.
 			} 
 			else if( GameAuditor.GetDb.GetBool( "party_decline_0x41000C93" ) )
 			{
-				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_reject" );
+				conversation_block$ = "conversation_nymeria_reject";
 				GameAuditor.GetDb.SetBool( "party_decline_0x41000C93", false );
 				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x41000C93", true );
 			}
 			else if( GameAuditor.GetDb.GetBool( "party_disband_0x41000C93" ) )
 			{
-				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_disband" );
+				conversation_block$ = "conversation_nymeria_disband";
 				GameAuditor.GetDb.SetBool( "party_disband_0x41000C93", false );
 				GameAuditor.GetDb.SetBool( "party_disbanded_0x41000C93", true );
 				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 114, 1.0 );	// Change indicator to join
 			}
 			else if( GameAuditor.GetDb.GetBool( "party_disbanded_0x41000C93" ) )
 			{
-				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_disband_rejoin" );			
+				conversation_block$ = "conversation_nymeria_disband_rejoin";
 			}
 			else if( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x41000C93" ) )
 			{
-				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_rejoin" );
+				conversation_block$ = "conversation_nymeria_rejoin";
 				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x41000C93", false );
 				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 199, 1.0 );	// Turn off the indicator.
 			}		 
 		}
 		else
 		{
-			m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_hello" );
+			conversation_block$ = "conversation_nymeria_quest_hello";
 			
 			if( GameAuditor.GetDb.GetBool( "nymeria_accept_quest" ) )
 			{
-				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_accept" );
+				conversation_block$ = "conversation_nymeria_quest_accept";
 				PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.goid, m_Go$.goid, 198, 1.0 );
 			}
 			else if( GameAuditor.GetDb.GetBool( "nymeria_decline_quest" ) )
 			{
-				m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_decline" );
+				conversation_block$ = "conversation_nymeria_quest_decline";
 				GameAuditor.GetDb.SetBool( "nymeria_decline_quest", false );
 			}
-		}
-		
-		if( Victory.GetQuestOrder( "quest_nymeria_sword" ) == 2 )
-		{
-			if( GameAuditor.GetDb.GetBool( "nymeria_quest_complete" ) )
+
+			if( Victory.GetQuestOrder( "quest_nymeria_sword" ) == 2 ) && ( Victory.IsQuestCompleted( "quest_nymeria_sword" ) == false )
 			{
-			}
-			else
-			{
+				GameAuditor.GetDb.SetBool( "nymeria_accept_quest", false );	//Prevents a relapse
 				#only( game )
 				[[
 					if( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_nymeria_sword_weak", m_target$ ) )
 					{
 						//Player is ready to complete the quest.
 						goid quest_weapon$ = UIPartyManager.DoesActivePartyHaveTemplate( "collab_ss_nymeria_sword_weak", m_target$ );
-					
-						m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_join" );
-						GameAuditor.GetDb.SetBool( "nymeria_quest_complete", true );
+						conversation_block$ = "conversation_nymeria_join";
 					
 						//Remove the weapon from the player.
 						quest_weapon$.Go.parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, quest_weapon$ ) );
@@ -175,12 +168,13 @@ state Talk$
 					}
 					else
 					{
-						m_Go$.GetConversation.RSSelectConversation( "conversation_nymeria_quest_accept" );
+						conversation_block$ = "conversation_nymeria_quest_accept";
 					}
 				]]
 			}
 		}
 		
+		m_Go$.GetConversation.RSSelectConversation( conversation_block$ );
 		TryAnim$('talk');
 		m_Go$.GetConversation.RSActivateDialogue();
 	}

@@ -257,6 +257,10 @@
 }
 [t:door_csl_dungeon_left_01,n:0x47000121]
 {
+	[door_basic]
+	{
+	  x msg_scid_open = 0x470002F4;
+	}
 	[placement]
 	{
 	  q orientation = 0,1.49012e-007,0,1;
@@ -564,7 +568,7 @@
 {
 	[door_basic]
 	{
-	  x msg_scid_opening = 0x470002D6;
+	  x msg_scid_open = 0x470002D6;
 	  x second_door = 0x47000125;
 	}
 	[placement]
@@ -577,7 +581,7 @@
 {
 	[door_basic]
 	{
-	  x msg_scid_opening = 0x470002D6;
+	  x msg_scid_open = 0x470002D6;
 	  x second_door = 0x47000124;
 	}
 	[placement]
@@ -590,6 +594,7 @@
 {
 	[door_basic]
 	{
+	  x msg_scid_open = 0x470000D8;
 	  x second_door = 0x470000F9;
 	}
 	[placement]
@@ -602,6 +607,7 @@
 {
 	[door_basic]
 	{
+	  x msg_scid_open = 0x470000D8;
 	  x second_door = 0x470000F7;
 	}
 	[placement]
@@ -718,6 +724,7 @@
 {
 	[door_basic]
 	{
+	  x msg_scid_open = 0x470002D8;
 	  x second_door = 0x470000FB;
 	}
 	[placement]
@@ -730,6 +737,7 @@
 {
 	[door_basic]
 	{
+	  x msg_scid_open = 0x470002D8;
 	  x second_door = 0x470000FA;
 	}
 	[placement]

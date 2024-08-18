@@ -190,7 +190,7 @@
 	}
 	[inventory]
 	{
-		selected_active_location = il_active_primary_spell;
+		selected_active_location = il_active_melee_weapon;
 		
 		[pcontent]
 		{

@@ -1,3 +1,71 @@
+[t:trigger_generic,n:0x46000d95]
+{
+	[common]
+	{
+		dev_instance_text = "LOCATION VALLEY";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("death_valley");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  p position = 0.0625114,-1.9,-5.28939,0x347420c3;
+	}
+}
+[t:trigger_generic,n:0x46000d92]
+{
+	[common]
+	{
+		dev_instance_text = "LOCATION CRYPT";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("forgotten_crypt");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  p position = -0.148172,-2.6,1.31948,0x6911e27f;
+	}
+}
 [t:trigger_generic,n:0x46000dd1]
 {
 	[common]
@@ -316,6 +384,40 @@
 	[placement]
 	{
 	  p position = 0.0658875,0,-1.89673,0x5b3920b1;
+	}
+}
+[t:trigger_generic,n:0x46000d96]
+{
+	[common]
+	{
+		dev_instance_text = "LOCATION VALLEY";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("death_valley");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,1.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0.5,0;
+	}
+	[placement]
+	{
+	  p position = 0.110794,-6,2.72632,0x9d94da45;
 	}
 }
 [t:trigger_generic,n:0x46000d91]
@@ -736,107 +838,5 @@
 	[placement]
 	{
 	  p position = 6.33858,-9.4,-6.3768,0x75fd9ae5;
-	}
-}
-[t:trigger_generic,n:0x46000d92]
-{
-	[common]
-	{
-		dev_instance_text = "LOCATION CRYPT";
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("forgotten_crypt");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,0.5,0;
-	}
-	[placement]
-	{
-	  p position = -0.148172,-2.6,1.31948,0x6911e27f;
-	}
-}
-[t:trigger_generic,n:0x46000d95]
-{
-	[common]
-	{
-		dev_instance_text = "LOCATION VALLEY";
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("death_valley");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,0.5,0;
-	}
-	[placement]
-	{
-	  p position = 0.0625114,-1.9,-5.28939,0x347420c3;
-	}
-}
-[t:trigger_generic,n:0x46000d96]
-{
-	[common]
-	{
-		dev_instance_text = "LOCATION VALLEY";
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("death_valley");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,0.5,0;
-	}
-	[placement]
-	{
-	  p position = 0.110794,-6,2.72632,0x9d94da45;
 	}
 }

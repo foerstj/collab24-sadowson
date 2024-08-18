@@ -58463,7 +58463,7 @@
 	  x mesh_guid = 0x460008F7;
 	  x nodelevel = 0xFFFFFFFF;
 	  x nodeobject = 0xFFFFFFFF;
-	  x nodesection = 0x00000001;
+	  x nodesection = 0x00000063;
 	  b occludes_camera = true;
 	  b occludes_light = true;
 		texsetabbr = dgn13;

@@ -1,14 +1,14 @@
 [bookmarks]
 {
-	[t:bookmark,n:test_lava]
+	[t:bookmark,n:test_catacomb]
 	{
 		description = "";
-		position = 0.000000,0.000000,0.000000,0x936532AB;
+		position = 0.000000,0.000000,0.000000,0xFB448EC1;
 		[camera]
 		{
-		  f azimuth = 0.980797;
-		  f distance = 55.500000;
-		  f orbit = -9.010015;
+		  f azimuth = 70.000000;
+		  f distance = 15.500000;
+		  f orbit = 0.000000;
 		}
 	}
 	[t:bookmark,n:test_crypt]
@@ -44,6 +44,17 @@
 		  f orbit = 1.749999;
 		}
 	}
+	[t:bookmark,n:test_lava]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0x936532ab;
+		[camera]
+		{
+		  f azimuth = 0.980797;
+		  f distance = 55.500000;
+		  f orbit = -9.010015;
+		}
+	}
 	[t:bookmark,n:test_lava_tele]
 	{
 		description = "";
@@ -75,6 +86,17 @@
 		  f azimuth = 0.520797;
 		  f distance = 18.000000;
 		  f orbit = -1.350000;
+		}
+	}
+	[t:bookmark,n:test_puzzle]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0x926b54ff;
+		[camera]
+		{
+		  f azimuth = 70.000000;
+		  f distance = 15.500000;
+		  f orbit = 0.000000;
 		}
 	}
 }

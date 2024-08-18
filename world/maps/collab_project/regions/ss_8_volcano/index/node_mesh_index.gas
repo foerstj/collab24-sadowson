@@ -59,7 +59,6 @@
 	0x48000885 = t_xxx_rmp_thck;
 	0x48000886 = t_xxx_rmp_thin;
 	0x4800088d = t_xxx_rmp_tx-wal-04-thck-l;
-	0x4800088e = t_xxx_rmp_tx-wal-04-thck-r;
 	0x4800088f = t_xxx_rmp_tx-wal-04-thin-l;
 	0x48000890 = t_xxx_rmp_tx-wal-04-thin-r;
 	0x4800089c = t_xxx_rvr_12-left-a;

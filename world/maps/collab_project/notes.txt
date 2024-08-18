@@ -83,3 +83,15 @@ Quadscale:			12
 ss_9_exit
 Darkling:	15
 Drake Blue:	3
+
+REGION IDS
+ss_1_valley
+ss_1a_family-tomb
+ss_2_prison
+ss_3_highway
+ss_4_merc_camp
+ss_5_dungeon
+ss_6_death_valley	= 0x00000460
+ss_7_crypt
+ss_8_volcano
+ss_9_exit

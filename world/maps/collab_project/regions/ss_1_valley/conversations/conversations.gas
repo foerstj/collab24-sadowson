@@ -548,14 +548,12 @@ I never want to leave the safety of these castle walls again!";
 	[text*]
 	{
 	  i order = 0;
-		screen_text = "You have my thanks traveller!
-According to my research, the family tomb is supposed to be west of here, near the broken bridge. I'm not sure how to get inside, supposedly it is well hidden.
-Please let me know what you find in there! Surely the family sword will be inside!";
+		screen_text = "With this sword, your leadership and our capabilities, there's nothing that can stand in our way! Lead on friend!";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
-		screen_text = "Have you had any luck in finding the sword west of here in my families tomb traveller?";
+		screen_text = "With this sword, your leadership and our capabilities, there's nothing that can stand in our way! Lead on friend!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -563,7 +561,7 @@ Please let me know what you find in there! Surely the family sword will be insid
 {
 	[text*]
 	{
-		screen_text = "DECLINE NYMERIA";
+		screen_text = "I understand traveller. Either way, many thanks to you again for retrieving me my families sword - at least I'll be able to get out of here on my own without Lady Athena barring my passage!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -571,7 +569,7 @@ Please let me know what you find in there! Surely the family sword will be insid
 {
 	[text*]
 	{
-		screen_text = "DISBAND NYMERIA";
+		screen_text = "I apologise if I haven't measured up to your expectations traveller. I shall await here incase you have need of my services again. Or at the very least, perhaps nows the time for me to strike out on my own.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -580,7 +578,7 @@ Please let me know what you find in there! Surely the family sword will be insid
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "DISBAND REJOIN NYMERIA";
+		screen_text = "We meet again traveller! Shall we stick together this time?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -591,7 +589,7 @@ Please let me know what you find in there! Surely the family sword will be insid
 		activate_quest* = quest_nymeria_sword,3;
 		choice = potential_member;
 		complete_quest* = quest_nymeria_sword;
-		screen_text = "NYMERIA JOIN";
+		screen_text = "This is it! My familys heirloom blade! A thousand times I thank you for returning this to me traveller! I'll be able to safely leave Larissa now without Lady Athena stopping me! Well, there's no question to it - a person of your calibre able to retrieve it is certainly worthy of mention in any local tavern hall! I'd be glad to lend my services to you if you'd have me! I swear the blade is reacting to me as soon as you handed it over... As if it's supposed to be mine... So, want to travel together?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -648,7 +646,7 @@ My rather crude blade was destroyed as I fought my way into the safety of this c
 {
 	[text*]
 	{
-		screen_text = "NYMERIA REJECT";
+		screen_text = "I still don't measure up enough for you friend? Well, perhaps it is better that we do travel our seperate ways.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -656,7 +654,7 @@ My rather crude blade was destroyed as I fought my way into the safety of this c
 {
 	[text*]
 	{
-		screen_text = "NYMERIA REJOIN";
+		screen_text = "I'll be glad to swing my blade at any foes that cross us! Onwards friend!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -719,7 +717,7 @@ I hope that this small payment of gold suffices as payment for your services.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "COMPLETE COMBAT";
+		screen_text = "I swear I must've heard some explosions in the distance... was that you friend? Either way, your armors looking a little charred. Want me to take a look at it?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -728,7 +726,7 @@ I hope that this small payment of gold suffices as payment for your services.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "COMPLETE MELEE";
+		screen_text = "Ahaha! Now that must have been a good show warrior! You're armors showing a bit of disrepair - clearly from all the fighting! What can I get you friend?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -737,7 +735,7 @@ I hope that this small payment of gold suffices as payment for your services.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "COMPLETE NATURE";
+		screen_text = "It's good to know the undead have returned to their rest, and I have no doubt that a nature mage of your calibre played a part in it. How can I help you healer?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -746,7 +744,7 @@ I hope that this small payment of gold suffices as payment for your services.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "COMPLETE RANGED";
+		screen_text = "It's good to know that the undead are finally retreating and I have no doubts you played a hand in it ranger. What can I get you?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -755,7 +753,7 @@ I hope that this small payment of gold suffices as payment for your services.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "HELLO COMBAT";
+		screen_text = "A combat mage is always welcome around these parts. You needing some new garments to eventually incinerate? What - why are you looking at me like that. Isn't that what happens to all combat mages?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -764,7 +762,7 @@ I hope that this small payment of gold suffices as payment for your services.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "HELLO MELEE";
+		screen_text = "A warrior! Now you're the kinda person I like! Planning on smashing the undead at our walls? I'll be glad to get you fitted for some new armor! Whats your preference - plate, scale or chain?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -773,7 +771,7 @@ I hope that this small payment of gold suffices as payment for your services.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "HELLO NATURE";
+		screen_text = "A nature mage huh? I think I can get you well fitted with some extra fabric. Might even have a fresh pair of boots for you if ya need some.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -782,7 +780,7 @@ I hope that this small payment of gold suffices as payment for your services.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "HELLO RANGED";
+		screen_text = "An archer huh? Yea, I think we've got some equipment around here that'll be good for you. Are you wanting some leather or needing a bit more protection in the form of chain or scale?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -855,7 +853,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	}
 	[text*]
 	{
-		screen_text = "Someone told me about an ";
+		screen_text = "At least its warm and safe here in Larissa. I do worry for everyone who hasnt made it safely here yet though. And to think, I'm hearing rumors that its all because of those blasted goblins! They ruin everything!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -864,7 +862,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	[text*]
 	{
 		choice = shop;
-		screen_text = "COMPLETE COMBAT";
+		screen_text = "You look a little singed friend! Need some new equipment to replace your battered stave? I'm sure I've got something for you around here.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -873,7 +871,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	[text*]
 	{
 		choice = shop;
-		screen_text = "COMPLETE MELEE";
+		screen_text = "Aha, the warrior returning! You look like you've picked a fight with a few things out there in the wild! Need a new blade?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -882,7 +880,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	[text*]
 	{
 		choice = shop;
-		screen_text = "COMPLETE NATURE";
+		screen_text = "I trust it was you're attunement with nature that saved us from the undead mhm? Well, I've got plenty of equipment here to help you on your way friend. What do you need?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -891,7 +889,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	[text*]
 	{
 		choice = shop;
-		screen_text = "COMPLETE RANGED";
+		screen_text = "The undead may have crawled back to their holes, but there'll be plenty of beasts for a ranger of your calibre to keep you on your toes. What can I get for you friend?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -915,7 +913,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	[text*]
 	{
 		choice = shop;
-		screen_text = "HELLO COMBAT";
+		screen_text = "Ah, I spy a mage versed in the art of combative magic! Well, I'm sure we've got some fine equipment here to get you up to scratch! The undead are clawing at our walls, so I think we'd all appreciate hearing some blasting happening! What can I get for you?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -924,7 +922,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	[text*]
 	{
 		choice = shop;
-		screen_text = "HELLO MELEE";
+		screen_text = "A fellow warrior! Tis a fine day to meet you good friend! We've got weapons a plenty for you! Lets get you fitted shall we? The undead are clawing at our walls, so how about a well rounded mace for smashing their bones in huh?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -933,7 +931,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	[text*]
 	{
 		choice = shop;
-		screen_text = "HELLO NATURE";
+		screen_text = "One such as you who is trained in healing magic is always welcome around these parts friend! I'm sure I've got a stave or two that can help give you that combative edge. What can I get for you?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -942,7 +940,7 @@ Who would build a town underground? That sounds like nonsense. Alot of work for 
 	[text*]
 	{
 		choice = shop;
-		screen_text = "HELLO RANGED";
+		screen_text = "We've got bows a plenty for you! With the undead at our walls, we need every archer we can get to hold them at bay! What can I get you friend?";
 	  f scroll_rate = 10.000000;
 	}
 }
