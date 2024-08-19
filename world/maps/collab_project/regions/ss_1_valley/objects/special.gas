@@ -1769,3 +1769,35 @@
 	  p position = 2.67555,-1,-0.0288277,0x36ee6c19;
 	}
 }
+[t:blocking_object,n:0x41000e36]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.7135,-1,1.13892,0x9f182a1a;
+	}
+}
+[t:blocking_object,n:0x41000e38]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -0.92894,-3.5,-0.241684,0xa02b8932;
+	}
+}
+[t:blocking_object,n:0x41000e39]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.09825,-3.5,-0.0973969,0xc7f9c924;
+	}
+}
+[t:blocking_object,n:0x41000e3a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382684;
+	  p position = 0.0550232,-3.5,0.483276,0xb999eb01;
+	}
+}

@@ -112,10 +112,6 @@ WE_KILLED								= WE DIED.
 owner	= GoSkritComponent;
 //////////////////////////////////////////////////////////////////////////////
 
-void PlayVoiceRandomList$( string VoiceList$ )
-{
-}
-
 event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
 {
 	if( e$ == WE_ENTERED_WORLD )

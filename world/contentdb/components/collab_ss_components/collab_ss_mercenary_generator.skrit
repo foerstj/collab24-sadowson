@@ -15,7 +15,6 @@ property	string	_doc$					= "Generates a squad of mercenaries based off a groupe
 property 	string	_required_component$	= "placement";
 
 			bool		initial_spawn_complete$	= false;
-			float		command_state$;
 
 // Exported Properties
 property	Scid	Initial_command$											doc = "SCID of Command Object if applicable";
@@ -546,10 +545,6 @@ state Active$
 		goid Member_5_Goid$;
 		goid Member_6_Goid$;
 		goid Member_7_Goid$;
-		
-		SiegePos Spawn_Position$;
-		
-		SiegePos Temp_Pos$;
 		
 		if( Squad_leader$ != "NONE" )
 		{

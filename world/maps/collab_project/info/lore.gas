@@ -18,6 +18,9 @@
 		They became quite aggressive when I entered the great hall at the end of the crypt... I think I might try and get a closer look when they're sleeping again.
 		";
 	}
+}
+[lore]
+{
 	[lore_dungeon]
 	{
 		description = "I am Arkantos, warrior to The Four and proud defender of The Valley. 
@@ -28,6 +31,9 @@
 		
 		I am Arkantos, warrior to The Four and proud defender of The Valley, and I shall see the legion rot for their crimes.";
 	}
+}
+[lore]
+{
 	[lore_The_Valley]
 	{
 		description = "Hundreds of years ago, a town called Pergamon lay in a lush valley, nestled rather plainly between many locations, the favoured location for many merchants to stop on their travels. Pergamon became rich due to it's influential connections across the land and at the height of its power, it was lead by a council called The Four.
@@ -35,12 +41,18 @@
 		
 		Records following the war are spotty, though Pergamon clearly won a phyrric victory. With the destruction of the town, merchants never returned and the only remains are a curious stone circle on the edges of the town ruins.";
 	}
+}
+[lore]
+{
 	[lore_larissa]
 	{
 		description = "Situated between The Sunset Slopes and the ruins of Pergamon, Larissa is an imposing fortress carved out of black granite. First constructed during the peak of Pergamons economic height, Larissa was placed in an advantageous position to send out military patrols to protect travelers and merchants on the roads near Pergamon, for not only bandits roamed the forests near The Valley.
 		
 		Larissa would be spared in the siege of Pergamon, the Legion unable to breech its thick walls. Larissa is now ruled and protected by descendents of the people of Pergamon, though there are unfounded rumors that some of the people are far older than they indicate themselves to be, and on some nights, strange lights can be seen from it's tallest tower in the center of the keep.";
 	}
+}
+[lore]
+{
 	[lore_the_four]
 	{
 		description = "At its peak, Pergamon was ruled by a council called The Four. Though the names of the leaders have changed through the many years, their titles have remained the same.
