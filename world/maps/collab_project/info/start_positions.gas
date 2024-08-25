@@ -130,7 +130,7 @@
 		{
 			[regular]
 			{
-			  i required_level = 15;
+			  i required_level = 8;
 			}
 		}
 	}
