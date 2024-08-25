@@ -5,7 +5,7 @@
 	  b default = true;
 		description = "";
 	  b dev_only = true;
-	  i id = 1698220;
+	  i id = 400;
 		screen_name = "";
 		[start_position]
 		{
@@ -28,7 +28,7 @@
 	  b default = false;
 		description = "The deep valley near Larissa";
 	  b dev_only = false;
-	  i id = 1698220;
+	  i id = 40;
 		screen_name = "The Valley";
 		[start_position]
 		{
