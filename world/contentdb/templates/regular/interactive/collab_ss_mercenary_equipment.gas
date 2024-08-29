@@ -176,6 +176,7 @@
 	{
         allow_modifiers = false;
 		screen_name 	= "Peasant Long Bow";
+		is_pcontent_allowed = false;
 	}
 	[gui]
 	{
@@ -209,6 +210,7 @@
 	{
 	  b allow_modifiers = false;
 		screen_name = "Kite Shield";
+		is_pcontent_allowed = false;
 	}
 	[defend]
 	{
