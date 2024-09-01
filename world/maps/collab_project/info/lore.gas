@@ -57,4 +57,9 @@
 		
 		Records of The Four appear to dissappear entirely following the destruction of Pergamon, though rumours abound that one or more of them survived that climactic horrifying battle.";
 	}
+
+    [lore_ria]
+    {
+        description = "Clean me up!";
+    }
 }
