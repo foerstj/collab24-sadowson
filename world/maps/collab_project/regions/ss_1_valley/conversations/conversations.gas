@@ -195,6 +195,7 @@ Do you want the short explanation or the long one?";
 	}
 	[text*]
 	{
+		choice = shop;
 		screen_text = "The warrior returning! What potions can I help you with?";
 	  f scroll_rate = 10.000000;
 	}
@@ -260,6 +261,7 @@ Though I suppose you're actually searching for healing potions so you can keep t
 	}
 	[text*]
 	{
+		choice = shop;
 		screen_text = "Back for more warrior? I've got plenty more stock if you're happy to pay.";
 	  f scroll_rate = 10.000000;
 	}
@@ -600,13 +602,13 @@ I never want to leave the safety of these castle walls again!";
 		activate_quest* = quest_nymeria_sword,0;
 	  i order = 0;
 		screen_text = "You have my thanks traveller!
-According to my research, the family tomb is supposed to be west of here, near the broken bridge. I'm not sure how to get inside, supposedly it is well hidden.
+According to my research, the family tomb is supposed to be north of here, near the broken bridge. I'm not sure how to get inside, supposedly it is well hidden.
 Please let me know what you find in there! Surely the family sword will be inside!";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
-		screen_text = "Have you had any luck in finding the sword west of here in my families tomb traveller?";
+		screen_text = "Have you had any luck in finding the sword north of here in my families tomb traveller?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -614,7 +616,7 @@ Please let me know what you find in there! Surely the family sword will be insid
 {
 	[text*]
 	{
-		screen_text = "NYMERIA DECLINE QUEST";
+		screen_text = "I had not considered that you would be otherwise unavailable. If you do have time to spare traveller, please let me know.";
 	  f scroll_rate = 10.000000;
 	}
 }
