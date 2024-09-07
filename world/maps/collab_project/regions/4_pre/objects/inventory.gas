@@ -41,6 +41,31 @@
 	  p position = 2.02581,0,1.26336,0xbac0d0a4;
 	}
 }
+[t:gold,n:0x40000012]
+{
+	[aspect]
+	{
+	  i gold_value = 12345;
+	}
+	[placement]
+	{
+	  p position = -3.08885,-9.53674e-007,3.34484,0xbac0d0a4;
+	}
+}
+[t:potion_health_super,n:0x40000013]
+{
+	[placement]
+	{
+	  p position = -3.04674,9.53674e-007,2.7781,0xbac0d0a4;
+	}
+}
+[t:potion_mana_super,n:0x40000014]
+{
+	[placement]
+	{
+	  p position = -3.10919,0,2.21782,0xbac0d0a4;
+	}
+}
 [t:bo_ra_gr_bl_f_g_c_fin,n:0x40000018]
 {
 	[placement]
