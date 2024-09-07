@@ -21,15 +21,15 @@ property bool		_server_only$				= false;
 property string		_doc$						= "Gives the player free exp on entering the world";
 property string		_required_component$ 		= "placement";
 
-property int		execute_timer$	= 2				doc = "How many seconds after entering the world before activating?";
-property int		Melee_skill$		= 0			doc = "What level to set Melee to.";
-property int		Ranged_skill$		= 0			doc = "What level to set Ranged to.";
-property int		Nature_skill$		= 0			doc = "What level to set Nature Magic to.";
-property int		Combat_skill$		= 0			doc = "What level to set Combat Magic to.";
-property int		Strength_stat$		= 0			doc = "What level to set Strength to.";
-property int		Dexterity_stat$		= 0			doc = "What level to set Dexterity to.";
-property int		Intelligence_stat$	= 0			doc = "What level to set Intelligence to.";
-property int		Speed_Modifier$		= 0			doc = "Modify the actors speed by this value. 0 to ignore. Default move speed is 4.5";
+property float		execute_timer$		= 2			doc = "How many seconds after entering the world before activating?";
+property float		Melee_skill$		= 0			doc = "What level to set Melee to.";
+property float		Ranged_skill$		= 0			doc = "What level to set Ranged to.";
+property float		Nature_skill$		= 0			doc = "What level to set Nature Magic to.";
+property float		Combat_skill$		= 0			doc = "What level to set Combat Magic to.";
+property float		Strength_stat$		= 0			doc = "What level to set Strength to.";
+property float		Dexterity_stat$		= 0			doc = "What level to set Dexterity to.";
+property float		Intelligence_stat$	= 0			doc = "What level to set Intelligence to.";
+property float		Speed_Modifier$		= 0			doc = "Modify the actors speed by this value. 0 to ignore. Default move speed is 4.5";
 
 owner = GoSkritComponent;
 
