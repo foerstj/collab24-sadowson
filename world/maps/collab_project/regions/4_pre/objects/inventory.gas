@@ -1,4 +1,4 @@
-[t:collab_ss_quest_note,n:0x40000001]
+[t:amulet_keeper,n:0x40000001]
 {
 	[common]
 	{
@@ -6,7 +6,8 @@
 		{
 			[*]
 			{
-				action* = change_quest_state("quest_twin_sisters","active",0);
+				action* = change_quest_state("c24_3_3_amulet","active",0);
+				action* = change_quest_state("c24_3_3_amulet","active",2);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message");
 			  f delay = 0.000000;

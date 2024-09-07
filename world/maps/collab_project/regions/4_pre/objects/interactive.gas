@@ -31,3 +31,72 @@
 	  p position = -2.93601,0,-0.847999,0x76de0a99;
 	}
 }
+[t:lever_gob_01,n:0x40000010]
+{
+	[common]
+	{
+		screen_name = "GYPSY GREETINGS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_3_2_gypsy_greetings","active",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[on_off_lever]
+	{
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  p position = 0.223874,0,0.0142889,0x76de0a99;
+	}
+}
+[t:lever_gob_01,n:0x40000011]
+{
+	[common]
+	{
+		screen_name = "LOST AMULET";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_3_3_amulet","active",1);
+				action* = change_quest_state("c24_3_3_amulet","active",2);
+				action* = change_quest_state("c24_3_3_amulet","active",0);
+				action* = change_quest_state("c24_3_3_amulet","active",1);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[on_off_lever]
+	{
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  p position = 2.05842,0,0.0559874,0x76de0a99;
+	}
+}
