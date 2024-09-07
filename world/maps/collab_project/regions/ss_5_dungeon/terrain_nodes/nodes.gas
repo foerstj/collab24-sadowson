@@ -4,6 +4,7 @@
   f actor_ambient_intensity = 0.100000;
   x ambient_color = 0xFFFFFFFF;
   f ambient_intensity = 0.000000;
+	environment_map = b_em_sphere;
   x object_ambient_color = 0xFFFFFFFF;
   f object_ambient_intensity = 0.000000;
   x targetnode = 0x4A1C46D7;
@@ -8287,7 +8288,7 @@
 	  x mesh_guid = 0x45000F16;
 	  x nodelevel = 0xFFFFFFFF;
 	  x nodeobject = 0xFFFFFFFF;
-	  x nodesection = 0x00000013;
+	  x nodesection = 0x00000015;
 	  b occludes_camera = true;
 	  b occludes_light = true;
 		texsetabbr = xxx;

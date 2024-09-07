@@ -104,6 +104,7 @@
 	}
 	[common]
 	{
+		b allow_modifiers = false;
 		screen_name = "collab_ss_guard_shield";
 		is_pcontent_allowed = false;
 	}

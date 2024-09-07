@@ -677,3 +677,17 @@
 	  p position = -0.209515,0,0.154034,0xa59d0a02;
 	}
 }
+[t:use_point,n:0x41a0011c]
+{
+	[placement]
+	{
+	  p position = 1.86949,-4.76837e-007,-0.00192618,0x89e276e1;
+	}
+}
+[t:use_point,n:0x41a0011d]
+{
+	[placement]
+	{
+	  p position = -0.065158,-1.5,1.86815,0xdb3aaad4;
+	}
+}

@@ -1383,6 +1383,35 @@
 	  p position = -0.0786667,7.5406,-0.3965,0x6aeedbfa;
 	}
 }
+[t:trigger_generic,n:0x45000314]
+{
+	[common]
+	{
+		dev_instance_text = "FADE DEATH VALLEY EARLY";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000460,1,-1,-1,"out:instant");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.124697,-0.5,0.907594,0x6aeedbfa;
+	}
+}
 [t:use_point,n:0x450000c8]
 {
 	[placement]
@@ -1721,32 +1750,40 @@
 	  p position = -0.893539,0,0.0821228,0xb6d09e1b;
 	}
 }
-[t:trigger_generic,n:0x45000314]
+[t:use_point,n:0x45000315]
 {
-	[common]
-	{
-		dev_instance_text = "FADE DEATH VALLEY EARLY";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x00000460,1,-1,-1,"out:instant");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,0.500000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
-	  p position = -0.124697,-0.5,0.907594,0x6aeedbfa;
+	  p position = -0.210769,0,-1.91498,0x88ec4f35;
+	}
+}
+[t:use_point,n:0x45000316]
+{
+	[placement]
+	{
+	  p position = -0.0811764,0,-1.87315,0xcade3ece;
+	}
+}
+[t:use_point,n:0x45000318]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.11052,0,-1.93659,0x1c12351e;
+	}
+}
+[t:use_point,n:0x45000319]
+{
+	[placement]
+	{
+	  p position = 0.0413516,0,-1.50511,0x7f185f5a;
+	}
+}
+[t:use_point,n:0x4500031a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.305237,0,-2.08438,0x17295163;
 	}
 }

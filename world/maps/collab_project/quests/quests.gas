@@ -23,6 +23,42 @@
 }
 [quests]
 {
+	[c24_3_2_gypsy_greetings]
+	{
+		chapter = chapter_03_underland;
+		screen_name = "Gypsy Greetings";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "Inform Pesha in Larissa about the holdup of the Gypsies in Shroomington";
+		  i order = 0;
+		  b required = false;
+		}
+	}
+	[c24_3_3_amulet]
+	{
+		chapter = chapter_03_underland;
+		screen_name = "Lost Amulet";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "Ask the Gypsies in Shroomington about their lost amulet";
+		  i order = 0;
+		  b required = false;
+		}
+		[*]
+		{
+			description = "Find Persephone's amulet lost in the Crystlayer on the way to Larissa";
+		  i order = 1;
+		  b required = false;
+		}
+		[*]
+		{
+			description = "Deliver the Elder Wood Amulet to Persephone in Larissa";
+		  i order = 2;
+		  b required = false;
+		}
+	}
 	[quest_athena]
 	{
 		chapter = chapter_04;
@@ -39,6 +75,7 @@
 		}
 		[*]
 		{
+			address = ss_1_valley:conversations:conversation_athena_short;
 			description = lady athena has given you a task to complete in exchange for repairing the bridge;
 		  b is_consumable = true;
 		  i order = 1;
@@ -47,6 +84,7 @@
 		}
 		[*]
 		{
+			address = ss_1_valley:conversations:conversation_athena_complete;
 			description = lady athena's task is complete. you can cross the broken bridge now...;
 		  b is_consumable = true;
 		  i order = 2;
@@ -93,6 +131,7 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
+			address = ss_1_valley:conversations:conversation_nymeria_quest_accept;
 			description = find nymeria's family tomb;
 		  b is_consumable = true;
 		  i order = 0;
@@ -117,6 +156,7 @@
 		}
 		[*]
 		{
+			address = ss_1_valley:conversations:conversation_nymeria_join;
 			description = nymeria's heraldric sword has been given to her.;
 		  b is_consumable = true;
 		  i order = 3;
@@ -202,43 +242,4 @@
 			speaker = lady athena;
 		}
 	}
-	
-	[c24_3_2_gypsy_greetings]
-    {
-		chapter = chapter_03_underland;
-		screen_name = "Gypsy Greetings";
-		victory_sample = s_e_level_up_quest;
-		[*]
-		{
-			description = "Inform Pesha in Larissa about the holdup of the Gypsies in Shroomington";
-		  	i order = 0;
-		  	b required = false;
-		}
-    }
-    [c24_3_3_amulet]
-    {
-		chapter = chapter_03_underland;
-		screen_name = "Lost Amulet";
-		victory_sample = s_e_level_up_quest;
-		[*]
-		{
-            // if you find the amulet first
-			description = "Ask the Gypsies in Shroomington about their lost amulet";
-		  	i order = 0;
-		  	b required = false;
-		}
-		[*]
-		{
-            // if you speak to the gypsy first
-			description = "Find Persephone's amulet lost in the Crystlayer on the way to Larissa";
-		  	i order = 1;
-		  	b required = false;
-		}
-		[*]
-		{
-			description = "Deliver the Elder Wood Amulet to Persephone in Larissa";
-		  	i order = 2;
-		  	b required = false;
-		}
-    }
 }

@@ -120,6 +120,11 @@ state Talk$
 					clonereq_Gold$.SnapToTerrain = true;
 					goid gold$ = GoDb.SCloneGo( clonereq_Gold$ );
 					gold$.Go.Aspect.SetGoldValue( Quest_Reward_Cash$ );
+					
+					//Remove the quest item
+					goid quest_item$ = UIPartyManager.DoesActivePartyHaveTemplate( "amulet_keeper", m_target$ );
+					quest_item$.Go.Parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, quest_item$ ) );
+					PostWorldMessage( WE_REQ_DELETE, quest_item$, quest_item$, 0.1 );
 				}
 				else
 				{

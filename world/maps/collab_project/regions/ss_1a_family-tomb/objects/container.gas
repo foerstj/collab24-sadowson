@@ -207,6 +207,83 @@
 	  p position = 2.01971,0,-0.0498123,0xad2dc662;
 	}
 }
+[t:urn_collab_ss_1a_family-tomb_01,n:0x41a000b2]
+{
+	[placement]
+	{
+	  p position = -1.57098,-1.5,1.85099,0xdb3aaad4;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_02,n:0x41a0010f]
+{
+	[placement]
+	{
+	  p position = 1.48451,-1.5,1.57859,0xdb3aaad4;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_01,n:0x41a00108]
+{
+	[placement]
+	{
+	  p position = 0.42385,-1.5,-0.889366,0xd052f0c3;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_02,n:0x41a0010a]
+{
+	[placement]
+	{
+	  p position = 0.82106,-1.5,-0.399843,0xd052f0c3;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_02,n:0x41a0010b]
+{
+	[placement]
+	{
+	  p position = 0.642512,-1.5,-0.659774,0xd398152d;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_01,n:0x41a000b1]
+{
+	[placement]
+	{
+	  p position = -1.33741,-1.5,-0.393517,0x8cee2d00;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_02,n:0x41a00109]
+{
+	[placement]
+	{
+	  p position = -1.96052,-1.5,-0.527177,0x8cee2d00;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_01,n:0x41a0010d]
+{
+	[placement]
+	{
+	  p position = 1.97685,-1.5,-0.745963,0x8cee2d00;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_01,n:0x41a0010e]
+{
+	[placement]
+	{
+	  p position = 1.50378,-1.5,-0.415843,0x8cee2d00;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_02,n:0x41a00110]
+{
+	[placement]
+	{
+	  p position = 1.0847,-1.5,-0.769546,0x8cee2d00;
+	}
+}
+[t:urn_collab_ss_1a_family-tomb_01,n:0x41a0010c]
+{
+	[placement]
+	{
+	  p position = 0.538217,-1.5,-0.4537,0xef69f05b;
+	}
+}
 [t:sarcophagus_collab_ss_1a_family-tomb,n:0x41a00096]
 {
 	[placement]
@@ -478,6 +555,7 @@
 	{
 	  q orientation = 0,-0.492987,0,0.870037;
 	  p position = -0.615918,-0.5,-0.00761747,0xfd492ec8;
+		use_point_scids = 0x41A0011C;
 	}
 }
 [t:urn_collab_ss_1a_family-tomb_01,n:0x41a0007f]
@@ -486,82 +564,6 @@
 	{
 	  q orientation = 0,0.979051,0,0.203613;
 	  p position = 0.0591307,-0.5,0.0440414,0xfd492ec8;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_01,n:0x41a000b1]
-{
-	[placement]
-	{
-	  p position = -1.33741,-1.5,-0.393517,0x8cee2d00;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_01,n:0x41a000b2]
-{
-	[placement]
-	{
-	  p position = -1.57098,-1.5,1.85099,0xdb3aaad4;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_01,n:0x41a00108]
-{
-	[placement]
-	{
-	  p position = 0.42385,-1.5,-0.889366,0xd052f0c3;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_02,n:0x41a00109]
-{
-	[placement]
-	{
-	  p position = -1.96052,-1.5,-0.527177,0x8cee2d00;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_02,n:0x41a0010a]
-{
-	[placement]
-	{
-	  p position = 0.82106,-1.5,-0.399843,0xd052f0c3;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_02,n:0x41a0010b]
-{
-	[placement]
-	{
-	  p position = 0.642512,-1.5,-0.659774,0xd398152d;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_01,n:0x41a0010c]
-{
-	[placement]
-	{
-	  p position = 0.538217,-1.5,-0.4537,0xef69f05b;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_01,n:0x41a0010d]
-{
-	[placement]
-	{
-	  p position = 1.97685,-1.5,-0.745963,0x8cee2d00;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_01,n:0x41a0010e]
-{
-	[placement]
-	{
-	  p position = 1.50378,-1.5,-0.415843,0x8cee2d00;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_02,n:0x41a0010f]
-{
-	[placement]
-	{
-	  p position = 1.48451,-1.5,1.57859,0xdb3aaad4;
-	}
-}
-[t:urn_collab_ss_1a_family-tomb_02,n:0x41a00110]
-{
-	[placement]
-	{
-	  p position = 1.0847,-1.5,-0.769546,0x8cee2d00;
+		use_point_scids = 0x41A0011C;
 	}
 }

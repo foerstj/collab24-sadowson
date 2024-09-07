@@ -345,7 +345,8 @@
 	[common]
 	{
 	  b allow_modifiers = false;
-		screen_name = "Scale Boots";
+		screen_name = "Mercenary Boots";
+		is_pcontent_allowed = false;
 	}
 	[defend]
 	{

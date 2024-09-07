@@ -20,6 +20,7 @@ The bridge was destroyed a short while ago when a Goblin war band came through. 
 		button_1_value = athena_reward;
 		complete_quest* = quest_athena;
 		complete_quest* = quest_warding_crystal;
+	  b quest_dialog = true;
 		screen_text = "It is good to see you again traveller.
 I foresaw your victory in the stars before you arrived, such is natural in my family.
 
@@ -147,6 +148,7 @@ Return it to the Sleeping Catacombs and I will reward you handsomly.";
 		activate_quest* = quest_mercenaries,0;
 		activate_quest* = quest_warding_crystal,0;
 		activate_quest* = quest_athena,1;
+	  b quest_dialog = true;
 		screen_text = "Not one for wasting time aye? Very well.
 A mercenary company, gladly taking gold given by the goblins in order to distract us and cause chaos, has stolen the Warding Crystal from the Sleeping Catacombs which have caused to undead to rise.
 
@@ -591,6 +593,7 @@ I never want to leave the safety of these castle walls again!";
 		activate_quest* = quest_nymeria_sword,3;
 		choice = potential_member;
 		complete_quest* = quest_nymeria_sword;
+	  b quest_dialog = true;
 		screen_text = "This is it! My familys heirloom blade! A thousand times I thank you for returning this to me traveller! I'll be able to safely leave Larissa now without Lady Athena stopping me! Well, there's no question to it - a person of your calibre able to retrieve it is certainly worthy of mention in any local tavern hall! I'd be glad to lend my services to you if you'd have me! I swear the blade is reacting to me as soon as you handed it over... As if it's supposed to be mine... So, want to travel together?";
 	  f scroll_rate = 10.000000;
 	}
@@ -601,6 +604,7 @@ I never want to leave the safety of these castle walls again!";
 	{
 		activate_quest* = quest_nymeria_sword,0;
 	  i order = 0;
+	  b quest_dialog = true;
 		screen_text = "You have my thanks traveller!
 According to my research, the family tomb is supposed to be north of here, near the broken bridge. I'm not sure how to get inside, supposedly it is well hidden.
 Please let me know what you find in there! Surely the family sword will be inside!";

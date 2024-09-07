@@ -146,35 +146,35 @@
 	{
 		[store_pcontent]
 		{
-			full_ratio = 0.08;
+			full_ratio = 0;
 			[magic]
 			{
 				[all*]
 				{
-					il_main = #spell/10-28;
-					max = 40;
-					min = 40;
+					il_main = #spell/6-22;
+					max = 25;
+					min = 25;
 				}
 				[all*]
 				{
-					il_main = #spell/0-9;
-					max = 10;
-					min = 10;
+					il_main = #spell/0-5;
+					max = 5;
+					min = 5;
 				}
 			}
 			[misc]
 			{
                 [all*]
 				{
-					il_main = #spellbook/73-80;
-					max = 6;
+					il_main = #spellbook/57-63;
+					max = 4;
 					min = 4;
 				}
 				[all*]
 				{
 					il_main = book_glb_magic_01;
-					max = 5;
-					min = 5;
+					max = 3;
+					min = 3;
 				}
 			}
 		}
