@@ -2,11 +2,10 @@
 {
 	[colab_ss_starting-exp]
 	{
-	  i dexterity_stat = 14;
-	  i intelligence_stat = 11;
-	  i melee_skill = 15;
-	  i speed_modifier = 8;
-	  i strength_stat = 19;
+	  f dexterity_stat = 4.05;
+	  f intelligence_stat = 1.35;
+	  f melee_skill = 15;
+	  f strength_stat = 9.6;
 	}
 	[placement]
 	{
