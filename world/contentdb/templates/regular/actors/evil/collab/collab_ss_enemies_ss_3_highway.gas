@@ -419,29 +419,44 @@
 			{
 				[oneof*]
 				{
-					il_main = #*/130-150;
-					il_main = #armor/367-420;
-                }
-				[oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/149-163;
-	                il_main = #armor/-rare(1)/422-434;
-                    il_main = #*/-rare(1)/149-163;
-                }
-				[oneof*]
-				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/149-163;
-	                il_main = #armor/-unique(2)/422-434;
-                    il_main = #*/-unique(2)/149-163;
-	            }
-				[gold*]
-				{
-					max = 35123;
-					min = 29890;
-					min_pile = 3050;
-					piles = 4 - 6;
+					[oneof*]
+					{
+						chance = 0.05;
+						il_main = potion_health_small;
+						il_main = potion_mana_small;
+					}
+					[all*]
+					{
+						chance = 0.02;
+						il_main = #spell/10-14;
+					}
+					[oneof*]
+					{
+						chance = 0.2;
+						il_main = #*/6-11;
+						il_main = #armor/18-98;
+						il_main = #weapon/36-44;
+					}
+					[oneof*]
+					{
+						chance = 0.004;
+						il_main = #weapon/-rare(1)/42-59;
+						il_main = #armor/-rare(1)/126-144;
+						il_main = #*/-rare(1)/42-59;
+					}
+					[oneof*]
+					{
+						chance = 0.002;
+						il_main = #weapon/-unique(2)/42-59;
+						il_main = #armor/-unique(2)/126-144;
+						il_main = #*/-unique(2)/42-59;
+					}
+					[gold*]
+					{
+						chance = 0.15;
+						max = 500;
+						min = 400;
+					}
 				}
 			}
 		}

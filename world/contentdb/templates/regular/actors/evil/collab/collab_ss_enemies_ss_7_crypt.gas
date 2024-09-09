@@ -452,7 +452,7 @@
 		{
 			[oneof*]
 			{
-				es_shield_hand = bw_un_seck_avg;
+				es_shield_hand = collab_ss_wraith_piercer_bow;
 			}
 			[oneof*]
 			{
