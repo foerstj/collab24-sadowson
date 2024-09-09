@@ -1168,7 +1168,7 @@
 				action* = fade_nodes(0x00000410,1,2,-1,"out:black");
 				action* = mood_change("collab_ss_1_valley_3-castle-int");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.500000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
