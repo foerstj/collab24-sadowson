@@ -455,7 +455,7 @@
 {
 	[placement]
 	{
-	  p position = -4.66127,-5.05,17.6377,0x5564e21f;
+	  p position = -4.75915,-5.05,18.6971,0x5564e21f;
 	}
 }
 [t:ee_gizmo_wall_blocker,n:0x44000862]

@@ -62,14 +62,9 @@ trigger OnGoDrawDebugHud$
 
 //////////////////////////////////////////////////////////////////////////////
 
-startup state Startup$
+startup state Execute$
 {
-	transition -> Execute$: OnGoHandleMessage( WE_ENTERED_WORLD );
-}
-
-state Execute$
-{
-	event OnEnterState$
+	event OnGoHandleMessage( WE_ENTERED_WORLD );
 	{
 		//I don't know why but this was having a massive hernia in SE so I've OnlyGamed it
 		#only( game )
@@ -82,7 +77,6 @@ state Execute$
 				Actor_Two$.go.Aspect.SSetIsVisible = true;
 				Actor_Three$.go.Aspect.SSetIsVisible = true;
 				//The quest can only complete once, so self destruct after this is done.
-				SetState Shutdown$;
 			}
 			else
 			{
@@ -93,14 +87,5 @@ state Execute$
 					Actor_Three$.go.Aspect.SSetIsVisible = false;
 			}
 		]]
-	}
-}
-
-state Shutdown$
-{
-	event OnEnterState$
-	{
-		//Optimisation. Deletes the goid after the quest has been completed and the actors set to be visible.
-		GoDb.SMarkForDeletion( owner.goid );
 	}
 }

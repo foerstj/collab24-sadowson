@@ -1364,7 +1364,7 @@
 	}
 	[placement]
 	{
-		drop_point_scids = 0x4500031A;
+		drop_point_scids = 0x4500031a;
 	  q orientation = 0,0.994964,0,0.100236;
 	  p position = -0.0215302,0,-0.375,0x17295163;
 	}

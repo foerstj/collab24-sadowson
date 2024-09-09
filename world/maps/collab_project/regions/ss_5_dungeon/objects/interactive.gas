@@ -264,6 +264,10 @@
 }
 [t:door_glb_spdrdungeon_01,n:0x450002ff]
 {
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x450002FE;
+	}
 	[placement]
 	{
 	  p position = 0.035347,-1.75,-0.860405,0x7420dd31;

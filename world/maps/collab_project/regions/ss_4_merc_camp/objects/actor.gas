@@ -2,7 +2,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[placement]
 	{
@@ -14,7 +14,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -26,7 +26,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type20;
 	}
 	[placement]
 	{
@@ -38,7 +38,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type15;
+		custom_head = m_c_gah_fb_hlmt_type6;
 	}
 	[placement]
 	{
@@ -50,7 +50,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type36;
+		custom_head = m_c_gah_fg_hlmt_head-03;
 	}
 	[placement]
 	{
@@ -62,7 +62,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type10;
+		custom_head = m_c_gah_fg_hlmt_type36;
 	}
 	[placement]
 	{
@@ -73,7 +73,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type20;
+		custom_head = m_c_gah_fb_hlmt_type8;
 	}
 	[placement]
 	{
@@ -85,7 +85,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type26;
+		custom_head = m_c_gah_fb_hlmt_type15;
 	}
 	[placement]
 	{
@@ -97,7 +97,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type19;
 	}
 	[placement]
 	{
@@ -109,7 +109,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[placement]
 	{
@@ -124,7 +124,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_head-03;
+		custom_head = m_c_gah_fg_hlmt_type19;
 	}
 	[placement]
 	{
@@ -140,7 +140,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type22;
+		custom_head = m_c_gah_fg_hlmt_type24;
 	}
 	[placement]
 	{
@@ -152,7 +152,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type10;
+		custom_head = m_c_gah_fb_hlmt_type36;
 	}
 	[placement]
 	{
@@ -168,7 +168,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type22;
+		custom_head = m_c_gah_fg_hlmt_head-03;
 	}
 	[placement]
 	{
@@ -187,7 +187,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type20;
+		custom_head = m_c_gah_fb_hlmt_type24;
 	}
 	[mind]
 	{
@@ -221,7 +221,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -5.46478,-5.05,18.5493,0x5564e21f;
+	  p position = -5.39895,-5.05,19.2841,0x5564e21f;
 		use_point_scids = 0x440007aa;
 	}
 }
@@ -307,7 +307,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type6;
+		custom_head = m_c_gah_fg_hlmt_head-03;
 	}
 	[placement]
 	{
@@ -335,7 +335,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type20;
+		custom_head = m_c_gah_fb_hlmt_type22;
 	}
 	[placement]
 	{
@@ -407,7 +407,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -419,7 +419,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type19;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[placement]
 	{
@@ -431,7 +431,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -495,7 +495,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type24;
+		custom_head = m_c_gah_fg_hlmt_type19;
 	}
 	[placement]
 	{
@@ -511,7 +511,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_head-03;
+		custom_head = m_c_gah_fg_hlmt_type13;
 	}
 	[placement]
 	{
@@ -523,7 +523,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[placement]
 	{
@@ -535,7 +535,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type20;
 	}
 	[placement]
 	{
@@ -547,7 +547,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type15;
+		custom_head = m_c_gah_fb_hlmt_type6;
 	}
 	[placement]
 	{

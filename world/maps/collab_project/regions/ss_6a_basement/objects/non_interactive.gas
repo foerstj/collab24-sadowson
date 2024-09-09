@@ -178,3 +178,107 @@
 	  p position = -1.96004,-0.401517,0.029083,0x8b48ebe5;
 	}
 }
+[t:shelf_glb_06,n:0x46a00009]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -2.14516,-1.5,-0.394545,0x81600bf9;
+	}
+}
+[t:shelf_glb_06,n:0x46a0000a]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = 1.62567,-1.5,-0.360095,0xebcab493;
+	}
+}
+[t:shelf_glb_06,n:0x46a0000b]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -0.970876,-1.5,-0.342373,0xebcab493;
+	}
+}
+[t:supplies_glb_01,n:0x46a0000d]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -5.87082,-1.5,-0.931851,0xebcab493;
+	}
+}
+[t:supplies_glb_02,n:0x46a0000e]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.693711,-1.5,-0.842002,0x44786632;
+	}
+}
+[t:statue_glb_roman_01,n:0x46a0001f]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -0.0120068,-1.25,0.110043,0x51017fdf;
+	}
+}
+[t:statue_glb_roman_01,n:0x46a00020]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -0.0600123,-1.25,0.0603833,0x55adbf45;
+	}
+}
+[t:statue_glb_roman_02,n:0x46a00021]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = 0.00596237,-1.25,-0.101481,0x7bc589af;
+	}
+}
+[t:statue_glb_roman_02,n:0x46a00022]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = 0.0144272,-1.25,-0.100741,0x1f59a9c3;
+	}
+}
+[t:statue_glb_wizard_01,n:0x46a00023]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = 1.97255,-1.5,-0.528873,0xde9e6786;
+	}
+}
+[t:statue_glb_wizard_05,n:0x46a00024]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 0.739436,-1.5,-0.489964,0xdf3fd76f;
+	}
+}
+[t:statue_glb_wizard_05,n:0x46a00025]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = -0.660138,-1.5,-0.510046,0x54e0a43c;
+	}
+}
+[t:statue_glb_wizard_21,n:0x46a00026]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = 1.49398,-1.5,-0.429991,0x8aeea164;
+	}
+}
