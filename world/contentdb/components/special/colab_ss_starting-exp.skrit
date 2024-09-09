@@ -22,6 +22,7 @@ property string		_doc$						= "Gives the player free exp on entering the world";
 property string		_required_component$ 		= "placement";
 
 property float		execute_timer$		= 2			doc = "How many seconds after entering the world before activating?";
+property float		experience_amount$	= 0			doc = "XP";
 property float		Melee_skill$		= 0			doc = "What level to set Melee to.";
 property float		Ranged_skill$		= 0			doc = "What level to set Ranged to.";
 property float		Nature_skill$		= 0			doc = "What level to set Nature Magic to.";
@@ -64,6 +65,8 @@ state Execute$
 		//Make sure that the player is controlled by a human.
 		if( player$.Go.Player.Controller != PC_COMPUTER )
 		{
+			//Set XP
+			Rules.AwardExperience( player$, owner.goid, experience_amount$ );
 			//Set Base Stats
 			player$.go.actor.RCSetSkillLevels( Strength_stat$, Intelligence_stat$, Dexterity_stat$ );
 			
