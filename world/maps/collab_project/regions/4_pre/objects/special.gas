@@ -7,6 +7,10 @@
 			[*]
 			{
 				action* = mood_change("collab_ss_1a_family-tomb_1");
+				action* = send_world_message("we_req_activate",0x40000015,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x40000016,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x40000017,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x40000019,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_first_enter");
 			  f delay = 0.000000;
