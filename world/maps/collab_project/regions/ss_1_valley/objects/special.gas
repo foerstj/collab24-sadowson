@@ -1354,7 +1354,7 @@
 			{
 				action* = fade_nodes(0x00000410,1,2,-1,"out:instant");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(0.500000,"on_every_leave");
+				condition* = party_member_within_sphere(0.500000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
