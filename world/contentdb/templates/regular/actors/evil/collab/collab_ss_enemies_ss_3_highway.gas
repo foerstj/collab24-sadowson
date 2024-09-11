@@ -258,7 +258,7 @@
 			strength	 = 9,  0;
 			intelligence = 10, 0;
 			dexterity	 = 10, 0;
-            nature_magic = 7,  0;
+            combat_magic = 7,  0;
 		}
 	}
 	[aspect]
@@ -371,7 +371,7 @@
 			strength	 = 9,  0;
 			intelligence = 10, 0;
 			dexterity	 = 10, 0;
-            nature_magic = 7,  0;
+            combat_magic = 7,  0;
 		}
 	}
 	[aspect]
