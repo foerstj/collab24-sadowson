@@ -242,7 +242,7 @@
 		{
        		[oneof*]
 			{
-				es_shield_hand = bw_g_c_s_s_r_avg;
+				es_shield_hand = bw_g_c_s_m_r_avg;
 			}
 			[oneof*]
 			{
