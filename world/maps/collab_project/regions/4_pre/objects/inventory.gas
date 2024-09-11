@@ -189,3 +189,38 @@
 	  p position = -0.118231,0,1.46064,0x76de0a99;
 	}
 }
+[t:collab_ss_book_archeologist,n:0x4000000f]
+{
+	[placement]
+	{
+	  p position = -3.23235,0,0.924853,0xbac0d0a4;
+	}
+}
+[t:collab_ss_book_dungeon,n:0x4000001a]
+{
+	[placement]
+	{
+	  p position = -3.24748,0,0.416773,0xbac0d0a4;
+	}
+}
+[t:collab_ss_book_larissa,n:0x4000001b]
+{
+	[placement]
+	{
+	  p position = -2.86671,-9.53674e-007,0.390677,0xbac0d0a4;
+	}
+}
+[t:collab_ss_book_the_four,n:0x4000001c]
+{
+	[placement]
+	{
+	  p position = -2.78046,0,0.949584,0xbac0d0a4;
+	}
+}
+[t:collab_ss_book_valley,n:0x4000001d]
+{
+	[placement]
+	{
+	  p position = -2.35392,0,0.425458,0xbac0d0a4;
+	}
+}

@@ -41,6 +41,14 @@ That rotting goblin said we'd be rich, pillaging the crypts here, but there noth
 	  f scroll_rate = 10.000000;
 	}
 }
+[conversation_mercenary_guard]
+{
+	[text*]
+	{
+		screen_text = "The cave's and the crypt ain't safe. Watch ya step - I won't be goin' down to drag you out!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [conversation_piratus_hello]
 {
 	[text*]
@@ -50,6 +58,14 @@ That rotting goblin said we'd be rich, pillaging the crypts here, but there noth
 		screen_text = "Hey, whoa - weapons down friends. You smacked up our leader something good so I ain't gonna even try fight you.
 To be honest, the captain sorta had it coming. If you hadn't challenged him, someone else would have. He's been sending us down into some ancient tomb to try and find treasure, but there's just junk in there!
 I'm guessing you'll be wanting his shiny purple crystal huh?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_piratus_pre]
+{
+	[text*]
+	{
+		screen_text = "Whatchu lookin' at? It's the boss ya after - not me!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -71,11 +87,11 @@ And they haven't come out for a good long while now. So they're probably still d
 	  f scroll_rate = 10.000000;
 	}
 }
-[conversation_mercenary_guard]
+[conversation_piratus_invalid]
 {
 	[text*]
 	{
-		screen_text = "The cave's and the crypt ain't safe. Watch ya step - I won't be goin' down to drag you out!";
+		screen_text = "I got nothing to say to you! Git outta my face!";
 	  f scroll_rate = 10.000000;
 	}
 }

@@ -455,7 +455,7 @@
 {
 	[placement]
 	{
-	  p position = -4.75915,-5.05,18.6971,0x5564e21f;
+	  p position = -4.32039,-5.05,18.2843,0x5564e21f;
 	}
 }
 [t:ee_gizmo_wall_blocker,n:0x44000862]
@@ -1518,5 +1518,20 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 2.61687,0,0.0284882,0x8b26e719;
+	}
+}
+[t:set_bool,n:0x4400036c]
+{
+	[common]
+	{
+		dev_instance_text = "merc_boss_dead";
+	}
+	[placement]
+	{
+	  p position = 6.08392,-5.05,10.5327,0x5564e21f;
+	}
+	[set_bool]
+	{
+		bool_variable = "merc_boss_dead";
 	}
 }

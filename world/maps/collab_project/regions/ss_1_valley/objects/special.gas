@@ -586,6 +586,7 @@
 			[*]
 			{
 				action* = mood_change("collab_ss_1_valley_2");
+				action* = send_world_message("we_req_activate",0x41000BED,0f,"default","every",0), doc("Check Guards Visibility");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,4.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
