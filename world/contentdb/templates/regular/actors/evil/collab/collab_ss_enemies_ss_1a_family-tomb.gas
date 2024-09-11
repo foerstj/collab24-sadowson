@@ -42,7 +42,7 @@
 		{
        		[oneof*]
 			{
-				es_shield_hand = bw_g_c_s_m_c_fun;
+				es_shield_hand = bw_g_c_s_s_r_avg;
 			}
 			[oneof*]
 			{
@@ -114,8 +114,8 @@
 	}
 	[attack]
 	{
-		damage_max = 20;
-		damage_min = 18;
+		damage_max = 33;
+		damage_min = 29;
 	}
 	[common]
 	{
