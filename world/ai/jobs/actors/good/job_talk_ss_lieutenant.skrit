@@ -100,12 +100,17 @@ state Talk$
 		conversation_piratus_yes
 		*/
 		
-		conversation_block$ = "conversation_piratus_hello";
+		conversation_block$ = "conversation_piratus_pre";
 		
-		if( GameAuditor.GetDb.GetBool( "lieutenant_yes" ) )
+		if( GameAuditor.GetDb.GetBool( "merc_boss_dead" ) )
 		{
-			conversation_block$ = "conversation_piratus_yes";
-			PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 199, 0.0 );//Turn off the Indicator
+			conversation_block$ = "conversation_piratus_hello";
+			
+			if( GameAuditor.GetDb.GetBool( "lieutenant_yes" ) )
+			{
+				conversation_block$ = "conversation_piratus_yes";
+				PostWorldMessage( WE_REQ_ACTIVATE, m_go$.goid, m_go$.goid, 199, 0.0 );//Turn off the Indicator
+			}
 		}
 		
 		//Use Conversation
