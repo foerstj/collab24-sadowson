@@ -1,0 +1,380 @@
+
+[t:template,n:chest_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "chest_collab_ss_7_crypt";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_csl_chest-04;
+		[textures]
+		{
+			0 = b_i_csl_chest-02;
+		}
+	}
+	[attack]
+	{
+		damage_max = 36;
+		damage_min = 24;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_close]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-04-open;
+				}
+			}
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-04-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 135;
+					min = 117;
+					min_pile = 16;
+					piles = 3 - 5;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/12-32;
+					il_main = #armor/19-95;
+					il_main = #*/12-32;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/28-33;
+					il_main = #armor/-rare(1)/90-108;
+					il_main = #*/-rare(1)/28-33;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/28-33;
+					il_main = #armor/-unique(2)/90-108;
+					il_main = #*/-unique(2)/28-33;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_flame_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:rack_csl_armor_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "rack_csl_armor_collab_ss_7_crypt";
+	specializes = prop;
+	[aspect]
+	{
+		model = m_i_csl_rack-armor;
+		[textures]
+		{
+			0 = b_i_csl_rack-armor;
+		}
+	}
+	[common]
+	{
+		rollover_display = TRUE;
+		screen_name = "Armor Stand";
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = we_req_use;
+		one_shot = TRUE;
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 1;
+					il_main = #armor,body/19-100;
+					il_main = #armor/19-100;
+				}
+			}
+		}
+	}
+}
+[t:template,n:rack_csl_weapons_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "rack_csl_weapons_collab_ss_7_crypt";
+	specializes = prop;
+	[aspect]
+	{
+		model = m_i_csl_rack-weapon;
+		[textures]
+		{
+			0 = b_w_weapons;
+			1 = b_i_csl_rack-weapon;
+		}
+	}
+	[common]
+	{
+		rollover_display = TRUE;
+		screen_name = "Weapon Rack";
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = we_req_use;
+		one_shot = TRUE;
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 1;
+					il_main = #weapon/12-33;
+					il_main = #weapon/30-50;
+				}
+			}
+		}
+	}
+}
+[t:template,n:trunk_csl_collab_ss_7_crypt_1]
+{
+	category_name = "ss_7_crypt";
+	doc = "trunk_csl_collab_ss_7_crypt_1";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[attack]
+	{
+		damage_max = 143;
+		damage_min = 95;
+	}
+	[common]
+	{
+		screen_name = "Trunk";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 142;
+					min = 124;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/25-40;
+					il_main = #armor/90-108;
+					il_main = #*/45-125;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_star_crate;
+	}
+}
+[t:template,n:trunk_csl_collab_ss_7_crypt_2]
+{
+	category_name = "ss_7_crypt";
+	doc = "trunk_csl_collab_ss_7_crypt_2";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[attack]
+	{
+		damage_max = 143;
+		damage_min = 95;
+	}
+	[common]
+	{
+		screen_name = "Trunk";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 135;
+					min = 100;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/25-40;
+					il_main = #armor/90-108;
+					il_main = #*/45-125;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_star_crate;
+	}
+}
+[t:template,n:trunk_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "trunk_collab_ss_7_crypt";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+		[textures]
+		{
+			0 = b_i_glb_trunk-long;
+		}
+	}
+	[attack]
+	{
+		damage_max = 143;
+		damage_min = 95;
+	}
+	[common]
+	{
+		screen_name = "Trunk";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 150;
+					min = 105;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/25-40;
+					il_main = #armor/90-108;
+					il_main = #*/45-125;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_gas_crate;
+	}
+}
+[t:template,n:sarcophagus_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "sarcophagus_collab_ss_7_crypt";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = stone;
+		model = m_i_csl_sarcophagus-02;
+	}
+	[attack]
+	{
+		damage_max = 139;
+		damage_min = 93;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = sarcophagus-02-open;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Sarcophagus";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 121;
+					min = 83;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/25-40;
+					il_main = #armor/90-108;
+					il_main = #*/45-125;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_fireball_chest;
+		fire_event = WE_REQ_USE;
+	}
+}

@@ -1,0 +1,223 @@
+[t:template,n:container_collab_ss_1a_family-tomb]
+{
+	category_name = "ss_1a_family-tomb";
+	doc = "container_collab_ss_1a_family-tomb";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = stone;
+		model = m_i_cav_container-01;
+	}
+	[attack]
+	{
+		damage_max = 14;
+		damage_min = 10;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_cav;
+			[chore_open]
+			{
+				skrit = random_transition;
+				[anim_files]
+				{
+					00 = container-01-open-01;
+					01 = container-01-open-02;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Monument";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 50;
+					min = 45;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:sarcophagus_collab_ss_1a_family-tomb]
+{
+	category_name = "ss_1a_family-tomb";
+	doc = "sarcophagus_collab_ss_1a_family-tomb";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = stone;
+		model = m_i_cav_sarcophagus-01;
+	}
+	[attack]
+	{
+		damage_max = 15;
+		damage_min = 10;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_cav;
+			[chore_open]
+			{
+				skrit = random_transition;
+				[anim_files]
+				{
+					00 = sarcophagus-open-01;
+					01 = sarcophagus-open-02;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Sarcophagus";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 75;
+					min = 15;
+					min_pile = 2;
+					piles = 2 - 3;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/5-10;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:urn_collab_ss_1a_family-tomb_01]
+{
+	category_name = "ss_1a_family-tomb";
+	doc = "urn_collab_ss_1a_family-tomb_01";
+	specializes = base_container_clay;
+	[aspect]
+	{
+		model = m_i_cav_urn-01;
+	}
+	[attack]
+	{
+		damage_max = 15;
+		damage_min = 10;
+	}
+	[common]
+	{
+		screen_name = "Urn";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.005;
+					il_main = #ring/10-15;
+				}
+				[gold*]
+				{
+					chance = 0.1;
+					max = 70;
+					min = 55;
+					min_pile = 3;
+					piles = 1 - 3;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+}
+[t:template,n:urn_collab_ss_1a_family-tomb_02]
+{
+	category_name = "ss_1a_family-tomb";
+	doc = "urn_collab_ss_1a_family-tomb_02";
+	specializes = base_container_clay;
+	[aspect]
+	{
+		model = m_i_cav_urn-02;
+	}
+	[attack]
+	{
+		damage_max = 14;
+		damage_min = 10;
+	}
+	[common]
+	{
+		screen_name = "Urn";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.1;
+					max = 70;
+					min = 60;
+					min_pile = 3;
+					piles = 2 - 3;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/5-10;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+[t:template,n:crate_collab_super_base]
+{
+	doc = "crate_collab_super_base";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-elemental;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+				}
+			}
+	}
+	[common]
+	{
+		screen_name="Chest";
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+	}
+}
+[t:template,n:crate_collab_ss_7_air]
+{
+	category_name = "ss_7_crypt";
+	doc = "crate_collab_ss_7_air";
+	specializes = crate_collab_super_base;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				il_main = #spellbook/79-87/-mod(1);
+				il_main = #spellbook/79-87/-mod(1);
+				il_main = #book_glb_magic_07/79-87/+ofconvoking;
+				il_main = #book_glb_magic_06/79-87/+ofcompassion;
+			}
+		}
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_chest_air-diffuse; 
+			1 = b_i_glb_chest_air-static; 
+			2 = b_i_glb_chest_air-dynamic;
+		}
+	}
+}
+[t:template,n:crate_collab_ss_7_earth]
+{
+	category_name = "ss_7_crypt";
+	doc = "crate_collab_ss_7_earth";
+	specializes = crate_collab_super_base;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				il_main = #armor,f/75-90/+ofpatience;
+				il_main = #armor,r/70-90/+ofold;
+				il_main = #armor,m/70-90/+ofretaliation;
+				il_main = #armor,m/75-90/+ofindependence;
+			}
+		}
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_chest_earth-diffuse; 
+			1 = b_i_glb_chest_earth-static; 
+			2 = b_i_glb_chest_earth-dynamic;
+		}
+	}
+}
+[t:template,n:crate_collab_ss_7_fire]
+{
+	category_name = "ss_7_crypt";
+	doc = "crate_collab_ss_7_fire";
+	specializes = crate_collab_super_base;
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				il_main = #melee,f/79-87/-rare(1);
+				il_main = #ranged/79-87/-unique(2);
+				il_main = #staff/79-87/-unique(2);
+				il_main = #weapon/79-87/-rare(1);
+			}
+		}
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_chest_fire-diffuse; 
+			1 = b_i_glb_chest_fire-static; 
+			2 = b_i_glb_chest_fire-dynamic;
+		}
+	}
+}
+[t:template,n:crate_collab_ss_7_water]
+{
+	category_name = "ss_7_crypt";
+	doc = "crate_collab_ss_7_water";
+	specializes = crate_collab_super_base;
+	[inventory]
+	{
+		[pcontent] //delayed_
+		{
+			[all*]
+			{
+				il_main = #amulet/79-87/-rare(1);
+				il_main = #ring/79-87/-rare(1);
+				il_main = #amulet/79-87/-unique(2);
+				il_main = #ring/79-87/-unique(2);
+			}
+		}
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_chest_water-diffuse; 
+			1 = b_i_glb_chest_water-static; 
+			2 = b_i_glb_chest_water-dynamic;
+		}
+	}
+}
