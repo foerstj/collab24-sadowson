@@ -390,145 +390,145 @@
 			{
 				[all*]
 				{
-					il_main = #body,ro/91-222;
+					il_main = #body,ro/60-172;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #body/91-121;
+					il_main = #body/60-84;
 					max = 7;
 					min = 7;
 				}
 				[all*]
 				{
-					il_main = #body/122-185;
-					max = 17;
-					min = 17;
+					il_main = #body/85-141;
+					max = 12;
+					min = 12;
 				}
 				[all*]
 				{
-					il_main = #body/186-222;
-					max = 3;
-					min = 3;
+					il_main = #body/142-172;
+					max = 5;
+					min = 5;
 				}
 
-
-				[all*]
-				{
-					il_main = #gloves/12-121;
-					max = 8;
-					min = 8;
-				}
-				[all*]
-				{
-					il_main = #gloves/122-185;
-					max = 8;
-					min = 8;
-				}
-				[all*]
-				{
-					il_main = #gloves/186-222;
-					max = 4;
-					min = 4;
-				}
 
 				[all*]
 				{
-					il_main = #helm/12-121;
-					max = 8;
-					min = 8;
+					il_main = #gloves/8-84;
+					max = 10;
+					min = 10;
 				}
 				[all*]
 				{
-					il_main = #helm/122-185;
-					max = 8;
-					min = 8;
+					il_main = #gloves/85-141;
+					max = 12;
+					min = 12;
 				}
 				[all*]
 				{
-					il_main = #helm/186-222;
-					max = 4;
-					min = 4;
+					il_main = #gloves/142-172;
+					max = 6;
+					min = 6;
 				}
 
 				[all*]
 				{
-					il_main = #boots/12-121;
-					max = 8;
-					min = 8;
+					il_main = #helm/8-84;
+					max = 10;
+					min = 10;
 				}
 				[all*]
 				{
-					il_main = #boots/122-185;
-					max = 8;
-					min = 8;
+					il_main = #helm/85-141;
+					max = 12;
+					min = 12;
 				}
 				[all*]
 				{
-					il_main = #boots/186-222;
-					max = 4;
-					min = 4;
+					il_main = #helm/142-172;
+					max = 6;
+					min = 6;
+				}
+
+				[all*]
+				{
+					il_main = #boots/8-84;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #boots/85-141;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #boots/142-172;
+					max = 6;
+					min = 6;
 				}
 			}
 			[shields]
 			{
 				[all*]
 				{
-					il_main = #shield/12-121;
-					max = 5;
-					min = 5;
+					il_main = #shield/8-84;
+					max = 10;
+					min = 10;
 				}
 				[all*]
 				{
-					il_main = #shield/122-185;
+					il_main = #shield/85-141;
+					max = 12;
+					min = 12;
+				}
+				[all*]
+				{
+					il_main = #shield/142-172;
 					max = 6;
 					min = 6;
-				}
-				[all*]
-				{
-					il_main = #shield/186-222;
-					max = 4;
-					min = 4;
 				}
 			}
 			[weapons]
 			{
 				[all*]
 				{
-					il_main = #melee/44-56;
+					il_main = #melee/30-40;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #melee/57-85;
-					max = 18;
-					min = 18;
+					il_main = #melee/41-65;
+					max = 14;
+					min = 14;
 				}
 				[all*]
 				{
-					il_main = #melee/86-101;
+					il_main = #melee/66-79;
 					max = 6;
 					min = 6;
 				}
 
 				[all*]
 				{
-					il_main = #ranged/44-56;
+					il_main = #ranged/30-40;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #ranged/57-85;
-					max = 18;
-					min = 18;
+					il_main = #ranged/41-65;
+					max = 14;
+					min = 14;
 				}
 				[all*]
 				{
-					il_main = #ranged/86-101;
+					il_main = #ranged/66-79;
 					max = 6;
 					min = 6;
 				}
@@ -538,19 +538,25 @@
 			{
 				[all*]
 				{
-					il_main = #spell/15-36;
+					il_main = #spell/6-22;
 					max = 25;
 					min = 25;
 				}
 				[all*]
 				{
-					il_main = #spell/0-14;
+					il_main = #spell/0-5;
 					max = 5;
 					min = 5;
 				}
 			}
 			[misc]
 			{
+                [all*]
+				{
+					il_main = #spellbook/57-63;
+					max = 4;
+					min = 4;
+				}
 				[all*]
 				{
 					il_main = book_glb_magic_01;

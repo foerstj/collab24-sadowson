@@ -1,0 +1,172 @@
+[t:template,n:collab_ss_spell_monster_plains_braak]
+{
+	category_name = "magic";
+	doc = "collab_ss_spell_monster_plains_braak";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		aiming_error_range_x = 2;
+		aiming_error_range_y = 2;
+		ammo_attach_bone = weapon_grip;
+		ammo_template = braak_boulder;
+		damage_max = 21;
+		damage_min = 19;
+		use_aiming_error = true;
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 16;
+	}
+	[spell_launch]
+	{
+		number = 1;
+	}
+}
+[t:template,n:collab_ss_spell_chitterskrag_poison]
+{
+	category_name = "magic";
+	doc = "spell_chitterskrag_poison";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 32;
+		damage_min = 28;
+	}
+	[magic]
+	{
+		cast_range = 8;
+		cast_reload_delay = 1;
+		effect_duration = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		magic_class = mc_combat_magic;
+		skill_class = "Combat Magic";
+	}
+	[spell_fire]
+	{
+		effect_script = chitterskrag_poison;
+		ignite = false;
+		particle_fit = 0.6;
+	}
+}
+[t:template,n:collab_ss_spell_wraith_zap]
+{
+	category_name = "magic";
+	doc = "collab_ss_spell_wraith_zap";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 60;
+		damage_min = 45;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("wraith_zap");
+				condition* = receive_world_message("we_req_cast");
+			}
+			[*]
+			{
+				action* = call_sfx_script("wraith_zap_charge");
+				condition* = receive_world_message("we_req_cast_charge");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 14;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		cast_sub_animation = 1;
+	}
+	[spell_instant_hit] {}
+}
+[t:template,n:collab_ss_spell_lava_spirit_fire]
+{
+	category_name = "magic";
+	doc = "collab_ss_spell_lava_spirit_fire";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 65;
+		damage_min = 50;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("lava_spirit_charge");
+				condition* = receive_world_message("we_req_cast_charge");
+			}
+			[*]
+			{
+				action* = call_sfx_script( "dsx_lava_spirit_fire" );
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 14;
+		cast_reload_delay = 1;
+		effect_duration = 5;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		magic_class = mc_combat_magic;
+		skill_class = "Combat Magic";
+	}
+}
+[t:template,n:collab_ss_spell_lava_beast_blast]
+{
+	category_name = "magic";
+	doc = "collab_ss_spell_lava_beast_blast";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 100;
+		damage_min = 90;
+		area_damage_radius = 3;
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 0.5;
+		effect_duration = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_damage_volume]
+	{
+		effect_script = lava_beast_blast;
+		start_radius = 1.5;
+		length = 13.0;
+	}
+}

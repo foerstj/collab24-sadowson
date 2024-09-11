@@ -16,16 +16,16 @@
 	[aspect]
 	{
 		experience_value = 113;
-		life 		= 100;
-		max_life 	= 100;
+		life 		= 75;
+		max_life 	= 75;
 		mana 		= 56;
 		max_mana 	= 56;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 60;
-		damage_min = 55;
+		damage_max = 50;
+		damage_min = 45;
 	}
 	[common]
 	{
@@ -33,12 +33,12 @@
 	}
 	[defend]
 	{
-		defense = 74;
+		defense = 33;
 	}
 	[inventory]
 	{
     	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_darkling_spark; }
+		[other] { il_active_primary_spell = spell_darkling_spark; }
     	[pcontent]
 		{
 			[oneof*]
@@ -98,8 +98,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 50;
-		damage_min = 45;
+		damage_max = 80;
+		damage_min = 65;
 	}
 	[common]
 	{
@@ -127,30 +127,17 @@
    	[inventory]
 	{
     	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_blue; }
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_white;
+		}
 
 		[pcontent]
 		{
 			[oneof*]
 			{
-				[oneof*]
-				{
-				   chance = 0.05;
-				   il_main = potion_health_small;
-				   il_main = potion_mana_small;
-				}
-				[all*]
-				{
-       				chance = 0.1;
-                    il_main = #cmagic/3-15;
-				}
-				[oneof*]
-				{
-					chance = 0.15;
-                    il_main = #*/36-44;
-                    il_main = #body,ro/70-88;
-				}
-
+				chance = 0.8;
+				il_main = #*/38-42;
 			}
 		}
 	}

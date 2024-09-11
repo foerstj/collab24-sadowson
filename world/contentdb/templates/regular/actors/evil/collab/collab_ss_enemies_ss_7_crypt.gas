@@ -16,8 +16,8 @@
 	[aspect]
 	{
 		experience_value = 78;
-		life 			= 290;
-		max_life 		= 290;
+		life 			= 250;
+		max_life 		= 250;
 		mana 			= 20;
 		max_mana 		= 20;
 		model = m_c_ecm_wr_pos_1;
@@ -194,8 +194,8 @@
 	[aspect]
 	{
 		experience_value = 156;
-		life 			= 327;
-		max_life 		= 327;
+		life 			= 300;
+		max_life 		= 300;
 		mana 			= 50;
 		max_mana 		= 50;
 		model = m_c_ecm_wr_pos_1;
@@ -209,7 +209,7 @@
 	}
 	[defend]
 	{
-		defense = 202;
+		defense = 150;
 	}
 	[body]
 	{
@@ -370,8 +370,8 @@
 	[aspect]
 	{
 		experience_value = 95;
-		life 			= 243;
-		max_life 		= 243;
+		life 			= 230;
+		max_life 		= 230;
 		mana 			= 20;
 		max_mana 		= 20;
 		model = m_c_ecm_wr_pos_2;
@@ -443,7 +443,7 @@
 	}
    	[defend]
 	{
-		defense = 355;
+		defense = 75;
 	}
 	[inventory]
 	{
@@ -543,7 +543,7 @@
 	}
 	[defend]
 	{
-		defense = 74;
+		defense = 65;
 	}
 	[body]
 	{
@@ -638,7 +638,7 @@
     	selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell = spell_wraith_zap;
+			il_active_primary_spell = collab_ss_spell_wraith_zap;
 		}
     	[pcontent]
 		{
@@ -704,16 +704,16 @@
 	[aspect]
 	{
 		experience_value = 82;
-		life 			= 327;
-		max_life 		= 327;
+		life 			= 300;
+		max_life 		= 300;
 		mana 			= 50;
 		max_mana 		= 50;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 33;
-		damage_min = 29;
+		damage_max = 15;
+		damage_min = 10;
 	}
 	[common]
 	{
@@ -722,7 +722,7 @@
 	}
 	[defend]
 	{
-		defense = 202;
+		defense = 100;
 	}
 
    	[mind]
@@ -755,33 +755,45 @@
 				es_shield_hand = #shield/-no_mod/150-180;
 				es_chest = #body,f/-no_mod/150-180;
 			}
-			[all*]
+			[oneof*]
 			{
 				[oneof*]
 				{
-					il_main = #armor,f/130-145;
-	                il_main = #weapon/44-48;
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/10-14;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/6-11;
+					il_main = #armor/18-98;
+	                il_main = #weapon/36-44;
 				}
 				[oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/51-59;
-	                il_main = #armor/-rare(1)/155-172;
-                    il_main = #*/-rare(1)/51-59;
+	                il_main = #weapon/-rare(1)/42-59;
+	                il_main = #armor/-rare(1)/126-144;
+                    il_main = #*/-rare(1)/42-59;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/51-59;
-	                il_main = #armor/-unique(2)/155-172;
-                    il_main = #*/-unique(2)/51-59;
+	                il_main = #weapon/-unique(2)/42-59;
+	                il_main = #armor/-unique(2)/126-144;
+                    il_main = #*/-unique(2)/42-59;
 	            }
 				[gold*]
 				{
-					max = 484;
-					min = 241;
-					min_pile = 41;
-					piles = 2 - 4;
+					chance = 0.15;
+					max = 328;
+					min = 239;
 				}
 			}
 		}
@@ -805,8 +817,8 @@
 	[aspect]
 	{
 		experience_value = 165;
-		life 			= 350;
-		max_life 		= 350;
+		life 			= 320;
+		max_life 		= 320;
 		mana 			= 50;
 		max_mana 		= 50;
 	}
@@ -908,8 +920,8 @@
 	[aspect]
 	{
 		experience_value 	= 87;
-		life			= 327;
-		max_life		= 327;
+		life			= 300;
+		max_life		= 300;
 		mana			= 100;
 		max_mana		= 100;
 		model = m_c_ebb_dk_pos_1;
@@ -924,12 +936,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_min = 40;
-		damage_max = 30;
+		damage_min = 20;
+		damage_max = 15;
 	}
 	[defend]
 	{
-		defense = 202;
+		defense = 150;
 	}
 	[body]
 	{

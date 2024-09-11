@@ -44,7 +44,7 @@
 		{
 			[oneof*]
 			{
-				es_weapon_hand = ax_g_c_2h1b_avg;
+				es_weapon_hand = ax_d_o_2h2b_avg;
 			}
 			[oneof*]
 			{
@@ -145,7 +145,7 @@
 		selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell=dsx_spell_lava_spirit_fire;
+			il_active_primary_spell = collab_ss_spell_lava_spirit_fire;
 		}
 			
 	}
@@ -180,9 +180,9 @@
 	[aspect]
 	{
 		experience_value = 108;
-		life = 350;
+		life = 250;
 		material = stone;
-		max_life = 350;
+		max_life = 250;
 		mana = 50;
 		max_mana = 50;
 		textures:0 = b_c_edm_rb-02;
@@ -199,7 +199,7 @@
 	}
 	[defend]
 	{
-		defense = 200;
+		defense = 100;
 	}
 
 	[physics]
@@ -220,7 +220,10 @@
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_lava_beast_blast; }
+		[other]
+		{
+			il_active_primary_spell=collab_ss_spell_lava_beast_blast;
+		}
 
    		[pcontent]
 		{
@@ -277,18 +280,18 @@
 	{
 		[skills]
 		{
-			strength =  	18, 0;
-			intelligence =  5,  0;
-			dexterity =  	11, 0;
-            melee =  		13, 0;
+			strength 	 = 18, 0;
+			intelligence = 4,  0;
+			dexterity 	 = 10, 0;
+            melee 		 = 7,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 217;
-		life 			= 400;
+		life 			= 320;
 		material 		= stone;
-		max_life		= 400;
+		max_life		= 320;
 		mana 	 		= 100;
 		max_mana 		= 100;
 		textures:0 = b_c_edm_rb-03;
@@ -343,7 +346,7 @@
 	}
 	[defend]
 	{
-		defense=1882;
+		defense = 100;
 	}
 
 	[physics]
@@ -364,38 +367,27 @@
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_lava_beast_blast; }
+		[other]
+		{
+			il_active_primary_spell=collab_ss_spell_lava_beast_blast;
+		}
 
    		[pcontent]
 		{
-			[all*]
+			[oneof*]
 			{
-				[oneof*]
+				[all*]
 				{
-					il_main = #*/150-170;
-					il_main = #armor/480-530;
+       				chance = 0.5;
+                    il_main = #cmagic/13-15;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/178-195;
-	                il_main = #armor/-rare(1)/550-564;
-                    il_main = #*/-rare(1)/178-195;
-                }
-				[oneof*]
-				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/178-195;
-	                il_main = #armor/-unique(2)/550-564;
-                    il_main = #*/-unique(2)/178-195;
-	            }
-				[gold*]
-				{
-					max = 59876;
-					min = 57632;
-					min_pile = 5987;
-					piles = 6 - 8;
+					chance = 0.5;
+                    il_main = #*/40-46;
+                    il_main = #body,ro/70-88;
 				}
+
 			}
 		}
 	}
@@ -495,7 +487,7 @@
 	}
     [defend]
 	{
-		defense = 78;
+		defense = 30;
 	}
 	[mind]
 	{

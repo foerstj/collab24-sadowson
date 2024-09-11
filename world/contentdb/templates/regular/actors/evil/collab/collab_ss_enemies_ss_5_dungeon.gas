@@ -16,8 +16,8 @@
 	[aspect]
 	{
 		experience_value = 52;
-		life 			= 280;
-		max_life 		= 280;
+		life 			= 180;
+		max_life 		= 180;
 		mana 			= 97;
 		max_mana 		= 97;
 		model = m_c_ecm_sk_pos_2;
@@ -34,7 +34,7 @@
 	}
 	[defend]
 	{
-		defense = 100;
+		defense = 52;
 	}
 	[inventory]
 	{
@@ -52,20 +52,35 @@
 			{
 				[all*]
 				{
-       				chance = 0.03;
-            	    il_main = #spell/2-4;
+       				chance = 0.02;
+	                il_main = #spell/8-14;
 				}
 				[oneof*]
 				{
-					chance = 0.20;
-					il_main = #weapon/10-14;
-					il_main = #armor/5-29;
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
 				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
+	            }
 				[gold*]
 				{
-					chance = 0.2;
-					max = 38;
-					min = 20;
+					chance = 0.125;
+					max = 196;
+					min = 131;
 				}
 			}
 		}
@@ -86,17 +101,17 @@
 	{
 		[skills]
 		{
-			strength 	 = 18, 0;
-			intelligence = 5,  0;
+			strength 	 = 13, 0;
+			intelligence = 10,  0;
 			dexterity 	 = 11, 0;
-            melee 		 = 13, 0;
+            melee 		 = 10, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 104;
-		life 			= 330;
-		max_life 		= 330;
+		life 			= 250;
+		max_life 		= 250;
 		mana 			= 100;
 		max_mana 		= 100;
 		model = m_c_ecm_sk_pos_2;
@@ -110,7 +125,7 @@
 	}
 	[defend]
 	{
-		defense = 202;
+		defense = 100;
 	}
 	[common]
 	{
@@ -143,14 +158,28 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/14-16;
-					il_main = #body,f/29-35;
+					il_main = #armor,f/90-108;
+	                il_main = #weapon/35-38;
 				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/41-52;
+	                il_main = #armor/-rare(1)/109-127;
+                    il_main = #*/-rare(1)/41-52;
+                }
+				[oneof*]
+				{
+                	chance = 0.2;
+	                il_main = #weapon/-unique(2)/41-52;
+	                il_main = #armor/-unique(2)/109-127;
+                    il_main = #*/-unique(2)/41-52;
+	            }
 				[gold*]
 				{
-					max = 60;
-					min = 40;
-					min_pile = 10;
+					max = 364;
+					min = 221;
+					min_pile = 57;
 					piles = 2 - 3;
 				}
 			}
@@ -178,24 +207,24 @@
 	{
 		[skills]
 		{
-			strength 	 = 13, 0;
-			intelligence = 5,  0;
+			strength 	 = 10, 0;
+			intelligence = 5, 0;
 			dexterity 	 = 16, 0;
-            ranged		 = 6,  0;
+            ranged 		 = 10,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 48;
-		life 			= 243;
-		max_life 		= 243;
-		mana 			= 100;
-		max_mana 		= 100;
+		life 			= 105;
+		max_life 		= 105;
+		mana 			= 60;
+		max_mana 		= 60;
 	}
 	[attack]
 	{
-		damage_max = 51;
-		damage_min = 48;
+		damage_max = 40;
+		damage_min = 35;
 	}
 	[common]
 	{
@@ -203,7 +232,7 @@
 	}
 	[defend]
 	{
-		defense = 75;
+		defense = 50;
 	}
 	[inventory]
 	{
@@ -219,29 +248,35 @@
 			{
 				[all*]
 				{
-       				chance = 0.03;
-            	    il_main = #spell/4-7;
+       				chance = 0.02;
+	                il_main = #spell/8-14;
 				}
 				[oneof*]
 				{
-					chance = 0.30;
-					il_main = #weapon/14-18;
-					il_main = #*/14-18;
-					il_main = #armor/8-41;
-    			    il_main = potion_health_small;
-				    il_main = potion_mana_small;
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
 				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
+                }
 				[oneof*]
 				{
-					chance = 0.20;
-    			    il_main = potion_health_small;
-				    il_main = potion_mana_small;
-				}
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
+	            }
 				[gold*]
 				{
-					chance = 0.1;
-					max = 25;
-					min = 13;
+					chance = 0.125;
+					max = 196;
+					min = 131;
 				}
 			}
 		}
@@ -291,7 +326,7 @@
 	}
 	[defend]
 	{
-		defense = 50;
+		defense = 45;
 	}
 	[body]
 	{
@@ -358,32 +393,34 @@
 				[all*]
 				{
        				chance = 0.02;
-            	    il_main = #spell/2-6;
+	                il_main = #spell/8-14;
 				}
 				[oneof*]
 				{
-					chance = 0.17;
-					il_main = #*/14-20;
-					il_main = #armor/8-41;
-	                il_main = #weapon/14-20;
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
 				}
-        		[oneof*]
+                [oneof*]
 				{
-	                   chance = 0.002;
-	                   il_main = #weapon/-rare(1)/20-27;
-	                   il_main = #armor/-rare(1)/20-45;
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
 	            }
-				[oneof*]
-				{
-					chance = 0.20;
-    			    il_main = potion_health_small;
-				    il_main = potion_mana_small;
-				}
 				[gold*]
 				{
-					chance = 0.15;
-					max = 30;
-					min = 10;
+					chance = 0.125;
+					max = 196;
+					min = 131;
 				}
 			}
 		}

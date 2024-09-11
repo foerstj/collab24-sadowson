@@ -10,6 +10,7 @@ DO NOT MODIFY ANYTHING AFTER THE BASE BALANCING TEMPLATES.
 
 v1 - 13/07/24: Initial Implementation
 v2 - 16/08/24: Rebalanced stats
+v3 - 11/09/24: Rebalanced stats. Loot pool is identical to Braak.
 
 */
 
@@ -70,43 +71,37 @@ v2 - 16/08/24: Rebalanced stats
 			}
 			[oneof*]
 			{
-				[oneof*]
-				{
-				   chance = 0.05;
-				   il_main = potion_health_small;
-				   il_main = potion_mana_small;
-				}
 				[all*]
 				{
        				chance = 0.02;
-	                il_main = #spell/10-14;
+	                il_main = #spell/8-14;
 				}
 				[oneof*]
 				{
-					chance = 0.2;
-					il_main = #*/6-11;
-					il_main = #armor/18-98;
-	                il_main = #weapon/36-44;
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
 				}
-				[oneof*]
+                [oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/42-59;
-	                il_main = #armor/-rare(1)/126-144;
-                    il_main = #*/-rare(1)/42-59;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/42-59;
-	                il_main = #armor/-unique(2)/126-144;
-                    il_main = #*/-unique(2)/42-59;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
 	            }
 				[gold*]
 				{
-					chance = 0.15;
-					max = 328;
-					min = 239;
+					chance = 0.125;
+					max = 196;
+					min = 131;
 				}
 			}
 		}
@@ -183,43 +178,37 @@ v2 - 16/08/24: Rebalanced stats
 			}
 			[oneof*]
 			{
-				[oneof*]
-				{
-				   chance = 0.05;
-				   il_main = potion_health_small;
-				   il_main = potion_mana_small;
-				}
 				[all*]
 				{
        				chance = 0.02;
-	                il_main = #spell/10-14;
+	                il_main = #spell/8-14;
 				}
 				[oneof*]
 				{
-					chance = 0.2;
-					il_main = #*/6-11;
-					il_main = #armor/18-91;
-	                il_main = #weapon/36-43;
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
 				}
                 [oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/41-51;
-	                il_main = #armor/-rare(1)/110-143;
-                    il_main = #*/-rare(1)/41-51;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/41-51;
-	                il_main = #armor/-unique(2)/110-143;
-                    il_main = #*/-unique(2)/41-51;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
 	            }
 				[gold*]
 				{
-					chance = 0.15;
-					max = 398;
-					min = 266;
+					chance = 0.125;
+					max = 196;
+					min = 131;
 				}
 			}
 		}
@@ -294,20 +283,38 @@ v2 - 16/08/24: Rebalanced stats
 			}
 			[oneof*]
 			{
-			   chance = 0.05;
-			   il_main = potion_health_small;
-			   il_main = potion_mana_small;
-			}
-			[all*]
-			{
-       			chance = 0.1;
-                il_main = #cmagic/3-15;
-			}
-			[oneof*]
-			{
-				chance = 0.15;
-                il_main = #*/36-44;
-                il_main = #body,ro/70-88;
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/8-14;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 196;
+					min = 131;
+				}
 			}
 		}
 	}
@@ -404,44 +411,39 @@ v2 - 16/08/24: Rebalanced stats
 			}
 			[oneof*]
 			{
-				[oneof*]
-				{
-				   chance = 0.05;
-				   il_main = potion_health_medium;
-				   il_main = potion_mana_medium;
-				}
 				[all*]
 				{
-	   				chance = 0.02;
-	                il_main = #spell/8-12;
+       				chance = 0.02;
+	                il_main = #spell/8-14;
 				}
 				[oneof*]
 				{
-					chance = 0.22;
-					il_main = #*/50-66;
-					il_main = #armor/29-141;
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
 				}
                 [oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/60-78;
-	                il_main = #armor/-rare(1)/140-225;
-                    il_main = #*/-rare(1)/60-78;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/60-78;
-	                il_main = #armor/-unique(2)/140-225;
-                    il_main = #*/-unique(2)/60-78;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
 	            }
 				[gold*]
 				{
 					chance = 0.125;
-					max = 1744;
-					min = 1456;
+					max = 196;
+					min = 131;
 				}
-            }
+			}
 		}
 	}
 	[common]
@@ -744,7 +746,7 @@ v2 - 16/08/24: Rebalanced stats
 	{
 		actor_class = "MELEE";
 	}
-	[collab_ss_mercenary_voices]{}
+	//[collab_ss_mercenary_voices]{}
 }
 [t:template,n:collab_ss_mercenary_male_ranged_base]		//VA: Kraal
 {

@@ -8,8 +8,8 @@
 	}
 	[attack]
 	{
-		f damage_max = 424.0;
-		f damage_min = 302.0;
+		f damage_max = 100.0;
+		f damage_min = 50.0;
 		is_two_handed = true;
 		reload_delay = 0;
 	}
@@ -67,8 +67,8 @@
 	}
 	[attack]
 	{
-		f damage_max = 424.0;
-		f damage_min = 302.0;
+		f damage_max = 50.0;
+		f damage_min = 40.0;
 		is_two_handed = true;
 	}
 	[common]

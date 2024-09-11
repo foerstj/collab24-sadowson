@@ -5,7 +5,7 @@
 	specializes = actor_evil;
 	[actor]
 	{
-		alignment		= aa_good;
+		alignment		= aa_good;	//Change by a skrit to aa_evil.
 		portrait_icon	= b_gui_ig_i_ic_c_sk_g;
 		can_level_up	= false;
 		[skills]
@@ -14,7 +14,7 @@
 			intelligence	= 12, 0;
 			dexterity		= 16, 0;
 			melee 			= 20, 0;
-			combat_magic	= 25, 0;
+			combat_magic	= 20, 0;
 		}
 	}
 	[aspect]
@@ -43,8 +43,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 120;
-		damage_min = 100;
+		damage_max = 60;
+		damage_min = 40;
 	}
 	[body]
 	{
@@ -198,26 +198,35 @@
 			{
 				es_weapon_hand = collab_ss_lord_commander_sword;
 			}
-			[oneof*]
+			[all*]
 			{
-               	min = 1;
-               	max = 2;
-				il_main = #weapon/-rare(1)/119-129;
-				il_main = #armor/-rare(1)/300-340;
-				il_main = #*/-rare(1)/119-129;
-            }
-			[oneof*]
-			{
-               	chance = 0.01;
-				il_main = #weapon/-unique(2)/119-129;
-				il_main = #armor/-unique(2)/300-340;
-				il_main = #*/-unique(2)/119-129;
-	        }
-			[gold*]
-			{
-				max = 28102;
-				min = 24201;
-				piles = 3 - 6;
+				[oneof*]
+				{
+					il_main = #armor,f/130-145;
+	                il_main = #weapon/44-48;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/51-59;
+	                il_main = #armor/-rare(1)/155-172;
+                    il_main = #*/-rare(1)/51-59;
+                }
+				[oneof*]
+				{
+                	min = 1;
+					max = 2;
+	                il_main = #weapon/-unique(2)/51-59;
+	                il_main = #armor/-unique(2)/155-172;
+                    il_main = #*/-unique(2)/51-59;
+	            }
+				[gold*]
+				{
+					max = 600;
+					min = 400;
+					min_pile = 41;
+					piles = 2 - 4;
+				}
 			}
 		}
 		[other]

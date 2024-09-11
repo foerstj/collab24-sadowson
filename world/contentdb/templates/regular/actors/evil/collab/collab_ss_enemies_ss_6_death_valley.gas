@@ -16,21 +16,21 @@
 	[aspect]
 	{
 		experience_value = 69;
-		life			 = 153;
-        max_life		 = 153;
-        mana			 = 12;
-        max_mana 		 = 12;
+		life			 = 143;
+        max_life		 = 143;
+        mana			 = 25;
+        max_mana 		 = 25;
 		textures:0 = b_c_edm_wf-05;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 40;
-		damage_min = 35;
+		damage_max = 38;
+		damage_min = 32;
 	}
 	[defend]
 	{
-		defense = 55;
+		defense = 50;
 	}
 	[body]
 	{
@@ -68,10 +68,10 @@
 	[aspect]
 	{
 		experience_value = 74;
-		life			= 270;
-        max_life		= 270;
-        mana			= 30;
-        max_mana 		= 30;
+		life			= 200;
+        max_life		= 200;
+        mana			= 80;
+        max_mana 		= 80;
 		model = m_c_ecm_wr_pos_2;
 		[textures]
 		{
@@ -99,7 +99,7 @@
 		{
 			[oneof*]
 			{
-				es_weapon_hand = ax_g_c_2h1b_avg;
+				es_weapon_hand = ax_d_o_2h2b_avg;
 			}
 
 			[oneof*]
@@ -191,8 +191,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max 	= 68; 
-		damage_min 	= 60;
+		damage_max 	= 40; 
+		damage_min 	= 35;
 	}
 	[common]
 	{
@@ -269,8 +269,8 @@
 	[aspect]
 	{
 		experience_value = 31;
-		life			= 100;
-        max_life		= 100;
+		life			= 50;
+        max_life		= 50;
         mana			= 20;
         max_mana 		= 20;
 		model = m_c_edm_chs_pos_1;
@@ -437,7 +437,10 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files]{ 00=mg; }
+				[anim_files]
+				{
+					00=mg;
+				}
 			}
 		}
 	}
@@ -456,7 +459,9 @@
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_chitterskrag_poison; }
-		
+		[other]
+		{
+			il_active_primary_spell = collab_ss_spell_chitterskrag_poison;
+		}
 	}
 }

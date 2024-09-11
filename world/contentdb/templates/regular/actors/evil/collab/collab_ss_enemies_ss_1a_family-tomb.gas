@@ -16,10 +16,10 @@
 	[aspect]
 	{
 		experience_value	= 26;
-		life 				= 240;
-		max_life 			= 240;
-		mana 				= 100;
-		max_mana			= 100;
+		life 				= 100;
+		max_life 			= 100;
+		mana 				= 50;
+		max_mana			= 50;
 	}
 	[attack]
 	{
@@ -32,7 +32,7 @@
 	}
 	[defend]
 	{
-		defense = 75;
+		defense = 60;
 	}
 	[inventory]
 	{
@@ -106,8 +106,8 @@
 	[aspect]
 	{
 		experience_value	= 22;
-		life				= 270;
-		max_life			= 270;
+		life				= 130;
+		max_life			= 130;
 		mana				= 90;
 		max_mana			= 90;
 		model = m_c_ecm_sk_pos_2;
@@ -124,7 +124,7 @@
 	}
 	[defend]
 	{
-		defense = 100;
+		defense = 80;
 	}
 	[inventory]
 	{

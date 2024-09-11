@@ -62,30 +62,49 @@ trigger OnGoDrawDebugHud$
 
 //////////////////////////////////////////////////////////////////////////////
 
+void Quest_Check$()
+{
+	//I don't know why but this was having a massive hernia in SE so I've OnlyGamed it
+	#only( game )
+	[[
+		//Check status of the quest
+		if( Victory.IsQuestCompleted( "quest_athena" ) )
+		{
+			//Quest is complete.
+			Actor_One$.go.Aspect.SSetIsVisible = true;
+			Actor_Two$.go.Aspect.SSetIsVisible = true;
+			Actor_Three$.go.Aspect.SSetIsVisible = true;
+			//The quest can only complete once, so self destruct after this is done.
+		}
+		else
+		{
+			//Quest is NOT complete.
+			//Only activates in game to prevent the actors from going invisible in the editor FOR SOME REASON...
+			Actor_One$.go.Aspect.SSetIsVisible = false;
+			Actor_Two$.go.Aspect.SSetIsVisible = false;
+			Actor_Three$.go.Aspect.SSetIsVisible = false;
+		}
+	]]
+}
+
+startup state Inactive$
+{
+	transition -> Execute$: OnGoHandleMessage( WE_ENTERED_WORLD );
+	transition -> Execute$: OnGoHandleMessage( WE_REQ_ACTIVATE );
+}
+
 startup state Execute$
 {
-	event OnGoHandleMessage( WE_ENTERED_WORLD );
+	event OnEnterState$
 	{
-		//I don't know why but this was having a massive hernia in SE so I've OnlyGamed it
-		#only( game )
-		[[
-			//Check status of the quest
-			if( Victory.IsQuestCompleted( "quest_athena" ) )
-			{
-				//Quest is complete.
-				Actor_One$.go.Aspect.SSetIsVisible = true;
-				Actor_Two$.go.Aspect.SSetIsVisible = true;
-				Actor_Three$.go.Aspect.SSetIsVisible = true;
-				//The quest can only complete once, so self destruct after this is done.
-			}
-			else
-			{
-				//Quest is NOT complete.
-				//Only activates in game to prevent the actors from going invisible in the editor FOR SOME REASON...
-					Actor_One$.go.Aspect.SSetIsVisible = false;
-					Actor_Two$.go.Aspect.SSetIsVisible = false;
-					Actor_Three$.go.Aspect.SSetIsVisible = false;
-			}
-		]]
+		Quest_Check$;
+	}
+	//Sometimes it doesn't fire when prematurely entering the world, so we're gonna kick it to run the check again.
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if( e$ == WE_REQ_ACTIVATE )
+		{
+			Quest_Check$;
+		}
 	}
 }

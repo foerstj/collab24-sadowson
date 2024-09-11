@@ -17,18 +17,18 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 36;
-		damage_min = 30;
+		damage_max = 30;
+		damage_min = 25;
 	}
 	[defend]
 	{
-		defense = 60;
+		defense = 50;
 	}
 	[aspect] 
 	{
 		experience_value = 35;
-		life		= 180;
-		max_life	= 180;
+		life		= 120;
+		max_life	= 120;
 		mana 		= 10;
 		max_mana	= 10;
 		model = m_c_edm_kc_pos_1; 
@@ -73,8 +73,8 @@
 		scale_base	= 0.4;
 		
 		experience_value = 18;
-		life 			= 100;
-		max_life 		= 100;
+		life 			= 80;
+		max_life 		= 80;
 		mana 			= 5;
 		max_mana 		= 5;
 		
@@ -90,8 +90,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 30;
-		damage_min = 25;
+		damage_max = 25;
+		damage_min = 20;
 	}
 	[body]
 	{
@@ -123,21 +123,21 @@
 	{
 		[skills]
 		{
-			strength 	 = 11, 0;
-			intelligence = 6,  0;
-			dexterity 	 = 12, 0;
-            melee		 = 11, 0;
+			strength 	 =  10, 0;
+			intelligence =  4, 0;
+			dexterity 	 =  15, 0;
+            melee 		 =  8,  0;
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 37;
-		damage_min = 33;
+		damage_max = 36;
+		damage_min = 30;
 	}
 	[defend]
 	{
-		defense = 55;
+		defense = 50;
 	}
 	[aspect]
 	{
@@ -191,27 +191,27 @@
 	{
 		[skills]
 		{
-			strength 	 = 11, 0;
-			intelligence = 6,  0;
-			dexterity 	 = 12, 0;
-            melee		 = 11, 0;
+			strength 	 =  10, 0;
+			intelligence =  4, 0;
+			dexterity 	 =  15, 0;
+            melee 		 =  8,  0;
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 45;
-		damage_min = 35;
+		damage_min = 40;
 	}
 	[defend]
 	{
-		defense = 23;
+		defense = 60;
 	}
 	[aspect]
 	{
 		experience_value = 78;
-		life             = 180;
-		max_life         = 180;
+		life             = 200;
+		max_life         = 200;
 		mana             = 20;
 		max_mana         = 20;
 		textures:0 = b_c_edm_hb-04;
@@ -295,11 +295,20 @@
 	[inventory]
 	{
     	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_braak_boulder; }
+		[other]
+		{
+			il_active_primary_spell = collab_ss_spell_monster_plains_braak;
+		}
 		[pcontent]
 		{
 			[oneof*]
 			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
 				[all*]
 				{
        				chance = 0.02;
@@ -308,29 +317,30 @@
 				[oneof*]
 				{
 					chance = 0.25;
-					il_main = #*/30-38;
-					il_main = #armor/15-73;
-	                il_main = #weapon/30-38;
-				}
+					il_main = #*/25-32;
+					il_main = #armor/13-66;
+	                il_main = #weapon/25-32;
+                    il_main = #body,ro/30-66;
+                }
                 [oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/32-44;
-	                il_main = #armor/-rare(1)/72-104;
-                    il_main = #*/-rare(1)/32-44;
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/29-38;
+	                   il_main = #armor/-rare(1)/52-91;
+                       il_main = #*/-rare(1)/29-38;
                 }
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/32-44;
-	                il_main = #armor/-unique(2)/72-104;
-                    il_main = #*/-unique(2)/32-44;
-	            }
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/29-38;
+	                   il_main = #armor/-unique(2)/52-91;
+                       il_main = #*/-unique(2)/29-38;
+				}
 				[gold*]
 				{
 					chance = 0.125;
-					max = 196;
-					min = 131;
+					max = 147;
+					min = 88;
 				}
 			}
 		}
@@ -411,52 +421,41 @@
     	selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell=spell_braak_boulder;
+			il_active_primary_spell = collab_ss_spell_monster_plains_braak;
 		}
 		[pcontent]
 		{
 			[all*]
 			{
+				[all*]
+				{
+	                il_main = #spell/12-14;
+				}
 				[oneof*]
 				{
-					[oneof*]
-					{
-						chance = 0.05;
-						il_main = potion_health_small;
-						il_main = potion_mana_small;
-					}
-					[all*]
-					{
-						chance = 0.02;
-						il_main = #spell/10-14;
-					}
-					[oneof*]
-					{
-						chance = 0.2;
-						il_main = #*/6-11;
-						il_main = #armor/18-98;
-						il_main = #weapon/36-44;
-					}
-					[oneof*]
-					{
-						chance = 0.004;
-						il_main = #weapon/-rare(1)/42-59;
-						il_main = #armor/-rare(1)/126-144;
-						il_main = #*/-rare(1)/42-59;
-					}
-					[oneof*]
-					{
-						chance = 0.002;
-						il_main = #weapon/-unique(2)/42-59;
-						il_main = #armor/-unique(2)/126-144;
-						il_main = #*/-unique(2)/42-59;
-					}
-					[gold*]
-					{
-						chance = 0.15;
-						max = 500;
-						min = 400;
-					}
+					il_main = #armor,f/90-108;
+	                il_main = #weapon/35-38;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/41-52;
+	                il_main = #armor/-rare(1)/109-127;
+                    il_main = #*/-rare(1)/41-52;
+                }
+				[oneof*]
+				{
+                	chance = 0.2;
+	                il_main = #weapon/-unique(2)/41-52;
+	                il_main = #armor/-unique(2)/109-127;
+                    il_main = #*/-unique(2)/41-52;
+	            }
+				[gold*]
+				{
+					max = 364;
+					min = 221;
+					min_pile = 57;
+					piles = 2 - 3;
 				}
 			}
 		}

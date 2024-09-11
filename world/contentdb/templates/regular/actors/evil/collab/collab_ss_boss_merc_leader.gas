@@ -14,7 +14,7 @@
 			strength 	 = 21, 0;
 			intelligence = 13, 0;
 			dexterity 	 = 12, 0;
-            melee 		 = 20, 0;
+            melee 		 = 18, 0;
 		}
 	}
 	[aspect]
@@ -47,8 +47,8 @@
 	{
 		attack_range	= 0.5;
 		reload_delay	= 0;
-		damage_max		= 80;
-		damage_min		= 60;
+		damage_max		= 70;
+		damage_min		= 55;
 	}
 	[body]
 	{
