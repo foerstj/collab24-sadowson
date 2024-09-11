@@ -37,12 +37,11 @@
 			[*]
 			{
 				alteration = alter_life_steal;
-				value		= 25;
-				description = "25 health stolen per hit.";
+				value		= 10;
+				description = "10 health stolen per hit.";
 				duration = #infinite;
 				is_permanent = true;
 				is_single_instance = false;
-				value = 35;
 			}
 			[*]
 			{
@@ -53,7 +52,6 @@
 				duration = #infinite;
 				is_permanent = true;
 				is_single_instance = false;
-				value = 35;
 				effect_script_equip	= dam_fire_7_re;
 				effect_script_hit	= fire_weapon;
 			}

@@ -14,7 +14,7 @@
 			strength 	 = 21, 0;
 			intelligence = 13, 0;
 			dexterity 	 = 12, 0;
-            melee 		 = 18, 0;
+            melee 		 = 14, 0;
 		}
 	}
 	[aspect]
@@ -47,8 +47,8 @@
 	{
 		attack_range	= 0.5;
 		reload_delay	= 0;
-		damage_max		= 70;
-		damage_min		= 55;
+		damage_max		= 2;
+		damage_min		= 1;
 	}
 	[body]
 	{
@@ -196,24 +196,25 @@
 			}
 			[oneof*]
 			{
-               	min = 1;
+               	min = 2;
                	max = 2;
-				il_main = #weapon/-rare(1)/119-129;
-				il_main = #armor/-rare(1)/300-340;
-				il_main = #*/-rare(1)/119-129;
+				il_main = #weapon/-rare(1)/35-50;
+				il_main = #armor/-rare(1)/60-100;
+				il_main = #*/-rare(1)/35-50;
             }
 			[oneof*]
 			{
                	chance = 0.01;
-				il_main = #weapon/-unique(2)/119-129;
-				il_main = #armor/-unique(2)/300-340;
-				il_main = #*/-unique(2)/119-129;
+				il_main = #weapon/-unique(2)/35-50;
+				il_main = #armor/-unique(2)/60-100;
+				il_main = #*/-unique(2)/35-50;
 	        }
 			[gold*]
 			{
-				max = 28102;
-				min = 24201;
+				max = 2812;
+				min = 2421;
 				piles = 3 - 6;
+				min_pile = 421;
 			}
 		}
 	}
@@ -259,3 +260,4 @@
 	{
 		fire_effect = human_physics_fire;
 	}
+}
