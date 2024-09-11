@@ -4,58 +4,23 @@
 {
 	[lore_crypt_archeologist]
 	{
-		description = "1125 - August
-		After years of searching, I've finally found it! That crazy lady in her castle kept giving me the run around, trying to keep me away, but I've finally found The Sleeping Crypt! I've setup camp outside the main entrance... now I just need to find a way inside. The symbols on the ground are most interesting!
-		1125 - September
-		It took so long but I've finally deciphered the symbols on the ground! At least... I think. They're important. Yep. Important. At least, that's what I'll tell the folks back home.
-		Standing on the pressure plates in the correct sequence opened the center! Now I just have to figure out how to get down!
-		
-		1125 - October
-		I never thought it possible... they're all still ALIVE down here? Well, some sort of alive... not quite undead. Only a few of them seem to be awake at any given time. At first they were all hostile to me, but it seems they've calmed down now that they've realised that I'm not trying to pilfer anything.
-		I've carefully documented all my findings, I can't wait to get back to the Mages College at Eden and tell them! And they doubted me!
-		As best as I can tell, the inhabitants here seem to spend a tenth of the day maintaining the crypt with what small life force they have. Then they spend another tenth worshiping something in the great hall at the end.
-		
-		They became quite aggressive when I entered the great hall at the end of the crypt... I think I might try and get a closer look when they're sleeping again.
-		";
+		description = "1125 - August \nAfter years of searching, I've finally found it! That crazy lady in her castle kept giving me the run around, trying to keep me away, but I've finally found The Sleeping Crypt! I've setup camp outside the main entrance... now I just need to find a way inside. The symbols on the ground are most interesting! \n1125 - September \nIt took so long but I've finally deciphered the symbols on the ground! At least... I think. They're important. Yep. Important. At least, that's what I'll tell the folks back home. \nStanding on the pressure plates in the correct sequence opened the center! Now I just have to figure out how to get down! \n\n1125 - October \nI never thought it possible... they're all still ALIVE down here? Well, some sort of alive... not quite undead. Only a few of them seem to be awake at any given time. At first they were all hostile to me, but it seems they've calmed down now that they've realised that I'm not trying to pilfer anything. \nI've carefully documented all my findings, I can't wait to get back to the Mages College at Eden and tell them! And they doubted me! \nAs best as I can tell, the inhabitants here seem to spend a tenth of the day maintaining the crypt with what small life force they have. Then they spend another tenth worshiping something in the great hall at the end. \n\nThey became quite aggressive when I entered the great hall at the end of the crypt... I think I might try and get a closer look when they're sleeping again.";
 	}
 	[lore_dungeon]
 	{
-		description = "I am Arkantos, warrior to The Four and proud defender of The Valley. 
-		
-		My death is near, The Lady - her sweet soothing voice has told me so. Foul magics have twisted my insides and there is precious little mana among the healers to spare for someone as old as me. The Lady has offered me one final service, and I shall do as she pleases, for The Four have guided us justly for many years. The cursed invaders must be buried deep underground where their foul stench cannot tarnish the roots and grasses of The Valley. 
-		
-		If ye be living and reading my memoirs, Reader I beseech thee, do not let them out. Do not let their foul mages stain the air again. Let them rot, their minds cast to the void. 
-		
-		I am Arkantos, warrior to The Four and proud defender of The Valley, and I shall see the legion rot for their crimes.";
+		description = "I am Arkantos, warrior to The Four and proud defender of The Valley. \n\nMy death is near, The Lady - her sweet soothing voice has told me so. Foul magics have twisted my insides and there is precious little mana among the healers to spare for someone as old as me. The Lady has offered me one final service, and I shall do as she pleases, for The Four have guided us justly for many years. The cursed invaders must be buried deep underground where their foul stench cannot tarnish the roots and grasses of The Valley. \n\nIf ye be living and reading my memoirs, Reader I beseech thee, do not let them out. Do not let their foul mages stain the air again. Let them rot, their minds cast to the void. \n\nI am Arkantos, warrior to The Four and proud defender of The Valley, and I shall see the legion rot for their crimes.";
 	}
 	[lore_The_Valley]
 	{
-		description = "Hundreds of years ago, a town called Pergamon lay in a lush valley, nestled rather plainly between many locations, the favoured location for many merchants to stop on their travels. Pergamon became rich due to it's influential connections across the land and at the height of its power, it was lead by a council called The Four.
-		Unfortunately this became its undoing during the War of Legions. During the peak of the war an unknown legion determined to take Pergamon's riches for themselves would attempt to siege and loot the town. Curiously, records say that Pergamon was vastly outnumbered, but its knowledge of the valley allowed it to slow down and nearly halt the Legion before it arrrived at the town walls. The Legion would fight a pitched battle and on the last day, would breech the walls. Hungry and enraged, they slaughtered the townsfolk only to be finally encircled and killed themselves.
-		
-		Records following the war are spotty, though Pergamon clearly won a phyrric victory. With the destruction of the town, merchants never returned and the only remains are a curious stone circle on the edges of the town ruins.";
+		description = "Hundreds of years ago, a town called Pergamon lay in a lush valley, nestled rather plainly between many locations, the favoured location for many merchants to stop on their travels. Pergamon became rich due to it's influential connections across the land and at the height of its power, it was lead by a council called The Four. \n\nUnfortunately this became its undoing during the War of Legions. During the peak of the war an unknown legion determined to take Pergamon's riches for themselves would attempt to siege and loot the town. Curiously, records say that Pergamon was vastly outnumbered, but its knowledge of the valley allowed it to slow down and nearly halt the Legion before it arrrived at the town walls. The Legion would fight a pitched battle and on the last day, would breech the walls. Hungry and enraged, they slaughtered the townsfolk only to be finally encircled and killed themselves. \n\nRecords following the war are spotty, though Pergamon clearly won a phyrric victory. With the destruction of the town, merchants never returned and the only remains are a curious stone circle on the edges of the town ruins.";
 	}
 	[lore_larissa]
 	{
-		description = "Situated between The Sunset Slopes and the ruins of Pergamon, Larissa is an imposing fortress carved out of black granite. First constructed during the peak of Pergamons economic height, Larissa was placed in an advantageous position to send out military patrols to protect travelers and merchants on the roads near Pergamon, for not only bandits roamed the forests near The Valley.
-		
-		Larissa would be spared in the siege of Pergamon, the Legion unable to breech its thick walls. Larissa is now ruled and protected by descendents of the people of Pergamon, though there are unfounded rumors that some of the people are far older than they indicate themselves to be, and on some nights, strange lights can be seen from it's tallest tower in the center of the keep.";
+		description = "Situated between The Sunset Slopes and the ruins of Pergamon, Larissa is an imposing fortress carved out of black granite. First constructed during the peak of Pergamons economic height, Larissa was placed in an advantageous position to send out military patrols to protect travelers and merchants on the roads near Pergamon, for not only bandits roamed the forests near The Valley.\n\nLarissa would be spared in the siege of Pergamon, the Legion unable to breech its thick walls. Larissa is now ruled and protected by descendents of the people of Pergamon, though there are unfounded rumors that some of the people are far older than they indicate themselves to be, and on some nights, strange lights can be seen from it's tallest tower in the center of the keep.";
 	}
 	[lore_the_four]
 	{
-		description = "At its peak, Pergamon was ruled by a council called The Four. Though the names of the leaders have changed through the many years, their titles have remained the same.
-		
-		The Lord Commander was in charge of military affairs, and spent their time ensuring that the roads were protected against bandits and beasts. 
-		
-		The High Smith was in charge of all economic matters, as well as resolving economic disputes between merchants.
-		
-		The High mage was in charge of all magical based matters, and this evidently sometimes crossed over with the High Smith when it became a matter of dispute over ownership of magical posessions.
-		
-		Finally, The Watcher was charged with ensuring that nothing was missed by The Four, and that nobody was double crossed. Records would suggest that they had a largely independent role within The Four, often ensuring that problems were resolved before they came before the council as a whole.
-		
-		Civil matters would often be brought before The Four, and it would be the role of The Four to discuss and resolve said matters. It was rare for the The Four to be unable to reach a consensus on any matter and it would appear that this skill was paramount in the rise of Pergamon as an independent city state.
-		
-		Records of The Four appear to dissappear entirely following the destruction of Pergamon, though rumours abound that one or more of them survived that climactic horrifying battle.";
+		description = "At its peak, Pergamon was ruled by a council called The Four. Though the names of the leaders have changed through the many years, their titles have remained the same. \n\nThe Lord Commander was in charge of military affairs, and spent their time ensuring that the roads were protected against bandits and beasts. \n\nThe High Smith was in charge of all economic matters, as well as resolving economic disputes between merchants. \n\nThe High mage was in charge of all magical based matters, and this evidently sometimes crossed over with the High Smith when it became a matter of dispute over ownership of magical posessions. \n\nFinally, The Watcher was charged with ensuring that nothing was missed by The Four, and that nobody was double crossed. Records would suggest that they had a largely independent role within The Four, often ensuring that problems were resolved before they came before the council as a whole. \n\nCivil matters would often be brought before The Four, and it would be the role of The Four to discuss and resolve said matters. It was rare for the The Four to be unable to reach a consensus on any matter and it would appear that this skill was paramount in the rise of Pergamon as an independent city state. \n\nRecords of The Four appear to dissappear entirely following the destruction of Pergamon, though rumours abound that one or more of them survived that climactic horrifying battle.";
 	}
 
     [lore_ria]
