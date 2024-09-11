@@ -16,9 +16,12 @@ set ds=%DungeonSiege%
 set tc=%TankCreator%
 
 :: pre-build checks
+robocopy "%bits%\original\templates" "%bits%\world\contentdb\templates\original" /S
 pushd %gaspy%
 venv\Scripts\python -m build.pre_build_checks %map% --check standard --bits "%bits%"
-if %errorlevel% neq 0 pause
+set pre_build_checks_errorlevel=%errorlevel%
+rmdir /S /Q "%bits%\world\contentdb\templates\original"
+if %pre_build_checks_errorlevel% neq 0 pause
 popd
 
 :: Compile map file

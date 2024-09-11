@@ -1,2 +1,5 @@
 /world/contentdb/templates/original
 /world/contentdb/original
+
+# Ignore where I put original templates for scripting purposes
+/original
