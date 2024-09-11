@@ -38,7 +38,13 @@
 			{
 				[all*]
 				{
-					il_main = #shield/8-84;
+					il_main = #shield/8-40;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #shield/40-84;
 					max = 10;
 					min = 10;
 				}
@@ -59,9 +65,15 @@
 			{
 				[all*]
 				{
+					il_main = #melee/20-30;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
 					il_main = #melee/30-40;
-					max = 8;
-					min = 8;
+					max = 20;
+					min = 20;
 				}
 				[all*]
 				{
@@ -78,9 +90,15 @@
 
 				[all*]
 				{
+					il_main = #ranged/20-30;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
 					il_main = #ranged/30-40;
-					max = 8;
-					min = 8;
+					max = 20;
+					min = 20;
 				}
 				[all*]
 				{
@@ -151,7 +169,13 @@
 			{
 				[all*]
 				{
-					il_main = #spell/6-22;
+					il_main = #spell/16-22;
+					max = 25;
+					min = 25;
+				}
+				[all*]
+				{
+					il_main = #spell/6-15;
 					max = 25;
 					min = 25;
 				}
@@ -261,9 +285,15 @@
 
 				[all*]
 				{
+					il_main = #body/40-60;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
 					il_main = #body/60-84;
-					max = 7;
-					min = 7;
+					max = 8;
+					min = 8;
 				}
 				[all*]
 				{
@@ -287,6 +317,18 @@
 				}
 				[all*]
 				{
+					il_main = #gloves/40-60;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/60-84;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
 					il_main = #gloves/85-141;
 					max = 12;
 					min = 12;
@@ -306,6 +348,18 @@
 				}
 				[all*]
 				{
+					il_main = #helm/40-60;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/60-84;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
 					il_main = #helm/85-141;
 					max = 12;
 					min = 12;
@@ -322,6 +376,18 @@
 					il_main = #boots/8-84;
 					max = 10;
 					min = 10;
+				}
+				[all*]
+				{
+					il_main = #boots/40-60;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/60-84;
+					max = 8;
+					min = 8;
 				}
 				[all*]
 				{
