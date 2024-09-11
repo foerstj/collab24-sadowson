@@ -292,6 +292,8 @@
 		damage_max = 40;
 		damage_min = 35;
 		reload_delay = 0;
+		damage_bonus_min_cmagic = 15;
+		damage_bonus_max_cmagic = 10;
 	}
     [defend]
 	{
