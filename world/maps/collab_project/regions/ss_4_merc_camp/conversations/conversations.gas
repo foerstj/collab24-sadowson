@@ -27,6 +27,7 @@ Still, we'll be camped here for a while longer. The lads have been pulling all s
 	}
 	[text*]
 	{
+		choice = shop;
 		screen_text = "Ah, the returning hero! Your purse still heavy mhmmm? I'd be happy to take if off your hands in exchange for some of our wares...";
 	  f scroll_rate = 10.000000;
 	}
