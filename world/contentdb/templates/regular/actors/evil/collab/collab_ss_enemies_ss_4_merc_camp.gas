@@ -39,8 +39,8 @@ v3 - 11/09/24: Rebalanced stats. Loot pool is identical to Braak.
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 33;
-		damage_min = 25;
+		damage_max = 17;
+		damage_min = 12;
 	}
 	[defend]
 	{
@@ -263,6 +263,8 @@ v3 - 11/09/24: Rebalanced stats. Loot pool is identical to Braak.
 		attack_range = 0.5;
 		damage_max = 60;
 		damage_min = 50;
+		damage_bonus_min_cmagic = 25;
+		damage_bonus_max_cmagic = 20;
 	}
 	[defend]
 	{
@@ -389,6 +391,8 @@ v3 - 11/09/24: Rebalanced stats. Loot pool is identical to Braak.
 		attack_range = 0.5;
 		damage_max = 45;
 		damage_min = 40;
+		damage_bonus_min_nmagic = 13;
+		damage_bonus_max_nmagic = 10;
 	}
 	[defend]
 	{
