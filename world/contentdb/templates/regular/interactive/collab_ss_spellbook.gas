@@ -30,7 +30,7 @@
 				is_imbued = true;
 				imbued_spell_group = spells_healing;
 				multiply_value = true;
-				value = 5;
+				value = 25;
 				duration = #infinite;
 				is_permanent = true;
 				is_single_instance = false;
