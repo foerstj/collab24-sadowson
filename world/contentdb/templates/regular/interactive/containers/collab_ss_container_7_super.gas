@@ -39,10 +39,10 @@
 		{
 			[all*]
 			{
-				il_main = #spellbook/79-87/-mod(1);
-				il_main = #spellbook/79-87/-mod(1);
-				il_main = #book_glb_magic_07/79-87/+ofconvoking;
-				il_main = #book_glb_magic_06/79-87/+ofcompassion;
+				il_main = #spellbook/40-60/-mod(1);
+				il_main = #spellbook/40-60/-mod(1);
+				il_main = #spellbook/40-60/-mod(2);
+				il_main = #spellbook/40-60/-mod(2);
 			}
 		}
 	}
@@ -67,10 +67,10 @@
 		{
 			[all*]
 			{
-				il_main = #armor,f/75-90/+ofpatience;
-				il_main = #armor,r/70-90/+ofold;
-				il_main = #armor,m/70-90/+ofretaliation;
-				il_main = #armor,m/75-90/+ofindependence;
+				il_main = #armor,f/80-120/-rare(1);
+				il_main = #armor,r/80-120/-rare(1);
+				il_main = #armor,m/80-120/-rare(1);
+				il_main = #armor,m/80-120/-unique(1);
 			}
 		}
 	}
@@ -95,10 +95,10 @@
 		{
 			[all*]
 			{
-				il_main = #melee,f/79-87/-rare(1);
-				il_main = #ranged/79-87/-unique(2);
-				il_main = #staff/79-87/-unique(2);
-				il_main = #weapon/79-87/-rare(1);
+				il_main = #melee,f/40-60/-rare(1);
+				il_main = #ranged/40-60/-unique(1);
+				il_main = #staff/40-60/-unique(1);
+				il_main = #weapon/40-60/-rare(1);
 			}
 		}
 	}
@@ -123,10 +123,10 @@
 		{
 			[all*]
 			{
-				il_main = #amulet/79-87/-rare(1);
-				il_main = #ring/79-87/-rare(1);
-				il_main = #amulet/79-87/-unique(2);
-				il_main = #ring/79-87/-unique(2);
+				il_main = #amulet/80-120/-rare(1);
+				il_main = #amulet/80-120/-unique(1);
+				il_main = #ring/40-60/-rare(1);
+				il_main = #ring/40-60/-unique(1);
 			}
 		}
 	}
