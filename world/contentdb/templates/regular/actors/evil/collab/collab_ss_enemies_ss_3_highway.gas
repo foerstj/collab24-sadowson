@@ -439,16 +439,16 @@
 				[oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/41-52;
-	                il_main = #armor/-rare(1)/109-127;
+	                il_main = #weapon/-rare(1)/35-50;
+	                il_main = #armor/-rare(1)/60-100;
                     il_main = #*/-rare(1)/41-52;
                 }
 				[oneof*]
 				{
                 	chance = 0.2;
-	                il_main = #weapon/-unique(2)/41-52;
-	                il_main = #armor/-unique(2)/109-127;
-                    il_main = #*/-unique(2)/41-52;
+	                il_main = #weapon/-unique(2)/35-50;
+	                il_main = #armor/-unique(2)/60-100;
+                    il_main = #*/-unique(2)/35-50;
 	            }
 				[gold*]
 				{
