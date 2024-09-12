@@ -259,3 +259,4 @@
 	{
 		fire_effect = human_physics_fire;
 	}
+}
