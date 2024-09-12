@@ -28,7 +28,7 @@
 	  b default = true;
 		description = "";
 	  b dev_only = true;
-	  i id = 1698412;
+	  i id = 470;
 		screen_name = "Test - Sleeping Catacombs";
 		[start_position]
 		{
