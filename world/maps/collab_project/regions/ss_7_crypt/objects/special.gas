@@ -1545,6 +1545,36 @@
 	  p position = 1.97868,-2,0.105041,0xfb46a5a7;
 	}
 }
+[t:trigger_generic,n:0x47000315]
+{
+	[common]
+	{
+		dev_instance_text = "DEV STARTPOS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab_ss_7_crypt_ominous");
+				action* = fade_nodes_global(0x00000470,10,-1,-1,"out:instant");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 4.09841,0,0.996223,0x84203bd3;
+	}
+}
 [t:trigger_generic,n:0x470002d8]
 {
 	[common]
