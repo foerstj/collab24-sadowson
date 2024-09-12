@@ -25,7 +25,7 @@
 		{
 			[*]
 			{
-				description = "Redces the cost of Healing Spells in this spellbook by 25%";
+				description = "Reduces the cost of Healing Spells in this spellbook by 5%";
 				alteration = alter_spell_cost;
 				is_imbued = true;
 				imbued_spell_group = spells_healing;
