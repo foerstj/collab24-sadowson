@@ -747,14 +747,12 @@
 		{
 			[all*]
 			{
-				[oneof*]
-				{
-    				es_weapon_hand = sd_g_c_st_1h_avg;
-					es_weapon_hand = ss_g_c_sd_1h_avg;
-				}
-				es_shield_hand = #shield/-no_mod/150-180;
-				es_chest = #body,f/-no_mod/150-180;
+                es_weapon_hand = #sword/-no_mod/25-30;
+				es_shield_hand = #shield/-no_mod/25-30;
+				es_chest = #body,f/-no_mod/50-60;
 			}
+
+            // from ice_warrior
 			[oneof*]
 			{
 				[oneof*]
@@ -861,14 +859,12 @@
 		{
 			[all*]
 			{
-				[oneof*]
-				{
-    				es_weapon_hand = sd_g_c_st_1h_avg;
-					es_weapon_hand = ss_g_c_sd_1h_avg;
-				}
-				es_shield_hand = #shield/-no_mod/150-180;
-				es_chest = bd_un_ba_f_g_skeleton_captain;
+                es_weapon_hand = #sword/-no_mod/25-30;
+				es_shield_hand = #shield/-no_mod/25-30;
+				es_chest = #body,f/-no_mod/50-60;
 			}
+
+            // from ice_warrior_boss_01
 			[all*]
 			{
 				[oneof*]
