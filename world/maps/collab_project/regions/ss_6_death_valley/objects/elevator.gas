@@ -1,5 +1,9 @@
 [t:elevator_2s_1c_2n,n:0x46000002]
 {
+	[common]
+	{
+		dev_instance_text = "BASEMENT TRAP";
+	}
 	[elevator_2s_1c_2n]
 	{
 	  i connect_door_level1 = 9;
@@ -21,6 +25,10 @@
 }
 [t:elevator_hidden_stairwell,n:0x46000001]
 {
+	[common]
+	{
+		dev_instance_text = "BASEMENT EXIT";
+	}
 	[elevator_hidden_stairwell]
 	{
 	  f duration = 5;
@@ -129,6 +137,10 @@
 }
 [t:elevator_2s_1c_1n_act_deact,n:0x46000448]
 {
+	[common]
+	{
+		dev_instance_text = "SEVEN";
+	}
 	[elevator_2s_1c_1n_act_deact]
 	{
 	  i connect_door_level1 = 49;
@@ -146,6 +158,10 @@
 }
 [t:elevator_2s_1c_1n_act_deact,n:0x46000d0b]
 {
+	[common]
+	{
+		dev_instance_text = "FOUR";
+	}
 	[elevator_2s_1c_1n_act_deact]
 	{
 	  i connect_door_level1 = 45;
@@ -163,6 +179,10 @@
 }
 [t:elevator_2s_1c_1n_act_deact,n:0x46000d0c]
 {
+	[common]
+	{
+		dev_instance_text = "TWO";
+	}
 	[elevator_2s_1c_1n_act_deact]
 	{
 	  i connect_door_level1 = 43;
@@ -181,6 +201,10 @@
 }
 [t:elevator_2s_1c_1n_act_deact,n:0x46000d0d]
 {
+	[common]
+	{
+		dev_instance_text = "SIX";
+	}
 	[elevator_2s_1c_1n_act_deact]
 	{
 	  i connect_door_level1 = 41;
@@ -198,6 +222,10 @@
 }
 [t:elevator_2s_1c_1n_act_deact,n:0x46000d0e]
 {
+	[common]
+	{
+		dev_instance_text = "ONE";
+	}
 	[elevator_2s_1c_1n_act_deact]
 	{
 	  i connect_door_level1 = 39;
@@ -216,6 +244,10 @@
 }
 [t:elevator_2s_1c_1n_act_deact,n:0x46000d0f]
 {
+	[common]
+	{
+		dev_instance_text = "FIVE";
+	}
 	[elevator_2s_1c_1n_act_deact]
 	{
 	  i connect_door_level1 = 37;
@@ -233,6 +265,10 @@
 }
 [t:elevator_2s_1c_1n_act_deact,n:0x46000d10]
 {
+	[common]
+	{
+		dev_instance_text = "EIGHT";
+	}
 	[elevator_2s_1c_1n_act_deact]
 	{
 	  i connect_door_level1 = 51;
@@ -251,6 +287,10 @@
 }
 [t:elevator_2s_1c_1n_act_deact,n:0x46000d0a]
 {
+	[common]
+	{
+		dev_instance_text = "THREE";
+	}
 	[elevator_2s_1c_1n_act_deact]
 	{
 	  i connect_door_level1 = 47;
