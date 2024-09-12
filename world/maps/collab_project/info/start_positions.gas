@@ -2,7 +2,7 @@
 {
 	[t:start_group,n:test_04_pre]
 	{
-	  b default = true;
+	  b default = false;
 		description = "";
 	  b dev_only = true;
 	  i id = 400;
@@ -17,6 +17,29 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = 2.065747,0.000000,-0.960624,0xBAC0D0A4;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:test_catacombs]
+	{
+	  b default = true;
+		description = "";
+	  b dev_only = true;
+	  i id = 1698412;
+		screen_name = "Test - Sleeping Catacombs";
+		[start_position]
+		{
+		  i id = 1;
+			position = 5.243859,-2.000000,1.825037,0xFB448EC1;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 5.243859,-2.000000,1.825037,0xFB448EC1;
 			}
 		}
 		[world_levels]
