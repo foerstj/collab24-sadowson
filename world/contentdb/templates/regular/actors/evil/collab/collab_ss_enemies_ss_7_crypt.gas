@@ -113,6 +113,7 @@
 	{
     	[pcontent]
 		{
+            // from ice_warrior
    			[oneof*]
 			{
 				[oneof*]
@@ -300,6 +301,7 @@
 	{
     	[pcontent]
 		{
+            // from ice_warrior_boss_01
    			[all*]
 			{
 				[oneof*]
@@ -454,6 +456,8 @@
 			{
 				es_shield_hand = collab_ss_wraith_piercer_bow;
 			}
+
+            // from ice_archer
 			[oneof*]
 			{
 				[oneof*]
@@ -747,9 +751,9 @@
 		{
 			[all*]
 			{
-                es_weapon_hand = #sword/-no_mod/25-30;
-				es_shield_hand = #shield/-no_mod/25-30;
-				es_chest = #body,f/-no_mod/50-60;
+                es_weapon_hand = #sword/-no_mod/30-50;
+				es_shield_hand = #shield/-no_mod/30-50;
+				es_chest = #body,f/-no_mod/60-100;
 			}
 
             // from ice_warrior
@@ -859,9 +863,9 @@
 		{
 			[all*]
 			{
-                es_weapon_hand = #sword/-no_mod/25-30;
-				es_shield_hand = #shield/-no_mod/25-30;
-				es_chest = #body,f/-no_mod/50-60;
+                es_weapon_hand = #sword/-no_mod/40-50;
+				es_shield_hand = #shield/-no_mod/40-50;
+				es_chest = #body,f/-no_mod/80-100;
 			}
 
             // from ice_warrior_boss_01
@@ -1059,6 +1063,7 @@
 		}
 		[pcontent]
 		{
+            // from ice_warrior_boss_01
 			[all*]
 			{
 				[oneof*]
