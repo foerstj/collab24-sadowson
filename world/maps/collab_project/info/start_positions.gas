@@ -2,11 +2,11 @@
 {
 	[t:start_group,n:test_04_pre]
 	{
-	  b default = false;
+	  b default = true;
 		description = "";
 	  b dev_only = true;
 	  i id = 400;
-		screen_name = "";
+		screen_name = "Test - Larissa Pre";
 		[start_position]
 		{
 		  i id = 1;
@@ -48,7 +48,7 @@
 	}
 	[t:start_group,n:test_catacombs_end]
 	{
-	  b default = true;
+	  b default = false;
 		description = "";
 	  b dev_only = true;
 	  i id = 471;
