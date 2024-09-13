@@ -23,8 +23,10 @@
 		experience_value = 217;
 		life 			 = 1216;
 		max_life 		 = 1216;
-		mana 			 = 258;
-		max_mana 		 = 258;
+		mana 			 = 3000;
+		max_mana 		 = 3000;
+		mana_recovery_period	= 1;
+		mana_recovery_unit		= 10;
 		[voice]
 		{
 			[die]			{ priority = high; * = s_e_die_skeleton; }
@@ -43,8 +45,9 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 60;
-		damage_min = 40;
+		// Control his damage via his weapon
+		damage_max = 2;
+		damage_min = 1;
 	}
 	[body]
 	{
@@ -182,7 +185,7 @@
 	}
 	[defend]
 	{
-		defense = 120;
+		defense = 150;
 	}
 	[guts_manager]
 	{
@@ -231,8 +234,8 @@
 		}
 		[other]
 		{
-			il_active_primary_spell	= spell_fireshot;
-			il_spell_1				= spell_fireshot;
+			il_active_primary_spell	= spell_fireball;
+			il_spell_1				= spell_leech_life;
 			il_main = collab_ss_lord_commander_sword_player;
 		}
 	}
@@ -259,7 +262,7 @@
 		jat_cast 						= world\ai\jobs\common\job_cast.skrit
 			?rand_spell					= true
 			&spell_chances				= "0.5,                0.5"
-			&spells						= "spell_fireshot, spell_fireshot";
+			&spells						= "spell_fireball, spell_leech_life";
 			
 		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
 			?still						= true;

@@ -57,25 +57,25 @@
 				[oneof*]
 				{
 					chance = 0.5;
-					il_main = #weapon/12-32;
+					il_main = #weapon/12-36;
 					il_main = #armor/19-95;
-					il_main = #*/12-32;
+					il_main = #*/12-36;
 					max = 2;
 					min = 1;
 				}
 				[oneof*]
 				{
 					chance = 0.004;
-					il_main = #weapon/-rare(1)/28-33;
-					il_main = #armor/-rare(1)/90-108;
-					il_main = #*/-rare(1)/28-33;
+					il_main = #weapon/-rare(1)/36-41;
+					il_main = #armor/-rare(1)/50-115;
+					il_main = #*/-rare(1)/36-41;
 				}
 				[oneof*]
 				{
 					chance = 0.002;
-					il_main = #weapon/-unique(2)/28-33;
-					il_main = #armor/-unique(2)/90-108;
-					il_main = #*/-unique(2)/28-33;
+					il_main = #weapon/-unique(2)/36-41;
+					il_main = #armor/-unique(2)/50-1150;
+					il_main = #*/-unique(2)/36-41;
 				}
 			}
 		}
@@ -118,8 +118,7 @@
 				[all*]
 				{
 					chance = 1;
-					il_main = #armor,body/19-100;
-					il_main = #armor/19-100;
+					il_main = #armor/19-95;
 				}
 			}
 		}
@@ -158,8 +157,7 @@
 				[all*]
 				{
 					chance = 1;
-					il_main = #weapon/12-33;
-					il_main = #weapon/30-50;
+					il_main = #weapon/12-36;
 				}
 			}
 		}
@@ -191,7 +189,7 @@
 	{
 		[pcontent]
 		{
-			[oneof*]
+			[all*]
 			{
 				[gold*]
 				{
@@ -202,11 +200,17 @@
 				[oneof*]
 				{
 					chance = 0.3;
-					il_main = #weapon/25-40;
-					il_main = #armor/90-108;
-					il_main = #*/45-125;
-					il_main = potion_mana_large;
-					il_main = potion_health_large;
+					il_main = #weapon/12-36;
+					il_main = #armor/19-95;
+					il_main = #*/12-36;
+				}
+				[oneof*]
+				{
+					chance = 0.90;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					min = 1;
+					max = 2;
 				}
 			}
 		}
@@ -238,7 +242,7 @@
 	{
 		[pcontent]
 		{
-			[oneof*]
+			[all*]
 			{
 				[gold*]
 				{
@@ -249,11 +253,17 @@
 				[oneof*]
 				{
 					chance = 0.3;
-					il_main = #weapon/25-40;
-					il_main = #armor/90-108;
-					il_main = #*/45-125;
-					il_main = potion_mana_large;
-					il_main = potion_health_large;
+					il_main = #weapon/12-36;
+					il_main = #armor/19-95;
+					il_main = #*/12-36;
+				}
+				[oneof*]
+				{
+					chance = 0.90;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					min = 1;
+					max = 2;
 				}
 			}
 		}
@@ -300,11 +310,17 @@
 				[oneof*]
 				{
 					chance = 0.3;
-					il_main = #weapon/25-40;
-					il_main = #armor/90-108;
-					il_main = #*/45-125;
-					il_main = potion_mana_large;
-					il_main = potion_health_large;
+					il_main = #weapon/12-36;
+					il_main = #armor/19-95;
+					il_main = #*/12-36;
+				}
+				[oneof*]
+				{
+					chance = 0.90;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					min = 1;
+					max = 2;
 				}
 			}
 		}
@@ -363,11 +379,17 @@
 				[oneof*]
 				{
 					chance = 0.3;
-					il_main = #weapon/25-40;
-					il_main = #armor/90-108;
-					il_main = #*/45-125;
-					il_main = potion_mana_large;
-					il_main = potion_health_large;
+					il_main = #weapon/12-36;
+					il_main = #armor/19-95;
+					il_main = #*/12-36;
+				}
+				[oneof*]
+				{
+					chance = 0.90;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					min = 1;
+					max = 2;
 				}
 			}
 		}
