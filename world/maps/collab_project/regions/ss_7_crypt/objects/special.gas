@@ -1711,3 +1711,11 @@
 	  p position = 1.37851,4.11198,0.993567,0x2b7eb93e;
 	}
 }
+[t:use_point,n:0x47000318]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.42202,-2,4.88454,0x5ea94b94;
+	}
+}
