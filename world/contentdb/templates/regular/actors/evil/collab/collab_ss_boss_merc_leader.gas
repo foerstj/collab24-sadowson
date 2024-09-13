@@ -47,8 +47,9 @@
 	{
 		attack_range	= 0.5;
 		reload_delay	= 0;
-		damage_max		= 70;
-		damage_min		= 55;
+		// Control his damage via his weapon
+		damage_max		= 2;
+		damage_min		= 1;
 	}
 	[body]
 	{

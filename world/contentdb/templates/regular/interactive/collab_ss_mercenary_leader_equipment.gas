@@ -37,8 +37,8 @@
 			[*]
 			{
 				alteration = alter_life_steal;
-				value		= 25;
-				description = "25 health stolen per hit.";
+				value		= 10;
+				description = "10 health stolen per hit.";
 				duration = #infinite;
 				is_permanent = true;
 				is_single_instance = false;
