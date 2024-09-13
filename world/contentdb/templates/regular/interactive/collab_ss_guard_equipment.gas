@@ -135,7 +135,7 @@
 			[*]
 			{
 				alteration = alter_chance_to_block_ranged_damage;
-				description = "35% Chance to Block Ranged Attack";
+				description = "20% Chance to Block Ranged Attack";
 				duration = #infinite;
 				innate_enchantment = true;
 				is_permanent = true;
