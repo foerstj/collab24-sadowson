@@ -65,8 +65,8 @@
 	}
 	[attack]
 	{
-		f damage_max = 65.0;
-		f damage_min = 57.0;
+		f damage_max = 85.0;
+		f damage_min = 77.0;
 		is_two_handed = true;
 	}
 	[common]
