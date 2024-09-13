@@ -43,8 +43,9 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 60;
-		damage_min = 40;
+		// Control his damage via his weapon
+		damage_max = 2;
+		damage_min = 1;
 	}
 	[body]
 	{
@@ -182,7 +183,7 @@
 	}
 	[defend]
 	{
-		defense = 120;
+		defense = 150;
 	}
 	[guts_manager]
 	{
