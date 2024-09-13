@@ -65,8 +65,8 @@
 	}
 	[attack]
 	{
-		f damage_max = 50.0;
-		f damage_min = 40.0;
+		f damage_max = 65.0;
+		f damage_min = 57.0;
 		is_two_handed = true;
 	}
 	[common]
@@ -78,6 +78,7 @@
 	{
 		active_icon = b_gui_ig_i_ic_swd_007;
 		inventory_icon = b_gui_ig_i_w_swd_310;
+		equip_requirements = strength:18;
 		inventory_height = 4;
 		inventory_width = 2;
 	}
@@ -87,10 +88,19 @@
 		{
 			[*]
 			{
+				alteration = alter_melee;
+				description = "+2 to Melee Skill";
+				duration = #infinite;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 2;
+			}
+			[*]
+			{
 				alteration = alter_custom_damage_melee;
-				value		= 5;
-				max_value	= 10;
-				description = "Burns enemies for 5 to 10 fire damage.";
+				value		= 13;
+				max_value	= 15;
+				description = "Burns enemies for 13 to 15 fire damage.";
 				duration = #infinite;
 				is_permanent = true;
 				is_single_instance = false;
