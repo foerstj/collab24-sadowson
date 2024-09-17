@@ -988,6 +988,7 @@
 		[conversations]
 		{
 			* = conversation_watcher_stone;
+			* = conversation_watcher_stone_alt;
 		}
 	}
 	[mind]

@@ -44,11 +44,12 @@ event OnJobInit$( Job job$ )
 
 	m_Target$	= job$.GoalObject;
 
-	SetState Face$;
+	SetState Talk$;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 //	face the audience
+/*
 state Face$
 {
 	transition
@@ -68,10 +69,9 @@ state Face$
 		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
 	}
 }
-
+*/
 
 ////////////////////////////////////////////////////////////////////////////////
-//	blab blab away... pretend you're Lee
 state Talk$
 {
 	transition
@@ -84,37 +84,36 @@ state Talk$
 			}
 		}
 	}
-	
+	/*
 	trigger OnWorldMessage$( WE_ANIM_DONE )
 	{
 		TryAnim$('talk');
 	}
-
+	*/
 	event OnEnterState$
 	{
 
 		string	conversation_block$;
-		int		Secret_Quest_State$;
 		
 		conversation_block$ = "conversation_watcher_stone";
-		
+		Report.Generic( "conversation_watcher_stone selected: \n" );
 		if( GameAuditor.GetDb.GetBool( "secret_quest_active" ) )
 		{
-			if( GameAuditor.GetDb.GetBool( "secret_quest_watcher_stone_complete" ) != true )
+			if( GameAuditor.GetDb.GetInt( "secret_quest_state" ) == 5 )
 			{
-				Secret_Quest_State$ = GameAuditor.GetDB.GetInt( "secret_quest_state" );
-				if( Secret_Quest_State$ == 5 )
-				{
-					GameAuditor.GetDb.SetInt( "secret_quest_state", 6 );
-					GameAuditor.GetDb.SetBool( "secret_quest_watcher_stone_complete", true );
-					Report.Generic( "Secret Quest State: 6" );
-				}
+				GameAuditor.GetDb.SetInt( "secret_quest_state", 6 );
+				Report.Generic( "Secret Quest State: 6" );	
+				conversation_block$ = "conversation_watcher_stone_alt";
+				GameAuditor.GetDb.SetBool( "watcher_stone_fix", true );
 			}
 		}
-		
+		if( GameAuditor.GetDb.GetBool( "watcher_stone_fix" ) == true )
+		{
+			conversation_block$ = "conversation_watcher_stone_alt";
+		}
+
 		//Use Conversation
 		m_go$.GetConversation.RSSelectConversation( conversation_block$ );
-		TryAnim$('talk');
 		
 		//Start talking
 		m_Go$.GetConversation.RSActivateDialogue();

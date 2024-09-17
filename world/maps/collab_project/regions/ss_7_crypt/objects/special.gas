@@ -1078,6 +1078,34 @@
 	  p position = 0.0490297,-0.500001,-0.737869,0xa9a666c6;
 	}
 }
+[t:trigger_generic,n:0x47000317]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_delete",0x470000D7,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(12.000000,0.500000,4.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.3559,-2,-0.429121,0x75ac7c77;
+	}
+}
 [t:trigger_generic,n:0x47000134]
 {
 	[common]
@@ -1324,8 +1352,11 @@
 				action* = change_quest_state("quest_warding_crystal","active",2);
 				action* = change_quest_state("quest_warding_crystal","active",3);
 				action* = send_world_message("we_req_activate",0x470001F5,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x470000CE,0f,"default","every",0), doc("Fade Nodes Global");
+				action* = send_world_message("we_req_activate",0x4700031A,0f,"default","every",0), doc("Secret Quest Active");
+				action* = send_world_message("we_req_activate",0x47000319,0f,"default","every",0), doc("Secret Quest State");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_first_enter");
+				condition* = party_member_within_sphere(4.000000,"on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1340,14 +1371,16 @@
 	}
 	[placement]
 	{
-	  p position = -8.3229,-5.9,-13.621,0x3461f0a3;
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 1.41836,-2,2.0529,0x0dcee2b5;
 	}
 }
 [t:set_bool,n:0x470001f5]
 {
 	[placement]
 	{
-	  p position = -6.4219,-5.9,-13.9042,0x3461f0a3;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 2.76217,-2,0.122045,0x0dcee2b5;
 	}
 	[set_bool]
 	{
@@ -1719,31 +1752,15 @@
 	  p position = 1.37851,4.11198,0.993567,0x2b7eb93e;
 	}
 }
-[t:trigger_generic,n:0x47000317]
+[t:set_bool,n:0x4700031a]
 {
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_delete",0x470000D7,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(12.000000,0.500000,4.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
-	  p position = 1.3559,-2,-0.429121,0x75ac7c77;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 2.8913,-2,3.13588,0x0dcee2b5;
+	}
+	[set_bool]
+	{
+		bool_variable = "secret_quest_active";
 	}
 }

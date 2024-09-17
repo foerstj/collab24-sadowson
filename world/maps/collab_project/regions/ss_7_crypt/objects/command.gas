@@ -48,3 +48,16 @@
 	  p position = -0.210345,-1.1,-1.45816,0x0d90392f;
 	}
 }
+[t:collab_ss_set_int,n:0x47000319]
+{
+	[collab_ss_set_int]
+	{
+	  i bool_int = 5;
+		bool_variable = "Secret_Quest_State";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -9.80515,-5.9,-14.1969,0x2b650b98;
+	}
+}

@@ -102,7 +102,7 @@ state Talk$
 		string conversation_block$;
 		conversation_block$ = "conversation_archivist_end";
 		
-		if( GameAuditor.GetDb.GetBool( "archivist_name" ) )
+		if( GameAuditor.GetDb.GetInt( "secret_quest_state" ) == 6 )
 		{
 			conversation_block$ = "conversation_archivist_end_alt";
 		}
@@ -122,6 +122,7 @@ state Talk$
 				Report.Generic( "Athena_secret_known: TRUE" );
 				Report.Generic( "secret_quest_State: 7" );
 			}
+			GameAuditor.GetDb.SetBool( "who_is_she", false );
 		}
 			m_go$.GetConversation.RSSelectConversation( conversation_block$ );
 			TryAnim$('talk');

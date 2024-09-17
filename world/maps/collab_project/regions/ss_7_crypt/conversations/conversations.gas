@@ -173,6 +173,14 @@ I shall test your might. En garde spawn of hell!";
 {
 	[text*]
 	{
+		screen_text = "The name on the sarcophagus has weathered away but you can see her title: 'SHE WHO PREPARED THE DEFENDERS OF THE VALLEY AND PROTECTS THEIR ETERNAL SLUMBER'";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_watcher_stone_alt]
+{
+	[text*]
+	{
 		screen_text = "The name on the sarcophagus has weathered away but you can see her title: 'SHE WHO PREPARED THE DEFENDERS OF THE VALLEY AND PROTECTS THEIR ETERNAL SLUMBER'
 Curiously, the sarcophagus is empty.";
 	  f scroll_rate = 10.000000;
