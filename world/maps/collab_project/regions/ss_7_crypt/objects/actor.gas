@@ -990,6 +990,10 @@
 			* = conversation_watcher_stone;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_watcher_stone.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,1,0,5.96046e-008;

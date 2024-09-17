@@ -1,5 +1,26 @@
 [t:collab_ss_book_dungeon,n:0x45000308]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x4500032B,0f,"default","every",0), doc("UPDATE SECRET QUEST STATE");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,-0.382683;

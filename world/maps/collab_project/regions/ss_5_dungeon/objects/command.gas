@@ -26,3 +26,15 @@
 	  p position = 0.282745,-15.3,0.0352859,0x538b5525;
 	}
 }
+[t:collab_ss_set_int,n:0x4500032b]
+{
+	[collab_ss_set_int]
+	{
+	  i bool_int = 3;
+		bool_variable = "secret_quest_state";
+	}
+	[placement]
+	{
+	  p position = 0.232113,0,-0.175964,0x9bd7024d;
+	}
+}

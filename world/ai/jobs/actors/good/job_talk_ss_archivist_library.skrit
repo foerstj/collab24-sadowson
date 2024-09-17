@@ -6,7 +6,7 @@
 
 	Author(s)	: 	Sadowson
 
-	Purpose		: 	Generic script which checks the actors highest skill level and then activates the relevant conversation.
+	Purpose		: 	Generic script
 
 	(C)opyright 2024 Sadowson.
 
@@ -111,6 +111,11 @@ state Talk$
 		if( GameAuditor.GetDb.GetBool( "what_about_you" ) )
 		{
 			conversation_block$ = "conversation_archivist_library_whataboutyou";
+			if( GameAuditor.GetDb.GetInt( "secret_quest_state" ) == 4 )
+			{
+				GameAuditor.GetDb.SetInt( "secret_quest_state", 5 );
+				Report.Generic( "Secret Quest state: 5" );
+			}
 		}
 
 		m_go$.GetConversation.RSSelectConversation( conversation_block$ );

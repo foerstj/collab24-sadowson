@@ -2,11 +2,11 @@
   ============================================================================
   ----------------------------------------------------------------------------
 
-	File		: 	job_talk_ss_archivist_death_valley.skrit
+	File		: 	job_talk_ss_watcher_stone.skrit
 
 	Author(s)	: 	Sadowson
 
-	Purpose		: 	Generic script which checks the actors highest skill level and then activates the relevant conversation.
+	Purpose		: 	Handles progressing the secret quest.
 
 	(C)opyright 2024 Sadowson.
 
@@ -92,40 +92,32 @@ state Talk$
 
 	event OnEnterState$
 	{
-		/*
-		conversation_archivist_end			-> For everyone who skipped exposition
-		conversation_archivist_end_alt		-> one_empty | requires archivist_name
-		conversation_archivist_end_secret	-> who_is_she
-		conversation_archivist_end_whoisshe
-		*/
+
+		string	conversation_block$;
+		int		Secret_Quest_State$;
 		
-		string conversation_block$;
-		conversation_block$ = "conversation_archivist_end";
+		conversation_block$ = "conversation_watcher_stone";
 		
-		if( GameAuditor.GetDb.GetBool( "archivist_name" ) )
+		if( GameAuditor.GetDb.GetBool( "secret_quest_active" ) )
 		{
-			conversation_block$ = "conversation_archivist_end_alt";
-		}
-		
-		if( GameAuditor.GetDb.GetBool( "one_empty" ) )
-		{
-			conversation_block$ = "conversation_archivist_end_secret";
-		}
-		
-		if( GameAuditor.GetDb.GetBool( "who_is_she" ) )
-		{
-			conversation_block$ = "conversation_archivist_end_whoisshe";
-			if( GameAuditor.GetDb.GetInt( "secret_quest_state" ) == 6 )
+			if( GameAuditor.GetDb.GetBool( "secret_quest_watcher_stone_complete" ) != true )
 			{
-				GameAuditor.GetDb.SetBool( "Athena_secret_known", true );
-				GameAuditor.GetDb.SetInt( "secret_quest_state", 7 );
-				Report.Generic( "Athena_secret_known: TRUE" );
-				Report.Generic( "secret_quest_State: 7" );
+				Secret_Quest_State$ = GameAuditor.GetDB.GetInt( "secret_quest_state" );
+				if( Secret_Quest_State$ == 5 )
+				{
+					GameAuditor.GetDb.SetInt( "secret_quest_state", 6 );
+					GameAuditor.GetDb.SetBool( "secret_quest_watcher_stone_complete", true );
+					Report.Generic( "Secret Quest State: 6" );
+				}
 			}
 		}
-			m_go$.GetConversation.RSSelectConversation( conversation_block$ );
-			TryAnim$('talk');
-			m_Go$.GetConversation.RSActivateDialogue();//Start talking
+		
+		//Use Conversation
+		m_go$.GetConversation.RSSelectConversation( conversation_block$ );
+		TryAnim$('talk');
+		
+		//Start talking
+		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }
 

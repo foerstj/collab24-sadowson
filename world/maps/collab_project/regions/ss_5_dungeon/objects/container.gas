@@ -548,7 +548,7 @@
 	{
 	  q orientation = 0,0.990247,0,0.139321;
 	  p position = 1.34088,-2,-0.870819,0x909692f4;
-		use_point_scids = 0x4500031B;
+		use_point_scids = 0x4500031b;
 	}
 }
 [t:barrel_webbed_ss_5_dungeon_01,n:0x45000148]
@@ -896,7 +896,7 @@
 	{
 	  q orientation = 0,-0.827205,0,-0.561901;
 	  p position = 0.335983,0,-0.288025,0xb53eca74;
-		use_point_scids = 0x4500031C;
+		use_point_scids = 0x4500031c;
 	}
 }
 [t:barrel_webbed_ss_5_dungeon_01,n:0x45000116]
@@ -973,7 +973,7 @@
 	{
 	  q orientation = 0,0.0687203,0,-0.997636;
 	  p position = -0.00376892,-2,0.745239,0x6b08bc61;
-		use_point_scids = 0x4500031D;
+		use_point_scids = 0x4500031d;
 	}
 }
 [t:barrel_webbed_ss_5_dungeon_01,n:0x4500018c]
@@ -1127,7 +1127,7 @@
 	{
 	  q orientation = 0,-0.963878,0,-0.266346;
 	  p position = 1.59515,0,-1.35527,0x9f1a3d47;
-		use_point_scids = 0x4500031E;
+		use_point_scids = 0x4500031e;
 	}
 }
 [t:chest_ss_5_dungeon_03,n:0x45000185]
@@ -1140,7 +1140,7 @@
 	{
 	  q orientation = 0,0.972888,0,-0.231275;
 	  p position = -1.48482,7.45058e-009,-1.20795,0x32baf715;
-		use_point_scids = 0x4500031F;
+		use_point_scids = 0x4500031f;
 	}
 }
 [t:barrel_webbed_ss_5_dungeon_01,n:0x4500017c]

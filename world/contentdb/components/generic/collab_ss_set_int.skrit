@@ -1,0 +1,37 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  collab_ss_set_int.skrit
+// Author(s):  Sadowson
+//
+// Copyright © 2024 Gas Powered Games, Inc.  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool			_server_only$			= true;
+property string			_doc$					= "Sets boolean value upon receiving we_req_activate";
+
+// exported properties
+property string			bool_variable$			doc = "Name of the Bool variable";
+property	int			bool_int$				doc = "Value to set the INT to";
+
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+{
+	if( e$ == WE_REQ_ACTIVATE )
+	{
+		if( !StringTool.IsEmpty( bool_variable$ ) )
+		{
+			GameAuditor.GetDb.SetInt( bool_variable$, bool_int$ );
+		}
+	}
+}

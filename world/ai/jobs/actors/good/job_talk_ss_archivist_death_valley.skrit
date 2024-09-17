@@ -143,6 +143,11 @@ state Talk$
 		{
 			conversation_block$ = "conversation_archivist_counterpart";
 			may_talk$ = true;
+			
+			if( GameAuditor.GetDb.GetInt( "secret_quest_state" ) == 3 )
+			{
+				GameAuditor.GetDb.SetInt( "secret_quest_state", 4 );
+			}
 		}
 		
 		//This will override dv_counterpart when active - that is intentional.

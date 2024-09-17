@@ -379,7 +379,7 @@
 				}
 				[oneof*]
 				{
-					chance = 0.5;
+					chance = 0.4;
 					il_main = potion_mana_small;
 					il_main = potion_health_small;
 				}

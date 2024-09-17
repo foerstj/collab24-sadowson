@@ -109,3 +109,18 @@
 	{
 	}
 }
+[t:template,n:collab_ss_set_int]
+{
+	specializes	= command;
+	doc			= "collab_ss_set_int";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_blue;
+	}
+	[collab_ss_set_int]
+	{
+	}
+}
