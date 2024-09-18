@@ -12,6 +12,7 @@
 {
 	[text*]
 	{
+		activate_quest* = quest_warding_crystal,3;
 		screen_text = "Congratulations traveller. The gate is open, the Sleeping Catacombs open to you.
 
 Step on the elevator... then I shall send you down.";
@@ -22,6 +23,7 @@ Step on the elevator... then I shall send you down.";
 {
 	[text*]
 	{
+		activate_quest* = quest_warding_crystal,2;
 		button_1_text = warding crystal;
 		button_1_value = return_warding_crystal;
 		screen_text = "Thieves! Liars - cheats!
