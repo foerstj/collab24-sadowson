@@ -1068,21 +1068,6 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x470000EC,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_begin",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-			[*]
-			{
 				action* = send_world_message("we_req_activate",0x470000E0,0f,"default","every",0), doc("activate altar");
 				action* = send_world_message("we_trigger_activate",0x470001F1,0f,"default","every",0), doc("victory mood on");
 				action* = send_world_message("we_trigger_deactivate",0x470001F2,0f,"default","every",0), doc("battle mood off");
@@ -1100,7 +1085,8 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_trigger_activate",0x470001F2,0f,"default","every",0), doc("battle mood activatse");
+				action* = send_world_message("we_trigger_activate",0x470001F2,0f,"default","every",0), doc("battle mood activate");
+				action* = send_world_message("we_req_activate",0x470000EC,0f,"default","every",0), doc("Change Alignment to Evil");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_talk_end",0,"on_first_message");
 			  f delay = 0.000000;
