@@ -786,45 +786,6 @@
 	  p position = -13.1251,-4.95,23.0141,0xa7ab2ffd;
 	}
 }
-[t:trunk_csl_long,n:0x440007b7]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  b is_selectable = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.833886,0,0.551937;
-	  p position = -15.431,-4.95,22.3719,0xa7ab2ffd;
-	}
-}
-[t:trunk_csl_long,n:0x440007b8]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  b is_selectable = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.833886,0,0.551937;
-	  p position = -16.0628,-4.95,22.6339,0xa7ab2ffd;
-	}
-}
-[t:trunk_csl_long,n:0x440007b9]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  b is_selectable = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.833886,0,0.551937;
-	  p position = -15.7526,-4.25147,22.5059,0xa7ab2ffd;
-	}
-}
 [t:footlocker_collab_ss_plains_01,n:0x4400085a]
 {
 	[placement]

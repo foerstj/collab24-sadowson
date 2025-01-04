@@ -2,7 +2,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type13;
+		custom_head = m_c_gah_fb_hlmt_type24;
 	}
 	[placement]
 	{
@@ -26,7 +26,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type9;
+		custom_head = m_c_gah_fb_hlmt_type24;
 	}
 	[placement]
 	{
@@ -50,7 +50,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type6;
+		custom_head = m_c_gah_fg_hlmt_head-04;
 	}
 	[placement]
 	{
@@ -62,7 +62,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type35;
+		custom_head = m_c_gah_fg_hlmt_type10;
 	}
 	[placement]
 	{
@@ -73,7 +73,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type14;
+		custom_head = m_c_gah_fb_hlmt_type6;
 	}
 	[placement]
 	{
@@ -85,7 +85,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type10;
+		custom_head = m_c_gah_fb_hlmt_type15;
 	}
 	[placement]
 	{
@@ -97,7 +97,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type20;
+		custom_head = m_c_gah_fb_hlmt_type19;
 	}
 	[placement]
 	{
@@ -109,7 +109,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type19;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[placement]
 	{
@@ -118,13 +118,9 @@
 }
 [t:collab_ss_mercenary_female_melee_friendly,n:0x44000895]
 {
-	[collab_ss_mercenary_voices]
-	{
-		voice_type = "_die_enemy_spotted_attack";
-	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_head-04;
+		custom_head = m_c_gah_fg_hlmt_head-05;
 	}
 	[placement]
 	{
@@ -134,13 +130,9 @@
 }
 [t:collab_ss_mercenary_female_melee_friendly,n:0x44000896]
 {
-	[collab_ss_mercenary_voices]
-	{
-		voice_type = "_die_enemy_spotted_attack";
-	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type13;
+		custom_head = m_c_gah_fg_hlmt_head-03;
 	}
 	[placement]
 	{
@@ -152,7 +144,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type36;
+		custom_head = m_c_gah_fb_hlmt_type26;
 	}
 	[placement]
 	{
@@ -162,13 +154,9 @@
 }
 [t:collab_ss_mercenary_female_melee_friendly,n:0x44000897]
 {
-	[collab_ss_mercenary_voices]
-	{
-		voice_type = "_die_enemy_spotted_attack";
-	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_head-05;
+		custom_head = m_c_gah_fg_hlmt_head-03;
 	}
 	[placement]
 	{
@@ -263,7 +251,7 @@
 				action* = send_world_message("we_req_activate",0x4400087A,0f,"default","every",0), doc("rear blocker");
 				action* = send_world_message("we_req_activate",0x4400087B,0f,"default","every",0), doc("npc indicator");
 				action* = send_world_message("we_req_activate",0x4400087E,0f,"default","every",0), doc("turn off my indicator");
-				action* = send_world_message("we_req_activate",0x4400036C,0f,"default","every",0), doc("Variable Merc_Boss_Dead");
+				action* = send_world_message("we_req_activate",0x4400036C,0f,"default","every",0), doc("variable merc_boss_dead");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_first_message");
 			  f delay = 0.000000;
@@ -310,7 +298,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_head-04;
+		custom_head = m_c_gah_fg_hlmt_head-03;
 	}
 	[placement]
 	{
@@ -320,13 +308,9 @@
 }
 [t:collab_ss_mercenary_female_melee_friendly,n:0x44000883]
 {
-	[collab_ss_mercenary_voices]
-	{
-		voice_type = "_die_enemy_spotted_attack";
-	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type24;
+		custom_head = m_c_gah_fg_hlmt_type19;
 	}
 	[placement]
 	{
@@ -350,7 +334,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type6;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[placement]
 	{
@@ -386,7 +370,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type16;
+		custom_head = m_c_gah_fg_hlmt_type8;
 	}
 	[placement]
 	{
@@ -398,7 +382,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[placement]
 	{
@@ -410,7 +394,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type19;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -422,7 +406,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -434,7 +418,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type19;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -446,7 +430,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type20;
 	}
 	[placement]
 	{
@@ -458,7 +442,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type15;
+		custom_head = m_c_gah_fb_hlmt_type10;
 	}
 	[placement]
 	{
@@ -470,7 +454,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type14;
+		custom_head = m_c_gah_fb_hlmt_type8;
 	}
 	[placement]
 	{
@@ -482,7 +466,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type6;
+		custom_head = m_c_gah_fg_hlmt_type10;
 	}
 	[placement]
 	{
@@ -492,13 +476,9 @@
 }
 [t:collab_ss_mercenary_female_melee_friendly,n:0x44000893]
 {
-	[collab_ss_mercenary_voices]
-	{
-		voice_type = "_die_enemy_spotted_attack";
-	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type19;
+		custom_head = m_c_gah_fg_hlmt_type20;
 	}
 	[placement]
 	{
@@ -508,13 +488,9 @@
 }
 [t:collab_ss_mercenary_female_melee_friendly,n:0x44000894]
 {
-	[collab_ss_mercenary_voices]
-	{
-		voice_type = "_die_enemy_spotted_attack";
-	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type19;
+		custom_head = m_c_gah_fg_hlmt_type13;
 	}
 	[placement]
 	{
@@ -526,7 +502,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type20;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -538,7 +514,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type20;
+		custom_head = m_c_gah_fb_hlmt_type22;
 	}
 	[placement]
 	{
@@ -550,7 +526,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type15;
+		custom_head = m_c_gah_fb_hlmt_type36;
 	}
 	[placement]
 	{
@@ -569,7 +545,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[mind]
 	{
@@ -585,11 +561,66 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type8;
+		custom_head = m_c_gah_fg_hlmt_type14;
 	}
 	[placement]
 	{
 	  q orientation = 0,-0.923879,0,-0.382684;
 	  p position = 0.764092,-5.0394,-31.1474,0x61deba4f;
+	}
+}
+[t:mule,n:0x4400036f]
+{
+	[aspect]
+	{
+	  i gold_value = 1000;
+	}
+	[common]
+	{
+		screen_name = "Statler";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -16.0988,-4.95,22.5361,0xa7ab2ffd;
+	}
+}
+[t:mule,n:0x44000370]
+{
+	[aspect]
+	{
+	  i gold_value = 1000;
+	}
+	[common]
+	{
+		screen_name = "Waldorf";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.970296,0,0.241922;
+	  p position = -18.4423,-4.95,17.1648,0xa7ab2ffd;
+	}
+}
+[t:collab_ss_henson_heckler,n:0x440006b2]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_henson_hello;
+			* = conversation_henson_no_packmule;
+			* = conversation_henson_one_packmule;
+			* = conversation_henson_two_packmules;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ss_henson_heckler.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.923879;
+	  p position = -18.9848,-4.95,18.6576,0xa7ab2ffd;
+		use_point_scids = 0x440006B4;
 	}
 }

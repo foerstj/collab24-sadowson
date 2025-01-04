@@ -376,6 +376,21 @@
 	  p position = 3.01038,-5.00915,26.1219,0x800b9b55;
 	}
 }
+[t:set_bool,n:0x4400036c]
+{
+	[common]
+	{
+		dev_instance_text = "merc_boss_dead";
+	}
+	[placement]
+	{
+	  p position = 6.08392,-5.05,10.5327,0x5564e21f;
+	}
+	[set_bool]
+	{
+		bool_variable = "merc_boss_dead";
+	}
+}
 [t:trigger_generic,n:0x44000798]
 {
 	[common]
@@ -1520,18 +1535,27 @@
 	  p position = 2.61687,0,0.0284882,0x8b26e719;
 	}
 }
-[t:set_bool,n:0x4400036c]
+[t:party_humanoid,n:0x440006b3]
 {
-	[common]
+	[party]
 	{
-		dev_instance_text = "merc_boss_dead";
+		[add_members]
+		{
+		  x * = 0x440006B2;
+		  x * = 0x4400036F;
+		  x * = 0x44000370;
+		}
 	}
 	[placement]
 	{
-	  p position = 6.08392,-5.05,10.5327,0x5564e21f;
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -18.4939,-4.95,20.4849,0xa7ab2ffd;
 	}
-	[set_bool]
+}
+[t:use_point,n:0x440006b4]
+{
+	[placement]
 	{
-		bool_variable = "merc_boss_dead";
+	  p position = -17.9391,-4.95,19.7132,0xa7ab2ffd;
 	}
 }

@@ -62,6 +62,14 @@ I'm guessing you'll be wanting his shiny purple crystal huh?";
 	  f scroll_rate = 10.000000;
 	}
 }
+[conversation_piratus_invalid]
+{
+	[text*]
+	{
+		screen_text = "I got nothing to say to you! Git outta my face!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [conversation_piratus_pre]
 {
 	[text*]
@@ -88,11 +96,40 @@ And they haven't come out for a good long while now. So they're probably still d
 	  f scroll_rate = 10.000000;
 	}
 }
-[conversation_piratus_invalid]
+[conversation_henson_hello]
 {
 	[text*]
 	{
-		screen_text = "I got nothing to say to you! Git outta my face!";
+		choice = buy_packmule;
+		screen_text = "Well... that was entertaining.
+Actually, that was the most entertaining thing that's happened around here for weeks. Tell me, do you do this sort of thing often? Go around killing important leaders and the like?
+Actually, don't answer that. i don't want to know. The boss just put me in charge of our mules and I HATE it. But he's dead and... nobodie's going to notice if they go missing. You give me some good coin and I'll swing them over to you.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_henson_two_packmules]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "I've still got these two mules here if you want them. Just need to hand over some of that good coin. They'll carry just about anything you want to load on them.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_henson_one_packmule]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "Hope the first one ain't giving you any trouble. I don't want it back. How about making it a pair? Still got one if ya interested...";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_henson_no_packmule]
+{
+	[text*]
+	{
+		screen_text = "We're cleaned out! And none too soon. I'll be off to find something more interesting to do. Good luck in your adventure traveller, I want none of it meself.";
 	  f scroll_rate = 10.000000;
 	}
 }
