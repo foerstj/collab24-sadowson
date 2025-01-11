@@ -26,6 +26,7 @@
 	[c24_3_2_gypsy_greetings]
 	{
 		chapter = chapter_03_underland;
+		quest_image = b_gui_ig_mnu_jnl_quest_34;
 		screen_name = "Gypsy Greetings";
 		victory_sample = s_e_level_up_quest;
 		[*]
@@ -38,16 +39,19 @@
 	[c24_3_3_amulet]
 	{
 		chapter = chapter_03_underland;
+		quest_image = b_gui_ig_mnu_jnl_quest_amulet;
 		screen_name = "Lost Amulet";
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
+			// if you find the amulet first
 			description = "Ask the Gypsies in Shroomington about their lost amulet";
 		  i order = 0;
 		  b required = false;
 		}
 		[*]
 		{
+			// if you speak to the gypsy first
 			description = "Find Persephone's amulet lost in the Crystlayer on the way to Larissa";
 		  i order = 1;
 		  b required = false;
