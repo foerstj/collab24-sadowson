@@ -603,6 +603,10 @@
 }
 [t:collab_ss_henson_heckler,n:0x440006b2]
 {
+	[common]
+	{
+	  b is_multi_player = false;
+	}
 	[conversation]
 	{
 		[conversations]
