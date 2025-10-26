@@ -1,0 +1,545 @@
+[t:template,n:3W_collab_ss_8_lava_caverns_incumbent_wraith]
+{
+	category_name = "3W_ss_8_volcano_enemies";
+	doc = "3W_Incumbent_wraith";
+	specializes = 3W_base_wraith;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 52, 0;
+			intelligence = 6,  0;
+			dexterity = 22, 0;
+			melee = 82,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1130952;
+		life = 1728;
+		max_life = 1766;
+		mana = 430;
+		max_mana = 434;
+		model = m_c_ecm_wr_pos_2;
+		[textures]
+		{
+			0 = b_c_ecm_wr;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 422;
+		damage_min = 282;
+	}
+	[common]
+	{
+		screen_name = "Incumbent Wraith";
+		membership = monster, party_wraith;
+	}
+	[defend]
+	{
+		defense = 965;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = ax_d_o_2h2b_avg;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/60-66;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/192-197;
+					il_main = #armor/356-497;
+					il_main = #weapon/226-235;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/233-251;
+					il_main = #armor/-rare(1)/547-578;
+					il_main = #*/-rare(1)/230-248;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/233-251;
+					il_main = #armor/-unique(2)/547-578;
+					il_main = #*/-unique(2)/230-248;
+				}
+				[gold*]
+				{
+					chance = 0.15;
+					max = 257920;
+					min = 158202;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party  = true;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_wraith_01 = 1;
+			frag_glb_wraith_02 = 1;
+			frag_glb_wraith_03 = 2;
+			frag_glb_wraith_04 = 1;
+			frag_glb_wraith_05 = 3;
+			frag_glb_wraith_07 = 1;
+		}
+	}
+}
+[t:template,n:3W_collab_ss_8_lava_caverns_fire_elemental]
+{
+	category_name = "3W_ss_8_volcano_enemies";
+	doc = "3W_Fire_elemental";
+	specializes = 3W_dsx_base_lava_spirit;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29,  0;
+			intelligence = 19, 0;
+			dexterity = 20,  0;
+			combat_magic = 79,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1130608;
+		life = 1466;
+		max_life = 1505;
+		mana = 459;
+		max_mana = 464;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 468;
+		damage_min = 324;
+	}
+	[defend]
+	{
+		defense = 926;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = collab_ss_spell_lava_spirit_fire;
+		}
+	}
+	[mind]
+	{
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+}
+[t:template,n:3W_collab_ss_8_lava_caverns_lava_beast]
+{
+	category_name = "3W_ss_8_volcano_enemies";
+	doc = "3W_Lava_beast";
+	specializes = 3W_base_rock_beast;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 52, 0;
+			intelligence = 6,  0;
+			dexterity = 22, 0;
+			melee = 82,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1131296;
+		life = 1662;
+		material = stone;
+		max_life = 1701;
+		mana = 430;
+		max_mana = 434;
+		[textures]
+		{
+			0 = b_c_edm_rb-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 425;
+		damage_min = 283;
+	}
+	[common]
+	{
+		screen_name = "Lava Beast";
+	}
+	[defend]
+	{
+		defense = 965;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_lava_beast_01 = 1;
+			frag_glb_lava_beast_02 = 1;
+			frag_glb_lava_beast_03 = 1;
+			frag_glb_lava_beast_04 = 1;
+			frag_glb_lava_beast_05 = 1;
+			frag_glb_lava_beast_06 = 2;
+			frag_glb_lava_beast_07 = 3;
+			frag_glb_lava_beast_08 = 4;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = collab_ss_spell_lava_beast_blast;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/60-66;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/192-197;
+					il_main = #armor/356-497;
+					il_main = #weapon/226-235;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/233-251;
+					il_main = #armor/-rare(1)/547-578;
+					il_main = #*/-rare(1)/230-248;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/233-251;
+					il_main = #armor/-unique(2)/547-578;
+					il_main = #*/-unique(2)/230-248;
+				}
+				[gold*]
+				{
+					chance = 0.15;
+					max = 257920;
+					min = 158202;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_collab_ss_8_lava_caverns_lava_beast_boss]
+{
+	category_name = "3W_ss_8_volcano_enemies";
+	doc = "3W_Lava_beast_boss";
+	specializes = 3W_base_rock_beast;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 52, 0;
+			intelligence = 6,  0;
+			dexterity = 22, 0;
+			melee = 82,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1140679;
+		life = 1754;
+		material = stone;
+		max_life = 1792;
+		mana = 674;
+		max_mana = 678;
+		[textures]
+		{
+			0 = b_c_edm_rb-03;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 451;
+		damage_min = 308;
+	}
+	[common]
+	{
+		screen_name = "Magma Beast";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("rock_beast_eye_glow");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_r_foot");
+				condition* = receive_world_message("we_anim_other",'rfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_l_foot");
+				condition* = receive_world_message("we_anim_other",'lfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_smash");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_yell");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust_hands");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 965;
+	}
+	[physics]
+	{
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_lava_beast_01 = 1;
+			frag_glb_lava_beast_02 = 1;
+			frag_glb_lava_beast_03 = 1;
+			frag_glb_lava_beast_04 = 1;
+			frag_glb_lava_beast_05 = 1;
+			frag_glb_lava_beast_06 = 2;
+			frag_glb_lava_beast_07 = 3;
+			frag_glb_lava_beast_08 = 4;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = collab_ss_spell_lava_beast_blast;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.5;
+					il_main = #cmagic/65-67;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #*/228-234;
+					il_main = #body,ro/448-479;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_collab_ss_8_lava_caverns_quadscale]
+{
+	category_name = "3W_ss_8_volcano_enemies";
+	doc = "3W_Quadscale";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 25, 0;
+			intelligence = 2, 0;
+			dexterity = 32,0;
+			melee = 78, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1127681;
+		life = 1462;
+		max_life = 1501;
+		mana = 235;
+		max_mana = 239;
+		model = m_c_edm_qs_pos_1;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_quadscale;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_quadscale_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_quadscale_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_quadscale_SED;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 403;
+		damage_min = 258;
+		reload_delay = 0;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.370000;
+		[bone_translator]
+		{
+			body_anterior = bone12;
+			body_mid = bone02;
+			body_posterior = bone03;
+			kill_bone = bone08;
+			shield_bone = bone02;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_qs_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Quadscale";
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?meander			= false
+			&still				= false;
+		melee_engage_range = 12;
+		personal_space_range = 0.7;
+		ranged_engage_range = 12.0;
+		sight_range = 12.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_quadscale_01 = 1;
+			frag_glb_quadscale_02 = 2;
+			frag_glb_quadscale_03 = 4;
+			frag_glb_quadscale_04 = 2;
+			frag_glb_quadscale_05 = 4;
+		}
+	}
+}

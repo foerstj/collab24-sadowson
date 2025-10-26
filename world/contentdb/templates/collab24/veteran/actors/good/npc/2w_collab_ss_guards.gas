@@ -1,0 +1,594 @@
+[t:template,n:2W_collab_ss_guard_m_base]
+{
+	specializes = 2W_base_npc_fb_multiplayer;
+	[aspect]
+	{
+		is_collidable = true;
+		draw_selection_indicator = false;
+	}
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 2.25;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					bed1 = a_c_gah_fb_fs0_dsf-05;
+					bed2 = a_c_gah_fb_fs0_dsf-06;
+					bed3 = a_c_gah_fb_fs0_dsf-07;
+					bed4 = a_c_gah_fb_fs0_dsf-11;
+					bed5 = a_c_gah_fb_fs0_dsf-12;
+					bed6 = a_c_gah_fb_fs0_dsf-13;
+					bed7 = a_c_gah_fb_fs0_dsf-14;
+					look = a_c_gah_fb_fs0_dsf;
+					sit1 = a_c_gah_fb_fs0_dsf-09;
+					sit2 = a_c_gah_fb_fs0_dsf-10;
+					sit3 = a_c_gah_fb_fs0_dsf-15;
+					talk = a_c_gah_fb_fs0_dsf-04;
+					lsn2 = a_c_gah_fb_fs0_dsf-18;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Guard";
+	}
+	[conversation]
+	{
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[mind]
+	{
+		actor_may_attack = true;
+		actor_may_be_attacked = true;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_base_melee]
+{
+	specializes = 2W_collab_ss_guard_m_base;
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+			es_head = collab_ss_guard_helmet;
+			es_shield_hand = collab_ss_guard_shield;
+			es_weapon_hand = collab_ss_guard_sword;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_base_melee_nohelmet]
+{
+	specializes = 2W_collab_ss_guard_m_base;
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+			es_shield_hand = collab_ss_guard_shield;
+			es_weapon_hand = collab_ss_guard_sword;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_base_ranged]
+{
+	specializes = 2W_collab_ss_guard_m_base;
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+			es_head = collab_ss_guard_helmet;
+			es_shield_hand = collab_ss_guard_bow;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_base_ranged_nohelmet]
+{
+	specializes = 2W_collab_ss_guard_m_base;
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+			es_shield_hand = collab_ss_guard_bow;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_01]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_01";
+	specializes = 2W_collab_ss_guard_m_base_melee;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_01;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_02]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_02";
+	specializes = 2W_collab_ss_guard_m_base_melee;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_02;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_03]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_03";
+	specializes = 2W_collab_ss_guard_m_base_melee;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_03;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_04]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_04";
+	specializes = 2W_collab_ss_guard_m_base_melee_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_04;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_05]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_05";
+	specializes = 2W_collab_ss_guard_m_base_melee_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_05;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_06]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_06";
+	specializes = 2W_collab_ss_guard_m_base_ranged;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_06;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_07]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_07";
+	specializes = 2W_collab_ss_guard_m_base_ranged;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_07;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_08]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_08";
+	specializes = 2W_collab_ss_guard_m_base_ranged_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_08;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_09]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_09";
+	specializes = 2W_collab_ss_guard_m_base_ranged_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_09;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_10]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_10";
+	specializes = 2W_collab_ss_guard_m_base_ranged;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_11;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_m_captain]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_m_captain";
+	specializes = 2W_collab_ss_guard_m_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_27;
+			1 = b_c_pos_a1_003;
+		}
+	}
+	[common]
+	{
+		screen_name = "Guard Captain";
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_base]
+{
+	specializes = 2W_base_npc_fg_multiplayer;
+	[aspect]
+	{
+		is_collidable = true;
+		draw_selection_indicator = false;
+	}
+	[common]
+	{
+		screen_name = "Guard";
+	}
+	[conversation]
+	{
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[mind]
+	{
+		actor_may_attack = true;
+		actor_may_be_attacked = true;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_base_melee]
+{
+	specializes = 2W_collab_ss_guard_g_base;
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+			es_head = collab_ss_guard_helmet;
+			es_shield_hand = collab_ss_guard_shield;
+			es_weapon_hand = collab_ss_guard_sword;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_base_melee_nohelmet]
+{
+	specializes = 2W_collab_ss_guard_g_base;
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+			es_shield_hand = collab_ss_guard_shield;
+			es_weapon_hand = collab_ss_guard_sword;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_base_ranged]
+{
+	specializes = 2W_collab_ss_guard_g_base;
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+			es_head = collab_ss_guard_helmet;
+			es_shield_hand = collab_ss_guard_bow;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_base_ranged_nohelmet]
+{
+	specializes = 2W_collab_ss_guard_g_base;
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			es_chest = collab_ss_guard_chestplate;
+			es_feet = collab_ss_guard_boots;
+			es_forearms = collab_ss_guard_gloves;
+			es_shield_hand = collab_ss_guard_bow;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_01]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_01";
+	specializes = 2W_collab_ss_guard_g_base_melee;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_01;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_02]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_02";
+	specializes = 2W_collab_ss_guard_g_base_melee;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_02;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_03]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_03";
+	specializes = 2W_collab_ss_guard_g_base_melee_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_03;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_04]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_04";
+	specializes = 2W_collab_ss_guard_g_base_melee_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_04;
+			1 = b_c_pos_a1_003;
+		}
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fg_hlmt_head-05;
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_05]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_05";
+	specializes = 2W_collab_ss_guard_g_base_melee_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_05;
+			1 = b_c_pos_a1_003;
+		}
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fg_hlmt_head-04;
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_06]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_06";
+	specializes = 2W_collab_ss_guard_g_base_ranged;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_06;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_07]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_07";
+	specializes = 2W_collab_ss_guard_g_base_ranged;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_07;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_08]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_08";
+	specializes = 2W_collab_ss_guard_g_base_ranged;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_08;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_09]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_09";
+	specializes = 2W_collab_ss_guard_g_base_ranged_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_09;
+			1 = b_c_pos_a1_003;
+		}
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fg_hlmt_head-02;
+	}
+}
+[t:template,n:2W_collab_ss_guard_g_10]
+{
+	category_name = "2W_character";
+	doc = "2W_collab_ss_guard_g_10";
+	specializes = 2W_collab_ss_guard_g_base_ranged_nohelmet;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_10;
+			1 = b_c_pos_a1_003;
+		}
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fg_hlmt_head-03;
+	}
+}

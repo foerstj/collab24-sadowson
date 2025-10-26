@@ -1,0 +1,166 @@
+[t:template,n:2W_collab_ss_1a_family-tomb_skeleton_archer]
+{
+	category_name = "2W_ss_1a_family-tomb_enemies";
+	doc = "2W_skeleton_archer";
+	specializes = 2W_base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			intelligence = 6, 0;
+			dexterity = 26, 0;
+			ranged = 50, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42602;
+		life = 909;
+		max_life = 932;
+		mana = 271;
+		max_mana = 273;
+	}
+	[attack]
+	{
+		damage_max = 294;
+		damage_min = 203;
+	}
+	[common]
+	{
+		screen_name = "Skeleton Archer";
+	}
+	[defend]
+	{
+		defense = 571;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_shield_hand = bw_g_c_s_s_r_avg;
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.03;
+					il_main = #spell/33-37;
+				}
+				[oneof*]
+				{
+					chance = 0.30;
+					il_main = #weapon/130-134;
+					il_main = #*/128-133;
+					il_main = #armor/208-257;
+					il_main = potion_health_medium;
+					il_main = potion_mana_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = potion_health_medium;
+					il_main = potion_mana_medium;
+				}
+				[gold*]
+				{
+					chance = 0.1;
+					max = 61573;
+					min = 34536;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 10.0;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.5
+			&meander						= false
+			&still							= false;
+	}
+}
+[t:template,n:2W_collab_ss_1a_family-tomb_skeleton_guard]
+{
+	category_name = "2W_ss_1a_family-tomb_enemies";
+	doc = "2W_Skeleton guard";
+	specializes = 2W_base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 38, 0;
+			intelligence = 5,  0;
+			dexterity = 17, 0;
+			melee = 52,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42590;
+		life = 944;
+		max_life = 967;
+		mana = 404;
+		max_mana = 407;
+		model = m_c_ecm_sk_pos_2;
+	}
+	[attack]
+	{
+		damage_max = 268;
+		damage_min = 179;
+	}
+	[common]
+	{
+		screen_name = "Skeleton Guard";
+		membership = skeleton, monster;
+	}
+	[defend]
+	{
+		defense = 597;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_shield_hand = sh_m_g_c_r_s_avg;
+			}
+			[oneof*]
+			{
+				es_weapon_hand = ax_d_c_1h1b_avg;
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.03;
+					il_main = #spell/31-33;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = #weapon/125-130;
+					il_main = #armor/204-240;
+				}
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61601;
+					min = 34567;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+	}
+}

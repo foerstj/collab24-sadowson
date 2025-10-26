@@ -1,0 +1,587 @@
+[t:template,n:3W_collab_ss_5_dungeon_skeleton_guard]
+{
+	category_name = "3W_ss_5_dungeon_enemies";
+	doc = "3W_Skeleton_Guard";
+	specializes = 3W_base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 52, 0;
+			intelligence = 6,  0;
+			dexterity = 22, 0;
+			melee = 82,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1126476;
+		life = 1571;
+		max_life = 1609;
+		mana = 660;
+		max_mana = 664;
+		model = m_c_ecm_sk_pos_2;
+	}
+	[attack]
+	{
+		damage_max = 425;
+		damage_min = 283;
+	}
+	[common]
+	{
+		screen_name = "Skeleton Guard";
+		membership = skeleton, party_krug_shaman, monster;
+	}
+	[defend]
+	{
+		defense = 893;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_shield_hand = sh_m_g_c_r_s_avg;
+			}
+			[oneof*]
+			{
+				es_weapon_hand = ax_d_c_1h1b_avg;
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/58-66;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/217-226;
+					il_main = #armor/350-453;
+					il_main = #weapon/220-228;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/222-235;
+					il_main = #armor/-rare(1)/451-508;
+					il_main = #*/-rare(1)/219-232;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/222-235;
+					il_main = #armor/-unique(2)/451-508;
+					il_main = #*/-unique(2)/219-232;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 257389;
+					min = 157026;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+	}
+}
+[t:template,n:3W_collab_ss_5_dungeon_skeleton_guard_boss]
+{
+	category_name = "3W_ss_5_dungeon_enemies";
+	doc = "3W_Skeleton_guard_boss";
+	specializes = 3W_base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 41, 0;
+			intelligence = 15,  0;
+			dexterity = 24, 0;
+			melee = 84, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1130952;
+		life = 1662;
+		max_life = 1701;
+		mana = 674;
+		max_mana = 678;
+		model = m_c_ecm_sk_pos_2;
+		[textures]
+		{
+			0 = b_c_ecm_skg-02;
+		}
+		scale_base = 1.2;
+	}
+	[attack]
+	{
+		damage_max = 434;
+		damage_min = 292;
+	}
+	[defend]
+	{
+		defense = 965;
+	}
+	[common]
+	{
+		screen_name = "Skeleton Captain";
+		membership = skeleton,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_shield_hand = sh_m_g_c_r_s_avg;
+			}
+			[oneof*]
+			{
+				es_weapon_hand = ax_d_c_1h1b_avg;
+			}
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #armor,f/483-515;
+					il_main = #weapon/225-228;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/232-243;
+					il_main = #armor/-rare(1)/517-548;
+					il_main = #*/-rare(1)/229-240;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/-unique(2)/232-243;
+					il_main = #armor/-unique(2)/517-548;
+					il_main = #*/-unique(2)/229-240;
+				}
+				[gold*]
+				{
+					max = 258065;
+					min = 158006;
+					min_pile = 57;
+					piles = 2 - 3;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.8
+			&friend_template	= false
+			&friends			= party_skeleton_guard_boss
+			&still				= false;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party	= true
+			&party_template				= "party_skeleton_guard_boss";
+	}
+}
+[t:template,n:3W_collab_ss_5_dungeon_skeleton_archer]
+{
+	category_name = "3W_ss_5_dungeon_enemies";
+	doc = "3W_Skeleton_archer";
+	specializes = 3W_base_skeleton;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 34, 0;
+			intelligence = 8, 0;
+			dexterity = 34, 0;
+			ranged = 84,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1126131;
+		life = 1473;
+		max_life = 1511;
+		mana = 479;
+		max_mana = 483;
+	}
+	[attack]
+	{
+		damage_max = 434;
+		damage_min = 292;
+	}
+	[common]
+	{
+		screen_name = "Skeleton Archer";
+	}
+	[defend]
+	{
+		defense = 890;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_shield_hand = bw_g_c_s_s_r_avg;
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/58-66;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/217-226;
+					il_main = #armor/350-453;
+					il_main = #weapon/220-228;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/222-235;
+					il_main = #armor/-rare(1)/451-508;
+					il_main = #*/-rare(1)/219-232;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/222-235;
+					il_main = #armor/-unique(2)/451-508;
+					il_main = #*/-unique(2)/219-232;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 257389;
+					min = 157026;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 10.0;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.5
+			&meander						= false
+			&still							= false;
+	}
+}
+[t:template,n:3W_collab_ss_5_dungeon_walking_corpse]
+{
+	category_name = "3W_ss_5_dungeon_enemies";
+	doc = "3W_Walking_corpse";
+	specializes = 3W_base_zombie;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 52, 0;
+			intelligence = 6,  0;
+			dexterity = 22, 0;
+			melee = 82,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1126820;
+		life = 1662;
+		max_life = 1701;
+		mana = 660;
+		max_mana = 664;
+		[textures]
+		{
+			0 = b_c_edm_zo-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 425;
+		damage_min = 275;
+	}
+	[defend]
+	{
+		defense = 882;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_ecm_sk_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					01 = wl-02;
+					02 = wl-03;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Walking Corpse";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/58-66;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/217-226;
+					il_main = #armor/350-453;
+					il_main = #weapon/220-228;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/222-235;
+					il_main = #armor/-rare(1)/451-508;
+					il_main = #*/-rare(1)/219-232;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/222-235;
+					il_main = #armor/-unique(2)/451-508;
+					il_main = #*/-unique(2)/219-232;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 257389;
+					min = 157026;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?still				= false
+			&meander			= false;
+		actor_auto_fidgets = true;
+		jat_startup = jat_none;
+		on_enemy_spotted_alert_friends = true;
+	}
+}
+[t:template,n:3W_collab_ss_spider_stalagnid]
+{
+	category_name = "3W_ss_5_dungeon_enemies";
+	doc = "3W_collab_ss_spider_stalagnid";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 34, 0;
+			intelligence = 6,  0;
+			dexterity = 32, 0;
+			melee = 83,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1125787;
+		life = 1545;
+		max_life = 1583;
+		mana = 430;
+		max_mana = 434;
+		model = m_c_edm_sn_pos_1;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 427;
+		damage_min = 283;
+	}
+	[defend]
+	{
+		defense = 905;
+	}
+	[body]
+	{
+		avg_move_velocity = 1.570000;
+		[bone_translator]
+		{
+			body_anterior = bone04;
+			body_mid = bone02;
+			body_posterior = bone42;
+			kill_bone = bone02;
+			shield_bone = bone01;
+			weapon_bone = bone04;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_sn_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Stalagnid";
+	}
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+		actor_auto_fidgets = false;
+		melee_engage_range = 12;
+		personal_space_range = 0.7;
+		ranged_engage_range = 12.0;
+		sight_range = 13.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_stalagnid_01 = 1;
+			frag_glb_stalagnid_02 = 3;
+			frag_glb_stalagnid_03 = 3;
+			frag_glb_stalagnid_04 = 3;
+			frag_glb_stalagnid_05 = 1;
+		}
+	}
+}

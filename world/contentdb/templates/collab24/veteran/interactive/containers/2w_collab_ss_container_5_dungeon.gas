@@ -1,0 +1,728 @@
+[t:template,n:2W_barrel_webbed_ss_5_dungeon_01]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_barrel_webbed_ss_5_dungeon_01";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_csl_barrel-webbed-01;
+	}
+	[attack]
+	{
+		damage_max = 265;
+		damage_min = 163;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61690;
+					min = 34725;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_barrel;
+	}
+}
+[t:template,n:2W_barrel_webbed_ss_5_dungeon_02]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_barrel_webbed_ss_5_dungeon_02";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_csl_barrel-webbed-02;
+	}
+	[attack]
+	{
+		damage_max = 265;
+		damage_min = 163;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61690;
+					min = 34725;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_barrel;
+	}
+}
+[t:template,n:2W_barrel_ss_5_dungeon]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_barrel_ss_5_dungeon";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
+	[attack]
+	{
+		damage_max = 265;
+		damage_min = 163;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61690;
+					min = 34725;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_barrel;
+	}
+}
+[t:template,n:2W_chest_ss_5_dungeon_01]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_chest_ss_5_dungeon_01";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-06;
+		[textures]
+		{
+			0 = b_i_glb_chest-stone;
+		}
+	}
+	[attack]
+	{
+		damage_max = 272;
+		damage_min = 172;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_close]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-06-open;
+				}
+			}
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-06-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61808;
+					min = 34992;
+					min_pile = 16;
+					piles = 3 - 5;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/127-148;
+					il_main = #armor/225-338;
+					il_main = #*/126-147;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/144-149;
+					il_main = #armor/-rare(1)/330-357;
+					il_main = #*/-rare(1)/143-148;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/144-149;
+					il_main = #armor/-unique(2)/330-357;
+					il_main = #*/-unique(2)/143-148;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:2W_chest_ss_5_dungeon_02_small]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_chest_ss_5_dungeon_02_small";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-02;
+	}
+	[attack]
+	{
+		damage_max = 272;
+		damage_min = 172;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_close]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-02-close;
+				}
+			}
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-02-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61808;
+					min = 34992;
+					min_pile = 16;
+					piles = 3 - 5;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/127-148;
+					il_main = #armor/225-338;
+					il_main = #*/126-147;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/144-149;
+					il_main = #armor/-rare(1)/330-357;
+					il_main = #*/-rare(1)/143-148;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/144-149;
+					il_main = #armor/-unique(2)/330-357;
+					il_main = #*/-unique(2)/143-148;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:2W_chest_ss_5_dungeon_03]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_chest_ss_5_dungeon_03";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-03;
+		[textures]
+		{
+			0 = b_i_glb_chest-01;
+		}
+	}
+	[attack]
+	{
+		damage_max = 272;
+		damage_min = 172;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61808;
+					min = 34992;
+					min_pile = 16;
+					piles = 3 - 5;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/127-148;
+					il_main = #armor/225-338;
+					il_main = #*/126-147;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/144-149;
+					il_main = #armor/-rare(1)/330-357;
+					il_main = #*/-rare(1)/143-148;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/144-149;
+					il_main = #armor/-unique(2)/330-357;
+					il_main = #*/-unique(2)/143-148;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:2W_chest_ss_5_dungeon_04]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_chest_ss_5_dungeon_04";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-07;
+		[textures]
+		{
+			0 = b_i_csl_chest-06;
+		}
+	}
+	[attack]
+	{
+		damage_max = 272;
+		damage_min = 172;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_close]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-07-close;
+				}
+			}
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-07-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61808;
+					min = 34992;
+					min_pile = 16;
+					piles = 3 - 5;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/127-148;
+					il_main = #armor/225-338;
+					il_main = #*/126-147;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/144-149;
+					il_main = #armor/-rare(1)/330-357;
+					il_main = #*/-rare(1)/143-148;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/144-149;
+					il_main = #armor/-unique(2)/330-357;
+					il_main = #*/-unique(2)/143-148;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:2W_crate_ss_5_dungeon_01]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_crate_ss_5_dungeon_01";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_crate-krug;
+		[textures]
+		{
+			0 = b_i_des_crate-01;
+		}
+	}
+	[attack]
+	{
+		damage_max = 256;
+		damage_min = 160;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61733;
+					min = 34808;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/127-144;
+					il_main = #armor/225-286;
+					il_main = #*/126-143;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_crate;
+	}
+}
+[t:template,n:2W_crate_ss_5_dungeon_02]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_crate_ss_5_dungeon_02";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_gob_crate-01;
+	}
+	[attack]
+	{
+		damage_max = 256;
+		damage_min = 160;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61733;
+					min = 34808;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/127-144;
+					il_main = #armor/225-286;
+					il_main = #*/126-143;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_crate;
+	}
+}
+[t:template,n:2W_footlocker_ss_5_dungeon]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_footlocker_ss_5_dungeon";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_footlocker-01;
+	}
+	[attack]
+	{
+		damage_max = 254;
+		damage_min = 161;
+	}
+	[common]
+	{
+		screen_name = "Footlocker";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61626;
+					min = 34655;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/124-134;
+					il_main = #armor/226-271;
+					il_main = #*/123-133;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_crate;
+	}
+}
+[t:template,n:2W_rack_weapons_ss_5_dungeon]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_rack_weapons_ss_5_dungeon";
+	specializes = prop;
+	[aspect]
+	{
+		model = m_i_csl_rack-weapon;
+		[textures]
+		{
+			0 = b_w_weapons;
+			1 = b_i_csl_rack-weapon;
+		}
+	}
+	[common]
+	{
+		rollover_display = TRUE;
+		screen_name = "Weapon Rack";
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = we_req_use;
+		one_shot = TRUE;
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 1;
+					il_main = #weapon/131-134;
+					il_main = #weapon/121-131;
+				}
+			}
+		}
+	}
+}
+[t:template,n:2W_rack_armor_ss_5_dungeon]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_rack_armor_ss_5_dungeon";
+	specializes = prop;
+	[aspect]
+	{
+		model = m_i_csl_rack-armor;
+		[textures]
+		{
+			0 = b_i_csl_rack-armor;
+		}
+	}
+	[common]
+	{
+		rollover_display = TRUE;
+		screen_name = "Armor Stand";
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = we_req_use;
+		one_shot = TRUE;
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 1;
+					il_main = #armor,body/249-263;
+					il_main = #armor/204-263;
+				}
+			}
+		}
+	}
+}
+[t:template,n:2W_trunk_ss_5_dungeon]
+{
+	category_name = "ss_5_dungeon";
+	doc = "2W_trunk_ss_5_dungeon";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[attack]
+	{
+		damage_max = 254;
+		damage_min = 161;
+	}
+	[common]
+	{
+		screen_name = "Trunk";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 61626;
+					min = 34655;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/124-134;
+					il_main = #armor/226-271;
+					il_main = #*/123-133;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_crate;
+	}
+}

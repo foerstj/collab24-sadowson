@@ -1,0 +1,393 @@
+[t:template,n:3W_chest_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "3W_chest_collab_ss_7_crypt";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_csl_chest-04;
+		[textures]
+		{
+			0 = b_i_csl_chest-02;
+		}
+	}
+	[attack]
+	{
+		damage_max = 427;
+		damage_min = 274;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_close]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-04-open;
+				}
+			}
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = chest-04-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 257143;
+					min = 156874;
+					min_pile = 16;
+					piles = 3 - 5;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/201-226;
+					il_main = #armor/357-492;
+					il_main = #*/198-224;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/226-232;
+					il_main = #armor/-rare(1)/412-527;
+					il_main = #*/-rare(1)/224-229;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/226-232;
+					il_main = #armor/-unique(2)/412-2357;
+					il_main = #*/-unique(2)/224-229;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_flame_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:3W_rack_csl_armor_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "3W_rack_csl_armor_collab_ss_7_crypt";
+	specializes = prop;
+	[aspect]
+	{
+		model = m_i_csl_rack-armor;
+		[textures]
+		{
+			0 = b_i_csl_rack-armor;
+		}
+	}
+	[common]
+	{
+		rollover_display = TRUE;
+		screen_name = "Armor Stand";
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = we_req_use;
+		one_shot = TRUE;
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 1;
+					il_main = #armor/357-492;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_rack_csl_weapons_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "3W_rack_csl_weapons_collab_ss_7_crypt";
+	specializes = prop;
+	[aspect]
+	{
+		model = m_i_csl_rack-weapon;
+		[textures]
+		{
+			0 = b_w_weapons;
+			1 = b_i_csl_rack-weapon;
+		}
+	}
+	[common]
+	{
+		rollover_display = TRUE;
+		screen_name = "Weapon Rack";
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = we_req_use;
+		one_shot = TRUE;
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 1;
+					il_main = #weapon/201-226;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_trunk_csl_collab_ss_7_crypt_1]
+{
+	category_name = "ss_7_crypt";
+	doc = "3W_trunk_csl_collab_ss_7_crypt_1";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[attack]
+	{
+		damage_max = 610;
+		damage_min = 389;
+	}
+	[common]
+	{
+		screen_name = "Trunk";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 257171;
+					min = 156950;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/201-226;
+					il_main = #armor/357-492;
+					il_main = #*/198-224;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_star_crate;
+	}
+}
+[t:template,n:3W_trunk_csl_collab_ss_7_crypt_2]
+{
+	category_name = "ss_7_crypt";
+	doc = "3W_trunk_csl_collab_ss_7_crypt_2";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[attack]
+	{
+		damage_max = 610;
+		damage_min = 389;
+	}
+	[common]
+	{
+		screen_name = "Trunk";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 257143;
+					min = 156689;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/201-226;
+					il_main = #armor/357-492;
+					il_main = #*/198-224;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_star_crate;
+	}
+}
+[t:template,n:3W_trunk_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "3W_trunk_collab_ss_7_crypt";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+		[textures]
+		{
+			0 = b_i_glb_trunk-long;
+		}
+	}
+	[attack]
+	{
+		damage_max = 610;
+		damage_min = 389;
+	}
+	[common]
+	{
+		screen_name = "Trunk";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 257204;
+					min = 156743;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/201-226;
+					il_main = #armor/357-492;
+					il_main = #*/198-224;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_gas_crate;
+	}
+}
+[t:template,n:3W_sarcophagus_collab_ss_7_crypt]
+{
+	category_name = "ss_7_crypt";
+	doc = "3W_sarcophagus_collab_ss_7_crypt";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = stone;
+		model = m_i_csl_sarcophagus-02;
+	}
+	[attack]
+	{
+		damage_max = 604;
+		damage_min = 385;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = sarcophagus-02-open;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Sarcophagus";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 257087;
+					min = 156503;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/201-226;
+					il_main = #armor/357-492;
+					il_main = #*/198-224;
+				}
+				[oneof*]
+				{
+					chance = 0.4;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_fireball_chest;
+		fire_event = WE_REQ_USE;
+	}
+}

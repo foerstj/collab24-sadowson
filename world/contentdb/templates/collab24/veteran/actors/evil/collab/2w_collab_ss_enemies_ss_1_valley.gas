@@ -1,0 +1,357 @@
+[t:template,n:2W_collab_ss_1_valley_Forest_Klaw]
+{
+	category_name = "2W_ss_1_valley_enemies";
+	doc = "2W_klaw";
+	specializes = 2W_base_klaw;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			intelligence = 10, 0;
+			dexterity = 20, 0;
+			melee = 52,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42602;
+		life = 1054;
+		max_life = 1076;
+		mana = 404;
+		max_mana = 407;
+		[textures]
+		{
+			0 = b_c_edm_kw-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 298;
+		damage_min = 203;
+	}
+	[common]
+	{
+		screen_name = "Forest Klaw";
+	}
+	[defend]
+	{
+		defense = 597;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_health_medium;
+					il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/36-45;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/141-148;
+					il_main = #armor/216-295;
+					il_main = #weapon/142-149;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/150-158;
+					il_main = #armor/-rare(1)/315-367;
+					il_main = #*/-rare(1)/149-156;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/150-158;
+					il_main = #armor/-unique(2)/315-367;
+					il_main = #*/-unique(2)/149-156;
+				}
+				[gold*]
+				{
+					chance = 0.15;
+					max = 61840;
+					min = 34830;
+				}
+			}
+		}
+	}
+}
+[t:template,n:2W_collab_ss_1_valley_wolf_black]
+{
+	category_name = "2W_ss_1_valley_enemies";
+	doc = "2W_wolf_black";
+	specializes = 2W_base_wolf;
+	[body]
+	{
+		max_move_velocity = 4.3;
+	}
+	[actor]
+	{
+		[skills]
+		{
+			strength = 26, 0;
+			dexterity = 20, 0;
+			intelligence = 8, 0;
+			melee = 55, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42613;
+		life = 971;
+		max_life = 993;
+		mana = 144;
+		max_mana = 147;
+		[textures]
+		{
+			0 = b_c_edm_wf-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 274;
+		damage_min = 184;
+	}
+	[defend]
+	{
+		defense = 565;
+	}
+	[common]
+	{
+		screen_name = "Black Wolf";
+		membership = party_wolf_black_boss, monster;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 						= 1.0;
+	}
+}
+[t:template,n:2W_collab_ss_1_valley_wolf_black_boss]
+{
+	category_name = "2W_ss_1_valley_enemies";
+	doc = "2W_wolf_black_boss_01";
+	specializes = 2W_base_wolf;
+	[body]
+	{
+		max_move_velocity = 4.3;
+	}
+	[actor]
+	{
+		[skills]
+		{
+			strength = 26, 0;
+			dexterity = 20, 0;
+			intelligence = 8, 0;
+			melee = 55, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42696;
+		life = 1025;
+		max_life = 1048;
+		mana = 441;
+		max_mana = 443;
+		[textures]
+		{
+			0 = b_c_edm_wf-05;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 292;
+		damage_min = 199;
+	}
+	[defend]
+	{
+		defense = 565;
+	}
+	[common]
+	{
+		screen_name = "Dark Wolf";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[all*]
+				{
+					il_main = #armor,f/345-367;
+					il_main = #weapon/149-154;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/161-170;
+					il_main = #armor/-rare(1)/363-373;
+					il_main = #*/-rare(1)/159-169;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/161-170;
+					il_main = #armor/-unique(2)/363-373;
+					il_main = #*/-unique(2)/159-169;
+				}
+				[gold*]
+				{
+					max = 62339;
+					min = 35535;
+					min_pile = 41;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.8
+			&friend_template				= false
+			&friends						= party_wolf_black_boss
+			&still							= false;
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&form_party_on_friend_entered_OCZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template						= "party_wolf_black_boss";
+	}
+}
+[t:template,n:2W_collab_ss_1_valley_skrubb_small]
+{
+	category_name = "2W_ss_1_valley_enemies";
+	doc = "2W_Black Skrubb";
+	specializes = 2W_base_skrubb;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 17, 0;
+			dexterity = 4, 0;
+			intelligence = 3, 0;
+			combat_magic = 47, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 42590;
+		life = 909;
+		max_life = 932;
+		mana = 271;
+		max_mana = 273;
+		model = m_c_edm_sb_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_sb-02;
+		}
+		scale_base = 0.20;
+		[voice]
+		{
+			[cast]
+			{
+				* = s_e_attack_skrubb;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_skrubb_small_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skrubb_small_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skrubb;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 278;
+		damage_min = 187;
+		reload_delay = 0;
+	}
+	[defend]
+	{
+		defense = 561;
+	}
+	[generator_in_object]
+	{
+		child_template_name = hole_grs_01;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_skrubb_spit_small;
+		}
+	}
+	[common]
+	{
+		screen_name = "Black Skrubb";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("skrubb_goo");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		melee_engage_range = 10;
+		personal_space_range = 1.2;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height = 2;
+	}
+}

@@ -1,0 +1,1576 @@
+[t:template,n:3W_collab_ss_mercenary_melee_base]
+{
+	doc = "3W_collab_ss_mercenary_melee_base";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 52, 0;
+			intelligence = 6, 0;
+			dexterity = 22, 0;
+			melee = 82,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1123893;
+		life = 1715;
+		max_life = 1753;
+		mana = 235;
+		max_mana = 239;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 422;
+		damage_min = 275;
+	}
+	[defend]
+	{
+		defense = 962;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = collab_ss_mercenary_boots_melee;
+				[oneof*]
+				{
+					es_weapon_hand = collab_ss_mercenary_melee_fullblade;
+					es_weapon_hand = collab_ss_mercenary_melee_gladius;
+					es_weapon_hand = collab_ss_mercenary_melee_axe;
+				}
+				[oneof*]
+				{
+					es_shield_hand = collab_ss_mercenary_kiteshield_01;
+					es_shield_hand = collab_ss_mercenary_kiteshield_02;
+					es_shield_hand = collab_ss_mercenary_kiteshield_03;
+					es_shield_hand = collab_ss_mercenary_kiteshield_04;
+					es_shield_hand = collab_ss_mercenary_kiteshield_05;
+					es_shield_hand = collab_ss_mercenary_kiteshield_06;
+				}
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/58-66;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/217-226;
+					il_main = #armor/350-453;
+					il_main = #weapon/220-228;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/222-235;
+					il_main = #armor/-rare(1)/451-508;
+					il_main = #*/-rare(1)/219-232;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/222-235;
+					il_main = #armor/-unique(2)/451-508;
+					il_main = #*/-unique(2)/219-232;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 257389;
+					min = 157026;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Mercenary Warrior";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[mind]
+	{
+		disposition_orders = ad_offensive;
+		melee_engage_range = 14;
+		ranged_engage_range = 14;
+		sight_range = 14;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious		= 0.75
+			&interest		= interest
+			&meander		= true
+			&still			= false;
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_ranged_base]
+{
+	doc = "3W_collab_ss_mercenary_ranged_base";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 41, 0;
+			intelligence = 8, 0;
+			dexterity = 34, 0;
+			ranged = 80,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1123893;
+		life = 1649;
+		max_life = 1687;
+		mana = 235;
+		max_mana = 239;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 453;
+		damage_min = 313;
+	}
+	[defend]
+	{
+		defense = 927;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = collab_ss_mercenary_boots_ranged;
+				[oneof*]
+				{
+					es_shield_hand = collab_ss_mercenary_ranged_LongBackedBow;
+					es_shield_hand = collab_ss_mercenary_ranged_LongBow;
+					es_shield_hand = collab_ss_mercenary_ranged_PeasantLongBow;
+				}
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/58-66;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/217-226;
+					il_main = #armor/350-453;
+					il_main = #weapon/220-228;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/222-235;
+					il_main = #armor/-rare(1)/451-508;
+					il_main = #*/-rare(1)/219-232;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/222-235;
+					il_main = #armor/-unique(2)/451-508;
+					il_main = #*/-unique(2)/219-232;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 257389;
+					min = 157026;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Mercenary Archer";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[mind]
+	{
+		disposition_orders = ad_offensive;
+		melee_engage_range = 14;
+		ranged_engage_range = 14;
+		sight_range = 14;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		= true
+			&actor_joins_existing_party		= true
+			&party_template					= "party_bandit_ranged";
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+    		?social							= 0.35
+    		&still							= false;
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_cmagic_base]
+{
+	doc = "3W_collab_ss_mercenary_cmagic_base";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 23, 0;
+			intelligence = 23, 0;
+			dexterity = 28, 0;
+			combat_magic = 77,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1123893;
+		life = 1532;
+		mana = 1162;
+		max_life = 1570;
+		max_mana = 1166;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 468;
+		damage_min = 316;
+	}
+	[defend]
+	{
+		defense = 890;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_fireshot;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = collab_ss_mercenary_boots_cmagic;
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/58-66;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/217-226;
+					il_main = #armor/350-453;
+					il_main = #weapon/220-228;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/222-235;
+					il_main = #armor/-rare(1)/451-508;
+					il_main = #*/-rare(1)/219-232;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/222-235;
+					il_main = #armor/-unique(2)/451-508;
+					il_main = #*/-unique(2)/219-232;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 257389;
+					min = 157026;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Mercenary Combat Mage";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[mind]
+	{
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_reanimates_friends = false;
+		actor_auto_uses_stored_items = true;
+		on_enemy_entered_ocz_flee = false;
+		on_life_ratio_low_flee = true;
+		actor_life_ratio_low_threshold = 0.25;
+		flee_count = 1;
+		flee_distance = 20;
+		disposition_orders = ad_offensive;
+		on_enemy_entered_icz_switch_to_melee = false;
+		actor_life_ratio_low_threshold = 0.5;
+		melee_engage_range = 14;
+		ranged_engage_range = 14;
+		sight_range = 14;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious						= 0.75
+			&interest						= interest
+			&still							= false;
+		jat_flee_from_object = world\ai\jobs\common\job_flee_from_object.skrit
+			?run_chance						 = 1.0;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&party_template					 = "party_bandit_ranged";
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
+			?persistence					= 0.0;
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_nmagic_base]
+{
+	doc = "3W_collab_ss_mercenary_nmagic_base";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 23, 0;
+			intelligence = 23, 0;
+			dexterity = 28, 0;
+			nature_magic = 78, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1123893;
+		life = 1492;
+		max_life = 1531;
+		mana = 1162;
+		max_mana = 1166;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 442;
+		damage_min = 300;
+	}
+	[defend]
+	{
+		defense = 882;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_apprentice_zap;
+			il_active_secondary_spell = spell_resurrect_monster;
+			il_spell_1 = spell_gom_heal;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = collab_ss_mercenary_boots_nmagic;
+			}
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/58-66;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/217-226;
+					il_main = #armor/350-453;
+					il_main = #weapon/220-228;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/222-235;
+					il_main = #armor/-rare(1)/451-508;
+					il_main = #*/-rare(1)/219-232;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/222-235;
+					il_main = #armor/-unique(2)/451-508;
+					il_main = #*/-unique(2)/219-232;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 257389;
+					min = 157026;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Mercenary Nature Mage";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[mind]
+	{
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_heals_others_life = true;
+		actor_auto_heals_self_life = true;
+		actor_auto_switches_to_magic = true;
+		actor_auto_reanimates_friends = true;
+		actor_auto_uses_stored_items = true;
+		on_enemy_entered_ocz_flee = false;
+		on_life_ratio_low_flee = true;
+		actor_life_ratio_low_threshold = 0.25;
+		flee_count = 1;
+		flee_distance = 20;
+		disposition_orders = ad_offensive;
+		on_enemy_entered_icz_switch_to_melee = false;
+		actor_life_ratio_low_threshold = 0.5;
+		melee_engage_range = 14;
+		ranged_engage_range = 14;
+		sight_range = 14;
+		jat_cast = world\ai\jobs\common\job_cast.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= false;
+		jat_flee_from_object = world\ai\jobs\common\job_flee_from_object.skrit
+			?run_chance					= 1.0;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party	= true
+			&party_template				= "party_bandit_ranged";
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
+			?persistence				= 0.0;
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_male_melee_base]
+{
+	doc = "3W_collab_ss_mercenary_male_melee";
+	specializes = 3W_collab_ss_mercenary_melee_base;
+	[actor]
+	{
+		can_level_up = false;
+		is_male = true;
+		race = human;
+	}
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_04;
+			1 = b_c_pos_a2_028;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_v_konus_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_v_konus_attack_03;
+			}
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 4.500000;
+		initial_chore = chore_fidget;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					01 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Mercenary";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[collab_ss_mercenary_skins]
+	{
+		actor_class = "MELEE";
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_female_melee_base]
+{
+	doc = "3W_collab_ss_mercenary_female_melee_base";
+	specializes = 3W_collab_ss_mercenary_melee_base;
+	[actor]
+	{
+		can_level_up = false;
+		is_male = false;
+		race = human;
+	}
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_01;
+			1 = b_c_pos_a2_028;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_v_jharmaya_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_v_jharmaya_attack_12;
+			}
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fg;
+		avg_move_velocity = 4.500000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 0.8, 0.8, 0.8;
+			as_two_handed_melee = 0.8, 0.8, 0.8;
+			as_two_handed_sword = 0.8, 0.8, 0.8;
+			as_staff = 1.0, 1.0, 1.0;
+			as_bow_and_arrow = 0.8, 0.8, 0.8;
+			as_minigun = 0.8, 0.8, 0.8;
+			as_shield_only = 0.9, 0.9, 0.9;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					00 = rl;
+				}
+			}
+		}
+	}
+	[collab_ss_mercenary_skins]
+	{
+		actor_class = "MELEE";
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_male_ranged_base]
+{
+	doc = "3W_collab_ss_mercenary_male_ranged";
+	specializes = 3W_collab_ss_mercenary_ranged_base;
+	[actor]
+	{
+		can_level_up = false;
+		is_male = true;
+		race = human;
+	}
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_04;
+			1 = b_c_pos_a2_011;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_v_kraal_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_v_kraal_attack_11;
+			}
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 4.500000;
+		initial_chore = chore_fidget;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					01 = rl;
+				}
+			}
+		}
+	}
+	[collab_ss_mercenary_skins]
+	{
+		actor_class = "RANGED";
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_female_ranged_base]
+{
+	doc = "3W_collab_ss_mercenary_female_ranged_base";
+	specializes = 3W_collab_ss_mercenary_ranged_base;
+	[actor]
+	{
+		can_level_up = false;
+		is_male = false;
+		race = human;
+	}
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_01;
+			1 = b_c_pos_a2_011;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_v_lyssa_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_v_lyssa_attack_10;
+			}
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fg;
+		avg_move_velocity = 4.500000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 0.8, 0.8, 0.8;
+			as_two_handed_melee = 0.8, 0.8, 0.8;
+			as_two_handed_sword = 0.8, 0.8, 0.8;
+			as_staff = 1.0, 1.0, 1.0;
+			as_bow_and_arrow = 0.8, 0.8, 0.8;
+			as_minigun = 0.8, 0.8, 0.8;
+			as_shield_only = 0.9, 0.9, 0.9;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					00 = rl;
+				}
+			}
+		}
+	}
+	[collab_ss_mercenary_skins]
+	{
+		actor_class = "RANGED";
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_male_cmagic_base]
+{
+	doc = "3W_collab_ss_mercenary_male_cmagic_base";
+	specializes = 3W_collab_ss_mercenary_cmagic_base;
+	[actor]
+	{
+		can_level_up = false;
+		is_male = true;
+		race = human;
+	}
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_04;
+			1 = b_c_pos_a2_023;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_v_jondar_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_v_jondar_attack_03;
+			}
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 4.500000;
+		initial_chore = chore_fidget;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					01 = rl;
+				}
+			}
+		}
+	}
+	[collab_ss_mercenary_skins]
+	{
+		actor_class = "CMAGIC";
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_female_cmagic_base]
+{
+	doc = "3W_collab_ss_mercenary_female_cmagic_base";
+	specializes = 3W_collab_ss_mercenary_cmagic_base;
+	[actor]
+	{
+		can_level_up = false;
+		is_male = false;
+		race = human;
+	}
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_01;
+			1 = b_c_pos_a2_023;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_v_mheagan_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_v_mheagan_attack_15;
+			}
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fg;
+		avg_move_velocity = 4.500000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 0.8, 0.8, 0.8;
+			as_two_handed_melee = 0.8, 0.8, 0.8;
+			as_two_handed_sword = 0.8, 0.8, 0.8;
+			as_staff = 1.0, 1.0, 1.0;
+			as_bow_and_arrow = 0.8, 0.8, 0.8;
+			as_minigun = 0.8, 0.8, 0.8;
+			as_shield_only = 0.9, 0.9, 0.9;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					00 = rl;
+				}
+			}
+		}
+	}
+	[collab_ss_mercenary_skins]
+	{
+		actor_class = "CMAGIC";
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_male_nmagic_base]
+{
+	doc = "3W_collab_ss_mercenary_male_nmagic";
+	specializes = 3W_collab_ss_mercenary_nmagic_base;
+	[actor]
+	{
+		can_level_up = false;
+		is_male = true;
+		race = human;
+	}
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_04;
+			1 = b_c_pos_a2_037;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_v_nardulo_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_v_nardulo_attack_08;
+			}
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 4.500000;
+		initial_chore = chore_fidget;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					01 = rl;
+				}
+			}
+		}
+	}
+	[collab_ss_mercenary_skins]
+	{
+		actor_class = "NMAGIC";
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_female_nmagic_base]
+{
+	doc = "3W_collab_ss_mercenary_female_nmagic_base";
+	specializes = 3W_collab_ss_mercenary_nmagic_base;
+	[actor]
+	{
+		can_level_up = false;
+		is_male = false;
+		race = human;
+	}
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a2;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_01;
+			1 = b_c_pos_a2_037;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_v_mheagan_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_v_mheagan_attack_15;
+			}
+		}
+	}
+	[body]
+	{
+		armor_version = gah_fg;
+		avg_move_velocity = 4.500000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 0.8, 0.8, 0.8;
+			as_two_handed_melee = 0.8, 0.8, 0.8;
+			as_two_handed_sword = 0.8, 0.8, 0.8;
+			as_staff = 1.0, 1.0, 1.0;
+			as_bow_and_arrow = 0.8, 0.8, 0.8;
+			as_minigun = 0.8, 0.8, 0.8;
+			as_shield_only = 0.9, 0.9, 0.9;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+					01 = rl;
+				}
+			}
+		}
+	}
+	[collab_ss_mercenary_skins]
+	{
+		actor_class = "NMAGIC";
+	}
+}
+[t:template,n:3W_collab_ss_mercenary_male_melee]
+{
+	category_name = "3W_ss_4_merc_camp_enemies";
+	doc = "3W_mercenary_male_melee";
+	specializes = 3W_collab_ss_mercenary_male_melee_base;
+}
+[t:template,n:3W_collab_ss_mercenary_female_melee]
+{
+	category_name = "3W_ss_4_merc_camp_enemies";
+	doc = "3W_mercenary_female_melee";
+	specializes = 3W_collab_ss_mercenary_female_melee_base;
+}
+[t:template,n:3W_collab_ss_mercenary_male_ranged]
+{
+	category_name = "3W_ss_4_merc_camp_enemies";
+	doc = "3W_mercenary_male_ranged";
+	specializes = 3W_collab_ss_mercenary_male_ranged_base;
+}
+[t:template,n:3W_collab_ss_mercenary_female_ranged]
+{
+	category_name = "3W_ss_4_merc_camp_enemies";
+	doc = "3W_mercenary_female_ranged";
+	specializes = 3W_collab_ss_mercenary_female_ranged_base;
+}
+[t:template,n:3W_collab_ss_mercenary_male_combat]
+{
+	category_name = "3W_ss_4_merc_camp_enemies";
+	doc = "3W_mercenary_male_cmagic";
+	specializes = 3W_collab_ss_mercenary_male_cmagic_base;
+}
+[t:template,n:3W_collab_ss_mercenary_female_combat]
+{
+	category_name = "3W_ss_4_merc_camp_enemies";
+	doc = "3W_mercenary_female_cmagic";
+	specializes = 3W_collab_ss_mercenary_female_cmagic_base;
+}
+[t:template,n:3W_collab_ss_mercenary_male_nature]
+{
+	category_name = "3W_ss_4_merc_camp_enemies";
+	doc = "3W_mercenary_male_nmagic";
+	specializes = 3W_collab_ss_mercenary_male_nmagic_base;
+}
+[t:template,n:3W_collab_ss_mercenary_female_nature]
+{
+	category_name = "3W_ss_4_merc_camp_enemies";
+	doc = "3W_mercenary_female_nmagic";
+	specializes = 3W_collab_ss_mercenary_female_nmagic_base;
+}

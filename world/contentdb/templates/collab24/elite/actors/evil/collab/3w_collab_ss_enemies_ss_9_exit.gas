@@ -1,0 +1,146 @@
+[t:template,n:3W_collab_ss_9_exit_darkling]
+{
+	category_name = "3W_ss_9_exit_enemies";
+	doc = "3W_Darkling";
+	specializes = 3W_base_darkling;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29,  0;
+			intelligence = 19, 0;
+			dexterity = 20,  0;
+			combat_magic = 79,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1131727;
+		life = 1434;
+		max_life = 1472;
+		mana = 459;
+		max_mana = 464;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 451;
+		damage_min = 308;
+	}
+	[common]
+	{
+		screen_name = "Darkling";
+	}
+	[defend]
+	{
+		defense = 864;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_darkling_spark;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+				[all*]
+				{
+					chance = 0.1;
+					il_main = #cmagic/51-67;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #*/224-232;
+					il_main = #body,ro/448-479;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+	}
+}
+[t:template,n:3W_collab_ss_9_exit_drake_blue]
+{
+	category_name = "3W_ss_9_exit_enemies";
+	doc = "3W_Drake_blue";
+	specializes = 3W_base_drake;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29,  0;
+			intelligence = 19, 0;
+			dexterity = 20,  0;
+			combat_magic = 79,  0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 1132071;
+		life = 1858;
+		max_life = 1896;
+		mana = 333;
+		max_mana = 337;
+		model = m_c_edm_dk_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_dk-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 502;
+		damage_min = 340;
+	}
+	[common]
+	{
+		screen_name = "Blue Drake";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("drake_wing");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("drake_scream_blue");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 965;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_white;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.8;
+				il_main = #*/226-230;
+			}
+		}
+	}
+}

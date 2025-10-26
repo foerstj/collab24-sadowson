@@ -1,0 +1,216 @@
+[t:template,n:2W_collab_ss_mercenary_male_melee_friendly]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_collab_ss_mercenary_male_melee_friendly";
+	specializes = 2W_collab_ss_mercenary_male_melee_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		draw_selection_indicator = false;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:2W_collab_ss_mercenary_female_melee_friendly]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_collab_ss_mercenary_female_melee_friendly";
+	specializes = 2W_collab_ss_mercenary_female_melee_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		draw_selection_indicator = false;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:2W_collab_ss_mercenary_male_ranged_friendly]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_collab_ss_mercenary_male_ranged_friendly";
+	specializes = 2W_collab_ss_mercenary_male_ranged_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		draw_selection_indicator = false;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:2W_collab_ss_mercenary_female_ranged_friendly]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_collab_ss_mercenary_female_ranged_friendly";
+	specializes = 2W_collab_ss_mercenary_female_ranged_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		draw_selection_indicator = false;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:2W_collab_ss_mercenary_male_combat_friendly]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_collab_ss_mercenary_male_combat_friendly";
+	specializes = 2W_collab_ss_mercenary_male_cmagic_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		draw_selection_indicator = false;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:2W_collab_ss_mercenary_female_combat_friendly]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_collab_ss_mercenary_female_combat_friendly";
+	specializes = 2W_collab_ss_mercenary_female_cmagic_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		draw_selection_indicator = false;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:2W_collab_ss_mercenary_male_nature_friendly]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_collab_ss_mercenary_male_nature_friendly";
+	specializes = 2W_collab_ss_mercenary_male_nmagic_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		draw_selection_indicator = false;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}
+[t:template,n:2W_collab_ss_mercenary_female_nature_friendly]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_collab_ss_mercenary_female_nature_friendly";
+	specializes = 2W_collab_ss_mercenary_female_nmagic_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		draw_selection_indicator = false;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?curious					= 0.75
+			&interest					= interest
+			&still						= true;
+	}
+}

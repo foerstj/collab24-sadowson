@@ -1,0 +1,492 @@
+[t:template,n:2W_collab_ss_6_death_valley_wolf_black]
+{
+	category_name = "2W_ss_6_death_valley_enemies";
+	doc = "2W_Wolf_black";
+	specializes = 2W_base_wolf;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 26, 0;
+			intelligence = 8, 0;
+			dexterity = 20, 0;
+			melee = 55,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42721;
+		life = 959;
+		max_life = 982;
+		mana = 187;
+		max_mana = 190;
+		[textures]
+		{
+			0 = b_c_edm_wf-05;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 275;
+		damage_min = 183;
+	}
+	[defend]
+	{
+		defense = 559;
+	}
+	[body]
+	{
+		max_move_velocity = 4.3;
+	}
+	[common]
+	{
+		screen_name = "Undead Black Wolf";
+		membership = party_wolf_black_boss, monster;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 						= 1.0;
+	}
+}
+[t:template,n:2W_collab_ss_6_death_valley_wraith_lesser]
+{
+	category_name = "2W_ss_6_death_valley_enemies";
+	doc = "2W_Wraith_lesser";
+	specializes = 2W_base_wraith;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 38, 0;
+			intelligence = 5,  0;
+			dexterity = 17, 0;
+			melee = 52,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42735;
+		life = 1025;
+		max_life = 1048;
+		mana = 371;
+		max_mana = 373;
+		model = m_c_ecm_wr_pos_2;
+		[textures]
+		{
+			0 = b_c_ecm_wr;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 268;
+		damage_min = 179;
+	}
+	[common]
+	{
+		screen_name = "Wraith";
+		membership = monster, party_wraith;
+	}
+	[defend]
+	{
+		defense = 619;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = ax_d_o_2h2b_avg;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_health_medium;
+					il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/41-46;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/120-125;
+					il_main = #armor/223-342;
+					il_main = #weapon/153-161;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/159-177;
+					il_main = #armor/-rare(1)/384-410;
+					il_main = #*/-rare(1)/157-175;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/159-177;
+					il_main = #armor/-unique(2)/384-410;
+					il_main = #*/-unique(2)/157-175;
+				}
+				[gold*]
+				{
+					chance = 0.15;
+					max = 62219;
+					min = 35526;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party  = true;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_wraith_01 = 1;
+			frag_glb_wraith_02 = 1;
+			frag_glb_wraith_03 = 2;
+			frag_glb_wraith_04 = 1;
+			frag_glb_wraith_05 = 3;
+			frag_glb_wraith_07 = 1;
+		}
+	}
+}
+[t:template,n:2W_collab_ss_6_death_valley_chitterskrag_one]
+{
+	category_name = "2W_ss_6_death_valley_enemies";
+	doc = "2W_Chitterskrag";
+	specializes = 2W_dsx_chitterskrag_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 35, 0;
+			intelligence = 10, 0;
+			dexterity = 17, 0;
+			melee = 53,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42699;
+		life = 1054;
+		max_life = 1076;
+		mana = 171;
+		max_mana = 173;
+		model = m_c_edm_chs_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_chs;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 278;
+		damage_min = 187;
+	}
+	[common]
+	{
+		screen_name = "Chitterskrag";
+		membership = monster;
+	}
+	[defend]
+	{
+		defense = 602;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_health_medium;
+					il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/37-42;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/145-151;
+					il_main = #armor/216-305;
+					il_main = #weapon/146-153;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/150-161;
+					il_main = #armor/-rare(1)/247-370;
+					il_main = #*/-rare(1)/149-159;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/150-161;
+					il_main = #armor/-unique(2)/247-370;
+					il_main = #*/-unique(2)/149-159;
+				}
+				[gold*]
+				{
+					chance = 0.15;
+					max = 61837;
+					min = 34878;
+				}
+			}
+		}
+	}
+}
+[t:template,n:2W_collab_ss_6_death_valley_chitterskrag_baby]
+{
+	category_name = "2W_ss_6_death_valley_enemies";
+	doc = "2W_Immature Chitterskrag";
+	specializes = 2W_dsx_chitterskrag_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 35, 0;
+			intelligence = 10, 0;
+			dexterity = 17, 0;
+			melee = 53,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42615;
+		life = 852;
+		max_life = 875;
+		mana = 171;
+		max_mana = 173;
+		model = m_c_edm_chs_pos_1;
+		scale_base = 0.35;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_baby_chitterskrag_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_baby_chitterskrag_SED;
+			}
+		}
+		[textures]
+		{
+			0 = b_c_edm_chs;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 251;
+		damage_min = 161;
+	}
+	[common]
+	{
+		screen_name = "Immature Chitterskrag";
+		membership = monster;
+	}
+	[defend]
+	{
+		defense = 549;
+	}
+	[body]
+	{
+		avg_move_velocity = 5;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = potion_health_medium;
+					il_main = potion_mana_medium;
+				}
+				[all*]
+				{
+					chance = 0.02;
+					il_main = #spell/37-42;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/145-151;
+					il_main = #armor/216-305;
+					il_main = #weapon/146-153;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/150-161;
+					il_main = #armor/-rare(1)/247-370;
+					il_main = #*/-rare(1)/149-159;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/150-161;
+					il_main = #armor/-unique(2)/247-370;
+					il_main = #*/-unique(2)/149-159;
+				}
+				[gold*]
+				{
+					chance = 0.15;
+					max = 61837;
+					min = 34878;
+				}
+			}
+		}
+	}
+}
+[t:template,n:2W_collab_ss_6_death_valley_chitterskrag_two]
+{
+	category_name = "2W_ss_6_death_valley_enemies";
+	doc = "2W_Spewing Chitterskrag";
+	specializes = 2W_dsx_chitterskrag_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 24, 0;
+			intelligence = 6, 0;
+			dexterity = 26, 0;
+			combat_magic = 52, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42710;
+		life = 919;
+		max_life = 941;
+		mana = 171;
+		max_mana = 173;
+		model = m_c_edm_chs_pos_2;
+		scale_base = 1.0;
+		[textures]
+		{
+			0 = b_c_edm_chs-03;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 278;
+		damage_min = 190;
+	}
+	[common]
+	{
+		screen_name = "Spewing Chitterskrag";
+		membership = monster;
+	}
+	[defend]
+	{
+		defense = 569;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.5;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_chs_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party		= true;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		personal_space_range = 0.75;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = collab_ss_spell_chitterskrag_poison;
+		}
+	}
+}
