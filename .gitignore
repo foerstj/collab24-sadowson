@@ -1,5 +1,3 @@
-/world/contentdb/templates/original
-/world/contentdb/original
-
-# Ignore where I put original templates for scripting purposes
-/original
+/world/contentdb/templates/regular
+/world/contentdb/templates/veteran
+/world/contentdb/templates/elite
