@@ -174,9 +174,17 @@
 		}
 		[world_levels]
 		{
+			[elite]
+			{
+			  i required_level = 89;
+			}
 			[regular]
 			{
 			  i required_level = 8;
+			}
+			[veteran]
+			{
+			  i required_level = 60;
 			}
 		}
 	}
