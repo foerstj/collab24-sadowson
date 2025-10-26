@@ -1,5 +1,6 @@
 :: name of map
 set map=collab_project
+set res=collab24
 :: name of map, case-sensitive
 set map_cs=Collab 24 Sadowson
 :: tank properties
@@ -49,7 +50,7 @@ robocopy "%bits%\sound" "%tmp%\Bits\sound" /S
 robocopy "%bits%\ui" "%tmp%\Bits\ui" /S
 robocopy "%bits%\world\ai" "%tmp%\Bits\world\ai" /S
 robocopy "%bits%\world\contentdb\components" "%tmp%\Bits\world\contentdb\components" /S
-robocopy "%bits%\world\contentdb\templates\regular" "%tmp%\Bits\world\contentdb\templates\regular" /S
+robocopy "%bits%\world\contentdb\templates\%res%" "%tmp%\Bits\world\contentdb\templates\%res%" /S
 robocopy "%bits%\world\global" "%tmp%\Bits\world\global" /S
 robocopy "%bits%\world\ui" "%tmp%\Bits\world\ui" /S
 "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
