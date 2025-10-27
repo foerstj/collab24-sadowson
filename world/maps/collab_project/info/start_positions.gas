@@ -69,6 +69,29 @@
 		{
 		}
 	}
+	[t:start_group,n:test_merc_camp]
+	{
+	  b default = false;
+		description = "";
+	  b dev_only = true;
+	  i id = 440;
+		screen_name = "Test - Mercenary Camp";
+		[start_position]
+		{
+		  i id = 1;
+			position = 3.133049,-4.950001,-11.332886,0xCB06E010;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 3.133049,-4.950001,-11.332886,0xCB06E010;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
 	[t:start_group,n:the_valley]
 	{
 	  b default = false;
