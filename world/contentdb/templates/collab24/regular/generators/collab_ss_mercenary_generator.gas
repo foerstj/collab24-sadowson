@@ -1,6 +1,6 @@
 [t:template,n:collab_ss_mercenary_generator]
 {
-	specializes	= command;
+	specializes	= generator;
 	doc			= "collab_ss_mercenary_generator";
     category_name = "collab_ss_gizmo";
 

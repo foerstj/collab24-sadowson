@@ -2,7 +2,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -14,7 +14,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type13;
+		custom_head = m_c_gah_fb_hlmt_type20;
 	}
 	[placement]
 	{
@@ -26,7 +26,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type13;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[placement]
 	{
@@ -38,7 +38,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type36;
+		custom_head = m_c_gah_fb_hlmt_type6;
 	}
 	[placement]
 	{
@@ -50,7 +50,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_head-05;
+		custom_head = m_c_gah_fg_hlmt_head-04;
 	}
 	[placement]
 	{
@@ -62,7 +62,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type6;
+		custom_head = m_c_gah_fg_hlmt_type35;
 	}
 	[placement]
 	{
@@ -73,7 +73,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type13;
+		custom_head = m_c_gah_fb_hlmt_type20;
 	}
 	[placement]
 	{
@@ -85,7 +85,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type36;
+		custom_head = m_c_gah_fb_hlmt_type26;
 	}
 	[placement]
 	{
@@ -97,7 +97,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type13;
+		custom_head = m_c_gah_fb_hlmt_type24;
 	}
 	[placement]
 	{
@@ -109,7 +109,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type19;
 	}
 	[placement]
 	{
@@ -120,7 +120,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type20;
+		custom_head = m_c_gah_fg_hlmt_type24;
 	}
 	[placement]
 	{
@@ -132,7 +132,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type22;
+		custom_head = m_c_gah_fg_hlmt_type9;
 	}
 	[placement]
 	{
@@ -144,7 +144,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type36;
+		custom_head = m_c_gah_fb_hlmt_type15;
 	}
 	[placement]
 	{
@@ -156,7 +156,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_head-05;
+		custom_head = m_c_gah_fg_hlmt_type22;
 	}
 	[placement]
 	{
@@ -175,7 +175,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type20;
+		custom_head = m_c_gah_fb_hlmt_type9;
 	}
 	[mind]
 	{
@@ -298,7 +298,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type14;
+		custom_head = m_c_gah_fg_hlmt_type8;
 	}
 	[placement]
 	{
@@ -310,7 +310,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type22;
+		custom_head = m_c_gah_fg_hlmt_type19;
 	}
 	[placement]
 	{
@@ -429,7 +429,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type15;
+		custom_head = m_c_gah_fg_hlmt_head-05;
 	}
 	[placement]
 	{
@@ -453,7 +453,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type20;
 	}
 	[placement]
 	{
@@ -477,7 +477,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type22;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[placement]
 	{
@@ -489,7 +489,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type9;
+		custom_head = m_c_gah_fb_hlmt_type20;
 	}
 	[placement]
 	{
@@ -501,7 +501,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type15;
+		custom_head = m_c_gah_fb_hlmt_type10;
 	}
 	[placement]
 	{
@@ -513,7 +513,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type13;
+		custom_head = m_c_gah_fb_hlmt_type20;
 	}
 	[placement]
 	{
@@ -525,7 +525,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type15;
+		custom_head = m_c_gah_fg_hlmt_type6;
 	}
 	[placement]
 	{
@@ -537,7 +537,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type13;
+		custom_head = m_c_gah_fg_hlmt_head-03;
 	}
 	[placement]
 	{
@@ -549,7 +549,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_type24;
+		custom_head = m_c_gah_fg_hlmt_type13;
 	}
 	[placement]
 	{
@@ -561,7 +561,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type22;
 	}
 	[placement]
 	{
@@ -573,7 +573,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type20;
+		custom_head = m_c_gah_fb_hlmt_type24;
 	}
 	[placement]
 	{
@@ -585,7 +585,7 @@
 {
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type8;
+		custom_head = m_c_gah_fb_hlmt_type16;
 	}
 	[placement]
 	{
@@ -604,7 +604,7 @@
 	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fb_hlmt_type24;
+		custom_head = m_c_gah_fb_hlmt_type13;
 	}
 	[mind]
 	{
