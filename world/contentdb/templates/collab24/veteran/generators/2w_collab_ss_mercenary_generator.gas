@@ -11,5 +11,6 @@
 	}
 	[collab_ss_mercenary_generator]
 	{
+		world_level_prefix = 2W_;
 	}
 }

@@ -21,6 +21,7 @@ property	Scid	Initial_command$											doc = "SCID of Command Object if applic
 property	float	Spawn_Radius$				= 1.5							doc = "Radius around spawner that Mercenaries can spawn";
 property	bool	Pull_from_global_pool$		= true							doc = "Squads will spawn from a global list, removing them from the list per use";
 property	string	Global_Pool_Name$			= "collab_ss_mercenary_pool"	doc = "Name of global pool to pull from";
+property	string	World_Level_Prefix$			= ""							doc = "Template prefix for the generated mercenaries";
 
 			String	Squad_Leader$			= "NONE";
 			String	Member_1$				= "NONE";
@@ -106,7 +107,7 @@ event OnGoDrawDebugHud$
 
 void Character_Squad_Name$( string Class_Type$ )
 {
-	string Complete_Name$;
+	string Complete_Name$ = World_Level_Prefix$;
 	int Gender_Chance_length$ = ( StringTool.GetNumDelimitedValues( Gender_Chance$ ) - 1 );
 	string Gender_Type$ = StringTool.GetDelimitedString( Gender_Chance$, ( GoMath.RandomInt( 0, Gender_Chance_length$ ) ) );
 	
