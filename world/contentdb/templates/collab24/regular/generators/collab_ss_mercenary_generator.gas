@@ -1,0 +1,15 @@
+[t:template,n:collab_ss_mercenary_generator]
+{
+	specializes	= command;
+	doc			= "collab_ss_mercenary_generator";
+    category_name = "collab_ss_gizmo";
+
+	[gizmo]
+	{
+		model = m_i_glb_object-gogen;  
+		texture = b_i_glb_red;
+	}
+	[collab_ss_mercenary_generator]
+	{
+	}
+}
