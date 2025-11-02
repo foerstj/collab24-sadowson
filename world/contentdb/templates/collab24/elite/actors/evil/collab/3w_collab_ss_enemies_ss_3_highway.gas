@@ -92,9 +92,9 @@
 			 0 = b_c_edm_klik-2;
 		}
 		scale_base = 0.4;
-		experience_value = 1123549;
-		life = 1440;
-		max_life = 1479;
+		experience_value = 523549;
+		life = 720;
+		max_life = 720;
 		mana = 211;
 		max_mana = 215;
 		[voice]

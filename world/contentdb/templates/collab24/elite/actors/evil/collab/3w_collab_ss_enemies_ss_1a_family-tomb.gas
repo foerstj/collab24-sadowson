@@ -15,9 +15,9 @@
 	}
 	[aspect]
 	{
-		experience_value = 1124238;
-		life = 1466;
-		max_life = 1505;
+		experience_value = 524238;
+		life = 733;
+		max_life = 733;
 		mana = 430;
 		max_mana = 434;
 	}
@@ -102,9 +102,9 @@
 	}
 	[aspect]
 	{
-		experience_value = 1123893;
-		life = 1505;
-		max_life = 1544;
+		experience_value = 523893;
+		life = 752;
+		max_life = 752;
 		mana = 625;
 		max_mana = 630;
 		model = m_c_ecm_sk_pos_2;

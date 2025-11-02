@@ -15,9 +15,9 @@
 	}
 	[aspect]
 	{
-		experience_value = 1131727;
-		life = 1434;
-		max_life = 1472;
+		experience_value = 531727;
+		life = 717;
+		max_life = 717;
 		mana = 459;
 		max_mana = 464;
 	}

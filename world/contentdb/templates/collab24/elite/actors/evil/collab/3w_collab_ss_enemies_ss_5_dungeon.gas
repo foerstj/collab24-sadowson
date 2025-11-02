@@ -217,9 +217,9 @@
 	}
 	[aspect]
 	{
-		experience_value = 1126131;
-		life = 1473;
-		max_life = 1511;
+		experience_value = 526131;
+		life = 747;
+		max_life = 747;
 		mana = 479;
 		max_mana = 483;
 	}
@@ -310,9 +310,9 @@
 	}
 	[aspect]
 	{
-		experience_value = 1126820;
-		life = 1662;
-		max_life = 1701;
+		experience_value = 526820;
+		life = 831;
+		max_life = 831;
 		mana = 660;
 		max_mana = 664;
 		[textures]
@@ -459,9 +459,9 @@
 	}
 	[aspect]
 	{
-		experience_value = 1125787;
-		life = 1545;
-		max_life = 1583;
+		experience_value = 525787;
+		life = 772;
+		max_life = 772;
 		mana = 430;
 		max_mana = 434;
 		model = m_c_edm_sn_pos_1;
