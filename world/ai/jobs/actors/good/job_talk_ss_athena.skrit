@@ -66,6 +66,7 @@ state Face$
 			SetState Exiting$;
 		}
 		///MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+		SetState Talk$;
 	}
 }
 
