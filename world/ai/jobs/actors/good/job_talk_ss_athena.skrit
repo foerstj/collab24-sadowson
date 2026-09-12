@@ -65,7 +65,7 @@ state Face$
 							m_Go$.Goid );
 			SetState Exiting$;
 		}
-		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+		///MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
 	}
 }
 
